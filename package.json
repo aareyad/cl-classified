@@ -1,0 +1,27 @@
+{
+  "name": "cl-classified",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-rtlcss": "^1.4.1",
+    "gulp-wp-pot": "^2.5.0",
+    "gulp-zip": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aareyad/classima.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aareyad/classima.git/issues"
+  },
+  "homepage": "https://github.com/aareyad/classima.git#readme"
+}
