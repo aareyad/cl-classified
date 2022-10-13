@@ -1,12 +1,13 @@
 <?php
-namespace radiustheme\HomListi\Customizer\Controls;
+
+namespace RadiusTheme\ClassifiedLite\Customizer\Controls;
 
 use WP_Customize_Control;
 /**
  * Toggle Switch Custom Control
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-    class Customizer_Switch_Control extends WP_Customize_Control {
+    class Switcher extends WP_Customize_Control {
         /**
          * The type of control being rendered
          */

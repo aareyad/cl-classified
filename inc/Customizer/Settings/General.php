@@ -5,17 +5,17 @@
  * @version 1.0
  */
 
-namespace radiustheme\HomListi\Customizer\Settings;
+namespace RadiusTheme\ClassifiedLite\Customizer\Settings;
 
-use radiustheme\HomListi\Customizer\RDTheme_Customizer;
-use radiustheme\HomListi\Customizer\Controls\Customizer_Switch_Control;
-use radiustheme\HomListi\Customizer\Controls\Customizer_Separator_Control;
+use RadiusTheme\ClassifiedLite\Customizer\Controls\Separator;
+use RadiusTheme\ClassifiedLite\Customizer\Controls\Switcher;
+use RadiusTheme\ClassifiedLite\Customizer\Customizer;
 use WP_Customize_Media_Control;
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class RDTheme_General_Settings extends RDTheme_Customizer {
+class General extends Customizer {
 
 	public function __construct() {
 		parent::instance();
@@ -135,7 +135,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'separator_general1', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'separator_general1', [
 			'settings' => 'separator_general1',
 			'section'  => 'general_section',
 		] ) );
@@ -149,7 +149,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 				'sanitize_callback' => 'rttheme_switch_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'preloader',
+		$wp_customize->add_control( new Switcher( $wp_customize, 'preloader',
 			[
 				'label'   => esc_html__( 'Preloader', 'homlisti' ),
 				'section' => 'general_section',
@@ -190,7 +190,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 				'sanitize_callback' => 'rttheme_switch_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'magnific_popup',
+		$wp_customize->add_control( new Switcher( $wp_customize, 'magnific_popup',
 			[
 				'label'   => esc_html__( 'Magnific Popup', 'homlisti' ),
 				'section' => 'general_section',
@@ -205,7 +205,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 				'sanitize_callback' => 'rttheme_switch_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'sticky_sidebar',
+		$wp_customize->add_control( new Switcher( $wp_customize, 'sticky_sidebar',
 			[
 				'label'   => esc_html__( 'Sticky Sidebar', 'homlisti' ),
 				'section' => 'general_section',
@@ -220,7 +220,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 				'sanitize_callback' => 'rttheme_switch_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'back_to_top',
+		$wp_customize->add_control( new Switcher( $wp_customize, 'back_to_top',
 			[
 				'label'   => esc_html__( 'Back to Top', 'homlisti' ),
 				'section' => 'general_section',
@@ -236,7 +236,7 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 				'sanitize_callback' => 'rttheme_switch_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'remove_admin_bar',
+		$wp_customize->add_control( new Switcher( $wp_customize, 'remove_admin_bar',
 			[
 				'label'   => esc_html__( 'Remove Admin Bar', 'homlisti' ),
 				'section' => 'general_section',
@@ -246,11 +246,4 @@ class RDTheme_General_Settings extends RDTheme_Customizer {
 
 	}
 
-}
-
-/**
- * Initialise our Customizer settings only when they're required
- */
-if ( class_exists( 'WP_Customize_Control' ) ) {
-	new RDTheme_General_Settings();
 }

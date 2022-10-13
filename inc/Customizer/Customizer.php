@@ -10,7 +10,7 @@ namespace RadiusTheme\ClassifiedLite\Customizer;
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class Settings {
+class Customizer {
 
 	// Get our default values
 	protected $defaults;
@@ -26,7 +26,6 @@ class Settings {
 	public static function instance() {
 		if ( null == self::$instance ) {
 			self::$instance = new self();
-			//self::populated_default_data();
 		}
 
 		return self::$instance;
@@ -71,56 +70,56 @@ class Settings {
 		// Add General Section
 		$wp_customize->add_section( 'general_section',
 			[
-				'title'    => esc_html__( 'General', 'homlisti' ),
+				'title'    => esc_html__( 'General', 'cl-classified' ),
 				'priority' => 10,
 			]
 		);
 		// Add Header Main Section
 		$wp_customize->add_section( 'header_main_section',
 			[
-				'title'    => esc_html__( 'Header', 'homlisti' ),
+				'title'    => esc_html__( 'Header', 'cl-classified' ),
 				'priority' => 11,
 			]
 		);
 		// Add Header Main Section
 		$wp_customize->add_section( 'breadcrumb_section',
 			[
-				'title'    => esc_html__( 'Breadcrumb', 'homlisti' ),
+				'title'    => esc_html__( 'Breadcrumb', 'cl-classified' ),
 				'priority' => 11,
 			]
 		);
 		// Add Footer Section
 		$wp_customize->add_section( 'footer_section',
 			[
-				'title'    => esc_html__( 'Footer', 'homlisti' ),
+				'title'    => esc_html__( 'Footer', 'cl-classified' ),
 				'priority' => 12,
 			]
 		);
 		// Add Color Section
 		$wp_customize->add_section( 'site_color_section',
 			[
-				'title'    => esc_html__( 'Site Color', 'homlisti' ),
+				'title'    => esc_html__( 'Site Color', 'cl-classified' ),
 				'panel'    => 'rttheme_color_panel',
 				'priority' => 10,
 			]
 		);
 		$wp_customize->add_section( 'header_color_section',
 			[
-				'title'    => esc_html__( 'Header Color', 'homlisti' ),
+				'title'    => esc_html__( 'Header Color', 'cl-classified' ),
 				'panel'    => 'rttheme_color_panel',
 				'priority' => 12,
 			]
 		);
 		$wp_customize->add_section( 'breadcrumb_color_section',
 			[
-				'title'    => esc_html__( 'Breadcrumb Color', 'homlisti' ),
+				'title'    => esc_html__( 'Breadcrumb Color', 'cl-classified' ),
 				'panel'    => 'rttheme_color_panel',
 				'priority' => 13,
 			]
 		);
 		$wp_customize->add_section( 'footer_color_section',
 			[
-				'title'    => esc_html__( 'Footer Color', 'homlisti' ),
+				'title'    => esc_html__( 'Footer Color', 'cl-classified' ),
 				'panel'    => 'rttheme_color_panel',
 				'priority' => 14,
 			]
@@ -128,7 +127,7 @@ class Settings {
 		// Add Blog Layout Section
 		$wp_customize->add_section( 'blog_layout_section',
 			[
-				'title'    => esc_html__( 'Blog Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Blog Layout', 'cl-classified' ),
 				'priority' => 10,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -136,7 +135,7 @@ class Settings {
 		// Add Single Post Layout Section
 		$wp_customize->add_section( 'single_post_layout_section',
 			[
-				'title'    => esc_html__( 'Single Post Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Single Post Layout', 'cl-classified' ),
 				'priority' => 10,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -144,7 +143,7 @@ class Settings {
 		// Add Pages Layout Section
 		$wp_customize->add_section( 'page_layout_section',
 			[
-				'title'    => esc_html__( 'Pages Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Pages Layout', 'cl-classified' ),
 				'priority' => 15,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -152,7 +151,7 @@ class Settings {
 		// Add Error Layout Section
 		$wp_customize->add_section( 'error_layout_section',
 			[
-				'title'    => esc_html__( 'Error Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Error Layout', 'cl-classified' ),
 				'priority' => 15,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -160,7 +159,7 @@ class Settings {
 		// Add Listing Layout Section
 		$wp_customize->add_section( 'listing_archive_layout_section',
 			[
-				'title'    => esc_html__( 'Listing Archive Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Listing Archive Layout', 'cl-classified' ),
 				'priority' => 20,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -168,7 +167,7 @@ class Settings {
 		// Add Listing Single Layout Section
 		$wp_customize->add_section( 'listing_single_layout_section',
 			[
-				'title'    => esc_html__( 'Listing Single Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Listing Single Layout', 'cl-classified' ),
 				'priority' => 21,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -176,7 +175,7 @@ class Settings {
 		// Add Listing Layout Section
 		$wp_customize->add_section( 'agent_archive_layout_section',
 			[
-				'title'    => esc_html__( 'Agent Archive Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Agent Archive Layout', 'cl-classified' ),
 				'priority' => 22,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -184,7 +183,7 @@ class Settings {
 		// Add Listing Single Layout Section
 		$wp_customize->add_section( 'agent_single_layout_section',
 			[
-				'title'    => esc_html__( 'Agent Single Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Agent Single Layout', 'cl-classified' ),
 				'priority' => 23,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -192,7 +191,7 @@ class Settings {
 		// Add Store Layout Section
 		$wp_customize->add_section( 'store_archive_layout_section',
 			[
-				'title'    => esc_html__( 'Store Archive Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Store Archive Layout', 'cl-classified' ),
 				'priority' => 30,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -200,7 +199,7 @@ class Settings {
 		// WooCommerce Archive Section
 		$wp_customize->add_section( 'woocommerce_archive_layout_section',
 			[
-				'title'    => esc_html__( 'Woocommerce Archive Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Woocommerce Archive Layout', 'cl-classified' ),
 				'priority' => 31,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -208,7 +207,7 @@ class Settings {
 		// WooCommerce Archive Section
 		$wp_customize->add_section( 'woocommerce_single_layout_section',
 			[
-				'title'    => esc_html__( 'Woocommerce Details Layout', 'homlisti' ),
+				'title'    => esc_html__( 'Woocommerce Details Layout', 'cl-classified' ),
 				'priority' => 32,
 				'panel'    => 'rttheme_layouts_defaults',
 			]
@@ -216,35 +215,35 @@ class Settings {
 		// Add Blog Archive Section
 		$wp_customize->add_section( 'blog_archive_section',
 			[
-				'title'    => esc_html__( 'Blog Settings', 'homlisti' ),
+				'title'    => esc_html__( 'Blog Settings', 'cl-classified' ),
 				'priority' => 15,
 			]
 		);
 		// Add Single Post Section
 		$wp_customize->add_section( 'single_post_section',
 			[
-				'title'    => esc_html__( 'Post Details Settings', 'homlisti' ),
+				'title'    => esc_html__( 'Post Details Settings', 'cl-classified' ),
 				'priority' => 16,
 			]
 		);
 		// Add Listing Settings Section
 		$wp_customize->add_section( 'listings_section',
 			[
-				'title'    => esc_html__( 'Listing Settings', 'homlisti' ),
+				'title'    => esc_html__( 'Listing Settings', 'cl-classified' ),
 				'priority' => 17,
 			]
 		);
 		// Contact Info
 		$wp_customize->add_section( 'contact_info_section',
 			[
-				'title'    => esc_html__( 'Contact & Social', 'homlisti' ),
+				'title'    => esc_html__( 'Contact & Social', 'cl-classified' ),
 				'priority' => 17,
 			]
 		);
 		// Contact Info
 		$wp_customize->add_section( 'newsletter_section',
 			[
-				'title'    => esc_html__( 'Newsletter Section', 'homlisti' ),
+				'title'    => esc_html__( 'Newsletter Section', 'cl-classified' ),
 				'priority' => 17,
 			]
 		);
@@ -252,7 +251,7 @@ class Settings {
 		// Contact Info
 		$wp_customize->add_section( 'woocommerce_common_section',
 			[
-				'title'    => esc_html__( 'WooCommerce Common', 'homlisti' ),
+				'title'    => esc_html__( 'WooCommerce Common', 'cl-classified' ),
 				'priority' => 1,
 				'panel'    => 'woocommerce',
 			]
@@ -261,7 +260,7 @@ class Settings {
 		// Add Error Page Section
 		$wp_customize->add_section( 'error_section',
 			[
-				'title'    => esc_html__( 'Error Page', 'homlisti' ),
+				'title'    => esc_html__( 'Error Page', 'cl-classified' ),
 				'priority' => 19,
 			]
 		);

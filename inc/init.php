@@ -5,9 +5,11 @@
  * @version 1.0.0
  */
 
+use RadiusTheme\ClassifiedLite\Customizer\Init;
+
 require_once __DIR__ . './../vendor/autoload.php';
 
-final class RTCL_Includes {
+final class Includes {
 	private $suffix;
 	private $version;
 	private static $singleton = false;
@@ -56,7 +58,18 @@ final class RTCL_Includes {
 	}
 
 	private function hooks() {
-
+		if ( class_exists( 'WP_Customize_Control' ) ) {
+			Init::instance();
+		}
 	}
 
 }
+
+/**
+ * @return bool|Includes
+ */
+function Includes() {
+	return Includes::getInstance();
+}
+
+Includes();

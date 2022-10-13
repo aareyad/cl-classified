@@ -22,8 +22,12 @@ class ComposerStaticInit393fb4b81ac66bc94f0dae25fbf0f23a
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'RadiusTheme\\ClassifiedLite\\Customizer\\Controls\\Separator' => __DIR__ . '/../..' . '/inc/Customizer/Controls/Separator.php',
+        'RadiusTheme\\ClassifiedLite\\Customizer\\Controls\\Switcher' => __DIR__ . '/../..' . '/inc/Customizer/Controls/Switcher.php',
+        'RadiusTheme\\ClassifiedLite\\Customizer\\Customizer' => __DIR__ . '/../..' . '/inc/Customizer/Customizer.php',
         'RadiusTheme\\ClassifiedLite\\Customizer\\Default_Data' => __DIR__ . '/../..' . '/inc/Customizer/Default_Data.php',
-        'RadiusTheme\\ClassifiedLite\\Customizer\\Settings' => __DIR__ . '/../..' . '/inc/Customizer/Settings.php',
+        'RadiusTheme\\ClassifiedLite\\Customizer\\Init' => __DIR__ . '/../..' . '/inc/Customizer/Init.php',
+        'RadiusTheme\\ClassifiedLite\\Customizer\\Settings\\General' => __DIR__ . '/../..' . '/inc/Customizer/Settings/General.php',
         'RadiusTheme\\ClassifiedLite\\General' => __DIR__ . '/../..' . '/inc/General.php',
         'RadiusTheme\\ClassifiedLite\\Helper' => __DIR__ . '/../..' . '/inc/Helper.php',
         'RadiusTheme\\ClassifiedLite\\Layouts' => __DIR__ . '/../..' . '/inc/Layouts.php',

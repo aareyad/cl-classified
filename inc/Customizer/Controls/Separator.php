@@ -1,6 +1,6 @@
 <?php
 
-namespace radiustheme\HomListi\Customizer\Controls;
+namespace RadiusTheme\ClassifiedLite\Customizer\Controls;
 
 use WP_Customize_Control;
 
@@ -8,7 +8,7 @@ use WP_Customize_Control;
  * Separator Custom Control
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	class Customizer_Separator_Control extends WP_Customize_Control {
+	class Separator extends WP_Customize_Control {
 
 		public $type = 'separator';
 

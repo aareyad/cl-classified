@@ -7,8 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Controls\\Separator' => $baseDir . '/inc/Customizer/Controls/Separator.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Controls\\Switcher' => $baseDir . '/inc/Customizer/Controls/Switcher.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Customizer' => $baseDir . '/inc/Customizer/Customizer.php',
     'RadiusTheme\\ClassifiedLite\\Customizer\\Default_Data' => $baseDir . '/inc/Customizer/Default_Data.php',
-    'RadiusTheme\\ClassifiedLite\\Customizer\\Settings' => $baseDir . '/inc/Customizer/Settings.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Init' => $baseDir . '/inc/Customizer/Init.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Settings\\General' => $baseDir . '/inc/Customizer/Settings/General.php',
     'RadiusTheme\\ClassifiedLite\\General' => $baseDir . '/inc/General.php',
     'RadiusTheme\\ClassifiedLite\\Helper' => $baseDir . '/inc/Helper.php',
     'RadiusTheme\\ClassifiedLite\\Layouts' => $baseDir . '/inc/Layouts.php',

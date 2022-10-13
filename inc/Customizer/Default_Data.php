@@ -23,7 +23,7 @@ class Default_Data {
 			'preloader_image'              => '',
 			'magnific_popup'               => 0,
 			'banner_image'                 => '',
-			'back_to_top'                  => 0,
+			'back_to_top'                  => 1,
 			'remove_admin_bar'             => 0,
 			'sticky_sidebar'               => 0,
 
@@ -38,7 +38,6 @@ class Default_Data {
 			'header_login_icon'            => 1,
 			'header_fav_icon'              => 1,
 			'header_compare_icon'          => 2,
-			'header_cart_icon'             => 0,
 			'header_chat_icon'             => 0,
 			'header_search_icon'           => 0,
 			'header_style'                 => '1',
