@@ -7,6 +7,7 @@
 
 namespace radiustheme\HomListi\Customizer\Typography;
 
+use RadiusTheme\ClassifiedLite\Customizer\Default_Data;
 use radiustheme\HomListi\Customizer\Controls\Customizer_Separator_Control;
 
 /**
@@ -19,7 +20,7 @@ class Customizer_Typography_settings {
 
 	public function __construct() {
 		// Get our Customizer defaults
-		$this->defaults = rttheme_generate_defaults();
+		$this->defaults = Default_Data::default_values();
 		// Register Section
 		add_action( 'customize_register', [ $this, 'register_typography_sections' ] );
 		// Register Controls

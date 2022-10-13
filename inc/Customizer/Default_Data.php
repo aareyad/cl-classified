@@ -1,12 +1,17 @@
 <?php
+/**
+ * @author  RadiusTheme
+ * @since   1.0.0
+ * @version 1.0.0
+ */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+namespace RadiusTheme\ClassifiedLite\Customizer;
 
-// Customizer Default Data
-if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
-	function rttheme_generate_defaults() {
+class Default_Data {
+
+	// Customizer Default Data
+
+	public static function default_values() {
 		$customizer_defaults = [
 
 			// General
@@ -34,6 +39,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'header_fav_icon'              => 1,
 			'header_compare_icon'          => 2,
 			'header_cart_icon'             => 0,
+			'header_chat_icon'             => 0,
 			'header_search_icon'           => 0,
 			'header_style'                 => '1',
 			'header_width'                 => 'box-width',
@@ -210,45 +216,6 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'store_archive_breadcrumb'           => 'default',
 			'store_archive_footer_style'         => 'default',
 
-			// WooCommerce Archive Layout
-			'woocommerce_archive_layout'         => 'right-sidebar',
-			'woocommerce_archive_sidebar'        => 'woocommerce-archive-sidebar',
-			'woocommerce_archive_top_bar'        => 'default',
-			'woocommerce_archive_header_style'   => 'default',
-			'woocommerce_archive_menu_alignment' => 'default',
-			'woocommerce_archive_header_width'   => 'default',
-			'woocommerce_archive_tr_header'      => 'default',
-			'woocommerce_archive_breadcrumb'     => 'default',
-			'woocommerce_archive_footer_style'   => 'default',
-			'woocommerce_archive_padding_top'    => '',
-			'woocommerce_archive_padding_bottom' => '',
-
-			// WooCommerce Single Layout
-			'woocommerce_single_layout'          => 'right-sidebar',
-			'woocommerce_single_sidebar'         => 'woocommerce-single-sidebar',
-			'woocommerce_single_top_bar'         => 'default',
-			'woocommerce_single_header_style'    => 'default',
-			'woocommerce_single_menu_alignment'  => 'default',
-			'woocommerce_single_header_width'    => 'default',
-			'woocommerce_single_tr_header'       => 'default',
-			'woocommerce_single_breadcrumb'      => 'default',
-			'woocommerce_single_footer_style'    => 'default',
-			'woocommerce_single_padding_top'     => '',
-			'woocommerce_single_padding_bottom'  => '',
-
-			//WooCommerce Common Settings:
-			'woo_related_product'                => 1,
-			'wc_description'                     => 1,
-			'wc_reviews'                         => 1,
-			'wc_additional_info'                 => 1,
-			'wc_cross_sell'                      => 1,
-			'wc_show_excerpt'                    => 1,
-			'wc_num_product'                     => 9,
-			'wc_cats'                            => 1,
-			'wc_tags'                            => 1,
-			'wc_quickview_icon'                  => 1,
-			'wc_wishlist_icon'                   => 1,
-
 			// Blog Archive
 			'blog_style'                         => 'style1',
 			'blog_date'                          => 1,
@@ -309,7 +276,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'error_subtitle'                     => 'Sorry! This Page is <br> Not Available!',
 			'error_buttontext'                   => 'Go Back To Home Page',
 
-			//Newsletter
+			// Newsletter
 			'newsletter_section'                 => 0,
 
 			// Footer

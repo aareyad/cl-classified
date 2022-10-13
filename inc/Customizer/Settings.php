@@ -1,16 +1,16 @@
 <?php
 /**
  * @author  RadiusTheme
- * @since   1.0
- * @version 1.0
+ * @since   1.0.0
+ * @version 1.0.0
  */
 
-namespace radiustheme\HomListi\Customizer;
+namespace RadiusTheme\ClassifiedLite\Customizer;
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class RDTheme_Customizer {
+class Settings {
 
 	// Get our default values
 	protected $defaults;
@@ -33,7 +33,7 @@ class RDTheme_Customizer {
 	}
 
 	public function populated_default_data() {
-		$this->defaults = rttheme_generate_defaults();
+		$this->defaults = Default_Data::default_values();
 	}
 
 	/**

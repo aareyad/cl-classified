@@ -12,20 +12,8 @@ if ( 'fullwidth' == Options::$header_width ) {
 	$header_container = 'container-fluid';
 }
 ?>
-<div id="rt-sticky-placeholder"></div>
-<div id="header-menu" class="header-menu menu-layout1 header-icon-round">
+<div class="main-header">
     <div class="<?php echo esc_attr( $header_container ); ?>">
-        <div class="header-content">
-			<?php get_template_part( 'template-parts/header/site', 'logo' ) ?>
-            <div id="main-navigation" class="navigation-area <?php echo esc_attr( Options::$menu_alignment ) ?>">
-				<?php wp_nav_menu( [
-					'theme_location'  => 'primary',
-					'container'       => 'nav',
-					'container_id'    => 'dropdown',
-					'container_class' => 'template-main-menu',
-				] ); ?>
-            </div>
-			<?php get_template_part( 'template-parts/header/listing', 'area' ) ?>
-        </div>
+	    <?php get_template_part( 'template-parts/header/part-1' ); ?>
     </div>
 </div>

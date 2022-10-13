@@ -8,8 +8,7 @@
 use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
-$has_top_info = Options::$options['contact_address'] || Options::$options['contact_phone'] || Options::$options['contact_email'] || Options::$options['contact_website'] ? true
-	: false;
+$has_top_info = Options::$options['contact_address'] || Options::$options['contact_phone'] || Options::$options['contact_email'] || Options::$options['contact_website'];
 $socials      = Helper::socials();
 
 if ( ! $has_top_info || ! $socials ) {

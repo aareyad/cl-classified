@@ -7,6 +7,8 @@
 
 namespace RadiusTheme\ClassifiedLite;
 
+use RtclPro\Helpers\Fns;
+
 class Helper {
 
 	public static function has_sidebar() {
@@ -51,6 +53,12 @@ class Helper {
 	public static function comments_callback( $comment, $args, $depth ) {
 		$args2 = get_defined_vars();
 		Helper::get_template_part( 'template-parts/comments-callback', $args2 );
+	}
+
+	public static function nav_menu_args() {
+		$nav_menu_args = [ 'theme_location' => 'primary', 'container' => 'nav', 'fallback_cb' => false ];
+
+		return $nav_menu_args;
 	}
 
 	public static function requires( $filename, $dir = false ) {
@@ -230,11 +238,11 @@ class Helper {
 	}
 
 	public static function is_chat_enabled() {
-		if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) ) {
+		/*if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) ) {
 			if ( Fns::is_enable_chat() ) {
 				return true;
 			}
-		}
+		}*/
 
 		return false;
 	}

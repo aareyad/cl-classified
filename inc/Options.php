@@ -7,6 +7,8 @@
 
 namespace RadiusTheme\ClassifiedLite;
 
+use RadiusTheme\ClassifiedLite\Customizer\Default_Data;
+
 if ( ! class_exists( 'Options' ) ) {
 	class Options {
 
@@ -48,7 +50,7 @@ if ( ! class_exists( 'Options' ) ) {
 		}
 
 		public function set_options() {
-			$defaults = rttheme_generate_defaults();
+			$defaults = Default_Data::default_values();
 			$newData  = [];
 			foreach ( $defaults as $key => $dValue ) {
 				$value           = get_theme_mod( $key, $defaults[ $key ] );

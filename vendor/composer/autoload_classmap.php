@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Default_Data' => $baseDir . '/inc/Customizer/Default_Data.php',
+    'RadiusTheme\\ClassifiedLite\\Customizer\\Settings' => $baseDir . '/inc/Customizer/Settings.php',
     'RadiusTheme\\ClassifiedLite\\General' => $baseDir . '/inc/General.php',
     'RadiusTheme\\ClassifiedLite\\Helper' => $baseDir . '/inc/Helper.php',
     'RadiusTheme\\ClassifiedLite\\Layouts' => $baseDir . '/inc/Layouts.php',

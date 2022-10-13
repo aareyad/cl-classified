@@ -16,12 +16,11 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php do_action( 'wp_body_open' ); ?>
-	<div id="wrapper" class="wrapper">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'homlisti' ); ?></a>
+    <div id="page" class="site">
+        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cl-classified' ); ?></a>
 		<?php get_template_part( 'template-parts/content', 'menu' ); ?>
-		<div id="content" class="site-content">
-		
-		<?php 
-		if(class_exists('Rtcl')){
-			get_template_part('template-parts/content', 'banner'); 
-		}
+        <div id="content" class="site-content">
+            <?php
+            if(class_exists('Rtcl')){
+                get_template_part('template-parts/content', 'banner');
+            }
