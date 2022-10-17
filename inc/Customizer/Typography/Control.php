@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace radiustheme\HomListi\Customizer\Typography;
+namespace RadiusTheme\ClassifiedLite\Customizer\Typography;
 
 use WP_Customize_Control;
 
@@ -18,7 +18,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * Googe Font Select Custom Control
 	 */
-	class Customizer_Google_Fonts_Controls extends WP_Customize_Control {
+	class Control extends WP_Customize_Control {
 		/**
 		 * The type of control being rendered
 		 */

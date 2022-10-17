@@ -5,6 +5,7 @@
  * @version 1.0.0
  */
 
+use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
 $comments_number = get_comments_number();

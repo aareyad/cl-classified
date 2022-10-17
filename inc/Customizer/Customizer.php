@@ -215,14 +215,14 @@ class Customizer {
 		// Add Blog Archive Section
 		$wp_customize->add_section( 'blog_archive_section',
 			[
-				'title'    => esc_html__( 'Blog Settings', 'cl-classified' ),
+				'title'    => esc_html__( 'Blog', 'cl-classified' ),
 				'priority' => 15,
 			]
 		);
 		// Add Single Post Section
 		$wp_customize->add_section( 'single_post_section',
 			[
-				'title'    => esc_html__( 'Post Details Settings', 'cl-classified' ),
+				'title'    => esc_html__( 'Post Details', 'cl-classified' ),
 				'priority' => 16,
 			]
 		);

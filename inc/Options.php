@@ -62,5 +62,3 @@ if ( ! class_exists( 'Options' ) ) {
 	}
 }
 
-Options::instance();
-

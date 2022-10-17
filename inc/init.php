@@ -6,6 +6,7 @@
  */
 
 use RadiusTheme\ClassifiedLite\Customizer\Init;
+use RadiusTheme\ClassifiedLite\Options;
 
 require_once __DIR__ . './../vendor/autoload.php';
 
@@ -58,6 +59,7 @@ final class Includes {
 	}
 
 	private function hooks() {
+		Options::instance();
 		if ( class_exists( 'WP_Customize_Control' ) ) {
 			Init::instance();
 		}

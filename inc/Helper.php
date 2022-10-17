@@ -7,8 +7,6 @@
 
 namespace RadiusTheme\ClassifiedLite;
 
-use RtclPro\Helpers\Fns;
-
 class Helper {
 
 	public static function has_sidebar() {
@@ -34,8 +32,6 @@ class Helper {
 	}
 
 	public static function the_layout_class() {
-		//$fullwidth_col = (Options::$options['blog_style'] == 'style2') ? 'col-sm-12 col-12' : 'col-sm-10 offset-sm-1 col-12';
-
 		$fullwidth_col = ( Options::$options['blog_style'] == 'style1' && is_home() ) ? 'col-sm-10 offset-sm-1 col-12' : 'col-sm-12 col-12';
 
 		$layout_class = self::has_sidebar() ? 'col-lg-8 col-sm-12 col-12' : $fullwidth_col;

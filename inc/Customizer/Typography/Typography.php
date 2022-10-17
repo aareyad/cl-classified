@@ -5,15 +5,15 @@
  * @version 1.0
  */
 
-namespace radiustheme\HomListi\Customizer\Typography;
+namespace RadiusTheme\ClassifiedLite\Customizer\Typography;
 
+use RadiusTheme\ClassifiedLite\Customizer\Controls\Separator;
 use RadiusTheme\ClassifiedLite\Customizer\Default_Data;
-use radiustheme\HomListi\Customizer\Controls\Customizer_Separator_Control;
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class Customizer_Typography_settings {
+class Typography {
 
 	// Get our default values
 	private $defaults;
@@ -76,7 +76,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_body',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_body',
 			[
 				'label'       => __( 'Body', 'homlisti' ),
 				'section'     => 'typography_body_section',
@@ -135,7 +135,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_heading',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_heading',
 			[
 				'label'       => esc_html__( 'All Heading Typography (H1-H6)', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -151,7 +151,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general1', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general1', [
 			'settings' => 'typo_separator_general1',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -163,7 +163,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h1',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h1',
 			[
 				'label'       => __( 'Header h1 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -217,7 +217,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general2', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general2', [
 			'settings' => 'typo_separator_general2',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -229,7 +229,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h2',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h2',
 			[
 				'label'       => __( 'Header h2 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -283,7 +283,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general3', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general3', [
 			'settings' => 'typo_separator_general3',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -295,7 +295,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h3',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h3',
 			[
 				'label'       => __( 'Header h3 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -349,7 +349,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general4', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general4', [
 			'settings' => 'typo_separator_general4',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -361,7 +361,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h4',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h4',
 			[
 				'label'       => esc_html__( 'Header h4 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -415,7 +415,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general5', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general5', [
 			'settings' => 'typo_separator_general5',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -427,7 +427,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h5',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h5',
 			[
 				'label'       => esc_html__( 'Header h5 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -481,7 +481,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general6', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general6', [
 			'settings' => 'typo_separator_general6',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -493,7 +493,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_h6',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_h6',
 			[
 				'label'       => esc_html__( 'Header h6 ', 'homlisti' ),
 				'section'     => 'typography_heading_section',
@@ -547,7 +547,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_separator_general7', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_separator_general7', [
 			'settings' => 'typo_separator_general7',
 			'section'  => 'typography_heading_section',
 		] ) );
@@ -562,7 +562,7 @@ class Customizer_Typography_settings {
 				'sanitize_callback' => 'rttheme_google_font_sanitization',
 			]
 		);
-		$wp_customize->add_control( new Customizer_Google_Fonts_Controls( $wp_customize, 'typo_menu',
+		$wp_customize->add_control( new Control( $wp_customize, 'typo_menu',
 			[
 				'label'       => esc_html__( 'Menu', 'homlisti' ),
 				'section'     => 'typography_menu_section',
@@ -618,7 +618,7 @@ class Customizer_Typography_settings {
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
 		] );
-		$wp_customize->add_control( new Customizer_Separator_Control( $wp_customize, 'typo_submenu_separator', [
+		$wp_customize->add_control( new Separator( $wp_customize, 'typo_submenu_separator', [
 			'settings' => 'typo_submenu_separator',
 			'section'  => 'typography_menu_section',
 		] ) );
@@ -661,12 +661,4 @@ class Customizer_Typography_settings {
 			]
 		);
 	}
-
-}
-
-/**
- * Initialise our Customizer settings only when they're required
- */
-if ( class_exists( 'WP_Customize_Control' ) ) {
-	$rttheme_settings = new Customizer_Typography_settings();
 }

@@ -8,9 +8,9 @@
 use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
-$post_class = Helper::has_sidebar() ? 'row-cols-sm-2 row-cols-1' : 'row-cols-sm-3 row-cols-1';
+$post_class      = Helper::has_sidebar() ? 'row-cols-sm-2 row-cols-1' : 'row-cols-sm-3 row-cols-1';
 $is_blog_style_2 = ( is_home() || is_archive() ) && Options::$options['blog_style'] == 'style2';
-$grid_style = $is_blog_style_2 ? 'style2' : 'style1';
+$grid_style      = $is_blog_style_2 ? 'style2' : 'style1';
 get_header();
 ?>
     <main class="site-main blog-grid blog-grid-inner content-area rtcl-widget-border-enable rtcl-widget-is-sticky <?php echo esc_attr( $grid_style ); ?>">

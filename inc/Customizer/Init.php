@@ -2,9 +2,12 @@
 
 namespace RadiusTheme\ClassifiedLite\Customizer;
 
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Footer;
+use RadiusTheme\ClassifiedLite\Customizer\Typography\Settings;
+use RadiusTheme\ClassifiedLite\Customizer\Typography\Typography;
 
 class Init {
 	protected static $instance = null;
@@ -28,5 +31,7 @@ class Init {
 		new General();
 		new Header();
 		new Footer();
+		new Blog();
+		new Typography();
 	}
 }
