@@ -259,6 +259,60 @@ class Helper {
 		return apply_filters( 'rdtheme_body_color', Options::$options['body_color'] );
 	}
 
+	public static function is_header_btn_enabled() {
+		$btn_flag = get_theme_mod( 'header_btn' );
+		if ( empty( $btn_flag ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function is_trheader_enable() {
+		$tr_header = get_theme_mod( 'tr_header' );
+		if ( empty( $tr_header ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function is_copyright_area_enabled() {
+		$flag = get_theme_mod( 'copyright_area' );
+		if ( empty( $flag ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function is_compare_btn_enabled() {
+		$btn_flag = get_theme_mod( 'header_compare_icon' );
+		if ( empty( $btn_flag ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function is_login_btn_enabled() {
+		$btn_flag = get_theme_mod( 'header_login_icon' );
+		if ( empty( $btn_flag ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function is_fav_btn_enabled() {
+		$btn_flag = get_theme_mod( 'header_fav_icon' );
+		if ( empty( $btn_flag ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
 	public static function wp_set_temp_query( $query ) {
 		global $wp_query;
 		$temp     = $wp_query;

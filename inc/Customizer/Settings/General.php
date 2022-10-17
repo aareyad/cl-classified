@@ -10,6 +10,7 @@ namespace RadiusTheme\ClassifiedLite\Customizer\Settings;
 use RadiusTheme\ClassifiedLite\Customizer\Controls\Separator;
 use RadiusTheme\ClassifiedLite\Customizer\Controls\Switcher;
 use RadiusTheme\ClassifiedLite\Customizer\Customizer;
+use RadiusTheme\ClassifiedLite\Helper;
 use WP_Customize_Media_Control;
 
 /**
@@ -121,7 +122,7 @@ class General extends Customizer {
 				'label'           => __( 'Logo max width / max height', 'homlisti' ),
 				'section'         => 'general_section',
 				'type'            => 'text',
-				'active_callback' => 'rttheme_is_header_btn_enabled',
+				'active_callback' => ['\RadiusTheme\ClassifiedLite\Helper', 'is_header_btn_enabled'],
 				'description'     => __( 'Enter logo width height by comma separator. Eg: 196px,60px', 'homlisti' ),
 				'input_attrs'     => [
 					'placeholder' => __( '196px,60px', 'homlisti' ),
