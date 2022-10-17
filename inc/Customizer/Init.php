@@ -3,6 +3,7 @@
 namespace RadiusTheme\ClassifiedLite\Customizer;
 
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 
 class Init {
 	protected static $instance = null;
@@ -24,5 +25,6 @@ class Init {
 
 	private function includes() {
 		new General();
+		new Header();
 	}
 }
