@@ -5,8 +5,11 @@
  * @version 1.0.0
  */
 
-use RadiusTheme\ClassifiedLite\Customizer\Init;
+use RadiusTheme\ClassifiedLite\Constants;
+use RadiusTheme\ClassifiedLite\General;
+use RadiusTheme\ClassifiedLite\Scripts;
 use RadiusTheme\ClassifiedLite\Options;
+use RadiusTheme\ClassifiedLite\Customizer\Init;
 
 require_once __DIR__ . './../vendor/autoload.php';
 
@@ -22,7 +25,6 @@ final class Includes {
 		$this->suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 		$this->version = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : RTCL_CLASSSIFIED_VERSION;
 
-		$this->load_scripts();
 		$this->init();
 	}
 
@@ -41,24 +43,9 @@ final class Includes {
 	 * Classified Listing Constructor.
 	 */
 	protected function init() {
-		$this->define_constants();
-		$this->load_language();
-		$this->hooks();
-	}
-
-	private function load_scripts() {
-
-	}
-
-	private function define_constants() {
-
-	}
-
-	public function load_language() {
-
-	}
-
-	private function hooks() {
+		new Constants();
+		General::instance();
+		Scripts::instance();
 		Options::instance();
 		if ( class_exists( 'WP_Customize_Control' ) ) {
 			Init::instance();

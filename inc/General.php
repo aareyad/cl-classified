@@ -449,7 +449,4 @@ class General {
 			<?php
 		}
 	}
-
 }
-
-General::instance();

@@ -376,7 +376,4 @@ class Scripts {
 
 		return $resultCSS;
 	}
-
 }
-
-Scripts::instance();

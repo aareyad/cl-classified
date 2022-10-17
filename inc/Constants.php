@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace radiustheme\ClassifiedLite;
+namespace RadiusTheme\ClassifiedLite;
 
 class Constants {
 
@@ -26,7 +26,4 @@ class Constants {
 		self::$theme_inc_dir     = self::$theme_base_dir . 'inc/';
 		self::$theme_plugins_dir = self::$theme_base_dir . 'plugin-bundle/';
 	}
-
 }
-
-new Constants;
