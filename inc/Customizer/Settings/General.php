@@ -36,18 +36,18 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'logo',
 			[
-				'label'         => __( 'Main Logo', 'homlisti' ),
-				'description'   => esc_html__( 'Add site main logo', 'homlisti' ),
+				'label'         => __( 'Main Logo', 'cl-classified' ),
+				'description'   => esc_html__( 'Add site main logo', 'cl-classified' ),
 				'section'       => 'general_section',
 				'mime_type'     => 'image',
 				'button_labels' => [
-					'select'       => esc_html__( 'Select Logo', 'homlisti' ),
-					'change'       => esc_html__( 'Change Logo', 'homlisti' ),
-					'default'      => esc_html__( 'Default', 'homlisti' ),
-					'remove'       => esc_html__( 'Remove', 'homlisti' ),
-					'placeholder'  => esc_html__( 'No file selected', 'homlisti' ),
-					'frame_title'  => esc_html__( 'Select File', 'homlisti' ),
-					'frame_button' => esc_html__( 'Choose File', 'homlisti' ),
+					'select'       => esc_html__( 'Select Logo', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Logo', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
 				],
 			]
 		) );
@@ -110,22 +110,22 @@ class General extends Customizer {
 		) );
 
 		//Logo Width Height
-		$wp_customize->add_setting( 'main_logo_width_height',
+		$wp_customize->add_setting( 'logo_width',
 			[
-				'default'           => $this->defaults['main_logo_width_height'],
+				'default'           => $this->defaults['logo_width'],
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'rttheme_text_sanitization',
 			]
 		);
-		$wp_customize->add_control( 'main_logo_width_height',
+		$wp_customize->add_control( 'logo_width',
 			[
-				'label'           => __( 'Logo max width / max height', 'homlisti' ),
+				'label'           => __( 'Logo max width', 'cl-classified' ),
 				'section'         => 'general_section',
 				'type'            => 'text',
-				'active_callback' => ['\RadiusTheme\ClassifiedLite\Helper', 'is_header_btn_enabled'],
-				'description'     => __( 'Enter logo width height by comma separator. Eg: 196px,60px', 'homlisti' ),
+				'active_callback' => [ '\RadiusTheme\ClassifiedLite\Helper', 'is_header_btn_enabled' ],
+				'description'     => __( 'Enter logo width. Eg: 196px', 'cl-classified' ),
 				'input_attrs'     => [
-					'placeholder' => __( '196px,60px', 'homlisti' ),
+					'placeholder' => __( '196px', 'cl-classified' ),
 				],
 			]
 		);
@@ -239,9 +239,9 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'remove_admin_bar',
 			[
-				'label'   => esc_html__( 'Remove Admin Bar', 'homlisti' ),
-				'section' => 'general_section',
-				'description'   => esc_html__( 'This option not work for administrator users.', 'homlisti' ),
+				'label'       => esc_html__( 'Remove Admin Bar', 'homlisti' ),
+				'section'     => 'general_section',
+				'description' => esc_html__( 'This option not work for administrator users.', 'homlisti' ),
 			]
 		) );
 

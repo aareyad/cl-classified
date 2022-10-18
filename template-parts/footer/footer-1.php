@@ -7,6 +7,10 @@
 
 use RadiusTheme\ClassifiedLite\Options;
 
+if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_location( 'footer' ) ) {
+	return;
+}
+
 $footer_columns = 0;
 
 foreach ( range( 1, 4 ) as $i ) {

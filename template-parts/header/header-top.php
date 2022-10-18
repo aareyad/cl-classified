@@ -26,11 +26,15 @@ if ( 'fullwidth' == Options::$header_width ) {
 			<?php if ( $has_top_info ): ?>
                 <div class="col-sm-7 col-7">
                     <ul class="topbar-left">
-	                    <?php if ( Options::$options['contact_phone'] ): ?>
-                            <li class="item-location"><i class="fas fa-phone"></i><span><?php echo esc_html( Options::$options['contact_phone'] ); ?></span></li>
-	                    <?php endif; ?>
+						<?php if ( Options::$options['contact_phone'] ): ?>
+                            <li class="item-location"><i
+                                        class="fas fa-phone"></i><span><?php echo esc_html( Options::$options['contact_phone'] ); ?></span>
+                            </li>
+						<?php endif; ?>
 						<?php if ( Options::$options['contact_address'] ): ?>
-                            <li class="item-location"><i class="fas fa-map-marker-alt"></i><span><?php echo esc_html( Options::$options['contact_address'] ); ?></span></li>
+                            <li class="item-location"><i
+                                        class="fas fa-map-marker-alt"></i><span><?php echo esc_html( Options::$options['contact_address'] ); ?></span>
+                            </li>
 						<?php endif; ?>
 
                     </ul>
@@ -43,7 +47,8 @@ if ( 'fullwidth' == Options::$header_width ) {
                             <li class="social-icon">
                                 <label><?php esc_html_e( 'Follow Us On:', 'homlisti' ); ?></label>
 								<?php foreach ( $socials as $social ): ?>
-                                    <a target="_blank" href="<?php echo esc_url( $social['url'] ); ?>"><i class="<?php echo esc_attr( $social['icon'] ); ?>"></i></a>
+                                    <a target="_blank" href="<?php echo esc_url( $social['url'] ); ?>"><i
+                                                class="<?php echo esc_attr( $social['icon'] ); ?>"></i></a>
 								<?php endforeach; ?>
                             </li>
 						<?php endif; ?>

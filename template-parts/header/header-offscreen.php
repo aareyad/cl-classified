@@ -42,17 +42,17 @@ $order   = strtoupper( Functions::get_option_item( 'rtcl_general_settings', 'tax
                alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>"><?php echo wp_kses_post( $rdtheme_logo ); ?></a>
 			<?php
 			$html = '';
-			/*if ( Options::$options['header_btn_txt'] && Options::$options['header_btn_url'] ) {
-				$html .= '<a class="header-btn header-menu-btn header-menu-btn-mob" href="' . esc_url( Options::$options['header_btn_url'] ) . '"><i class="fas fa-plus" aria-hidden="true"></i><span>' . esc_html( Options::$options['header_btn_txt_mob'] ) . '</span></a>';
-			}*/
+			if ( Options::$options['header_btn_txt'] && Options::$options['header_btn_url'] ) {
+				$html .= '<a class="header-btn header-menu-btn header-menu-btn-mob" href="' . esc_url( Options::$options['header_btn_url'] ) . '"><i class="fas fa-plus" aria-hidden="true"></i><span>' . esc_html( Options::$options['header_btn_txt'] ) . '</span></a>';
+			}
 
 			if ( Helper::is_chat_enabled() ) {
 				$html .= '<a class="header-chat-icon header-chat-icon-mobile rtcl-chat-unread-count" href="' . esc_url( Link::get_my_account_page_link( 'chat' ) ) . '"><i class="far fa-comments" aria-hidden="true"></i></a>';
 			}
 
-			/*if ( class_exists( 'RtclPro' ) && class_exists( 'Rtcl' ) && Options::$options['header_icon'] ) {
+			if ( class_exists( 'RtclPro' ) && class_exists( 'Rtcl' ) && Options::$options['header_login_icon'] ) {
 				$html .= '<a class="header-login-icon header-login-icon-mobile" href="' . esc_url( Link::get_my_account_page_link() ) . '"><i class="far fa-user" aria-hidden="true"></i></a>';
-			}*/
+			}
 
 			if ( $html ) {
 				printf( '<div class="header-mobile-icons">%s</div>', $html );

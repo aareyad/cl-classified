@@ -66,21 +66,16 @@ $footer2_title                = Options::$options['footer2_title_color'];
 $copyright_menu_color         = Options::$options['copyright_menu_color'];
 $footer_icon_circle_color     = Options::$options['footer_icon_circle_color'];
 $footer2_icon_circle_color    = Options::$options['footer2_icon_circle_color'];
-$main_logo_width_height       = Options::$options['main_logo_width_height'];
+$logo_max_width               = Options::$options['logo_width'];
 
-$logo_max_width = $logo_max_height = '';
-if ( $main_logo_width_height ) {
-	[ $logo_max_width, $logo_max_height ] = explode( ',', $main_logo_width_height );
-}
-
-$menu_color              = $menu_color ? $menu_color : $secondary_color;
-$menu_hover_color        = $menu_hover_color ? $menu_hover_color : $primary_color;
-$menu_arrow_color        = $menu_arrow_color ? $menu_arrow_color : $menu_color;
-$menu_icon_color         = $menu_icon_color ? $menu_icon_color : $secondary_color;
-$menu_icon_hover_color   = $menu_icon_hover_color ? $menu_icon_hover_color : $secondary_color;
-$btn_color               = $btn_color ? $btn_color : $primary_color;
-$btn_hover_color         = $btn_hover_color ? $btn_hover_color : $secondary_color;
-$breadcrumb_active_color = $breadcrumb_active_color ? $breadcrumb_active_color : $primary_color;
+$menu_color                   = $menu_color ? $menu_color : $secondary_color;
+$menu_hover_color             = $menu_hover_color ? $menu_hover_color : $primary_color;
+$menu_arrow_color             = $menu_arrow_color ? $menu_arrow_color : $menu_color;
+$menu_icon_color              = $menu_icon_color ? $menu_icon_color : $secondary_color;
+$menu_icon_hover_color        = $menu_icon_hover_color ? $menu_icon_hover_color : $secondary_color;
+$btn_color                    = $btn_color ? $btn_color : $primary_color;
+$btn_hover_color              = $btn_hover_color ? $btn_hover_color : $secondary_color;
+$breadcrumb_active_color      = $breadcrumb_active_color ? $breadcrumb_active_color : $primary_color;
 ?>
 <?php
 /*-------------------------------------
@@ -116,16 +111,11 @@ a:active, .rtcl a:hover, a:hover, a:focus {
 color: <?php echo esc_html( $secondary_color ); ?>;
 }
 
-<?php if ( $logo_max_width || $logo_max_height ) : ?>
+<?php if ( $logo_max_width ) : ?>
     .header-menu .header-content .logo-area img {
 	<?php
 	if ( $logo_max_width ) {
 		echo esc_attr( "max-width:" . trim( $logo_max_width ) ) . ";";
-	}
-	?>
-	<?php
-	if ( $logo_max_height ) {
-		echo esc_attr( "max-height:" . trim( $logo_max_height ) ) . ";";
 	}
 	?>
     }
