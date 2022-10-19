@@ -36,7 +36,7 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'logo',
 			[
-				'label'         => __( 'Main Logo', 'cl-classified' ),
+				'label'         => esc_html__( 'Main Logo', 'cl-classified' ),
 				'description'   => esc_html__( 'Add site main logo', 'cl-classified' ),
 				'section'       => 'general_section',
 				'mime_type'     => 'image',
@@ -57,7 +57,7 @@ class General extends Customizer {
 			'render_callback' => '__return_false',
 		] );
 
-		// Transparent Header Logo
+		// White logo
 		$wp_customize->add_setting( 'logo_light',
 			[
 				'default'           => $this->defaults['logo_light'],
@@ -67,18 +67,18 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'logo_light',
 			[
-				'label'         => __( 'Light Logo', 'homlisti' ),
-				'description'   => esc_html__( 'Add logo for transparent header', 'homlisti' ),
+				'label'         => esc_html__( 'Light Logo', 'cl-classified' ),
+				'description'   => esc_html__( 'Add logo for transparent header', 'cl-classified' ),
 				'section'       => 'general_section',
 				'mime_type'     => 'image',
 				'button_labels' => [
-					'select'       => esc_html__( 'Select Logo', 'homlisti' ),
-					'change'       => esc_html__( 'Change Logo', 'homlisti' ),
-					'default'      => esc_html__( 'Default', 'homlisti' ),
-					'remove'       => esc_html__( 'Remove', 'homlisti' ),
-					'placeholder'  => esc_html__( 'No file selected', 'homlisti' ),
-					'frame_title'  => esc_html__( 'Select File', 'homlisti' ),
-					'frame_button' => esc_html__( 'Choose File', 'homlisti' ),
+					'select'       => esc_html__( 'Select Logo', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Logo', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
 				],
 			]
 		) );
@@ -93,23 +93,23 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'mobile_logo',
 			[
-				'label'         => esc_html__( 'Mobile Logo', 'homlisti' ),
-				'description'   => esc_html__( 'Add logo for mobile header', 'homlisti' ),
+				'label'         => esc_html__( 'Mobile Logo', 'cl-classified' ),
+				'description'   => esc_html__( 'Add logo for mobile header', 'cl-classified' ),
 				'section'       => 'general_section',
 				'mime_type'     => 'image',
 				'button_labels' => [
-					'select'       => esc_html__( 'Select Logo', 'homlisti' ),
-					'change'       => esc_html__( 'Change Logo', 'homlisti' ),
-					'default'      => esc_html__( 'Default', 'homlisti' ),
-					'remove'       => esc_html__( 'Remove', 'homlisti' ),
-					'placeholder'  => esc_html__( 'No file selected', 'homlisti' ),
-					'frame_title'  => esc_html__( 'Select File', 'homlisti' ),
-					'frame_button' => esc_html__( 'Choose File', 'homlisti' ),
+					'select'       => esc_html__( 'Select Logo', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Logo', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
 				],
 			]
 		) );
 
-		//Logo Width Height
+		// Logo Width
 		$wp_customize->add_setting( 'logo_width',
 			[
 				'default'           => $this->defaults['logo_width'],
@@ -119,19 +119,17 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( 'logo_width',
 			[
-				'label'           => __( 'Logo max width', 'cl-classified' ),
+				'label'           => esc_html__( 'Logo max width', 'cl-classified' ),
 				'section'         => 'general_section',
 				'type'            => 'text',
-				'active_callback' => [ '\RadiusTheme\ClassifiedLite\Helper', 'is_header_btn_enabled' ],
-				'description'     => __( 'Enter logo width. Eg: 196px', 'cl-classified' ),
+				'description'     => esc_html__( 'Enter logo width. Eg: 196px', 'cl-classified' ),
 				'input_attrs'     => [
-					'placeholder' => __( '196px', 'cl-classified' ),
+					'placeholder' => esc_html__( '196px', 'cl-classified' ),
 				],
 			]
 		);
-		/**
-		 * Separator
-		 */
+
+		// Separator
 		$wp_customize->add_setting( 'separator_general1', [
 			'default'           => '',
 			'sanitize_callback' => 'esc_html',
@@ -142,7 +140,7 @@ class General extends Customizer {
 		] ) );
 
 
-		// Add our Checkbox switch setting and control for opening URLs in a new tab
+		// Preloader
 		$wp_customize->add_setting( 'preloader',
 			[
 				'default'           => $this->defaults['preloader'],
@@ -152,7 +150,7 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'preloader',
 			[
-				'label'   => esc_html__( 'Preloader', 'homlisti' ),
+				'label'   => esc_html__( 'Preloader', 'cl-classified' ),
 				'section' => 'general_section',
 			]
 		) );
@@ -167,53 +165,49 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'preloader_image',
 			[
-				'label'         => esc_html__( 'Preloader Image', 'homlisti' ),
-				'description'   => esc_html__( 'Add preloader image to change default image', 'homlisti' ),
+				'label'         => esc_html__( 'Preloader Image', 'cl-classified' ),
+				'description'   => esc_html__( 'Add preloader image to change default image', 'cl-classified' ),
 				'section'       => 'general_section',
 				'mime_type'     => 'image',
 				'button_labels' => [
-					'select'       => esc_html__( 'Select Image', 'homlisti' ),
-					'change'       => esc_html__( 'Change Image', 'homlisti' ),
-					'default'      => esc_html__( 'Default', 'homlisti' ),
-					'remove'       => esc_html__( 'Remove', 'homlisti' ),
-					'placeholder'  => esc_html__( 'No file selected', 'homlisti' ),
-					'frame_title'  => esc_html__( 'Select File', 'homlisti' ),
-					'frame_button' => esc_html__( 'Choose File', 'homlisti' ),
+					'select'       => esc_html__( 'Select Image', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Image', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
 				],
 			]
 		) );
 
-		// Add our Checkbox switch setting and control for opening URLs in a new tab
-		$wp_customize->add_setting( 'magnific_popup',
+		// Banner Image
+		$wp_customize->add_setting( 'banner_image',
 			[
-				'default'           => $this->defaults['magnific_popup'],
+				'default'           => $this->defaults['banner_image'],
 				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
+				'sanitize_callback' => 'absint',
 			]
 		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'magnific_popup',
+		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'banner_image',
 			[
-				'label'   => esc_html__( 'Magnific Popup', 'homlisti' ),
-				'section' => 'general_section',
+				'label'         => esc_html__( 'Banner Image', 'cl-classified' ),
+				'description'   => esc_html__( 'Add banner image to change default image', 'cl-classified' ),
+				'section'       => 'general_section',
+				'mime_type'     => 'image',
+				'button_labels' => [
+					'select'       => esc_html__( 'Select Image', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Image', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
+				],
 			]
 		) );
 
-		// Add our Checkbox switch setting and control for opening URLs in a new tab
-		$wp_customize->add_setting( 'sticky_sidebar',
-			[
-				'default'           => $this->defaults['sticky_sidebar'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'sticky_sidebar',
-			[
-				'label'   => esc_html__( 'Sticky Sidebar', 'homlisti' ),
-				'section' => 'general_section',
-			]
-		) );
-
-		// Add our Checkbox switch setting and control for opening URLs in a new tab
+		// Back to top
 		$wp_customize->add_setting( 'back_to_top',
 			[
 				'default'           => $this->defaults['back_to_top'],
@@ -223,13 +217,13 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'back_to_top',
 			[
-				'label'   => esc_html__( 'Back to Top', 'homlisti' ),
+				'label'   => esc_html__( 'Back to Top', 'cl-classified' ),
 				'section' => 'general_section',
 			]
 		) );
 
 
-		// Add our Checkbox switch setting and control for opening URLs in a new tab
+		// Hide admin bar
 		$wp_customize->add_setting( 'remove_admin_bar',
 			[
 				'default'           => $this->defaults['remove_admin_bar'],
@@ -239,9 +233,9 @@ class General extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'remove_admin_bar',
 			[
-				'label'       => esc_html__( 'Remove Admin Bar', 'homlisti' ),
+				'label'       => esc_html__( 'Remove Admin Bar', 'cl-classified' ),
 				'section'     => 'general_section',
-				'description' => esc_html__( 'This option not work for administrator users.', 'homlisti' ),
+				'description' => esc_html__( 'This option not work for administrator users.', 'cl-classified' ),
 			]
 		) );
 

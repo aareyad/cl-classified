@@ -175,38 +175,18 @@ class Helper {
 	 *
 	 * @return array
 	 */
-	public static function get_homlisti_header_list( $return_type = '' ): array {
+	public static function get_header_list( $return_type = '' ): array {
 		if ( 'header' === $return_type ) {
 			return [
 				'1' => [
 					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-1.png',
-					'name'  => __( 'Style 1', 'homlisti' ),
-				],
-				'2' => [
-					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-2.png',
-					'name'  => __( 'Style 2', 'homlisti' ),
-				],
-				'3' => [
-					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-3.png',
-					'name'  => __( 'Style 3', 'homlisti' ),
-				],
-				'4' => [
-					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-4.png',
-					'name'  => __( 'Style 4', 'homlisti' ),
-				],
-				'5' => [
-					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-5.png',
-					'name'  => __( 'Style 5 (NO BG)', 'homlisti' ),
-				],
+					'name'  => esc_html__( 'Style 1', 'cl-classified' )
+				]
 			];
 		} else {
 			return [
-				'default' => esc_html__( 'Default', 'homlisti' ),
-				'1'       => esc_html__( 'Layout 1', 'homlisti' ),
-				'2'       => esc_html__( 'Layout 2', 'homlisti' ),
-				'3'       => esc_html__( 'Layout 3', 'homlisti' ),
-				'4'       => esc_html__( 'Layout 4', 'homlisti' ),
-				'5'       => esc_html__( 'Layout 5', 'homlisti' ),
+				'default' => esc_html__( 'Default', 'cl-classified' ),
+				'1'       => esc_html__( 'Layout 1', 'cl-classified' )
 			];
 		}
 	}
@@ -276,15 +256,6 @@ class Helper {
 	public static function is_copyright_area_enabled() {
 		$flag = get_theme_mod( 'copyright_area' );
 		if ( empty( $flag ) ) {
-			return false;
-		}
-
-		return true;
-	}
-
-	public static function is_compare_btn_enabled() {
-		$btn_flag = get_theme_mod( 'header_compare_icon' );
-		if ( empty( $btn_flag ) ) {
 			return false;
 		}
 
@@ -609,7 +580,8 @@ class Helper {
 				<?php foreach ( $images as $index => $image ): ?>
 					<?php $thumb_img = wp_get_attachment_image_src( $image->ID, $size ); ?>
                     <div class="swiper-slide">
-                        <div class="thumbnail-bg" style="background-image:url(<?php echo esc_url( $thumb_img[0] ) ?>)"></div>
+                        <div class="thumbnail-bg"
+                             style="background-image:url(<?php echo esc_url( $thumb_img[0] ) ?>)"></div>
                     </div>
 				<?php endforeach; ?>
             </div>

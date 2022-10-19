@@ -9,7 +9,7 @@ use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
 ?>
-<div id="sticky_sidebar" class="<?php Helper::the_sidebar_class(); ?>">
+<div class="<?php Helper::the_sidebar_class(); ?>">
 	<?php
 	if ( Options::$sidebar && is_active_sidebar( Options::$sidebar ) ) { ?>
         <aside class="sidebar-widget main-sidebar-wrapper">

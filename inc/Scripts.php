@@ -239,11 +239,11 @@ class Scripts {
 		wp_register_style( 'bootstrap', Helper::get_maybe_rtl_css( 'bootstrap.min' ), [], $this->version );
 		wp_register_style( 'magnific-popup', Helper::get_maybe_rtl_css( 'magnific-popup' ), [], $this->version );
 		wp_register_style( 'classified-default', Helper::get_maybe_rtl_css( 'default' ), [], $this->version );
-		wp_register_style( 'classified-style', Helper::get_maybe_rtl_css( 'styles' ), [], $this->version );
-		wp_register_style( 'classified-rtl', Helper::get_rtl_css( 'rtl' ), [], $this->version );
+		wp_register_style( 'cl-classified-main', Helper::get_maybe_rtl_css( 'main' ), [], $this->version );
+		wp_register_style( 'cl-classified-rtl', Helper::get_rtl_css( 'rtl' ), [], $this->version );
 
 		// Script
-		wp_register_script( 'bootstrap', Helper::get_js( 'bootstrap.min' ), [ 'jquery' ], $this->version, true );
+		wp_register_script( 'bootstrap', Helper::get_js( 'bootstrap.bundle.min' ), [ 'jquery' ], $this->version, true );
 		wp_register_script( 'magnific-popup', Helper::get_js( 'jquery.magnific-popup.min' ), [ 'jquery' ], $this->version, true );
 		wp_register_script( 'classified-main', Helper::get_js( 'main' ), [ 'jquery' ], $this->version, true );
 	}
@@ -255,9 +255,9 @@ class Scripts {
 		wp_enqueue_style( 'font-awesome' );
 		wp_enqueue_style( 'magnific-popup' );
 		wp_enqueue_style( 'classified-default' );
-		wp_enqueue_style( 'classified-style' );
+		wp_enqueue_style( 'cl-classified-main' );
 		if ( is_rtl() ) {
-			wp_enqueue_style( 'classified-rtl' );
+			wp_enqueue_style( 'cl-classified-rtl' );
 		}
 		$this->dynamic_style();
 		/*-------JS--------*/
@@ -303,12 +303,10 @@ class Scripts {
 		global $post;
 
 		$localize_data = [
-			'ajaxUrl'         => admin_url( 'admin-ajax.php' ),
-			'appendHtml'      => '',
-			'themeUrl'        => get_stylesheet_directory_uri(),
-			'lsSideOffset'    => Options::$options['sticky_header'] ? 130 : 10,
-			'rtStickySidebar' => Options::$options['sticky_sidebar'] ? 'enable' : 'disable',
-			'rtMagnificPopup' => Options::$options['magnific_popup'] ? 'enable' : 'disable',
+			'ajaxUrl'              => admin_url( 'admin-ajax.php' ),
+			'appendHtml'           => '',
+			'themeUrl'             => get_stylesheet_directory_uri(),
+			'rtStickyHeaderOffset' => Options::$options['sticky_header'] ? 130 : 10
 		];
 
 		$localize_data = apply_filters( 'classified_localized_data', $localize_data );

@@ -1,59 +1,93 @@
-/* Variable Defination */
-var project   		= require('./package.json');
-var gulp 			= require('gulp');
-var rtlcss    		= require('gulp-rtlcss');
-var wpPot 			= require('gulp-wp-pot');
-var clean   		= require('gulp-clean');
-var zip 			= require('gulp-zip');
+const project = require('./package.json');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('node-sass'));
 
-// Generate rtl style
+const SassAutoprefix = require('less-plugin-autoprefix');
+const autoprefix = new SassAutoprefix({browsers: ["> 1%", "last 2 versions"]});
+
+const rtlcss = require('gulp-rtlcss');
+var wpPot = require('gulp-wp-pot');
+const minify = require("gulp-minify");
+const uglify = require("gulp-uglify");
+const cleanCSS = require("gulp-clean-css");
+const beautify = require('gulp-jsbeautifier');
+const clean = require('gulp-clean');
+const rollup = require('gulp-better-rollup');
+var zip = require('gulp-zip');
+
+
+gulp.task('scss', function () {
+    return gulp.src(['main.scss'], {cwd: 'src/scss'})
+        .pipe(sass({
+            plugins: [autoprefix]
+        }))
+        .pipe(beautify({
+            indent_char: '\t',
+            indent_size: 1
+        }))
+        .pipe(gulp.dest('assets/css/'));
+});
+
 gulp.task('rtl', function () {
     return gulp.src([
         'assets/css/*.css',
-        '!assets/css/owl.carousel.css',
-        '!assets/css/owl.carousel.min.css',
-        '!assets/css/owl.theme.default.css',
-        '!assets/css/owl.theme.default.min.css',
-        '!assets/css/font-awesome.min.css',
+        '!assets/css/slick.css',
+        '!assets/css/all.min.css',
         '!assets/css/rtl.css'
     ])
-    .pipe(rtlcss())
-    .pipe(gulp.dest('assets/css-rtl/'));
-});
-
-gulp.task('rtl2', function () {
-    return gulp.src(['admin.css', 'elementor.css', 'listing.css', 'gutenberg.css'], {cwd: 'assets/css/'})
         .pipe(rtlcss())
-        .pipe(gulp.dest('assets/css-rtl/'));
+        .pipe(gulp.dest('assets/css/css-rtl/'));
 });
 
-// Generate pot file
-gulp.task('pot', function () {
-    return gulp.src(['**/*.php', '!__*/**', '!src/**', '!assets/**'])
-        .pipe(wpPot( {
-            domain: project.name,
-            bugReport: 'techlabpro15@gmail.com',
-            team: 'RadiusTheme <info@radiustheme.com>'
-        } ))
-        .pipe(gulp.dest('languages/'+project.name+'.pot'));
+gulp.task('minify-js', function () {
+    return gulp.src([
+        'assets/js/*.js',
+        '!assets/js/slick.func.js'
+    ])
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/js/minified'));
 });
 
-// Clean build folder
+gulp.task("minify-css", function () {
+    return (
+        gulp.src(
+            'assets/css/*.css',
+            '!assets/css/all.min.css',
+        )
+            .pipe(cleanCSS())
+            .pipe(gulp.dest("assets/css/minified"))
+    );
+});
+
 gulp.task('clean', function () {
     return gulp.src('__build/*.*', {read: false})
         .pipe(clean());
 });
 
-// Compress package file
+// Generate pot file
+gulp.task('pot', function () {
+    return gulp.src(['**/*.php', '!__*/**', '!src/**', '!assets/**'])
+        .pipe(wpPot({
+            domain: project.name,
+            bugReport: 'techlabpro15@gmail.com',
+            team: 'RadiusTheme <info@radiustheme.com>'
+        }))
+        .pipe(gulp.dest('languages/' + project.name + '.pot'));
+});
+
 gulp.task('zip', function () {
-    return gulp.src(['**', '!__*/**', '!node_modules/**', '!src/**', '!gulpfile.js', '!package.json', '!package-lock.json', '!info.txt', '!sftp-config.json', '!test-file.txt'], { base: '..' })
-        .pipe(zip(project.name+'.zip'))
+    return gulp.src(['**', '!__*/**', '!node_modules/**', '!src/**', '!gulpfile.js', '!package.json', '!package-lock.json', '!todo.txt', '!sftp-config.json', '!testing.html'], {base: '..'})
+        .pipe(zip(project.name + '.zip'))
         .pipe(gulp.dest('__build'));
 });
 
-// Build package
-gulp.task('run', gulp.series(gulp.parallel('pot'),'rtl'));
-gulp.task('build', gulp.series(gulp.parallel('run','clean'),'zip'));
+gulp.task('watch', function () {
+    gulp.watch('src/scss/**/*.scss', gulp.series('scss', 'rtl', 'minify-css', 'minify-js'));
+});
 
-// Defult Task
-gulp.task('default', gulp.series('run'));
+// Build package
+gulp.task('run', gulp.series('scss'));
+gulp.task('build', gulp.series(gulp.parallel('run', 'pot', 'clean'), gulp.parallel('minify-css', 'minify-js', 'rtl'), 'zip'));
+
+// Default Task
+gulp.task('default', gulp.series('run', 'watch'));

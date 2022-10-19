@@ -12,7 +12,7 @@ use Rtcl\Helpers\Link;
 
 $nav_menu_args = Helper::nav_menu_args();
 
-$logo = empty( Options::$options['logo']['url'] ) ? Helper::get_img( 'logo-dark.png' ) : Options::$options['logo'];
+$logo = empty( Options::$options['logo']['url'] ) ? Helper::get_img( 'logo.png' ) : Options::$options['logo'];
 
 if ( is_array( $logo ) && ! empty( $logo['url'] ) && ! empty( $logo['width'] ) && ! empty( $logo['height'] ) ) {
 	$rdtheme_logo = '<img class="logo-small" src="' . esc_url( $logo['url'] ) . '" width="' . esc_attr( $logo['width'] ) . '" height="' . esc_attr( $logo['height'] ) . '" />';

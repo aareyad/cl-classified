@@ -17,15 +17,13 @@ class Default_Data {
 			// General
 			'logo'                         => '',
 			'logo_light'                   => '',
-			'mobile_logo1'                 => '',
 			'mobile_logo'                  => '',
+			'logo_width'                   => '',
 			'preloader'                    => '',
 			'preloader_image'              => '',
-			'magnific_popup'               => 0,
 			'banner_image'                 => '',
 			'back_to_top'                  => 1,
 			'remove_admin_bar'             => 0,
-			'sticky_sidebar'               => 0,
 
 			// Header
 			'top_bar'                      => 0,
@@ -37,20 +35,11 @@ class Default_Data {
 			'breadcrumb'                   => 1,
 			'header_login_icon'            => 1,
 			'header_fav_icon'              => 1,
-			'header_compare_icon'          => 2,
 			'header_chat_icon'             => 0,
-			'header_search_icon'           => 0,
 			'header_style'                 => '1',
 			'header_width'                 => 'box-width',
 			'menu_alignment'               => 'menu-right',
-			'header_btn_order'             => '',
-			'login_btn_order'              => '',
-			'fav_btn_order'                => '',
-			'compare_btn_order'            => '',
-			'cart_btn_order'               => '',
-			'search_btn_order'             => '',
 			'header_transparent_color'     => 'rgba(0, 0, 0, .56)',
-			'logo_width'                   => '',
 
 			// Color
 			'primary_color'                => '#00c194',
