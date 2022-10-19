@@ -1,8 +1,8 @@
 <?php
 /**
  * @author  RadiusTheme
- * @since   1.0
- * @version 1.0
+ * @since   1.0.0
+ * @version 1.0.0
  */
 
 namespace RadiusTheme\ClassifiedLite\Customizer\Settings;
@@ -35,33 +35,15 @@ class Footer extends Customizer {
 		);
 		$wp_customize->add_control( new Image_Radio( $wp_customize, 'footer_style',
 			[
-				'label'       => __( 'Footer Layout', 'homlisti' ),
-				'description' => esc_html__( 'Select the header style', 'homlisti' ),
+				'label'       => esc_html__( 'Footer Layout', 'cl-classified' ),
+				'description' => esc_html__( 'Select the header style', 'cl-classified' ),
 				'section'     => 'footer_section',
 				'choices'     => [
 					'1' => [
 						'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/footer-1.png',
-						'name'  => __( 'Style 1', 'homlisti' ),
-					],
-					'2' => [
-						'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/footer-2.png',
-						'name'  => __( 'Style 2', 'homlisti' ),
-					],
+						'name'  => esc_html__( 'Style 1', 'cl-classified' ),
+					]
 				],
-			]
-		) );
-		// Footer Border
-		$wp_customize->add_setting( 'footer_border',
-			[
-				'default'           => $this->defaults['footer_border'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'footer_border',
-			[
-				'label'   => __( 'Footer Border Top', 'homlisti' ),
-				'section' => 'footer_section',
 			]
 		) );
 
@@ -75,7 +57,7 @@ class Footer extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'copyright_area',
 			[
-				'label'   => __( 'Display Copyright Area', 'homlisti' ),
+				'label'   => esc_html__( 'Display Copyright Area', 'cl-classified' ),
 				'section' => 'footer_section',
 			]
 		) );
@@ -89,7 +71,7 @@ class Footer extends Customizer {
 		);
 		$wp_customize->add_control( 'copyright_text',
 			[
-				'label'           => __( 'Copyright Text', 'homlisti' ),
+				'label'           => esc_html__( 'Copyright Text', 'cl-classified' ),
 				'section'         => 'footer_section',
 				'type'            => 'textarea',
 				'active_callback' => ['\RadiusTheme\ClassifiedLite\Helper', 'is_copyright_area_enabled'],
@@ -106,18 +88,18 @@ class Footer extends Customizer {
 		);
 		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_bg_image',
 			[
-				'label'         => __( 'Footer-2 Background Image', 'homlisti' ),
-				'description'   => esc_html__( 'This background will work only for Footer-2. Always choose a dark background for best view.', 'homlisti' ),
+				'label'         => esc_html__( 'Footer Background Image', 'cl-classified' ),
+				'description'   => esc_html__( 'This background will work only for Footer. Always choose a dark background for best view.', 'cl-classified' ),
 				'section'       => 'footer_section',
 				'mime_type'     => 'image',
 				'button_labels' => [
-					'select'       => esc_html__( 'Select Image', 'homlisti' ),
-					'change'       => esc_html__( 'Change Image', 'homlisti' ),
-					'default'      => esc_html__( 'Default', 'homlisti' ),
-					'remove'       => esc_html__( 'Remove', 'homlisti' ),
-					'placeholder'  => esc_html__( 'No file selected', 'homlisti' ),
-					'frame_title'  => esc_html__( 'Select File', 'homlisti' ),
-					'frame_button' => esc_html__( 'Choose File', 'homlisti' ),
+					'select'       => esc_html__( 'Select Image', 'cl-classified' ),
+					'change'       => esc_html__( 'Change Image', 'cl-classified' ),
+					'default'      => esc_html__( 'Default', 'cl-classified' ),
+					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
+					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
+					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
+					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
 				],
 			]
 		) );

@@ -29,7 +29,6 @@ if ( ! class_exists( 'Options' ) ) {
 		public static $has_breadcrumb = null;
 		public static $has_tr_header;
 		public static $has_top_bar;
-		public static $footer_border;
 		public static $breadcrumb_style;
 		public static $menu_alignment;
 

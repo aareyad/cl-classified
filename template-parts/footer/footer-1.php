@@ -33,9 +33,8 @@ switch ( $footer_columns ) {
 		$footer_class = 'col-lg-3 col-sm-6 col-12';
 }
 $copyright_class = has_nav_menu( 'secondary' ) ? 'col-xl-6 col-lg-4 text-right' : 'col-sm-12 col-12 text-center';
-$is_border       = Options::$footer_border ? 'is-border' : '';
 ?>
-<footer id="site-footer" class="site-footer footer-wrap footer-style-1 <?php echo esc_attr( $is_border ) ?>">
+<footer id="site-footer" class="site-footer footer-wrap footer-style-1">
 	<?php if ( $footer_columns ): ?>
         <div class="main-footer">
             <div class="container">

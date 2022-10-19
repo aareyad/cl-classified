@@ -41,6 +41,12 @@ class Default_Data {
 			'menu_alignment'               => 'menu-right',
 			'header_transparent_color'     => 'rgba(0, 0, 0, .56)',
 
+			// Footer
+			'footer_style'                   => '1',
+			'copyright_area'                 => 1,
+			'copyright_text'                 => date( 'Y' ) . '© All right reserved by Radiustheme',
+			'footer_bg_image'                => '',
+
 			// Color
 			'primary_color'                => '#00c194',
 			'primary_lighiten'             => '#50ffe4',
@@ -67,27 +73,6 @@ class Default_Data {
 			'breadcrumb_bg2'                 => '',
 			'breadcrumb_color'               => '#878c9f',
 			'breadcrumb_active_color'        => '',
-
-			//Footer
-			'footer_style'                   => '1',
-			'footer_bg'                      => '',
-			'footer2_bg_overlay'             => '',
-			'footer2_bg_overlay_opacity'     => '0.8',
-			'footer_text_color'              => '',
-			'footer2_text_color'             => '',
-			'footer_text_hover'              => '',
-			'footer2_text_hover'             => '',
-			'copyright_bg'                   => '',
-			'footer2_copyright_bg'           => '',
-			'copyright_text_color'           => '',
-			'footer2_copyright_text_color'   => '',
-			'footer_title_color'             => '',
-			'footer2_title_color'            => '',
-			'footer_title_border_color'      => '',
-			'footer_border'                  => 1,
-			'footer_bg_image'                => '',
-			'footer_icon_circle_color'       => '',
-			'footer2_icon_circle_color'      => '',
 
 			// Page Layout
 			'page_layout'                    => 'right-sidebar',
@@ -266,11 +251,6 @@ class Default_Data {
 
 			// Newsletter
 			'newsletter_section'             => 0,
-
-			// Footer
-			'copyright_area'                 => 1,
-			'copyright_text'                 => date( 'Y' ) . '© All right reserved by Radiustheme',
-			'copyright_menu_color'           => '',
 
 			// Contact Info
 			'contact_address'                => '121 King St, Melbourne den 3000, Australia',

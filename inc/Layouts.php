@@ -83,7 +83,6 @@ class Layouts {
 		}
 
 		// All pages
-		Options::$footer_border    = $this->meta_global_option( 'footer_border', true );
 		Options::$breadcrumb_style = $this->meta_global_option( 'breadcrumb_style' );
 	}
 
