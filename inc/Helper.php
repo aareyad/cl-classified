@@ -255,7 +255,6 @@ class Helper {
 
 	public static function is_copyright_area_enabled() {
 		$flag = get_theme_mod( 'copyright_area' );
-		error_log($flag . 'test');
 		if ( empty( $flag ) ) {
 			return false;
 		}

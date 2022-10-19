@@ -37,17 +37,17 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Image_Radio( $wp_customize, 'blog_style',
 			[
-				'label'       => __( 'Blog Layout', 'homlisti' ),
-				'description' => esc_html__( 'Select the blog style', 'homlisti' ),
+				'label'       => esc_html__( 'Blog Layout', 'cl-classified' ),
+				'description' => esc_html__( 'Select the blog style', 'cl-classified' ),
 				'section'     => 'blog_archive_section',
 				'choices'     => [
 					'style1' => [
 						'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog1.jpg',
-						'name'  => __( 'List', 'homlisti' ),
+						'name'  => esc_html__( 'List', 'cl-classified' ),
 					],
 					'style2' => [
 						'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog2.jpg',
-						'name'  => __( 'Grid', 'homlisti' ),
+						'name'  => esc_html__( 'Grid', 'cl-classified' ),
 					],
 				],
 			]
@@ -62,7 +62,7 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_date',
 			[
-				'label'   => __( 'Display Date', 'homlisti' ),
+				'label'   => esc_html__( 'Display Date', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 			]
 		) );
@@ -76,7 +76,7 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_author_name',
 			[
-				'label'   => __( 'Display Author Name', 'homlisti' ),
+				'label'   => esc_html__( 'Display Author Name', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 			]
 		) );
@@ -91,7 +91,7 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_cat_visibility',
 			[
-				'label'   => __( 'Display Category', 'homlisti' ),
+				'label'   => esc_html__( 'Display Category', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 			]
 		) );
@@ -106,7 +106,7 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_archive_reading_time',
 			[
-				'label'   => __( 'Display Reading Time', 'homlisti' ),
+				'label'   => esc_html__( 'Display Reading Time', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 			]
 		) );
@@ -121,7 +121,7 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_comment_num',
 			[
-				'label'   => __( 'Display Comment Count', 'homlisti' ),
+				'label'   => esc_html__( 'Display Comment Count', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 			]
 		) );
@@ -135,25 +135,10 @@ class Blog extends Customizer {
 		);
 		$wp_customize->add_control( 'excerpt_length',
 			[
-				'label'   => __( 'Excerpt Length', 'homlisti' ),
+				'label'   => esc_html__( 'Excerpt Length', 'cl-classified' ),
 				'section' => 'blog_archive_section',
 				'type'    => 'number',
 			]
 		);
-
-		// Blog Comment Visibility
-		$wp_customize->add_setting( 'blog_related_posts',
-			[
-				'default'           => $this->defaults['blog_related_posts'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_related_posts',
-			[
-				'label'   => __( 'Related Posts', 'homlisti' ),
-				'section' => 'blog_archive_section',
-			]
-		) );
 	}
 }

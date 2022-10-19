@@ -41,6 +41,15 @@ class Default_Data {
 			'menu_alignment'               => 'menu-right',
 			'header_transparent_color'     => 'rgba(0, 0, 0, .56)',
 
+			// Blog Archive
+			'blog_style'                     => 'style1',
+			'blog_date'                      => 1,
+			'blog_author_name'               => 1,
+			'blog_cat_visibility'            => 1,
+			'blog_archive_reading_time'      => 0,
+			'blog_comment_num'               => 1,
+			'excerpt_length'                 => 41,
+
 			// Footer
 			'footer_style'                   => '1',
 			'copyright_area'                 => 1,
@@ -188,16 +197,6 @@ class Default_Data {
 			'store_archive_padding_bottom'   => '',
 			'store_archive_breadcrumb'       => 'default',
 			'store_archive_footer_style'     => 'default',
-
-			// Blog Archive
-			'blog_style'                     => 'style1',
-			'blog_date'                      => 1,
-			'blog_cat_visibility'            => 1,
-			'blog_archive_reading_time'      => 0,
-			'blog_author_name'               => 1,
-			'blog_comment_num'               => 1,
-			'excerpt_length'                 => 41,
-			'blog_related_posts'             => 1,
 
 			// Single Post
 			'post_date'                      => 1,

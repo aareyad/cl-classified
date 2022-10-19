@@ -37,11 +37,7 @@ get_header();
 						<?php endif; ?>
                     </div>
 
-					<?php
-					if ( Options::$options['blog_related_posts'] ) {
-						get_template_part( 'template-parts/pagination' );
-					}
-					?>
+					<?php get_template_part( 'template-parts/pagination' ); ?>
                 </div>
 				<?php
 				if ( Helper::has_sidebar() ) {
