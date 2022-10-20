@@ -42,19 +42,19 @@ class Default_Data {
 			'header_transparent_color'     => 'rgba(0, 0, 0, .56)',
 
 			// Blog Archive
-			'blog_style'                     => 'style1',
-			'blog_date'                      => 1,
-			'blog_author_name'               => 1,
-			'blog_cat_visibility'            => 1,
-			'blog_archive_reading_time'      => 0,
-			'blog_comment_num'               => 1,
-			'excerpt_length'                 => 41,
+			'blog_style'                   => 'style1',
+			'blog_date'                    => 1,
+			'blog_author_name'             => 1,
+			'blog_cat_visibility'          => 1,
+			'blog_archive_reading_time'    => 0,
+			'blog_comment_num'             => 1,
+			'excerpt_length'               => 41,
 
 			// Footer
-			'footer_style'                   => '1',
-			'copyright_area'                 => 1,
-			'copyright_text'                 => date( 'Y' ) . '© All right reserved by Radiustheme',
-			'footer_bg_image'                => '',
+			'footer_style'                 => '1',
+			'copyright_area'               => 1,
+			'copyright_text'               => date( 'Y' ) . '© All right reserved by Radiustheme',
+			'footer_bg_image'              => '',
 
 			// Color
 			'primary_color'                => '#00c194',
@@ -267,7 +267,7 @@ class Default_Data {
 			// Body Typography
 			'typo_body'                      => json_encode(
 				[
-					'font'          => 'Roboto',
+					'font'          => 'Lato',
 					'regularweight' => 'normal',
 				]
 			),
@@ -277,7 +277,7 @@ class Default_Data {
 			//Menu Typography
 			'typo_menu'                      => json_encode(
 				[
-					'font'          => 'Ubuntu',
+					'font'          => 'Nunito',
 					'regularweight' => '500',
 				]
 			),
@@ -291,14 +291,14 @@ class Default_Data {
 			// Heading Typography
 			'typo_heading'                   => json_encode(
 				[
-					'font'          => 'Ubuntu',
-					'regularweight' => '500',
+					'font'          => 'Nunito',
+					'regularweight' => '700',
 				]
 			),
 			'typo_h1'                        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 				]
 			),
 			'typo_h1_size'                   => '36px',
@@ -307,7 +307,7 @@ class Default_Data {
 			'typo_h2'        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 
 				]
 			),
@@ -317,7 +317,7 @@ class Default_Data {
 			'typo_h3'        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 
 				]
 			),
@@ -327,7 +327,7 @@ class Default_Data {
 			'typo_h4'        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 
 				]
 			),
@@ -337,7 +337,7 @@ class Default_Data {
 			'typo_h5'        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 
 				]
 			),
@@ -347,7 +347,7 @@ class Default_Data {
 			'typo_h6'        => json_encode(
 				[
 					'font'          => '',
-					'regularweight' => '500',
+					'regularweight' => '700',
 
 				]
 			),

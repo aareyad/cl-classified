@@ -247,7 +247,7 @@ class Scripts {
 		// Script
 		wp_register_script( 'bootstrap', Helper::get_js( 'bootstrap.bundle.min' ), [ 'jquery' ], $this->version, true );
 		wp_register_script( 'magnific-popup', Helper::get_js( 'jquery.magnific-popup.min' ), [ 'jquery' ], $this->version, true );
-		wp_register_script( 'classified-main', Helper::get_js( 'main' ), [ 'jquery' ], $this->version, true );
+		wp_register_script( 'cl-classified-main', Helper::get_js( 'main' ), [ 'jquery' ], $this->version, true );
 	}
 
 	public function enqueue_scripts() {
@@ -267,7 +267,7 @@ class Scripts {
 		wp_enqueue_script( 'bootstrap' );
 		wp_enqueue_script( 'magnific-popup' );
 
-		wp_enqueue_script( 'classified-main' );
+		wp_enqueue_script( 'cl-classified-main' );
 		$this->localized_scripts(); // Localization
 	}
 
@@ -313,7 +313,7 @@ class Scripts {
 
 		$localize_data = apply_filters( 'classified_localized_data', $localize_data );
 
-		wp_localize_script( 'classified-main', 'HomListiObj', $localize_data );
+		wp_localize_script( 'cl-classified-main', 'CLClassified', $localize_data );
 	}
 
 	private function dynamic_style() {

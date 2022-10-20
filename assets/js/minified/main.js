@@ -1,0 +1,1 @@
+!function(o){o(document).ready(function(){o(".scrollToTop").on("click",function(){o("body,html").animate({scrollTop:0},360)}),o(window).on("scroll",function(){200<o(this).scrollTop()?o(".scrollToTop").fadeIn():o(".scrollToTop").fadeOut()})})}(jQuery);

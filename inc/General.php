@@ -45,11 +45,11 @@ class General {
 	// Render user profile info
 	function rt_show_extra_profile_fields( $user ) {
 		$user_agency = get_the_author_meta( 'user_agency', $user->ID ); ?>
-        <h3><?php esc_html_e( 'Agency Info', 'homlisti' ); ?></h3>
+        <h3><?php esc_html_e( 'Agency Info', 'cl-classified' ); ?></h3>
 
         <table class="form-table">
             <tr>
-                <th><label for="user_agency"><?php esc_html_e( 'Select an Agency', 'homlisti' ); ?></label></th>
+                <th><label for="user_agency"><?php esc_html_e( 'Select an Agency', 'cl-classified' ); ?></label></th>
                 <td>
 					<?php
 					$args       = [
@@ -60,7 +60,7 @@ class General {
 					$get_agency = new \WP_Query( $args )
 					?>
                     <select name="user_agency" id="user_agency">
-                        <option><?php echo esc_html__( 'Select Agency', 'homlisti' ) ?></option>
+                        <option><?php echo esc_html__( 'Select Agency', 'cl-classified' ) ?></option>
 						<?php
 						if ( $get_agency->have_posts() ) {
 							while ( $get_agency->have_posts() ) {
@@ -132,8 +132,7 @@ class General {
 		// Register menus
 		register_nav_menus(
 			[
-				'primary'   => esc_html__( 'Primary', 'homlisti' ),
-				'secondary' => esc_html__( 'Footer Menu', 'homlisti' ),
+				'primary' => esc_html__( 'Primary', 'cl-classified' ),
 			]
 		);
 	}
@@ -142,7 +141,7 @@ class General {
 
 		register_sidebar(
 			[
-				'name'          => esc_html__( 'Sidebar', 'homlisti' ),
+				'name'          => esc_html__( 'Sidebar', 'cl-classified' ),
 				'id'            => 'sidebar',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
@@ -152,10 +151,10 @@ class General {
 		);
 
 		$footer_widget_titles = [
-			'1' => esc_html__( 'Footer 1', 'homlisti' ),
-			'2' => esc_html__( 'Footer 2', 'homlisti' ),
-			'3' => esc_html__( 'Footer 3', 'homlisti' ),
-			'4' => esc_html__( 'Footer 4', 'homlisti' ),
+			'1' => esc_html__( 'Footer 1', 'cl-classified' ),
+			'2' => esc_html__( 'Footer 2', 'cl-classified' ),
+			'3' => esc_html__( 'Footer 3', 'cl-classified' ),
+			'4' => esc_html__( 'Footer 4', 'cl-classified' ),
 		];
 
 		foreach ( $footer_widget_titles as $id => $name ) {
@@ -163,9 +162,9 @@ class General {
 				[
 					'name'          => $name,
 					'id'            => 'footer-' . $id,
-					'before_widget' => '<div id="%1$s" class="footer-box %2$s">',
+					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</div>',
-					'before_title'  => '<h3 class="footer-title">',
+					'before_title'  => '<h3 class="widgettitle">',
 					'after_title'   => '</h3>',
 				]
 			);
@@ -173,18 +172,7 @@ class General {
 
 		register_sidebar(
 			[
-				'name'          => esc_html__( 'Single Property', 'homlisti' ),
-				'id'            => 'single-property-sidebar',
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widget-heading">',
-				'after_title'   => '</h3>',
-			]
-		);
-
-		register_sidebar(
-			[
-				'name'          => esc_html__( 'Agency/Store Sidebar', 'homlisti' ),
+				'name'          => esc_html__( 'Store Sidebar', 'cl-classified' ),
 				'id'            => 'store-sidebar',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
@@ -192,57 +180,11 @@ class General {
 				'after_title'   => '</h3>',
 			]
 		);
-
-		register_sidebar(
-			[
-				'name'          => esc_html__( 'Agent Sidebar', 'homlisti' ),
-				'id'            => 'agent-sidebar',
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widget-heading">',
-				'after_title'   => '</h3>',
-			]
-		);
-
-		register_sidebar(
-			[
-				'name'          => esc_html__( 'Listing Archive Sidebar', 'homlisti' ),
-				'id'            => 'listing-archive-sidebar',
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widget-heading">',
-				'after_title'   => '</h3>',
-			]
-		);
-
-		if ( class_exists( 'WooCommerce' ) ) {
-			register_sidebar(
-				[
-					'name'          => esc_html__( 'WooCommerce Archive Sidebar', 'homlisti' ),
-					'id'            => 'woocommerce-archive-sidebar',
-					'before_widget' => '<div id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</div>',
-					'before_title'  => '<h3 class="widget-heading">',
-					'after_title'   => '</h3>',
-				]
-			);
-
-			register_sidebar(
-				[
-					'name'          => esc_html__( 'WooCommerce Single Sidebar', 'homlisti' ),
-					'id'            => 'woocommerce-single-sidebar',
-					'before_widget' => '<div id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</div>',
-					'before_title'  => '<h3 class="widget-heading">',
-					'after_title'   => '</h3>',
-				]
-			);
-		}
 	}
 
 	public function body_classes( $classes ) {
 		//Theme Version
-		$header_style = Options::$header_style ? Options::$header_style : 4;
+		$header_style   = Options::$header_style ? Options::$header_style : 4;
 		$homlisti_theme = wp_get_theme();
 		$classes[]      = $homlisti_theme->Name . '-version-' . $homlisti_theme->Version;
 		$classes[]      = 'theme-homlisti';
@@ -337,7 +279,7 @@ class General {
 	public function scroll_to_top_html() {
 		// Back-to-top link
 		if ( Options::$options['back_to_top'] ) {
-			echo '<a href="#" class="scrollToTop" style=""><i class="fa fa-angle-double-up"></i></a>';
+			echo '<a href="#" class="scrollToTop" style=""><i class="fa-solid fa-angle-up"></i></a>';
 		}
 	}
 
@@ -348,7 +290,7 @@ class General {
                 <div class="row gutters-10">
                     <div class="col-12 form-group mb-0">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="' . esc_attr__( 'Search here...', 'homlisti' ) . '" value="' . get_search_query() . '" name="s" />
+                            <input type="text" class="form-control" placeholder="' . esc_attr__( 'Search here...', 'cl-classified' ) . '" value="' . get_search_query() . '" name="s" />
                             <span class="input-group-append">
                                 <button class="item-btn" type="submit">
                                     <i class="fas fa-search"></i>
@@ -382,7 +324,7 @@ class General {
 
 	public function excerpt_more() {
 		if ( is_search() ) {
-			$readmore = '<a href="' . get_the_permalink() . '"> [' . esc_html__( 'read more ...', 'homlisti' ) . ']</a>';
+			$readmore = '<a href="' . get_the_permalink() . '"> [' . esc_html__( 'read more ...', 'cl-classified' ) . ']</a>';
 
 			return $readmore;
 		}
@@ -411,7 +353,7 @@ class General {
 			'wrap_after'  => '</nav>',
 			'before'      => '',
 			'after'       => '',
-			'home'        => _x( 'Home', 'breadcrumb', 'homlisti' ),
+			'home'        => _x( 'Home', 'breadcrumb', 'cl-classified' ),
 		];
 
 		$breadcrumbs = new Breadcrumb();

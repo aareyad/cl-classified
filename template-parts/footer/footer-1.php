@@ -57,34 +57,28 @@ $copyright_class = has_nav_menu( 'secondary' ) ? 'col-xl-6 col-lg-4 text-right' 
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
+                    <div class="<?php echo esc_attr( $copyright_class ); ?>">
+                        <p class="footer-copyright">
+			                <?php
+			                echo wp_kses( Options::$options['copyright_text'], [
+				                'a'      => [
+					                'href'  => [],
+					                'title' => [],
+				                ],
+				                'br'     => [],
+				                'em'     => [],
+				                'strong' => [],
+			                ] );
+			                ?>
+                        </p>
+                    </div>
 					<?php if ( has_nav_menu( 'secondary' ) ): ?>
                         <div class="col-xl-6 col-lg-8">
-                            <div class="footer-bottom-menu">
-								<?php
-								wp_nav_menu( [
-									'theme_location' => 'secondary',
-									'menu_class'     => 'footer-link',
-									'fallback_cb'    => false,
-								] );
-								?>
+                            <div class="payment-icons">
+
                             </div>
                         </div>
 					<?php endif; ?>
-                    <div class="<?php echo esc_attr( $copyright_class ); ?>">
-                        <p class="footer-copyright">
-							<?php
-							echo wp_kses( Options::$options['copyright_text'], [
-								'a'      => [
-									'href'  => [],
-									'title' => [],
-								],
-								'br'     => [],
-								'em'     => [],
-								'strong' => [],
-							] );
-							?>
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
