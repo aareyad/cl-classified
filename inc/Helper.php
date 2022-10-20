@@ -7,6 +7,8 @@
 
 namespace RadiusTheme\ClassifiedLite;
 
+use RtclPro\Helpers\Fns;
+
 class Helper {
 
 	public static function has_sidebar() {
@@ -214,11 +216,11 @@ class Helper {
 	}
 
 	public static function is_chat_enabled() {
-		/*if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) ) {
+		if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) ) {
 			if ( Fns::is_enable_chat() ) {
 				return true;
 			}
-		}*/
+		}
 
 		return false;
 	}

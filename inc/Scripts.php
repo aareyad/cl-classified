@@ -32,14 +32,14 @@ class Scripts {
 	public function fonts_url() {
 		$fonts_url = '';
 		$subsets   = '';
-		$bodyFont  = 'Roboto';
+		$bodyFont  = 'Lato';
 		$bodyFW    = '300,400,500,600,700';
 
-		$menuFont  = 'Ubuntu';
+		$menuFont  = 'Nunito';
 		$menuFontW = '300,400,500,600,700';
 
-		$hFont  = 'Ubuntu';
-		$hFontW = '500';
+		$hFont  = 'Nunito';
+		$hFontW = '300,400,500,600,700';
 		$h1Font = '';
 		$h2Font = '';
 		$h3Font = '';
@@ -51,7 +51,7 @@ class Scripts {
 		$body_font = json_decode( Options::$options['typo_body'], true );
 
 		if ( $body_font['font'] == 'Inherit' ) {
-			$bodyFont = 'Roboto';
+			$bodyFont = 'Lato';
 		} else {
 			$bodyFont = $body_font['font'];
 		}
@@ -60,7 +60,7 @@ class Scripts {
 		// Menu Font
 		$menu_font = json_decode( Options::$options['typo_menu'], true );
 		if ( $menu_font['font'] == 'Inherit' ) {
-			$menuFont = 'Ubuntu';
+			$menuFont = 'Nunito';
 		} else {
 			$menuFont = $menu_font['font'];
 		}
@@ -69,7 +69,7 @@ class Scripts {
 		// Heading Font
 		$h_font = json_decode( Options::$options['typo_heading'], true );
 		if ( $h_font['font'] == 'Inherit' ) {
-			$hFont = 'Ubuntu';
+			$hFont = 'Nunito';
 		} else {
 			$hFont = $h_font['font'];
 		}
@@ -231,10 +231,12 @@ class Scripts {
 	}
 
 	public function register_scripts() {
+		/* Deregister */
+		wp_deregister_style( 'font-awesome' );
 		// Google fonts
 		wp_register_style( 'classified-gfonts', $this->fonts_url(), [], $this->version );
 		// Style
-		wp_register_style( 'font-awesome', Helper::get_css( 'font-awesome.min' ), [], $this->version );
+		wp_register_style( 'font-awesome', Helper::get_css( 'font-awesome-all.min' ), [], $this->version );
 
 		wp_register_style( 'bootstrap', Helper::get_maybe_rtl_css( 'bootstrap.min' ), [], $this->version );
 		wp_register_style( 'magnific-popup', Helper::get_maybe_rtl_css( 'magnific-popup' ), [], $this->version );
