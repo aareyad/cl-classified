@@ -111,6 +111,21 @@ class Blog extends Customizer {
 			]
 		) );
 
+		// Blog Button
+		$wp_customize->add_setting( 'blog_button',
+			[
+				'default'           => $this->defaults['blog_button'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'rttheme_switch_sanitization',
+			]
+		);
+		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_button',
+			[
+				'label'   => esc_html__( 'Display Button', 'cl-classified' ),
+				'section' => 'blog_archive_section',
+			]
+		) );
+
 		// Blog Comment Visibility
 		$wp_customize->add_setting( 'blog_comment_num',
 			[

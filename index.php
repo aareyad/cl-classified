@@ -8,24 +8,33 @@
 use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
-$post_class      = Helper::has_sidebar() ? 'row-cols-sm-2 row-cols-1' : 'row-cols-sm-3 row-cols-1';
+get_header();
+
 $is_blog_style_2 = ( is_home() || is_archive() ) && Options::$options['blog_style'] == 'style2';
 $grid_style      = $is_blog_style_2 ? 'style2' : 'style1';
-get_header();
 ?>
-    <main class="site-main blog-grid blog-grid-inner content-area rtcl-widget-border-enable rtcl-widget-is-sticky <?php echo esc_attr( $grid_style ); ?>">
+    <main id="primary" class="site-main content-area <?php echo esc_attr( $grid_style ); ?>">
         <div class="container">
             <div class="row">
+				<?php
+				if ( Options::$layout == 'left-sidebar' ) {
+					get_sidebar();
+				}
+				?>
                 <div class="<?php Helper::the_layout_class(); ?>">
-                    <div class="main-post-content">
+                    <div class="main-content">
 						<?php if ( have_posts() ) : ?>
 							<?php
 							if ( $is_blog_style_2 ) {
-								echo '<div class="row ' . $post_class . '">';
-								while ( have_posts() ) : the_post();
-									get_template_part( 'template-parts/content-alt' );
-								endwhile;
-								echo '</div>';
+							    ?>
+                                <div class="row">
+                                    <?php
+                                    while ( have_posts() ) : the_post();
+                                        get_template_part( 'template-parts/content-alt' );
+                                    endwhile;
+                                    ?>
+                                </div>
+                                <?php
 							} else {
 								while ( have_posts() ) : the_post();
 									get_template_part( 'template-parts/content' );
@@ -36,11 +45,10 @@ get_header();
 							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 						<?php endif; ?>
                     </div>
-
 					<?php get_template_part( 'template-parts/pagination' ); ?>
                 </div>
 				<?php
-				if ( Helper::has_sidebar() ) {
+				if ( Options::$layout == 'right-sidebar' ) {
 					get_sidebar();
 				}
 				?>
@@ -48,8 +56,4 @@ get_header();
         </div>
     </main>
 
-<?php
-if ( function_exists( '_mc4wp_load_plugin' ) && ! is_front_page() && is_home() && Options::$options['newsletter_section'] ) {
-	get_template_part( 'template-parts/rt', 'newsletter' );
-}
-get_footer();
+<?php get_footer(); ?>

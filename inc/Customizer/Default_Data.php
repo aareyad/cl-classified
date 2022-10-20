@@ -49,6 +49,7 @@ class Default_Data {
 			'blog_archive_reading_time'    => 0,
 			'blog_comment_num'             => 1,
 			'excerpt_length'               => 41,
+			'blog_button'                  => 1,
 
 			// Footer
 			'footer_style'                 => '1',

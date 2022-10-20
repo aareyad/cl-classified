@@ -5,88 +5,63 @@
  * @version 1.0.0
  */
 
+use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
+$post_class      = Helper::has_sidebar() ? 'col-lg-6 col-md-4 col-sm-2 col-12' : 'col-lg-4 col-md-6 col-sm-6 col-12';
 $comments_number = get_comments_number();
-$has_thumbnail   = has_post_thumbnail() ? ' has-thumbnail' : ' has-no-thumbnail';
-$post_class      = 'blog-box grid-style is-date';
-$post_class      .= $has_thumbnail;
+$has_thumbnail   = has_post_thumbnail() ? 'has-thumbnail' : 'has-no-thumbnail';
+$has_entry_meta  = ( Options::$options['blog_cat_visibility'] && has_category() ) || Options::$options['blog_author_name'] || Options::$options['blog_comment_num'] || Options::$options['blog_date'];
+$comments_number = get_comments_number();
+$comments_text   = sprintf( '(%s)', number_format_i18n( $comments_number ) );
 ?>
 
-<div class="col">
-    <article id="post-<?php the_ID(); ?>" <?php post_class( $post_class ); ?>>
+<div class="<?php echo esc_attr( $post_class ); ?>">
+    <article id="post-<?php the_ID(); ?>" <?php post_class( $has_thumbnail ); ?>>
 
-		<?php if ( has_post_thumbnail() ):
-
-			$thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'rdtheme-size2' );
-			?>
-            <div class="post-img is-date">
-                <a href="<?php the_permalink(); ?>">
-                    <div class="thumb-bg" style="background-image:url(<?php echo esc_url( $thumb_url ) ?>)">
-                    </div>
-                </a>
-				<?php edit_post_link( 'Edit' ); ?>
+		<?php if ( has_post_thumbnail() ): ?>
+            <div class="post-thumbnail">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'rdtheme-size2' ); ?></a>
             </div>
-
-
-			<?php if ( Options::$options['blog_date'] ): ?>
-            <div class="thumbnail-date">
-                <div class="popup-date">
-					<?php
-					printf( "<span class='day'>%s</span><span class='month'>%s</span>",
-						get_the_time( 'd' ),
-						get_the_time( 'M' )
-					);
-					?>
-                </div>
-            </div>
-		<?php endif; ?>
 		<?php endif; ?>
         <div class="post-content">
+            <h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
-            <div class="post-meta is_dots">
+			<?php if ( $has_entry_meta ): ?>
 
-                <ul class="list-inline">
-					<?php if ( Options::$options['blog_author_name'] ) : ?>
-                        <li class="author-meta">
-                        <span class="author vcard">
-                            <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-                                <?php
-                                echo esc_html__( 'by ', 'homlisti' ) . get_the_author();
-                                ?>
-                            </a>
-                        </span>
+                <ul class="post-meta">
+					<?php if ( Options::$options['blog_date'] ): ?>
+                        <li><i class="fa fa-calendar" aria-hidden="true"></i><span
+                                    class="updated published"><?php the_time( get_option( 'date_format' ) ); ?></span>
+                        </li>
+					<?php endif; ?>
+
+					<?php if ( Options::$options['blog_author_name'] ): ?>
+                        <li><i class="fa fa-user" aria-hidden="true"></i><span class="vcard author"><a
+                                        href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"
+                                        class="fn"><?php the_author(); ?></a></span></li>
+					<?php endif; ?>
+
+					<?php if ( Options::$options['blog_comment_num'] ): ?>
+                        <li><i class="fa fa-comments" aria-hidden="true"></i><?php echo esc_html( $comments_text ); ?>
                         </li>
 					<?php endif; ?>
 
 					<?php if ( Options::$options['blog_cat_visibility'] && has_category() ): ?>
-                        <li class="category-meta">
-                    <span class="posted-in">
-                        <?php echo get_the_category_list( esc_html_x( ', ', 'Used between list items, there is a space after the comma.', 'homlisti' ) );
-                        ?>
-                    </span>
-                        </li>
+                        <li><i class="fa fa-tags" aria-hidden="true"></i><?php the_category( ', ' ); ?></li>
 					<?php endif; ?>
-
-					<?php if ( Options::$options['blog_archive_reading_time'] ) : ?>
-                        <li class="reading-time">
-                            <a href="#" data-toggle="tooltip"
-                               data-original-title="<?php echo esc_attr__( 'Reading Time', 'homlisti' ) ?>"><?php echo Helper::reading_time_count( get_the_content() ); ?></a>
-                        </li>
-					<?php endif; ?>
-
                 </ul>
 
-            </div>
+			<?php endif; ?>
 
-            <h3 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+            <div class="post-content entry-summary"><?php the_excerpt(); ?></div>
 
-            <div class="read-more-grid-btn">
-                <a href="<?php the_permalink(); ?>" class="">
-					<?php echo esc_html__( 'Read More', 'homlisti' ); ?>
-                    <i class="arrow-btn"></i>
-                </a>
-            </div>
+			<?php if ( Options::$options['blog_button'] ): ?>
+                <div class="rtin-button post-btn">
+                    <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read More', 'cl-classified' ); ?></a>
+                </div>
+			<?php endif; ?>
+
         </div>
     </article>
 </div>
