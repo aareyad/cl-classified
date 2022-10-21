@@ -7,6 +7,8 @@
 
 namespace RadiusTheme\ClassifiedLite;
 
+use Rtcl\Helpers\Functions;
+
 class Layouts {
 
 	protected static $instance = null;
@@ -16,7 +18,7 @@ class Layouts {
 	public $meta_value;
 
 	public function __construct() {
-		$this->base = 'homlisti';
+		$this->base = 'cl_classified';
 
 		add_action( 'template_redirect', [ $this, 'layout_settings' ] );
 	}
@@ -30,13 +32,21 @@ class Layouts {
 	}
 
 	public function layout_settings() {
+		$is_listing = $is_listing_archive = $is_listing_account = false;
+
+		if ( class_exists( 'Rtcl' ) ) {
+			$is_listing_archive = Functions::is_listings() || Functions::is_listing_taxonomy();
+			$is_listing_account = Functions::is_account_page();
+		}
+
+		if ( $is_listing_archive || $is_listing_account ) {
+			$is_listing = true;
+		}
 		// Single Pages
 		if ( is_single() || is_page() ) {
 			$post_type        = get_post_type();
 			$post_id          = get_the_id();
 			$this->meta_value = get_post_meta( $post_id, "{$this->base}_layout_settings", true );
-
-
 
 			switch ( $post_type ) {
 				case 'post':
@@ -58,9 +68,8 @@ class Layouts {
 			Options::$has_tr_header  = $this->meta_layout_global_option( 'tr_header', true );
 			Options::$has_breadcrumb = $this->meta_layout_global_option( 'breadcrumb', true );
 
-
 		} // Blog and Archive
-		elseif ( is_home() || is_archive() || is_search() || is_404() || $is_listing || $is_store ) {
+		elseif ( is_home() || is_archive() || is_search() || is_404() || $is_listing ) {
 			if ( is_404() ) {
 				$this->type                                   = 'error';
 				Options::$options[ $this->type . '_layout' ]  = 'full-width';
@@ -199,5 +208,3 @@ class Layouts {
 	}
 
 }
-
-Layouts::instance();

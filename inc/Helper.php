@@ -150,18 +150,14 @@ class Helper {
 	 *
 	 * @return array
 	 */
-	public static function custom_sidebar_fields(): array {
-		$base                                      = 'homlisti';
-		$sidebar_fields                            = [];
-		$sidebar_fields['sidebar']                 = esc_html__( 'Sidebar', 'homlisti' );
-		$sidebar_fields['listing-archive-sidebar'] = esc_html__( 'Listing Archive Sidebar', 'homlisti' );
-		$sidebar_fields['store-sidebar']           = esc_html__( 'Agency/Store Sidebar', 'homlisti' );
-		$sidebar_fields['agent-sidebar']           = esc_html__( 'Agent Sidebar', 'homlisti' );
-		if ( class_exists( 'WooCommerce' ) ) {
-			$sidebar_fields['woocommerce-archive-sidebar'] = esc_html__( 'WooCommerce Archive Sidebar', 'homlisti' );
-			$sidebar_fields['woocommerce-single-sidebar']  = esc_html__( 'WooCommerce Single Sidebar', 'homlisti' );
-		}
-		$sidebars = get_option( "{$base}_custom_sidebars", [] );
+	public static function custom_sidebar_fields() {
+		$base                                   = 'cl_classified';
+		$sidebar_fields                         = [];
+		$sidebar_fields['sidebar']              = esc_html__( 'Sidebar', 'cl-classified' );
+		$sidebar_fields['rtcl-archive-sidebar'] = esc_html__( 'Listing Archive Sidebar', 'cl-classified' );
+		$sidebar_fields['rtcl-single-sidebar']  = esc_html__( 'Listing Single Sidebar', 'cl-classified' );
+		$sidebars                               = get_option( "{$base}_custom_sidebars", [] );
+
 		if ( $sidebars ) {
 			foreach ( $sidebars as $sidebar ) {
 				$sidebar_fields[ $sidebar['id'] ] = $sidebar['name'];
@@ -217,7 +213,7 @@ class Helper {
 	}
 
 	public static function is_chat_enabled() {
-		if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) ) {
+		if ( Options::$options['header_chat_icon'] && class_exists( 'RtclPro' ) ) {
 			if ( Fns::is_enable_chat() ) {
 				return true;
 			}

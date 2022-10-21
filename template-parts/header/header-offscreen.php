@@ -50,7 +50,7 @@ $order   = strtoupper( Functions::get_option_item( 'rtcl_general_settings', 'tax
 				$html .= '<a class="header-chat-icon header-chat-icon-mobile rtcl-chat-unread-count" href="' . esc_url( Link::get_my_account_page_link( 'chat' ) ) . '"><i class="far fa-comments" aria-hidden="true"></i></a>';
 			}
 
-			if ( class_exists( 'RtclPro' ) && class_exists( 'Rtcl' ) && Options::$options['header_login_icon'] ) {
+			if ( class_exists( 'Rtcl' ) && Options::$options['header_login_icon'] ) {
 				$html .= '<a class="header-login-icon header-login-icon-mobile" href="' . esc_url( Link::get_my_account_page_link() ) . '"><i class="far fa-user" aria-hidden="true"></i></a>';
 			}
 

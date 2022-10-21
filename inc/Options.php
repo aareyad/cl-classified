@@ -30,6 +30,7 @@ if ( ! class_exists( 'Options' ) ) {
 		public static $has_tr_header;
 		public static $has_top_bar;
 		public static $breadcrumb_style;
+		public static $bgimg;
 		public static $menu_alignment;
 
 		public static $inner_padding_top = null;

@@ -56,6 +56,19 @@ class Default_Data {
 			'copyright_text'               => date( 'Y' ) . '© All right reserved by Radiustheme',
 			'footer_bg_image'              => '',
 
+			// Blog Layout
+			'blog_layout'                    => 'right-sidebar',
+			'blog_sidebar'                   => 'sidebar',
+			'blog_top_bar'                   => 'default',
+			'blog_header_style'              => 'default',
+			'blog_menu_alignment'            => 'default',
+			'blog_header_width'              => 'default',
+			'blog_tr_header'                 => 'default',
+			'blog_breadcrumb'                => 'default',
+			'blog_padding_top'               => '',
+			'blog_padding_bottom'            => '90px',
+			'blog_footer_style'              => 'default',
+
 			// Color
 			'primary_color'                => '#00c194',
 			'primary_lighiten'             => '#50ffe4',
@@ -106,19 +119,6 @@ class Default_Data {
 			'error_menu_alignment'           => 'default',
 			'error_tr_header'                => 'default',
 			'error_footer_style'             => 'default',
-
-			// Blog Layout
-			'blog_layout'                    => 'right-sidebar',
-			'blog_sidebar'                   => 'sidebar',
-			'blog_padding_top'               => '',
-			'blog_padding_bottom'            => '90px',
-			'blog_breadcrumb'                => 'default',
-			'blog_top_bar'                   => 'default',
-			'blog_header_style'              => 'default',
-			'blog_header_width'              => 'default',
-			'blog_menu_alignment'            => 'default',
-			'blog_tr_header'                 => 'default',
-			'blog_footer_style'              => 'default',
 
 			// Single Post Layout
 			'single_post_layout'             => 'right-sidebar',

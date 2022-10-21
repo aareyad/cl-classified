@@ -58,7 +58,7 @@ $login_icon_title = is_user_logged_in() ? esc_html__( 'My Account', 'cl-classifi
                title="<?php esc_html_e( 'Chat', 'cl-classified' ); ?>"
                href="<?php echo esc_url( Link::get_my_account_page_link( 'chat' ) ); ?>"><i class="far fa-comments"></i></a>
 	    <?php endif; ?>
-        <?php if ( Options::$options['header_login_icon'] && class_exists( 'RtclPro' ) && class_exists( 'Rtcl' ) ): ?>
+        <?php if ( class_exists( 'Rtcl' ) && Options::$options['header_login_icon'] ): ?>
             <a class="header-login-icon" data-toggle="tooltip" title="<?php echo esc_attr( $login_icon_title ); ?>"
                href="<?php echo esc_url( Link::get_my_account_page_link() ); ?>"><i class="far fa-user"
                                                                                     aria-hidden="true"></i></a>

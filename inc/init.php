@@ -7,6 +7,7 @@
 
 use RadiusTheme\ClassifiedLite\Constants;
 use RadiusTheme\ClassifiedLite\General;
+use RadiusTheme\ClassifiedLite\Layouts;
 use RadiusTheme\ClassifiedLite\Scripts;
 use RadiusTheme\ClassifiedLite\Options;
 use RadiusTheme\ClassifiedLite\Customizer\Init;
@@ -47,6 +48,7 @@ final class Includes {
 		General::instance();
 		Scripts::instance();
 		Options::instance();
+		Layouts::instance();
 		if ( class_exists( 'WP_Customize_Control' ) ) {
 			Init::instance();
 		}
