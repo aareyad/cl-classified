@@ -23,20 +23,20 @@ $grid_style      = $is_blog_style_2 ? 'style2' : 'style1';
 				?>
                 <div class="<?php Helper::the_layout_class(); ?>">
                     <div class="main-content">
-						<?php if ( have_posts() ) : ?>
+						<?php if ( have_posts() ): ?>
 							<?php
 							if ( $is_blog_style_2 ) {
-							    ?>
+								?>
                                 <div class="row">
-                                    <?php
-                                    while ( have_posts() ) : the_post();
-                                        get_template_part( 'template-parts/content-alt' );
-                                    endwhile;
-                                    ?>
+									<?php
+									while ( have_posts() ) : the_post();
+										get_template_part( 'template-parts/content-alt' );
+									endwhile;
+									?>
                                 </div>
-                                <?php
+								<?php
 							} else {
-								while ( have_posts() ) : the_post();
+								while ( have_posts() ): the_post();
 									get_template_part( 'template-parts/content' );
 								endwhile;
 							}

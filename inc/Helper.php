@@ -40,7 +40,8 @@ class Helper {
 		if ( Options::$layout == 'left-sidebar' ) {
 			$layout_class .= ' order-lg-2';
 		}
-		echo apply_filters( 'homlisti_layout_class', $layout_class );
+
+		echo apply_filters( 'cl_classified_layout_class', $layout_class );
 	}
 
 	public static function the_sidebar_class() {

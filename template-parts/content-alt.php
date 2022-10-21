@@ -26,6 +26,7 @@ $length          = Options::$options['excerpt_length'];
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'rdtheme-size2' ); ?></a>
             </div>
 		<?php endif; ?>
+
         <div class="post-content-area">
 
 			<?php if ( $has_entry_meta ): ?>
