@@ -1,6 +1,5 @@
 body {
   font-family: $bodyFont;
-  background-color: $bodyBackground;
 }
 
 h1,
@@ -10,4 +9,22 @@ h4,
 h5,
 h6 {
   font-family: $headingFont;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
 }

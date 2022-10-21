@@ -4,6 +4,7 @@
 body {
   margin: 0 auto;
   color: $bodyColor;
+  background-color: $bodyBackground;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -16,16 +17,19 @@ body {
 .clear {
   clear: both;
 }
+
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
+
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
+
 .aligncenter {
   clear: both;
   display: block;
@@ -35,7 +39,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #181b31;
+  color: $black;
   margin-bottom: 20px;
   clear: both;
 }
@@ -47,6 +51,7 @@ p {
 a {
   background-color: transparent;
   outline: none;
+
   &:active,
   &:hover,
   &:focus,
@@ -60,6 +65,7 @@ a {
     transition: all 0.3s ease 0s;
     text-decoration: none;
   }
+
   &:hover,
   &:focus,
   &:active {
@@ -262,6 +268,7 @@ big {
 blockquote,
 q {
   quotes: "" "";
+
   &:before,
   &:after {
     content: "";
@@ -274,6 +281,7 @@ blockquote {
   margin: 30px 30px 30px 40px;
   padding: 0 0 0 30px;
   border: none;
+
   &:before {
     content: '';
     width: 5px;
@@ -294,6 +302,7 @@ blockquote {
   width: 1px;
   overflow: hidden;
 }
+
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: $borderRadius2;
@@ -324,30 +333,33 @@ blockquote {
 .wp-caption {
   margin: 0 0 1.5em;
   max-width: 100%;
+
   &.alignleft {
     margin-right: 1.5em;
   }
+
   &.alignright {
     margin-left: 1.5em;
   }
+
   &.aligncenter {
     margin-left: auto;
     margin-right: auto;
   }
 }
+
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.wp-caption .wp-caption-text {
-  //margin: 0.8075em 0;
-}
+
 .wp-caption-text,
 .wp-caption-dd {
   text-align: center;
   margin: 0.8075em 0 !important;
   padding: 0 !important;
+
   a {
     display: inline !important;
   }
@@ -356,6 +368,7 @@ blockquote {
 .gallery {
   margin-bottom: 1.5em;
 }
+
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -364,30 +377,39 @@ blockquote {
   margin: 0;
   padding: 0 5px 5px;
 }
+
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
+
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
+
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
+
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
+
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
+
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
+
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
+
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
+
 .gallery-caption {
   display: block;
 }
@@ -399,6 +421,7 @@ hr,
   border: 0;
   height: 2px;
   margin: 24px auto;
+
   &.is-style-dots {
     height: 0;
     text-align: center;
@@ -411,41 +434,51 @@ table,
   border-spacing: 0;
   margin: 15px 0;
   width: 100%;
+
   th, td {
     border: 1px solid #ddd;
     padding: 10px;
   }
+
   .wp-block-table__cell-content {
     padding: 0;
   }
 }
+
 .wp-block-latest-posts.is-grid {
   list-style: disc;
 }
+
 .wp-block-latest-posts.wp-block-latest-posts__list {
   list-style: disc;
   padding: 0;
+
   li {
     margin-bottom: 7px;
   }
 }
+
 .wp-block-audio {
   margin: 15px 0;
+
   figcaption {
     color: #555d66;
     font-size: 13px;
     text-align: center;
   }
 }
+
 .wp-block-categories,
 .wp-block-archives {
   margin: 0 0 20px;
   list-style-position: inside;
+
   ul {
     margin: 0;
     padding: 0;
     list-style-position: inside;
   }
+
   &.aligncenter {
     padding: 0;
   }
@@ -458,29 +491,36 @@ table,
 .wp-block-image.alignleft {
   margin-right: 20px;
 }
+
 .wp-block-image.alignright {
   margin-left: 20px;
 }
+
 .wp-block-gallery {
   display: flex;
   margin: 0 0 20px 0;
   padding: 0;
+
   figure {
     margin: 0;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
   }
+
   &.alignleft {
     margin-right: 20px;
   }
 }
+
 .wp-block-button__link {
   cursor: pointer;
   transition: inherit !important;
+
   &:hover {
     opacity: 0.8;
   }
+
   &:not(.has-text-color) {
     color: #fff;
   }
@@ -500,13 +540,16 @@ table,
   margin: 30px 30px 30px 40px;
   padding: 10px 0 10px 30px;
   border: none;
+
   p {
     font-style: italic;
     font-weight: $semiBold;
+
     &:last-of-type {
       margin-bottom: 0;
     }
   }
+
   cite,
   .wp-block-quote__citation {
     font-weight: 400;
@@ -516,6 +559,7 @@ table,
     font-style: italic;
     margin: 5px 0 0;
   }
+
   &:before {
     content: '';
     width: 5px;
@@ -534,10 +578,12 @@ table,
     padding: 10px 0 10px 30px;
     font-size: 22px;
     line-height: 1.5;
+
     p {
       font-size: 22px;
       line-height: 1.5;
     }
+
     cite,
     .wp-block-quote__citation {
       font-size: 16px;
@@ -558,6 +604,7 @@ table,
   quotes: none;
   font-weight: $semiBold;
   margin: 0 0 20px;
+
   blockquote {
     background-color: inherit;
     border: none;
@@ -569,24 +616,29 @@ table,
     margin: 0;
     color: inherit;
     quotes: none;
+
     &:before,
     &:after {
       content: none;
     }
   }
+
   p {
     font-size: 28px;
     line-height: 1.5;
     font-style: italic;
     font-weight: $semiBold;
+
     &:last-of-type {
       margin-bottom: 0;
     }
+
     &:before,
     &:after {
       content: none;
     }
   }
+
   cite,
   .wp-block-pullquote__citation {
     font-size: 13px;
@@ -598,6 +650,7 @@ table,
     text-transform: inherit;
     display: block;
   }
+
   &:before {
     content: none;
   }
@@ -605,6 +658,7 @@ table,
   &.is-style-solid-color blockquote {
     text-align: inherit;
     max-width: inherit;
+
     cite,
     .wp-block-pullquote__citation {
       color: inherit;
@@ -616,16 +670,20 @@ table,
     position: relative;
     z-index: 1;
     padding: 20px 0;
+
     p {
       font-size: 20px;
     }
   }
+
   &.alignleft {
     margin: 15px 20px 15px 0;
     display: block;
   }
+
   &.alignright {
     margin: 15px 0 15px 20px;
     display: block;
   }
+
 }

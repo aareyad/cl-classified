@@ -118,9 +118,7 @@ class General {
 		// Image sizes
 		$sizes = [
 			'rdtheme-size1'  => [ 1200, 650, true ], // When Full width
-			'rdtheme-size2'  => [ 370, 245, true ], // Listing Thumbnail Size and blog grid
-			'rdtheme-size3'  => [ 350, 420, true ],
-			'rdtheme-square' => [ 500, 500, true ],
+			'rdtheme-size2'  => [ 450, 260, true ], // Listing Thumbnail Size and blog grid
 		];
 
 		$sizes = apply_filters( 'homlisti_image_size', $sizes );

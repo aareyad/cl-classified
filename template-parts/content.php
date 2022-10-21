@@ -45,14 +45,6 @@ $has_entry_meta  = Options::$options['blog_author_name'] || Options::$options['b
 					<?php if ( Options::$options['blog_comment_num'] ): ?>
                         <li><i class="far fa-comments" aria-hidden="true"></i><?php echo esc_html( $comments_text ); ?></li>
 					<?php endif; ?>
-					<?php if ( Options::$options['blog_archive_reading_time'] ): ?>
-                        <li>
-                            <span data-toggle="tooltip" data-placement="bottom" title="<?php echo esc_attr__( 'Reading Time', 'homlisti' ) ?>"
-                                  data-original-title="<?php echo esc_attr__( 'Reading Time', 'homlisti' ) ?>">
-                                <?php echo Helper::reading_time_count( get_the_content(), true ); ?>
-                            </span>
-                        </li>
-					<?php endif; ?>
                 </ul>
             </div>
 		<?php endif; ?>

@@ -46,9 +46,8 @@ class Default_Data {
 			'blog_date'                    => 1,
 			'blog_author_name'             => 1,
 			'blog_cat_visibility'          => 1,
-			'blog_archive_reading_time'    => 0,
 			'blog_comment_num'             => 1,
-			'excerpt_length'               => 41,
+			'excerpt_length'               => 40,
 			'blog_button'                  => 1,
 
 			// Footer

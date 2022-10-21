@@ -96,21 +96,6 @@ class Blog extends Customizer {
 			]
 		) );
 
-		// Blog Reading Time
-		$wp_customize->add_setting( 'blog_archive_reading_time',
-			[
-				'default'           => $this->defaults['blog_archive_reading_time'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'blog_archive_reading_time',
-			[
-				'label'   => esc_html__( 'Display Reading Time', 'cl-classified' ),
-				'section' => 'blog_archive_section',
-			]
-		) );
-
 		// Blog Button
 		$wp_customize->add_setting( 'blog_button',
 			[

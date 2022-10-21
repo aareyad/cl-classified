@@ -77,3 +77,27 @@
     font-size: 14px;
   }
 }
+
+.rtin-button {
+  color: $white !important;
+  padding: 10px 16px;
+  border-radius: $borderRadius5;
+  text-decoration: none;
+  font-weight: $semiBold;
+  font-size: 16px;
+  border: 1px solid $primaryColor;
+  background-color: $primaryColor;
+  display: inline-block;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $primaryColor !important;
+    background-color: transparent;
+    border: 1px solid $primaryColor;
+  }
+
+  .rtin-button-icon {
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+}
