@@ -10,7 +10,7 @@ use RadiusTheme\ClassifiedLite\Options;
 $comments_number = get_comments_number();
 $comments_text   = sprintf( '(%s)', number_format_i18n( $comments_number ) );
 $has_thumbnail   = has_post_thumbnail() ? 'has-thumbnail' : 'has-no-thumbnail';
-$post_class      = $has_thumbnail . ' post-each post-each-alt';
+$post_class      = $has_thumbnail . ' post-each';
 $has_entry_meta  = ( Options::$options['blog_cat_visibility'] && has_category() ) || Options::$options['blog_author_name'] || Options::$options['blog_comment_num'] || Options::$options['blog_date'];
 $length          = Options::$options['excerpt_length'];
 ?>

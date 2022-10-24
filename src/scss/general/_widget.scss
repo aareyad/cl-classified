@@ -76,10 +76,10 @@
 #. Footer Widgets
 -----------------------------------------------*/
 .widget {
-  color: #b7c3c8;
+  color: $bodyColor;
 
   a {
-    color: #b7c3c8;
+    color: $bodyColor;
 
     &:hover {
       color: $primaryColor;
@@ -154,14 +154,14 @@
 
   a {
     color: #b7c3c8;
-    padding: 9px 10px;
+    padding: 10px 12px;
     display: inline-block;
     font-size: 13px !important;
-    margin-bottom: 3px;
-    margin-right: 3px;
+    margin-bottom: 5px;
+    margin-right: 5px;
     transition: all 0.3s ease 0s;
     border: 1px solid #373737;
-    border-radius: $borderRadius2;
+    border-radius: $borderRadius5;
     line-height: 1.5;
 
     &:hover {
@@ -184,8 +184,8 @@
   .widget {
     border: none;
     margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: $borderRadius8;
     background-color: $white;
 
     &:last-child {
@@ -198,6 +198,9 @@
       border-bottom: 1px solid #e7e7e7;
       position: relative;
       font-size: 22px;
+      line-height: 1.2;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
 
       &::after {
         width: 50px;
@@ -209,9 +212,6 @@
         bottom: -2.5px;
       }
 
-      + * {
-        padding: 20px;
-      }
     }
 
     a {
@@ -233,6 +233,7 @@
       &:before {
         content: "\f105";
         font-family: "Font Awesome 6 Free";
+        font-weight: 600;
         color: $primaryColor;
         position: absolute;
         left: 0;
@@ -262,21 +263,125 @@
   }
 
   .widget.widget_tag_cloud a {
-    border-color: #d5d5d5;
-    font-size: 12px !important;
+    border: none;
+    background-color: #e7e7e7;
+    font-size: 15px !important;
+    line-height: 1.2;
 
     &:hover {
-      color: #ffffff;
+      background-color: $primaryColor;
+      color: $white;
+    }
+  }
+
+  .widget.widget_search {
+    .input-group {
+      flex-wrap: nowrap;
+
+      input.form-control {
+        height: 45px;
+        width: 100%;
+        border-radius: $borderRadius5;
+
+        &:focus {
+          border-color: $primaryColor;
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 5;
+        line-height: 1;
+        padding: 0;
+
+        .search-btn {
+          border: 0;
+          background: 0;
+          color: $primaryColor;
+        }
+      }
     }
   }
 
   .widget.rtcl-widget-filter-class {
-    h3 {
-      padding: 12px 20px;
-      border-radius: $borderRadius2 $borderRadius2 0 0;
-      background-color: $primaryColor;
-      color: #fff;
-      border: none;
+    .panel-block {
+      padding: 0;
+
+      .ui-accordion-item {
+        .ui-accordion-title {
+          font-weight: 700;
+          color: #212529;
+
+          .ui-accordion-icon {
+            background-color: #fff1f3;
+            border: 1px solid $primaryColor;
+            color: $primaryColor;
+            border-radius: 50%;
+
+            &:before {
+              padding: 0;
+              margin: 0;
+              width: 20px;
+              height: 20px;
+              transform: translateY(3px);
+            }
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      ul {
+        li {
+          &.has-sub {
+            .arrow {
+              .rtcl-icon {
+                color: #b0b0b0;
+                font-size: 10px;
+              }
+            }
+          }
+          &:before {
+            content: none;
+          }
+          &.is-opener {
+            span {
+              i {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ui-buttons {
+      .rtcl-filter-btn {
+        background-color: $primaryColor;
+        color: $white;
+        padding: 10px 16px;
+        border-radius: $borderRadius8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: capitalize;
+        border: 1px solid $primaryColor;
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          color: $black;
+        }
+      }
     }
   }
 }

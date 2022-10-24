@@ -101,3 +101,17 @@
     vertical-align: middle;
   }
 }
+
+.rtcl .form-control,
+.form-control {
+  outline: none;
+  box-shadow: none;
+  border-radius: $borderRadius5;
+  height: 45px;
+  line-height: 1.2;
+  padding: 5px 12px;
+
+  &:focus {
+    border-color: $primaryColor;
+  }
+}

@@ -285,18 +285,16 @@ class General {
 		$output = '
 		<form method="get" class="custom-search-form" action="' . esc_url( home_url( '/' ) ) . '">
             <div class="search-box">
-                <div class="row gutters-10">
-                    <div class="col-12 form-group mb-0">
+                    <div class="form-group mb-0">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="' . esc_attr__( 'Search here...', 'cl-classified' ) . '" value="' . get_search_query() . '" name="s" />
-                            <span class="input-group-append">
-                                <button class="item-btn" type="submit">
+                            <button>
+                                <span class="search-btn">
                                     <i class="fas fa-search"></i>
-                                </button>
-                            </span>
+                                </span>
+                            </button>
                         </div>
                     </div>
-                </div>
             </div>
 		</form>
 		';
