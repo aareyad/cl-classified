@@ -1,11 +1,9 @@
 <?php
 /**
  * @author  RadiusTheme
- * @since   1.0
- * @version 1.0
+ * @since   1.0.0
+ * @version 1.0.0
  */
-
-namespace radiustheme\HomListi;
 
 $date       = get_comment_date( '', $comment );
 $time       = get_comment_time();
@@ -16,35 +14,33 @@ $human_time = human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp
 
 <div id="respond-<?php comment_ID(); ?>" class="each-comment media">
 
-	<?php if ( get_option( 'show_avatars' ) && ! empty( get_avatar( $comment ) ) ): ?>
+	<?php if ( get_option( 'show_avatars' ) ): ?>
         <div class="pull-left imgholder">
-			<?php if ( 0 != $args['avatar_size'] ) {
-				echo get_avatar( $comment, $args['avatar_size'], "", false, [ 'class' => 'media-object' ] );
-			} ?>
+			<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], "", false, array( 'class'=>'media-object' ) ); ?>
         </div>
 	<?php endif; ?>
 
     <div class="media-body comments-body">
         <div class="comment-meta clearfix">
             <div class="comment-meta-left">
-                <h3 class="comment-author"><?php echo get_comment_author_link( $comment ); ?></h3>
-                <div class="comment-time"><?php printf( esc_html__( ' %1$s ago / %2$s @ %3$s', 'homlisti' ), $human_time, $date, $time ); ?></div>
+                <h3 class="comment-author"><?php echo get_comment_author_link( $comment );?></h3>
+                <div class="comment-time"><?php printf( esc_html__( ' %1$s ago / %2$s @ %3$s', 'classima'), $human_time, $date, $time );?></div>
             </div>
 			<?php
 			comment_reply_link(
-				array_merge( $args, [
+				array_merge( $args, array(
 					'add_below' => 'respond',
 					'depth'     => $depth,
 					'max_depth' => $args['max_depth'],
 					'before'    => '<div class="reply-area">',
-					'after'     => '</div>',
-				] )
+					'after'     => '</div>'
+				) )
 			);
 			?>
         </div>
         <div class="comment-text">
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-                <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'homlisti' ); ?></p>
+                <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'classima' ); ?></p>
 			<?php endif; ?>
 			<?php comment_text(); ?>
         </div>

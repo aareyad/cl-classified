@@ -30,10 +30,6 @@
     }
   }
 
-  .post-content-area {
-    padding-top: 25px;
-  }
-
   &.post-each-alt {
     .post-content-area {
       padding: 25px 30px;
@@ -82,44 +78,55 @@
   }
 
   .post-thumbnail {
+    margin-bottom: 25px;
+
     .wp-post-image {
-      border-radius: $borderRadius8;
+      border-radius: $borderRadius5;
     }
   }
 
   &.post-each-single {
     margin-bottom: 0;
-    padding: 0;
+    padding: 25px;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: $borderRadius5;
 
     .post-thumbnail {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
 
+    .post-title-wrap {
+      .post-title {
+        margin-bottom: 10px;
+      }
+    }
+
+    .post-meta {
+      margin-bottom: 20px;
     }
 
     .post-footer {
-      margin-top: 15px;
+      margin-top: 10px;
 
       .post-tags {
-        margin-top: 15px;
+        margin-top: 10px;
 
         a {
-          color: #646464;
-          padding: 7px 10px;
+          color: $bodyColor;
+          background-color: #e7e7e7;
+          padding: 10px 12px;
           display: inline-block;
-          font-size: 13px;
-          margin-bottom: 3px;
-          margin-right: 3px;
+          font-size: 15px;
+          margin-bottom: 5px;
+          margin-right: 5px;
           transition: all 0.3s ease 0s;
-          border: 1px solid #d5d5d5;
-          border-radius: $borderRadius2;
-          line-height: 1.5;
+          border: none;
+          border-radius: $borderRadius5;
+          line-height: 1.2;
 
           &:hover {
             background-color: $primaryColor;
-            border-color: $primaryColor;
-            color: #ffffff;
+            color: $white;
           }
         }
       }

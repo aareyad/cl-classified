@@ -8,34 +8,32 @@
 use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
-$has_comment_or_from = '';
-if ( ! Options::$options['post_navigation'] ) {
-	$has_comment_or_from = ( comments_open() || get_comments_number() ) ? 'has-comment-form' : 'no-comment-form';
-}
 get_header();
 ?>
-    <section id="primary" class="content-area single-blog rtcl-widget-border-enable rtcl-widget-is-sticky">
+    <section id="primary" class="content-area site-single">
         <div class="container">
             <div class="row">
+				<?php
+				if ( Options::$layout == 'left-sidebar' ) {
+					get_sidebar();
+				}
+				?>
                 <div class="<?php Helper::the_layout_class(); ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
-                        <div class="single-post-wrapper <?php echo esc_attr( $has_comment_or_from ) ?>">
-							<?php
-							get_template_part( 'template-parts/content-single' );
-							if ( comments_open() || get_comments_number() ) {
-								comments_template();
-							}
-							?>
-                        </div>
+						<?php
+						get_template_part( 'template-parts/content-single' );
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
+						?>
 					<?php endwhile; ?>
                 </div>
 				<?php
-				if ( Helper::has_sidebar() ) {
+				if ( Options::$layout == 'right-sidebar' ) {
 					get_sidebar();
 				}
 				?>
             </div>
-
 			<?php
 			if ( Options::$options['post_details_related_section'] ) {
 				get_template_part( 'template-parts/related', 'posts' );
@@ -44,9 +42,4 @@ get_header();
         </div>
     </section>
 
-<?php
-if ( function_exists( '_mc4wp_load_plugin' ) && Options::$options['newsletter_section'] ) {
-	get_template_part( 'template-parts/rt', 'newsletter' );
-}
-
-get_footer();
+<?php get_footer(); ?>

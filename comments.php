@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 	$has_avatar      = get_option( 'show_avatars' );
 	$comment_class   = $has_avatar ? ' avatar-disabled' : '';
 	$comment_args    = [
-		'callback'    => 'radiustheme\HomListi\Helper::comments_callback',
+		'callback'    => 'RadiusTheme\Classified\Helper::comments_callback',
 		'reply_text'  => esc_html__( 'Reply', 'homlisti' ),
 		'avatar_size' => 70,
 	];

@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 30px;
 	font-weight: 700;
 	line-height: 1.5;
 }
@@ -102,6 +102,7 @@ h6 {
 
 p {
 	margin-bottom: 20px;
+	line-height: 1.6;
 }
 
 a {
@@ -1798,10 +1799,6 @@ table .wp-block-table__cell-content,
 	color: #f9423a;
 }
 
-.post-each .post-content-area {
-	padding-top: 25px;
-}
-
 .post-each.post-each-alt .post-content-area {
 	padding: 25px 30px;
 }
@@ -1848,45 +1845,57 @@ table .wp-block-table__cell-content,
 	line-height: 1.5;
 }
 
+.post-each .post-thumbnail {
+	margin-bottom: 25px;
+}
+
 .post-each .post-thumbnail .wp-post-image {
-	border-radius: 8px;
+	border-radius: 5px;
 }
 
 .post-each.post-each-single {
 	margin-bottom: 0;
-	padding: 0;
+	padding: 25px;
 	box-shadow: none;
-	border-radius: 0;
+	border-radius: 5px;
 }
 
 .post-each.post-each-single .post-thumbnail {
+	margin-bottom: 15px;
+}
+
+.post-each.post-each-single .post-title-wrap .post-title {
+	margin-bottom: 10px;
+}
+
+.post-each.post-each-single .post-meta {
 	margin-bottom: 20px;
 }
 
 .post-each.post-each-single .post-footer {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .post-each.post-each-single .post-footer .post-tags {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .post-each.post-each-single .post-footer .post-tags a {
-	color: #646464;
-	padding: 7px 10px;
+	color: #797f89;
+	background-color: #e7e7e7;
+	padding: 10px 12px;
 	display: inline-block;
-	font-size: 13px;
-	margin-bottom: 3px;
-	margin-right: 3px;
+	font-size: 15px;
+	margin-bottom: 5px;
+	margin-right: 5px;
 	transition: all 0.3s ease 0s;
-	border: 1px solid #d5d5d5;
-	border-radius: 2px;
-	line-height: 1.5;
+	border: none;
+	border-radius: 5px;
+	line-height: 1.2;
 }
 
 .post-each.post-each-single .post-footer .post-tags a:hover {
 	background-color: #f9423a;
-	border-color: #f9423a;
 	color: #ffffff;
 }
 
