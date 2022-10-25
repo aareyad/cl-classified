@@ -28,9 +28,9 @@ get_header();
 						?>
 					<?php endwhile; ?>
 					<?php
-					//if ( Options::$options['post_details_related_section'] ) {
+					if ( Options::$options['post_details_related_section'] ) {
 						get_template_part( 'template-parts/related', 'posts' );
-					//}
+					}
 					?>
                 </div>
 				<?php

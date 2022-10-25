@@ -5,7 +5,6 @@
  * @version 1.0.0
  */
 
-use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
 $comments_number = get_comments_number();
@@ -92,6 +91,7 @@ if ( Options::$options['post_navigation'] ) {
 	get_template_part( 'template-parts/content-single-pagination' );
 }
 ?>
+
 <?php if ( Options::$options['post_author_about'] ): ?>
     <div class="blog-author mt-30">
         <div class="widget-box">

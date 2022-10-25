@@ -50,6 +50,17 @@ class Default_Data {
 			'excerpt_length'               => 40,
 			'blog_button'                  => 1,
 
+			// Single Post
+			'post_date'                    => 1,
+			'post_author_name'             => 1,
+			'post_comment_num'             => 1,
+			'post_cats'                    => 1,
+			'post_details_related_section' => 0,
+			'post_tag'                     => 1,
+			'post_navigation'              => 0,
+			'post_social_icon'             => 0,
+			'post_author_about'            => 0,
+
 			// Footer
 			'footer_style'                 => '1',
 			'copyright_area'               => 1,
@@ -57,17 +68,17 @@ class Default_Data {
 			'footer_bg_image'              => '',
 
 			// Blog Layout
-			'blog_layout'                    => 'right-sidebar',
-			'blog_sidebar'                   => 'sidebar',
-			'blog_top_bar'                   => 'default',
-			'blog_header_style'              => 'default',
-			'blog_menu_alignment'            => 'default',
-			'blog_header_width'              => 'default',
-			'blog_tr_header'                 => 'default',
-			'blog_breadcrumb'                => 'default',
-			'blog_padding_top'               => '',
-			'blog_padding_bottom'            => '90px',
-			'blog_footer_style'              => 'default',
+			'blog_layout'                  => 'right-sidebar',
+			'blog_sidebar'                 => 'sidebar',
+			'blog_top_bar'                 => 'default',
+			'blog_header_style'            => 'default',
+			'blog_menu_alignment'          => 'default',
+			'blog_header_width'            => 'default',
+			'blog_tr_header'               => 'default',
+			'blog_breadcrumb'              => 'default',
+			'blog_padding_top'             => '',
+			'blog_padding_bottom'          => '90px',
+			'blog_footer_style'            => 'default',
 
 			// Color
 			'primary_color'                => '#00c194',
@@ -197,25 +208,6 @@ class Default_Data {
 			'store_archive_padding_bottom'   => '',
 			'store_archive_breadcrumb'       => 'default',
 			'store_archive_footer_style'     => 'default',
-
-			// Single Post
-			'post_date'                      => 1,
-			'post_author_name'               => 1,
-			'post_comment_num'               => 1,
-			'post_details_related_section'   => 0,
-			'post_details_reading_time'      => 0,
-			'post_author_about'              => 0,
-			'post_social_icon'               => 0,
-			'post_tag'                       => 1,
-			'post_navigation'                => 0,
-			'post_cats'                      => 1,
-			'social_facebook'                => 1,
-			'social_twitter'                 => 1,
-			'social_linkedin'                => 1,
-			'social_pinterest'               => 0,
-			'social_tumblr'                  => 1,
-			'social_reddit'                  => 0,
-			'social_vk'                      => 0,
 
 			// Listings Settings
 			'single_listing_style'           => 1,

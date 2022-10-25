@@ -7,6 +7,7 @@ use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Footer;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Post;
 use RadiusTheme\ClassifiedLite\Customizer\Typography\Typography;
 
 class Init {
@@ -32,6 +33,7 @@ class Init {
 		new Header();
 		new Footer();
 		new Blog();
+		new Post();
 		new Typography();
 		// Layout
 		new Blog_Layout();
