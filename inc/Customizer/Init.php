@@ -4,6 +4,8 @@ namespace RadiusTheme\ClassifiedLite\Customizer;
 
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog_Layout;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Error;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Error_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Footer;
@@ -36,10 +38,12 @@ class Init {
 		new Footer();
 		new Blog();
 		new Post();
+		new Error();
 		new Typography();
 		// Layout
 		new Blog_Layout();
 		new Post_Layout();
 		new Page_Layout();
+		new Error_Layout();
 	}
 }

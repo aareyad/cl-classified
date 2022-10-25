@@ -61,6 +61,12 @@ class Default_Data {
 			'post_social_icon'             => 0,
 			'post_author_about'            => 0,
 
+			// Error
+			'error_bodybanner'             => '',
+			'error_text'                   => 'ERROR PAGE',
+			'error_subtitle'               => 'Sorry! This Page is <br> Not Available!',
+			'error_buttontext'             => 'Go Back To Home Page',
+
 			// Footer
 			'footer_style'                 => '1',
 			'copyright_area'               => 1,
@@ -81,30 +87,41 @@ class Default_Data {
 			'blog_footer_style'            => 'default',
 
 			// Single Post Layout
-			'single_post_layout'             => 'right-sidebar',
-			'single_post_sidebar'            => 'sidebar',
-			'single_post_top_bar'            => 'default',
-			'single_post_header_style'       => 'default',
-			'single_post_menu_alignment'     => 'default',
-			'single_post_header_width'       => 'default',
-			'single_post_tr_header'          => 'default',
-			'single_post_breadcrumb'         => 'default',
-			'single_post_padding_top'        => '',
-			'single_post_padding_bottom'     => '',
-			'single_post_footer_style'       => 'default',
+			'single_post_layout'           => 'right-sidebar',
+			'single_post_sidebar'          => 'sidebar',
+			'single_post_top_bar'          => 'default',
+			'single_post_header_style'     => 'default',
+			'single_post_menu_alignment'   => 'default',
+			'single_post_header_width'     => 'default',
+			'single_post_tr_header'        => 'default',
+			'single_post_breadcrumb'       => 'default',
+			'single_post_padding_top'      => '',
+			'single_post_padding_bottom'   => '',
+			'single_post_footer_style'     => 'default',
 
 			// Page Layout
-			'page_layout'                    => 'full-width',
-			'page_sidebar'                   => 'sidebar',
-			'page_top_bar'                   => 'default',
-			'page_header_style'              => 'default',
-			'page_menu_alignment'            => 'default',
-			'page_header_width'              => 'default',
-			'page_tr_header'                 => 'default',
-			'page_breadcrumb'                => 'default',
-			'page_padding_top'               => '',
-			'page_padding_bottom'            => '',
-			'page_footer_style'              => 'default',
+			'page_layout'                  => 'full-width',
+			'page_sidebar'                 => 'sidebar',
+			'page_top_bar'                 => 'default',
+			'page_header_style'            => 'default',
+			'page_menu_alignment'          => 'default',
+			'page_header_width'            => 'default',
+			'page_tr_header'               => 'default',
+			'page_breadcrumb'              => 'default',
+			'page_padding_top'             => '',
+			'page_padding_bottom'          => '',
+			'page_footer_style'            => 'default',
+
+			// Error Layout
+			'error_padding_top'            => '',
+			'error_padding_bottom'         => '',
+			'error_breadcrumb'             => 'default',
+			'error_top_bar'                => 'default',
+			'error_header_style'           => 'default',
+			'error_header_width'           => 'default',
+			'error_menu_alignment'         => 'default',
+			'error_tr_header'              => 'default',
+			'error_footer_style'           => 'default',
 
 			// Color
 			'primary_color'                => '#00c194',
@@ -132,17 +149,6 @@ class Default_Data {
 			'breadcrumb_bg2'                 => '',
 			'breadcrumb_color'               => '#878c9f',
 			'breadcrumb_active_color'        => '',
-
-			// Error Layout
-			'error_padding_top'              => '',
-			'error_padding_bottom'           => '',
-			'error_breadcrumb'               => 'default',
-			'error_top_bar'                  => 'default',
-			'error_header_style'             => 'default',
-			'error_header_width'             => 'default',
-			'error_menu_alignment'           => 'default',
-			'error_tr_header'                => 'default',
-			'error_footer_style'             => 'default',
 
 			// Agent Archive Layout
 			'agent_archive_layout'           => 'left-sidebar',
@@ -231,12 +237,6 @@ class Default_Data {
 			'listing_widget_min_price'       => '0',
 			'listing_widget_max_price'       => '20000',
 			'listing_excerpt_limit'          => '',
-
-			// Error
-			'error_bodybanner'               => '',
-			'error_text'                     => 'ERROR PAGE',
-			'error_subtitle'                 => 'Sorry! This Page is <br> Not Available!',
-			'error_buttontext'               => 'Go Back To Home Page',
 
 			// Newsletter
 			'newsletter_section'             => 0,
