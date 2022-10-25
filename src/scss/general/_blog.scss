@@ -30,12 +30,6 @@
     }
   }
 
-  &.post-each-alt {
-    .post-content-area {
-      padding: 25px 30px;
-    }
-  }
-
   .post-meta {
     @include ul0();
 
@@ -72,16 +66,32 @@
     margin-bottom: 45px;
   }
 
-  &.post-each-alt .post-title {
-    font-size: 26px;
-    line-height: 1.5;
-  }
-
   .post-thumbnail {
     margin-bottom: 25px;
 
     .wp-post-image {
       border-radius: $borderRadius5;
+    }
+  }
+
+  &.post-each-alt {
+    padding: 0;
+
+    .post-thumbnail {
+      margin-bottom: 0;
+
+      .wp-post-image {
+        border-radius: 0;
+      }
+    }
+
+    .entry-title {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .post-content-area {
+      padding: 20px 25px 25px;
     }
   }
 

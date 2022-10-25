@@ -27,6 +27,11 @@ get_header();
 						}
 						?>
 					<?php endwhile; ?>
+					<?php
+					//if ( Options::$options['post_details_related_section'] ) {
+						get_template_part( 'template-parts/related', 'posts' );
+					//}
+					?>
                 </div>
 				<?php
 				if ( Options::$layout == 'right-sidebar' ) {
@@ -34,11 +39,6 @@ get_header();
 				}
 				?>
             </div>
-			<?php
-			if ( Options::$options['post_details_related_section'] ) {
-				get_template_part( 'template-parts/related', 'posts' );
-			}
-			?>
         </div>
     </section>
 

@@ -1,59 +1,49 @@
 <?php
-/**
- * @author  RadiusTheme
- * @since   1.0.0
- * @version 1.0.0
- */
+$post_id             = get_the_id();
+$current_post        = [ $post_id ];
+$related_post_number = apply_filters( 'cl_classified_related_post_number', 2 );
 
-$rt_post_cat = wp_get_object_terms( $post->ID, 'category', [ 'fields' => 'ids' ] );
-// arguments
 $args = [
-	'post_type'      => 'post',
-	'post_status'    => 'publish',
-	'posts_per_page' => 3,
-	'tax_query'      => [
-		[
-			'taxonomy' => 'category',
-			'field'    => 'id',
-			'terms'    => $rt_post_cat,
-		],
-	],
-	'post__not_in'   => [ $post->ID ],
+	'post__not_in'        => $current_post,
+	'posts_per_page'      => $related_post_number,
+	'no_found_rows'       => true,
+	'post_status'         => 'publish',
+	'ignore_sticky_posts' => true,
 ];
 
-$query = new \WP_Query( $args );
-get_header();
+$category_ids = [];
+$categories   = get_the_category( $post_id );
+
+foreach ( $categories as $category ) {
+	$category_ids[] = $category->term_id;
+}
+
+$args['category__in'] = $category_ids;
+
+# Get the posts ----------
+$related_query = new \WP_Query( $args );
+
+$count_post = $related_query->post_count;
+
+if ( ! $count_post ) {
+	return;
+}
+
 ?>
-
-<main class="site-main content-area blog-grid blog-grid-inner content-area style2 blog">
-    <div class="main-post-content">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="section-title-wrapper">
-                    <div class="bg-title-wrap">
-                        <span class="background-title solid"><?php echo esc_html__( 'Blogs', 'homlisti' ); ?></span>
-                    </div>
-
-                    <div class="title-inner-wrapper">
-                        <div class="top-sub-title-wrap">
-                            <span class="top-sub-title">
-                                <i class="fas fa-circle" aria-hidden="true"></i>
-                                <?php echo esc_html__( 'What\'s New Trending', 'homlisti' ); ?>
-                            </span>
-                        </div>
-                        <h2 class="main-title"><?php echo esc_html__( 'Related Blogs', 'homlisti' ); ?></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-			<?php
-			if ( $query->have_posts() ) :
-				while ( $query->have_posts() ) : $query->the_post();
-					get_template_part( 'template-parts/content-alt' );
-				endwhile;
-			endif;
-			?>
-        </div>
+<div class="content-block-gap"></div>
+<div class="site-content-block">
+    <div class="main-title-block">
+        <h3 class="main-title">
+			<?php esc_html_e( 'Related Post', 'cl-classified' ); ?>
+        </h3>
     </div>
-</main>
+    <div class="related-content row">
+		<?php
+		while ( $related_query->have_posts() ) {
+			$related_query->the_post();
+			get_template_part( 'template-parts/content', 'alt' );
+		}
+		wp_reset_postdata();
+		?>
+    </div>
+</div>

@@ -1790,10 +1790,6 @@ table .wp-block-table__cell-content,
 	color: #f9423a;
 }
 
-.post-each.post-each-alt .post-content-area {
-	padding: 25px 30px;
-}
-
 .post-each .post-meta {
 	list-style-type: none;
 	margin: 0;
@@ -1831,17 +1827,33 @@ table .wp-block-table__cell-content,
 	margin-bottom: 45px;
 }
 
-.post-each.post-each-alt .post-title {
-	font-size: 26px;
-	line-height: 1.5;
-}
-
 .post-each .post-thumbnail {
 	margin-bottom: 25px;
 }
 
 .post-each .post-thumbnail .wp-post-image {
 	border-radius: 5px;
+}
+
+.post-each.post-each-alt {
+	padding: 0;
+}
+
+.post-each.post-each-alt .post-thumbnail {
+	margin-bottom: 0;
+}
+
+.post-each.post-each-alt .post-thumbnail .wp-post-image {
+	border-radius: 0;
+}
+
+.post-each.post-each-alt .entry-title {
+	font-size: 22px;
+	line-height: 1.4;
+}
+
+.post-each.post-each-alt .post-content-area {
+	padding: 20px 25px 25px;
 }
 
 .post-each.post-each-single {
