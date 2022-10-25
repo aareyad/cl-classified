@@ -845,6 +845,7 @@ table .wp-block-table__cell-content,
 	height: 45px;
 	line-height: 1.2;
 	padding: 5px 12px;
+	border-color: #e7e7e7;
 }
 
 .rtcl .form-control:focus,
@@ -1649,6 +1650,7 @@ table .wp-block-table__cell-content,
 .sidebar-widget-area .widget.rtcl-widget-filter-class .panel-block .ui-accordion-item .ui-accordion-title {
 	font-weight: 700;
 	color: #212529;
+	border-color: #e7e7e7;
 }
 
 .sidebar-widget-area .widget.rtcl-widget-filter-class .panel-block .ui-accordion-item .ui-accordion-title .ui-accordion-icon {
