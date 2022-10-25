@@ -115,3 +115,15 @@
     border-color: $primaryColor;
   }
 }
+
+.content-block-gap {
+  margin-top: 30px;
+}
+
+.site-content-block {
+  .main-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: $borderRadius8;
+  }
+}

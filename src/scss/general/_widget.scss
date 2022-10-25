@@ -193,7 +193,7 @@
     }
 
     h3 {
-      color: #212529;
+      color: $liteBlack;
       font-weight: $bold;
       border-bottom: 1px solid #e7e7e7;
       position: relative;
@@ -316,7 +316,7 @@
       .ui-accordion-item {
         .ui-accordion-title {
           font-weight: 700;
-          color: #212529;
+          color: $liteBlack;
 
           .ui-accordion-icon {
             background-color: #fff1f3;

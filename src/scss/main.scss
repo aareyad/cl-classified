@@ -11,7 +11,8 @@ CSS INDEX
 #. Custom Widgets
 #. Banner
 #. Pagination
-#. Contents
+#. Widget
+#. Post
 #. Comments
 #. Error 404
 #. Ads
@@ -29,4 +30,6 @@ CSS INDEX
 @import "general/header";
 @import "general/widget";
 @import "general/blog";
+@import "general/comments";
+@import "general/error";
 @import "general/footer";

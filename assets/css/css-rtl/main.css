@@ -11,7 +11,8 @@ CSS INDEX
 #. Custom Widgets
 #. Banner
 #. Pagination
-#. Contents
+#. Widget
+#. Post
 #. Comments
 #. Error 404
 #. Ads
@@ -334,23 +335,12 @@ q:after {
 }
 
 blockquote {
-	color: #333;
+	color: #212529;
 	position: relative;
 	margin: 30px 40px 30px 30px;
 	padding: 0 30px 0 0;
 	border: none;
-}
-
-blockquote:before {
-	content: '';
-	width: 5px;
-	background-color: #f9423a;
-	position: absolute;
-	right: 0;
-	top: 4px;
-	white-space: pre;
-	height: 100%;
-	border-radius: 2px;
+	background-color: #feeceb;
 }
 
 .screen-reader-text {
@@ -599,11 +589,13 @@ table .wp-block-table__cell-content,
 }
 
 .wp-block-quote {
-	color: #333;
+	color: #212529;
 	position: relative;
 	margin: 30px 40px 30px 30px;
-	padding: 10px 30px 10px 0;
+	padding: 15px 20px 15px 20px;
 	border: none;
+	border-right: 5px solid #f9423a;
+	border-radius: 10px;
 }
 
 .wp-block-quote p {
@@ -617,24 +609,13 @@ table .wp-block-table__cell-content,
 
 .wp-block-quote cite,
 .wp-block-quote .wp-block-quote__citation {
+	display: inline-block;
 	font-weight: 400;
-	color: #666;
+	color: #212529;
 	font-size: 16px;
 	line-height: 1.3;
 	font-style: italic;
-	margin: 5px 0 0;
-}
-
-.wp-block-quote:before {
-	content: '';
-	width: 5px;
-	background-color: #f9423a;
-	position: absolute;
-	right: 0;
-	top: 2px;
-	white-space: pre;
-	height: 100%;
-	border-radius: 2px;
+	margin: 10px 0 0;
 }
 
 .wp-block-quote.is-large,
@@ -869,6 +850,16 @@ table .wp-block-table__cell-content,
 .rtcl .form-control:focus,
 .form-control:focus {
 	border-color: #f9423a;
+}
+
+.content-block-gap {
+	margin-top: 30px;
+}
+
+.site-content-block .main-content {
+	background-color: #fff;
+	padding: 25px;
+	border-radius: 8px;
 }
 
 /*-------------------------------------
@@ -1855,7 +1846,7 @@ table .wp-block-table__cell-content,
 
 .post-each.post-each-single {
 	margin-bottom: 0;
-	padding: 25px;
+	padding: 0;
 	box-shadow: none;
 	border-radius: 5px;
 }
@@ -2117,6 +2108,349 @@ table .wp-block-table__cell-content,
 .pagination-number ul li.pagi-next a:hover {
 	color: #ffffff;
 	background-color: #f9423a;
+}
+
+/*-------------------------------------
+#. Comments
+---------------------------------------*/
+.post-title-block,
+.comment-reply-title {
+	font-size: 20px;
+	line-height: 1.3;
+	color: #000000;
+	margin-bottom: 30px;
+}
+
+.comments-area ul.comment-list,
+.comments-area ul.children {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comments-area ul.children {
+	margin-right: 50px;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area ul.children {
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.comments-area ul.children {
+		margin-right: 10px;
+	}
+}
+
+.comments-area .avatar-disabled .main-comments ul.children {
+	margin-right: 30px;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area .avatar-disabled .main-comments ul.children {
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.comments-area .avatar-disabled .main-comments ul.children {
+		margin-right: 10px;
+	}
+}
+
+.comments-area .comment-title span {
+	color: #797f89;
+}
+
+.comments-area .main-comments {
+	padding-top: 12px;
+}
+
+.comments-area .main-comments:first-child {
+	padding-top: 0px;
+}
+
+.comments-area .main-comments .children li {
+	padding-top: 12px;
+}
+
+.comments-area .main-comments .each-comment {
+	padding: 15px 0;
+	border-bottom: 1px solid #ebebeb;
+}
+
+@media screen and (max-width: 480px) {
+	.comments-area .main-comments .each-comment {
+		padding: 5px 0;
+	}
+}
+
+.comments-area .main-comments .imgholder {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area .main-comments .imgholder {
+		max-width: 90px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.comments-area .main-comments .imgholder {
+		max-width: 50px;
+		margin-left: 10px;
+	}
+}
+
+.comments-area .main-comments .imgholder img {
+	border-radius: 50%;
+}
+
+.comments-area .main-comments.pingback .imgholder,
+.comments-area .main-comments.trackback .imgholder {
+	margin: 0;
+}
+
+.comments-area .main-comments .comment-meta .comment-meta-left {
+	float: right;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area .main-comments .comment-meta .comment-meta-left {
+		float: none;
+	}
+}
+
+.comments-area .main-comments .comment-meta .comment-meta-left .comment-author {
+	color: #111;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 5px;
+}
+
+.comments-area .main-comments .comment-meta .comment-meta-left .comment-time {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.comments-area .main-comments .comment-meta .comment-meta-left a {
+	color: #111;
+}
+
+.comments-area .main-comments .comment-meta .comment-meta-left a:hover {
+	text-decoration: underline;
+}
+
+.comments-area .main-comments .comment-meta .reply-area {
+	float: left;
+	margin-top: 10px;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area .main-comments .comment-meta .reply-area {
+		float: none;
+	}
+}
+
+.comments-area .main-comments .comment-meta .reply-area a {
+	color: #fff;
+	border-radius: 2px;
+	padding: 8px 15px;
+	display: block;
+	background-color: #f9423a;
+	font-size: 12px;
+	line-height: 1;
+	transition: all .5s ease-out;
+}
+
+.comments-area .main-comments .comment-meta .reply-area a:hover {
+	background-color: #797f89;
+}
+
+@media (max-width: 991.98px) {
+	.comments-area .main-comments .comment-meta .reply-area a {
+		display: inline-block;
+	}
+}
+
+.comments-area .main-comments .comments-body .comment-text {
+	margin-top: 10px;
+	color: #797f89;
+	font-size: 15px;
+}
+
+.comments-area .main-comments .comments-body .comment-text p {
+	margin-bottom: 10px;
+}
+
+.comments-area .main-comments .comments-body .comment-text .comment-awaiting-moderation {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #111;
+}
+
+.comments-area .main-comments #respond {
+	margin-top: 35px;
+}
+
+.comments-area .comments-closed {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 700;
+	padding-top: 20px;
+	line-height: 1.3;
+	color: #111;
+}
+
+.comments-area .comment-navigation {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.comments-area .comment-navigation div[class^="nav"] {
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.comments-area .comment-navigation div[class^="nav"] a {
+	background-color: #797f89;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	padding: 8px 20px;
+	border-radius: 5px;
+}
+
+.comments-area .comment-navigation div[class^="nav"] a:hover {
+	opacity: 0.8;
+}
+
+#respond .comment-reply-title {
+	margin-bottom: 5px;
+}
+
+#respond .comment-notes,
+#respond .logged-in-as,
+#respond .form-group {
+	margin-bottom: 20px;
+}
+
+#respond .logged-in-as a {
+	color: #212529;
+}
+
+#respond form input,
+#respond form textarea {
+	border: none;
+	background-color: #f9f9f9;
+	border-radius: 0;
+	box-shadow: none;
+	color: #212529;
+}
+
+#respond form input:focus,
+#respond form textarea:focus {
+	box-shadow: none;
+}
+
+#respond form input::placeholder,
+#respond form textarea::placeholder {
+	color: #868e96;
+}
+
+#respond form input {
+	height: 45px;
+}
+
+#respond form textarea {
+	height: auto;
+}
+
+#respond form input[type="checkbox"] {
+	height: inherit;
+	margin-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#respond form label {
+	margin: 0;
+	vertical-align: middle;
+}
+
+#respond form .submit-button {
+	margin-bottom: 0;
+}
+
+#respond form .btn-send {
+	height: inherit;
+	color: #ffffff;
+	padding: 10px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	border: 1px solid #f9423a;
+	background-color: #f9423a;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+#respond form .btn-send:hover {
+	color: #f9423a;
+	background-color: transparent;
+	border: 1px solid #f9423a;
+}
+
+#respond #cancel-comment-reply-link {
+	font-size: 12px;
+	line-height: 1.2;
+	margin-right: 8px;
+}
+
+.site-content .content-area .comment-reply-block .comment-reply-title {
+	display: none;
+}
+
+.site-content .content-area .comment-reply-block .alert {
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+/*-------------------------------------
+#. Error 404
+---------------------------------------*/
+.error-page {
+	text-align: center;
+}
+
+.error-page h3 {
+	margin-top: 30px;
+	margin-bottom: 0;
+	font-size: 30px;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.error-page .error-btn {
+	color: #ffffff;
+	background-color: #f9423a;
+	padding: 20px 35px;
+	border-radius: 5px;
+	margin-top: 50px;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+.error-page .error-btn:hover {
+	background-color: #797f89;
 }
 
 a.scrollToTop {

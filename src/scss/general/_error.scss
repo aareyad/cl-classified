@@ -1,0 +1,29 @@
+/*-------------------------------------
+#. Error 404
+---------------------------------------*/
+.error-page {
+  text-align: center;
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .error-btn {
+    color: #ffffff;
+    background-color: $primaryColor;
+    padding: 20px 35px;
+    border-radius: $borderRadius5;
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.3;
+
+    &:hover {
+      background-color: $secondaryColor;
+    }
+  }
+}
