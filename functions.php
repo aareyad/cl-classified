@@ -14,14 +14,5 @@ function cl_classified_load_textdomain() {
 	load_theme_textdomain( 'cl-classified', get_template_directory() . '/languages' );
 }
 
-/*function is_copyright_area_enabled() {
-	$flag = get_theme_mod( 'copyright_area' );
-	if ( empty( $flag ) ) {
-		return false;
-	}
-
-	return true;
-}*/
-
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';

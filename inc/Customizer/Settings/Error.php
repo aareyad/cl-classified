@@ -63,22 +63,6 @@ class Error extends Customizer {
 			]
 		);
 
-		// Error Subtitle
-		$wp_customize->add_setting( 'error_subtitle',
-			[
-				'default'           => $this->defaults['error_subtitle'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'wp_kses_post',
-			]
-		);
-		$wp_customize->add_control( 'error_subtitle',
-			[
-				'label'   => esc_html__( 'Error Subtitle', 'cl-classified' ),
-				'section' => 'error_section',
-				'type'    => 'text',
-			]
-		);
-
 		// Button Text
 		$wp_customize->add_setting( 'error_buttontext',
 			[
