@@ -93,6 +93,19 @@ class Default_Data {
 			'single_post_padding_bottom'     => '',
 			'single_post_footer_style'       => 'default',
 
+			// Page Layout
+			'page_layout'                    => 'full-width',
+			'page_sidebar'                   => 'sidebar',
+			'page_top_bar'                   => 'default',
+			'page_header_style'              => 'default',
+			'page_menu_alignment'            => 'default',
+			'page_header_width'              => 'default',
+			'page_tr_header'                 => 'default',
+			'page_breadcrumb'                => 'default',
+			'page_padding_top'               => '',
+			'page_padding_bottom'            => '',
+			'page_footer_style'              => 'default',
+
 			// Color
 			'primary_color'                => '#00c194',
 			'primary_lighiten'             => '#50ffe4',
@@ -119,19 +132,6 @@ class Default_Data {
 			'breadcrumb_bg2'                 => '',
 			'breadcrumb_color'               => '#878c9f',
 			'breadcrumb_active_color'        => '',
-
-			// Page Layout
-			'page_layout'                    => 'right-sidebar',
-			'page_sidebar'                   => 'sidebar',
-			'page_padding_top'               => '',
-			'page_padding_bottom'            => '',
-			'page_breadcrumb'                => 'default',
-			'page_footer_style'              => 'default',
-			'page_header_style'              => 'default',
-			'page_header_width'              => 'default',
-			'page_menu_alignment'            => 'default',
-			'page_tr_header'                 => 'default',
-			'page_top_bar'                   => 'default',
 
 			// Error Layout
 			'error_padding_top'              => '',

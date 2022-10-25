@@ -7,6 +7,7 @@ use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Footer;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Page_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Post;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Post_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Typography\Typography;
@@ -39,5 +40,6 @@ class Init {
 		// Layout
 		new Blog_Layout();
 		new Post_Layout();
+		new Page_Layout();
 	}
 }

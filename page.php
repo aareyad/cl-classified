@@ -6,23 +6,34 @@
  */
 
 use RadiusTheme\ClassifiedLite\Helper;
+use RadiusTheme\ClassifiedLite\Options;
 
 get_header();
 ?>
-    <main class="site-main content-area ptb-100">
+    <main id="primary" class="content-area">
         <div class="container">
             <div class="row">
+				<?php
+				if ( Options::$layout == 'left-sidebar' ) {
+					get_sidebar();
+				}
+				?>
                 <div class="<?php Helper::the_layout_class(); ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+						<?php
+						get_template_part( 'template-parts/content', 'page' );
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
+						?>
 					<?php endwhile; ?>
                 </div>
 				<?php
-				if ( Helper::has_sidebar() ) {
+				if ( Options::$layout == 'right-sidebar' ) {
 					get_sidebar();
 				}
 				?>
             </div>
         </div>
     </main>
-	<?php get_footer();
+<?php get_footer(); ?>
