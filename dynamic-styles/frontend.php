@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-Helper::requires( 'dynamic-styles/common.php' );
+Helper::requires( 'common.php', 'dynamic-styles' );
 
 $header_transparent_color = Options::$options['header_transparent_color'];
 ?>

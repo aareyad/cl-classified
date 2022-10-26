@@ -281,7 +281,7 @@ class Scripts {
 		wp_enqueue_style( 'cl-classified-gfonts' );
 		wp_enqueue_style( 'cl-classified-gutenberg' );
 		ob_start();
-		Helper::requires( 'dynamic-styles/common.php' );
+		Helper::requires( 'common.php', 'dynamic-styles' );
 		$dynamic_css = ob_get_clean();
 		$css         = $this->add_wrapper_to_css( $dynamic_css, '.wp-block.editor-block-list__block' );
 		$css         = str_replace( 'gtnbg_root', '', $css );

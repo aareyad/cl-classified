@@ -149,31 +149,6 @@ class Default_Data {
 			'breadcrumb_color'               => '#878c9f',
 			'breadcrumb_active_color'        => '',
 
-			// Agent Archive Layout
-			'agent_archive_layout'           => 'left-sidebar',
-			'agent_archive_sidebar'          => 'listing-archive-sidebar',
-			'agent_archive_breadcrumb'       => 'default',
-			'agent_archive_top_bar'          => 'default',
-			'agent_archive_header_style'     => 'default',
-			'agent_archive_header_width'     => 'default',
-			'agent_archive_menu_alignment'   => 'default',
-			'agent_archive_footer_style'     => 'default',
-			'agent_archive_tr_header'        => 'default',
-			'agent_archive_padding_top'      => '',
-			'agent_archive_padding_bottom'   => '',
-
-
-			// Agent Single Layout
-			'agent_single_layout'            => 'right-sidebar',
-			'agent_single_sidebar'           => 'agent-sidebar',
-			'agent_single_breadcrumb'        => 'default',
-			'agent_single_footer_style'      => 'default',
-			'agent_single_header_style'      => 'default',
-			'agent_single_header_width'      => 'default',
-			'agent_single_menu_alignment'    => 'default',
-			'agent_single_top_bar'           => 'default',
-			'agent_single_tr_header'         => 'default',
-
 			// Listing Archive Layout
 			'listing_archive_layout'         => 'left-sidebar',
 			'listing_archive_sidebar'        => 'listing-archive-sidebar',
@@ -237,9 +212,6 @@ class Default_Data {
 			'listing_widget_max_price'       => '20000',
 			'listing_excerpt_limit'          => '',
 
-			// Newsletter
-			'newsletter_section'             => 0,
-
 			// Contact Info
 			'contact_address'                => '121 King St, Melbourne den 3000, Australia',
 			'contact_phone'                  => '(+123) 596 000',
@@ -261,21 +233,21 @@ class Default_Data {
 				]
 			),
 			'typo_body_size'                 => '16px',
-			'typo_body_height'               => '30px',
+			'typo_body_height'               => '24px',
 
-			//Menu Typography
+			// Menu Typography
 			'typo_menu'                      => json_encode(
 				[
 					'font'          => 'Nunito',
-					'regularweight' => '500',
+					'regularweight' => '700',
 				]
 			),
-			'typo_menu_size'                 => '15px',
-			'typo_menu_height'               => '16px',
+			'typo_menu_size'                 => '16px',
+			'typo_menu_height'               => '24px',
 
 			//Sub Menu Typography
-			'typo_submenu_size'              => '14px',
-			'typo_submenu_height'            => '22px',
+			'typo_submenu_size'              => '16px',
+			'typo_submenu_height'            => '24px',
 
 			// Heading Typography
 			'typo_heading'                   => json_encode(
@@ -291,7 +263,7 @@ class Default_Data {
 				]
 			),
 			'typo_h1_size'                   => '36px',
-			'typo_h1_height'                 => '46px',
+			'typo_h1_height'                 => '1.5',
 
 			'typo_h2'        => json_encode(
 				[
@@ -301,7 +273,7 @@ class Default_Data {
 				]
 			),
 			'typo_h2_size'   => '30px',
-			'typo_h2_height' => '40px',
+			'typo_h2_height' => '1.5',
 
 			'typo_h3'        => json_encode(
 				[
@@ -310,8 +282,8 @@ class Default_Data {
 
 				]
 			),
-			'typo_h3_size'   => '22px',
-			'typo_h3_height' => '32px',
+			'typo_h3_size'   => '24px',
+			'typo_h3_height' => '1.5',
 
 			'typo_h4'        => json_encode(
 				[

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $typo_body = json_decode( Options::$options['typo_body'], true );
 if ( $typo_body['font'] == 'Inherit' ) {
 	$typo_body = [
-		'font'          => 'Roboto',
+		'font'          => 'Lato',
 		'regularweight' => '400',
 	];
 }
@@ -22,16 +22,16 @@ if ( $typo_body['font'] == 'Inherit' ) {
 $typo_menu = json_decode( Options::$options['typo_menu'], true );
 if ( $typo_menu['font'] == 'Inherit' ) {
 	$typo_menu = [
-		'font'          => 'Ubuntu',
-		'regularweight' => '400',
+		'font'          => 'Nunito',
+		'regularweight' => '700',
 	];
 }
 
 $typo_heading = json_decode( Options::$options['typo_heading'], true );
 if ( $typo_heading['font'] == 'Inherit' ) {
 	$typo_heading = [
-		'font'          => 'Ubuntu',
-		'regularweight' => '500',
+		'font'          => 'Nunito',
+		'regularweight' => '700',
 	];
 }
 
@@ -57,19 +57,17 @@ font-weight : <?php echo esc_html( $typo_body['regularweight'] ) ?>;
 font-style: normal;
 }
 
-.header-menu,
-.header-menu .navigation-area nav {
+.main-header .main-navigation-area .main-navigation {
 font-family: '<?php echo esc_html( $typo_menu['font'] ); ?>', sans-serif;
 }
 
-.navigation-area nav > ul > li > a {
+.main-header .main-navigation-area .main-navigation nav > ul > li > a {
 line-height: <?php echo esc_html( Options::$options['typo_menu_height'] ); ?>;
 font-weight : <?php echo esc_html( $typo_menu['regularweight'] ) ?>;
-}
-.navigation-area nav.template-main-menu > ul > li > a {
 font-size: <?php echo esc_html( Options::$options['typo_menu_size'] ) ?>;
 }
-.navigation-area nav > ul > li ul.sub-menu li a {
+
+.main-header .main-navigation-area .main-navigation nav > ul > li ul.sub-menu li a {
 font-size: <?php echo esc_html( Options::$options['typo_submenu_size'] ) ?>;
 line-height: <?php echo esc_html( Options::$options['typo_submenu_height'] ); ?>;
 }
