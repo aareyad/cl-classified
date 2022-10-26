@@ -18,4 +18,4 @@ $header_style = Options::$header_style ? Options::$header_style : 1;
 		?>
     </header>
 
-	<?php //get_template_part( 'template-parts/header/header', 'offscreen' ); ?>
+	<?php get_template_part( 'template-parts/header/header', 'offscreen' ); ?>
