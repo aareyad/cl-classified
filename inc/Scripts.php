@@ -234,29 +234,25 @@ class Scripts {
 		/* Deregister */
 		wp_deregister_style( 'font-awesome' );
 		// Google fonts
-		wp_register_style( 'classified-gfonts', $this->fonts_url(), [], $this->version );
+		wp_register_style( 'cl-classified-gfonts', $this->fonts_url(), [], $this->version );
 		// Style
 		wp_register_style( 'font-awesome', Helper::get_css( 'font-awesome-all.min' ), [], $this->version );
-
 		wp_register_style( 'bootstrap', Helper::get_maybe_rtl_css( 'bootstrap.min' ), [], $this->version );
-		wp_register_style( 'magnific-popup', Helper::get_maybe_rtl_css( 'magnific-popup' ), [], $this->version );
-		wp_register_style( 'classified-default', Helper::get_maybe_rtl_css( 'default' ), [], $this->version );
+		wp_register_style( 'cl-classified-default', Helper::get_maybe_rtl_css( 'default' ), [], $this->version );
 		wp_register_style( 'cl-classified-main', Helper::get_maybe_rtl_css( 'main' ), [], $this->version );
 		wp_register_style( 'cl-classified-rtl', Helper::get_rtl_css( 'rtl' ), [], $this->version );
 
 		// Script
 		wp_register_script( 'bootstrap', Helper::get_js( 'bootstrap.bundle.min' ), [ 'jquery' ], $this->version, true );
-		wp_register_script( 'magnific-popup', Helper::get_js( 'jquery.magnific-popup.min' ), [ 'jquery' ], $this->version, true );
 		wp_register_script( 'cl-classified-main', Helper::get_js( 'main' ), [ 'jquery' ], $this->version, true );
 	}
 
 	public function enqueue_scripts() {
 		/*------CSS--------*/
-		wp_enqueue_style( 'classified-gfonts' );
+		wp_enqueue_style( 'cl-classified-gfonts' );
 		wp_enqueue_style( 'bootstrap' );
 		wp_enqueue_style( 'font-awesome' );
-		wp_enqueue_style( 'magnific-popup' );
-		wp_enqueue_style( 'classified-default' );
+		wp_enqueue_style( 'cl-classified-default' );
 		wp_enqueue_style( 'cl-classified-main' );
 		if ( is_rtl() ) {
 			wp_enqueue_style( 'cl-classified-rtl' );
@@ -265,34 +261,33 @@ class Scripts {
 		/*-------JS--------*/
 		$this->conditional_scripts(); // Conditional Scripts
 		wp_enqueue_script( 'bootstrap' );
-		wp_enqueue_script( 'magnific-popup' );
 
 		wp_enqueue_script( 'cl-classified-main' );
 		$this->localized_scripts(); // Localization
 	}
 
 	public function enqueue_admin_scripts() {
-		wp_register_style( 'flaticon', Helper::get_css( 'flaticon' ), [], $this->version );
+		/*wp_register_style( 'flaticon', Helper::get_css( 'flaticon' ), [], $this->version );
 		wp_register_style( 'rt-admin', Helper::get_css( 'rt-admin' ), [], $this->version );
 		wp_enqueue_style( 'flaticon' );
 		wp_enqueue_style( 'rt-admin' );
-		wp_enqueue_style( 'homlisti-admin', Helper::get_css( 'homlisti-admin' ), [], $this->version );
+		wp_enqueue_style( 'homlisti-admin', Helper::get_css( 'homlisti-admin' ), [], $this->version );*/
 	}
 
 	public function register_gutenberg_scripts() {
-		wp_register_style( 'homlisti-gfonts', $this->fonts_url(), [], $this->version );
-		wp_register_style( 'homlisti-gutenberg', Helper::get_maybe_rtl_css( 'gutenberg' ), [], $this->version );
+		wp_register_style( 'cl-classified-gfonts', $this->fonts_url(), [], $this->version );
+		wp_register_style( 'cl-classified-gutenberg', Helper::get_maybe_rtl_css( 'gutenberg' ), [], $this->version );
 	}
 
 	public function enqueue_gutenberg_scripts() {
-		wp_enqueue_style( 'homlisti-gfonts' );
-		wp_enqueue_style( 'homlisti-gutenberg' );
+		wp_enqueue_style( 'cl-classified-gfonts' );
+		wp_enqueue_style( 'cl-classified-gutenberg' );
 		ob_start();
 		Helper::requires( 'dynamic-styles/common.php' );
 		$dynamic_css = ob_get_clean();
 		$css         = $this->add_wrapper_to_css( $dynamic_css, '.wp-block.editor-block-list__block' );
 		$css         = str_replace( 'gtnbg_root', '', $css );
-		wp_add_inline_style( 'homlisti-gutenberg', $css );
+		wp_add_inline_style( 'cl-classified-gutenberg', $css );
 	}
 
 	private function conditional_scripts() {
@@ -311,7 +306,7 @@ class Scripts {
 			'rtStickyHeaderOffset' => Options::$options['sticky_header'] ? 130 : 10
 		];
 
-		$localize_data = apply_filters( 'classified_localized_data', $localize_data );
+		$localize_data = apply_filters( 'cl_classified_localized_data', $localize_data );
 
 		wp_localize_script( 'cl-classified-main', 'CLClassified', $localize_data );
 	}
@@ -322,9 +317,9 @@ class Scripts {
 		Helper::requires( 'frontend.php', 'dynamic-styles' );
 		$dynamic_css .= ob_get_clean();
 		$dynamic_css = $this->optimized_css( $dynamic_css );
-		wp_register_style( 'classified-dynamic', false );
-		wp_enqueue_style( 'classified-dynamic' );
-		wp_add_inline_style( 'classified-dynamic', $dynamic_css );
+		wp_register_style( 'cl-classified-dynamic', false );
+		wp_enqueue_style( 'cl-classified-dynamic' );
+		wp_add_inline_style( 'cl-classified-dynamic', $dynamic_css );
 	}
 
 	private function template_style() {
@@ -334,7 +329,7 @@ class Scripts {
 			$style .= 'body .content-area {padding-top:' . Options::$padding_top . '!important;}';
 		}
 		if ( Options::$padding_bottom != '' ) {
-			$style .= 'body .content-area {padding-bottom:' . Options::$padding_bottom . ';!important}';
+			$style .= 'body .content-area {padding-bottom:' . Options::$padding_bottom . '!important}';
 		}
 
 		$bgimg            = ! empty( wp_get_attachment_image_url( Options::$options['banner_image'], 'full' ) ) ? wp_get_attachment_image_url( Options::$options['banner_image'],
