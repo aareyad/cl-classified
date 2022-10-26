@@ -149,8 +149,16 @@
   .main-navigation-area {
     min-height: 90px;
     display: flex;
-    justify-content: center;
     flex-grow: 1;
+    justify-content: center;
+
+    &.menu-left {
+      justify-content: flex-start;
+    }
+
+    &.menu-right {
+      justify-content: flex-end;
+    }
 
     @include small-screen() {
       display: block;
@@ -401,6 +409,42 @@
   }
 }
 
+// Sticky Header
+
+.main-header-sticky-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  margin-top: -120px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba($black, 0.1);
+}
+
+.admin-bar {
+  .main-header-sticky-wrapper {
+    top: 32px;
+  }
+}
+
+.rdthemeSticky {
+  .main-header-sticky-wrapper {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    margin-top: 0 !important;
+  }
+}
+
+// Transparent Header
+
+.trheader {
+  .main-header {
+    background-color: transparent;
+  }
+}
+
 @-webkit-keyframes toTopFromBottom {
   49% {
     -webkit-transform: translateY(-100%);
@@ -413,6 +457,7 @@
     opacity: 1;
   }
 }
+
 @-moz-keyframes toTopFromBottom {
   49% {
     -moz-transform: translateY(-100%);
@@ -425,6 +470,7 @@
     opacity: 1;
   }
 }
+
 @keyframes toTopFromBottom {
   49% {
     transform: translateY(-100%);
@@ -437,6 +483,7 @@
     opacity: 1;
   }
 }
+
 @-webkit-keyframes upsdown {
   0% {
     transform: translateY(-100px);

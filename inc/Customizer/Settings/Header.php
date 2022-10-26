@@ -125,7 +125,7 @@ class Header extends Customizer {
 			]
 		) );
 
-		//Transparent Header BG Color
+		// Transparent Header BG Color
 		$wp_customize->add_setting( 'header_transparent_color',
 			[
 				'default'           => $this->defaults['header_transparent_color'],
@@ -140,7 +140,6 @@ class Header extends Customizer {
 				'active_callback' => [ '\RadiusTheme\ClassifiedLite\Helper', 'is_trheader_enable' ],
 			]
 		) );
-
 
 		// Button Control
 		$wp_customize->add_setting( 'header_btn',
@@ -202,22 +201,6 @@ class Header extends Customizer {
 		$wp_customize->add_control( new Switcher( $wp_customize, 'header_login_icon',
 			[
 				'label'   => esc_html__( 'Header Login Icon Visibility', 'cl-classified' ),
-				'section' => 'header_main_section',
-			]
-		) );
-
-
-		// Header Fav Icon
-		$wp_customize->add_setting( 'header_fav_icon',
-			[
-				'default'           => $this->defaults['header_fav_icon'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'header_fav_icon',
-			[
-				'label'   => esc_html__( 'Header Favourite Icon Visibility', 'cl-classified' ),
 				'section' => 'header_main_section',
 			]
 		) );

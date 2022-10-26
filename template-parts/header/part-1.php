@@ -46,7 +46,7 @@ $login_icon_title = is_user_logged_in() ? esc_html__( 'My Account', 'cl-classifi
 
     </div>
 
-    <div class="main-navigation-area">
+    <div class="main-navigation-area <?php echo esc_attr( Options::$menu_alignment ) ?>">
         <div id="main-navigation" class="main-navigation">
             <?php wp_nav_menu( $nav_menu_args ); ?>
         </div>
@@ -63,7 +63,7 @@ $login_icon_title = is_user_logged_in() ? esc_html__( 'My Account', 'cl-classifi
                href="<?php echo esc_url( Link::get_my_account_page_link() ); ?>"><i class="far fa-user"
                                                                                     aria-hidden="true"></i></a>
         <?php endif; ?>
-	    <?php if ( Options::$options['header_btn_txt'] && Options::$options['header_btn_url'] ): ?>
+	    <?php if ( Options::$options['header_btn_txt'] && Options::$options['header_btn'] ): ?>
             <div class="header-btn-area">
                 <a class="header-btn" href="<?php echo esc_url( Options::$options['header_btn_url'] ); ?>"><i
                             class="fas fa-plus"

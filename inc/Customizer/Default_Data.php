@@ -27,19 +27,18 @@ class Default_Data {
 
 			// Header
 			'top_bar'                      => 0,
-			'tr_header'                    => 0,
 			'sticky_header'                => 0,
 			'header_btn'                   => 0,
 			'header_btn_txt'               => 'Add Listing',
 			'header_btn_url'               => '#',
 			'breadcrumb'                   => 1,
 			'header_login_icon'            => 1,
-			'header_fav_icon'              => 1,
 			'header_chat_icon'             => 0,
 			'header_style'                 => '1',
 			'header_width'                 => 'box-width',
-			'menu_alignment'               => 'menu-right',
-			'header_transparent_color'     => 'rgba(0, 0, 0, .56)',
+			'menu_alignment'               => 'menu-center',
+			'tr_header'                    => 0,
+			'header_transparent_color'     => 'rgba(255, 255, 255, .5)',
 
 			// Blog Archive
 			'blog_style'                   => 'style1',

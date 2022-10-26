@@ -1021,8 +1021,16 @@ table .wp-block-table__cell-content,
 .main-header .main-navigation-area {
 	min-height: 90px;
 	display: flex;
-	justify-content: center;
 	flex-grow: 1;
+	justify-content: center;
+}
+
+.main-header .main-navigation-area.menu-left {
+	justify-content: flex-start;
+}
+
+.main-header .main-navigation-area.menu-right {
+	justify-content: flex-end;
 }
 
 @media screen and (max-width: 767px) {
@@ -1255,6 +1263,32 @@ table .wp-block-table__cell-content,
 	background-color: #ffffff;
 	color: #f9423a;
 	transform: rotate(90deg);
+}
+
+.main-header-sticky-wrapper {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	margin-top: -120px;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	background-color: #ffffff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.admin-bar .main-header-sticky-wrapper {
+	top: 32px;
+}
+
+.rdthemeSticky .main-header-sticky-wrapper {
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	margin-top: 0 !important;
+}
+
+.trheader .main-header {
+	background-color: transparent;
 }
 
 @-webkit-keyframes toTopFromBottom {

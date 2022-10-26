@@ -21,6 +21,6 @@
 		<?php get_template_part( 'template-parts/content', 'menu' ); ?>
         <div id="content" class="site-content">
             <?php
-            if(class_exists('Rtcl')){
+            if( class_exists('Rtcl') ) {
                 get_template_part('template-parts/content', 'banner');
             }

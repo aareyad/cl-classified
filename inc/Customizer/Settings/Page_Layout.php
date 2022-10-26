@@ -100,11 +100,7 @@ class Page_Layout extends Customizer {
 			'type'    => 'select',
 			'section' => 'page_layout_section',
 			'label'   => esc_html__( 'Header Layout', 'cl-classified' ),
-			'choices' => [
-				'default' => esc_html__( 'Default', 'cl-classified' ),
-				'1'       => esc_html__( 'Layout 1', 'cl-classified' ),
-				'2'       => esc_html__( 'Layout 2', 'cl-classified' ),
-			],
+			'choices' => Helper::get_header_list(),
 		] );
 
 		// Menu Alignment

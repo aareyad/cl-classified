@@ -270,15 +270,6 @@ class Helper {
 		return true;
 	}
 
-	public static function is_fav_btn_enabled() {
-		$btn_flag = get_theme_mod( 'header_fav_icon' );
-		if ( empty( $btn_flag ) ) {
-			return false;
-		}
-
-		return true;
-	}
-
 	public static function wp_set_temp_query( $query ) {
 		global $wp_query;
 		$temp     = $wp_query;

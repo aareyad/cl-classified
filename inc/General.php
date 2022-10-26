@@ -117,8 +117,8 @@ class General {
 
 		// Image sizes
 		$sizes = [
-			'rdtheme-size1'  => [ 1200, 650, true ], // When Full width
-			'rdtheme-size2'  => [ 450, 260, true ], // Listing Thumbnail Size and blog grid
+			'rdtheme-size1' => [ 1200, 650, true ], // When Full width
+			'rdtheme-size2' => [ 450, 260, true ], // Listing Thumbnail Size and blog grid
 		];
 
 		$sizes = apply_filters( 'homlisti_image_size', $sizes );
@@ -181,22 +181,15 @@ class General {
 	}
 
 	public function body_classes( $classes ) {
-		//Theme Version
-		$header_style   = Options::$header_style ? Options::$header_style : 4;
-		$homlisti_theme = wp_get_theme();
-		$classes[]      = $homlisti_theme->Name . '-version-' . $homlisti_theme->Version;
-		$classes[]      = 'theme-homlisti';
-		// Header
-		if ( '5' == $header_style ) {
-			$classes[] = 'header-style-4';
-		}
-		$classes[] = 'header-style-' . $header_style;
-		$classes[] = 'header-width-' . Options::$header_width;
-		$sticky    = Options::$options['sticky_header'] ? 1 : 0;
+		// Theme Version
+		$theme     = wp_get_theme();
+		$classes[] = $theme->TextDomain . '-version-' . $theme->Version;
+		$classes[] = 'theme-cl-classified';
 
-		if ( $sticky ) {
-			$classes[] = 'sticky-header';
-		}
+		// Header
+		$header_style = Options::$header_style ? Options::$header_style : 1;
+		$classes[]    = 'header-style-' . $header_style;
+		$classes[]    = 'header-' . Options::$header_width;
 
 		if ( Options::$has_tr_header ) {
 			$classes[] = 'trheader';
@@ -212,32 +205,8 @@ class General {
 			$classes[] = 'single-listing-style-' . Helper::listing_single_style();
 		}
 
-		if ( class_exists( 'HomListi_Core' ) ) {
-			$classes[] = 'homlisti-core-installed';
-		}
-
-		if ( ! class_exists( 'HomListi_Core' ) ) {
-			$classes[] = 'need-homlisti-core';
-		}
-
 		if ( Helper::has_full_width() ) {
 			$classes[] = 'is-full-width';
-		}
-
-		// WooCommerce
-		if ( isset( $_COOKIE["shopview"] ) && $_COOKIE["shopview"] == 'list' ) {
-			$classes[] = 'product-list-view';
-		} else {
-			$classes[] = 'product-grid-view';
-		}
-
-		global $post;
-		if ( isset( $post ) ) {
-			$classes[] = $post->post_type . '-' . $post->post_name;
-		}
-
-		if ( isset( $_GET ) && ! empty( $_GET ) ) {
-			$classes[] = 'homlisti-have-request';
 		}
 
 		return $classes;

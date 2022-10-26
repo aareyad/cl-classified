@@ -238,7 +238,6 @@ class Scripts {
 		// Style
 		wp_register_style( 'font-awesome', Helper::get_css( 'font-awesome-all.min' ), [], $this->version );
 		wp_register_style( 'bootstrap', Helper::get_maybe_rtl_css( 'bootstrap.min' ), [], $this->version );
-		wp_register_style( 'cl-classified-default', Helper::get_maybe_rtl_css( 'default' ), [], $this->version );
 		wp_register_style( 'cl-classified-main', Helper::get_maybe_rtl_css( 'main' ), [], $this->version );
 		wp_register_style( 'cl-classified-rtl', Helper::get_rtl_css( 'rtl' ), [], $this->version );
 
@@ -252,7 +251,6 @@ class Scripts {
 		wp_enqueue_style( 'cl-classified-gfonts' );
 		wp_enqueue_style( 'bootstrap' );
 		wp_enqueue_style( 'font-awesome' );
-		wp_enqueue_style( 'cl-classified-default' );
 		wp_enqueue_style( 'cl-classified-main' );
 		if ( is_rtl() ) {
 			wp_enqueue_style( 'cl-classified-rtl' );
@@ -303,6 +301,7 @@ class Scripts {
 			'ajaxUrl'              => admin_url( 'admin-ajax.php' ),
 			'appendHtml'           => '',
 			'themeUrl'             => get_stylesheet_directory_uri(),
+			'hasStickyMenu'        => Options::$options['sticky_header'] ? 1 : 0,
 			'rtStickyHeaderOffset' => Options::$options['sticky_header'] ? 130 : 10
 		];
 
