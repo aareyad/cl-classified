@@ -63,7 +63,8 @@ class Default_Data {
 
 			// Error
 			'error_bodybanner'             => '',
-			'error_text'                   => 'ERROR PAGE',
+			'error_text'                   => 'ERROR PAGE!',
+			'error_subtitle'               => 'Sorry! This Page is Not Available!',
 			'error_buttontext'             => 'Go Back To Home Page',
 
 			// Footer
