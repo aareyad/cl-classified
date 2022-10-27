@@ -175,6 +175,25 @@ class Post_Layout extends Customizer {
 			],
 		] );
 
+		// Banner Search
+		$wp_customize->add_setting( 'single_post_banner_search',
+			[
+				'default'           => $this->defaults['single_post_banner_search'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'rttheme_text_sanitization',
+			]
+		);
+		$wp_customize->add_control( 'single_post_banner_search', [
+			'type'    => 'select',
+			'section' => 'single_post_layout_section',
+			'label'   => esc_html__( 'Banner Search', 'cl-classified' ),
+			'choices' => [
+				'default' => esc_html__( 'Default', 'cl-classified' ),
+				'on'      => esc_html__( 'Enable', 'cl-classified' ),
+				'off'     => esc_html__( 'Disable', 'cl-classified' ),
+			],
+		] );
+
 		// Padding Top
 		$wp_customize->add_setting( 'single_post_padding_top',
 			[

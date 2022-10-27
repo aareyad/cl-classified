@@ -331,11 +331,11 @@ class Scripts {
 			$style .= 'body .content-area {padding-bottom:' . Options::$padding_bottom . '!important}';
 		}
 
-		$bgimg            = ! empty( wp_get_attachment_image_url( Options::$options['banner_image'], 'full' ) ) ? wp_get_attachment_image_url( Options::$options['banner_image'],
+		$bgimg = ! empty( wp_get_attachment_image_url( Options::$options['banner_image'], 'full' ) ) ? wp_get_attachment_image_url( Options::$options['banner_image'],
 			'full' ) : '';
-		$breadcrumb_style = Options::$breadcrumb_style;
-		if ( ! empty( $bgimg ) && 'style-2' == $breadcrumb_style ) {
-			$style .= '.breadcrumbs-banner {background-image:url(' . $bgimg . ');}';
+
+		if ( ! empty( $bgimg ) ) {
+			$style .= '.banner-search {background-image:url(' . $bgimg . ');}';
 		}
 
 		return $style;

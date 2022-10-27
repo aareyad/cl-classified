@@ -56,17 +56,18 @@ class Layouts {
 					$this->type = 'page';
 			}
 
-			Options::$layout         = $this->meta_layout_option( 'layout' );
-			Options::$sidebar        = $this->meta_layout_option( 'sidebar' );
-			Options::$padding_top    = $this->meta_layout_option( 'padding_top' );
-			Options::$padding_bottom = $this->meta_layout_option( 'padding_bottom' );
-			Options::$has_top_bar    = $this->meta_layout_global_option( 'top_bar', true );
-			Options::$header_width   = $this->meta_layout_global_option( 'header_width' );
-			Options::$header_style   = $this->meta_layout_global_option( 'header_style' );
-			Options::$menu_alignment = $this->meta_layout_global_option( 'menu_alignment' );
-			Options::$footer_style   = $this->meta_layout_global_option( 'footer_style' );
-			Options::$has_tr_header  = $this->meta_layout_global_option( 'tr_header', true );
-			Options::$has_breadcrumb = $this->meta_layout_global_option( 'breadcrumb', true );
+			Options::$layout            = $this->meta_layout_option( 'layout' );
+			Options::$sidebar           = $this->meta_layout_option( 'sidebar' );
+			Options::$padding_top       = $this->meta_layout_option( 'padding_top' );
+			Options::$padding_bottom    = $this->meta_layout_option( 'padding_bottom' );
+			Options::$has_top_bar       = $this->meta_layout_global_option( 'top_bar', true );
+			Options::$header_width      = $this->meta_layout_global_option( 'header_width' );
+			Options::$header_style      = $this->meta_layout_global_option( 'header_style' );
+			Options::$menu_alignment    = $this->meta_layout_global_option( 'menu_alignment' );
+			Options::$footer_style      = $this->meta_layout_global_option( 'footer_style' );
+			Options::$has_tr_header     = $this->meta_layout_global_option( 'tr_header', true );
+			Options::$has_breadcrumb    = $this->meta_layout_global_option( 'breadcrumb', true );
+			Options::$has_banner_search = $this->meta_layout_global_option( 'banner_search', true );
 
 		} // Blog and Archive
 		elseif ( is_home() || is_archive() || is_search() || is_404() || $is_listing ) {
@@ -78,17 +79,18 @@ class Layouts {
 				$this->type = 'blog';
 			}
 
-			Options::$layout         = $this->layout_option( 'layout' );
-			Options::$sidebar        = $this->layout_option( 'sidebar' );
-			Options::$padding_top    = $this->layout_option( 'padding_top' );
-			Options::$padding_bottom = $this->layout_option( 'padding_bottom' );
-			Options::$has_breadcrumb = $this->layout_global_option( 'breadcrumb', true );
-			Options::$has_top_bar    = $this->layout_global_option( 'top_bar', true );
-			Options::$header_width   = $this->layout_global_option( 'header_width' );
-			Options::$menu_alignment = $this->layout_global_option( 'menu_alignment' );
-			Options::$header_style   = $this->layout_global_option( 'header_style' );
-			Options::$footer_style   = $this->layout_global_option( 'footer_style' );
-			Options::$has_tr_header  = $this->layout_global_option( 'tr_header', true );
+			Options::$layout            = $this->layout_option( 'layout' );
+			Options::$sidebar           = $this->layout_option( 'sidebar' );
+			Options::$padding_top       = $this->layout_option( 'padding_top' );
+			Options::$padding_bottom    = $this->layout_option( 'padding_bottom' );
+			Options::$has_breadcrumb    = $this->layout_global_option( 'breadcrumb', true );
+			Options::$has_banner_search = $this->layout_global_option( 'banner_search', true );
+			Options::$has_top_bar       = $this->layout_global_option( 'top_bar', true );
+			Options::$header_width      = $this->layout_global_option( 'header_width' );
+			Options::$menu_alignment    = $this->layout_global_option( 'menu_alignment' );
+			Options::$header_style      = $this->layout_global_option( 'header_style' );
+			Options::$footer_style      = $this->layout_global_option( 'footer_style' );
+			Options::$has_tr_header     = $this->layout_global_option( 'tr_header', true );
 		}
 
 		// All pages

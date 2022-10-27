@@ -97,7 +97,7 @@ class Blog_Layout extends Customizer {
 			'type'    => 'select',
 			'section' => 'blog_layout_section',
 			'label'   => esc_html__( 'Header Layout', 'cl-classified' ),
-			'choices'     => Helper::get_header_list(),
+			'choices' => Helper::get_header_list(),
 		] );
 
 		// Menu Alignment
@@ -119,7 +119,7 @@ class Blog_Layout extends Customizer {
 			],
 		] );
 
-		//Header width
+		// Header width
 		$wp_customize->add_setting( 'blog_header_width', [
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'rttheme_text_sanitization',
@@ -167,6 +167,24 @@ class Blog_Layout extends Customizer {
 			'type'    => 'select',
 			'section' => 'blog_layout_section',
 			'label'   => esc_html__( 'Breadcrumb', 'cl-classified' ),
+			'choices' => [
+				'default' => esc_html__( 'Default', 'cl-classified' ),
+				'on'      => esc_html__( 'Enable', 'cl-classified' ),
+				'off'     => esc_html__( 'Disable', 'cl-classified' ),
+			],
+		] );
+		// Banner Search
+		$wp_customize->add_setting( 'blog_banner_search',
+			[
+				'default'           => $this->defaults['blog_banner_search'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'rttheme_text_sanitization',
+			]
+		);
+		$wp_customize->add_control( 'blog_banner_search', [
+			'type'    => 'select',
+			'section' => 'blog_layout_section',
+			'label'   => esc_html__( 'Banner Search', 'cl-classified' ),
 			'choices' => [
 				'default' => esc_html__( 'Default', 'cl-classified' ),
 				'on'      => esc_html__( 'Enable', 'cl-classified' ),

@@ -141,7 +141,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #797f89;
+	color: #ef1c13;
 	text-decoration: none;
 }
 
@@ -811,7 +811,7 @@ table .wp-block-table__cell-content,
 }
 
 .section-link a {
-	color: #797f89;
+	color: #ef1c13;
 	font-weight: 600;
 	transition: all 0.3s ease-in-out;
 	border-bottom: 1px solid transparent;
@@ -2415,7 +2415,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	border: 1px solid #e7e7e7;
 	border-radius: 4px;
 	text-decoration: none;
-	color: #797f89;
+	color: #ef1c13;
 	background-color: #ffffff;
 	transition: all 0.3s;
 }
@@ -2607,7 +2607,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 }
 
 .comments-area .main-comments .comment-meta .reply-area a:hover {
-	background-color: #797f89;
+	background-color: #ef1c13;
 }
 
 @media (max-width: 991.98px) {
@@ -2806,7 +2806,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 }
 
 .error-page .error-btn:hover {
-	background-color: #797f89;
+	background-color: #ef1c13;
 }
 
 a.scrollToTop {
@@ -2835,4 +2835,76 @@ a.scrollToTop:focus {
 
 .footer-bottom .footer-copyright {
 	margin-bottom: 0;
+}
+
+.banner-search {
+	padding: 50px 0;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form {
+	display: flex;
+	display: -ms-flexbox;
+	align-items: flex-end;
+	gap: 20px;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form>div {
+	flex: 1 1 0;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0;
+	margin: 0;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-btn-holder {
+	max-width: 135px;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item label {
+	color: #797f89;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button {
+	background-color: #ffffff;
+	padding: 15px 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 8px #e4e4e4;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button input {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button .cl-input-icon {
+	margin-right: 8px;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-search-btn {
+	background-color: #f9423a;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 28px;
+	border-radius: 5px;
+	font-weight: 600;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-search-btn:hover {
+	background-color: #ef1c13;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-search-btn i {
+	margin-left: 8px;
+}
+
+.banner-search+.breadcrumbs-area {
+	margin-top: 20px;
 }

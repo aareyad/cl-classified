@@ -25,7 +25,7 @@ if ( ! class_exists( 'Options' ) ) {
 		public static $footer_style = null;
 		public static $padding_top = null;
 		public static $padding_bottom = null;
-		public static $has_banner = null;
+		public static $has_banner_search = null;
 		public static $has_breadcrumb = null;
 		public static $has_tr_header;
 		public static $has_top_bar;

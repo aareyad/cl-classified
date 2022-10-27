@@ -139,7 +139,6 @@ class General extends Customizer {
 			'section'  => 'general_section',
 		] ) );
 
-
 		// Preloader
 		$wp_customize->add_setting( 'preloader',
 			[
