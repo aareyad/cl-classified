@@ -6,15 +6,21 @@
  */
 
 use RadiusTheme\ClassifiedLite\Helper;
+use RadiusTheme\ClassifiedLite\Options;
 
 get_header();
 ?>
 
-    <main class="site-main blog-grid blog-grid-inner content-area rtcl-widget-border-enable search-page-content style1">
+    <main id="primary" class="site-search content-area">
         <div class="container">
             <div class="row">
+	            <?php
+	            if ( Options::$layout == 'left-sidebar' ) {
+		            get_sidebar();
+	            }
+	            ?>
                 <div class="<?php Helper::the_layout_class(); ?>">
-                    <div class="main-post-content">
+                    <div class="main-content">
 						<?php if ( have_posts() ) : ?>
 							<?php
 							while ( have_posts() ) : the_post();
@@ -27,11 +33,11 @@ get_header();
                     </div>
 					<?php get_template_part( 'template-parts/pagination' ); ?>
                 </div>
-				<?php
-				if ( Helper::has_sidebar() ) {
-					get_sidebar();
-				}
-				?>
+	            <?php
+	            if ( Options::$layout == 'right-sidebar' ) {
+		            get_sidebar();
+	            }
+	            ?>
             </div>
         </div>
     </main>

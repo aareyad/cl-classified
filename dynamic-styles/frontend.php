@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 Helper::requires( 'common.php', 'dynamic-styles' );
 
 $header_transparent_color = Options::$options['header_transparent_color'];
+$logo_max_width           = Options::$options['logo_width'];
 ?>
 <?php
 /*-------------------------------------
@@ -23,4 +24,7 @@ $header_transparent_color = Options::$options['header_transparent_color'];
 ?>
 .trheader .main-header {
 background-color: <?php echo esc_html( $header_transparent_color ); ?>;
+}
+.main-header .site-branding {
+max-width: <?php echo esc_html( $logo_max_width ); ?>;
 }

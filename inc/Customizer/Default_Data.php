@@ -18,7 +18,7 @@ class Default_Data {
 			'logo'                         => '',
 			'logo_light'                   => '',
 			'mobile_logo'                  => '',
-			'logo_width'                   => '',
+			'logo_width'                   => '200px',
 			'preloader'                    => '',
 			'preloader_image'              => '',
 			'banner_image'                 => '',

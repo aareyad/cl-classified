@@ -15,7 +15,7 @@ class General {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', [ $this, 'theme_setup' ] );
-		add_filter( 'max_srcset_image_width', [ $this, 'disable_wp_responsive_images' ] );
+		//add_filter( 'max_srcset_image_width', [ $this, 'disable_wp_responsive_images' ] );
 		add_action( 'widgets_init', [ $this, 'register_sidebars' ], 99 );
 		add_action( 'homlisti_breadcrumb', [ $this, 'breadcrumb' ] );
 		add_filter( 'body_class', [ $this, 'body_classes' ] );
@@ -24,75 +24,21 @@ class General {
 		add_action( 'wp_body_open', [ $this, 'preloader' ] );
 		add_action( 'wp_footer', [ $this, 'scroll_to_top_html' ], 1 );
 		add_filter( 'get_search_form', [ $this, 'search_form' ] );
-		//add_filter( 'comment_form_fields', [ $this, 'move_textarea_to_bottom' ] );
 		add_filter( 'post_class', [ $this, 'hentry_config' ] );
-		add_filter( 'excerpt_more', [ $this, 'excerpt_more' ] );
 		add_filter( 'wp_list_categories', [ $this, 'add_span_cat_count' ] );
 		add_filter( 'get_archives_link', [ $this, 'add_span_archive_count' ] );
 		add_filter( 'widget_text', 'do_shortcode' );
-
-		//Add user 
-		add_action( 'show_user_profile', [ $this, 'rt_show_extra_profile_fields' ] );
-		add_action( 'edit_user_profile', [ $this, 'rt_show_extra_profile_fields' ] );
-		add_action( 'personal_options_update', [ $this, 'rt_update_user_profile_fields' ] );
-		add_action( 'edit_user_profile_update', [ $this, 'rt_update_user_profile_fields' ] );
-
-		//Disable Gutenberg widget block
+		// Restrict Admin Area
+		add_action( 'after_setup_theme', [ $this, 'restrict_admin_area' ] );
+		// Disable Gutenberg widget block
 		add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );// Disables the block editor from managing widgets in the Gutenberg plugin.
 		add_filter( 'use_widgets_block_editor', '__return_false' ); // Disables the block editor from managing widgets.
 	}
 
-	// Render user profile info
-	function rt_show_extra_profile_fields( $user ) {
-		$user_agency = get_the_author_meta( 'user_agency', $user->ID ); ?>
-        <h3><?php esc_html_e( 'Agency Info', 'cl-classified' ); ?></h3>
-
-        <table class="form-table">
-            <tr>
-                <th><label for="user_agency"><?php esc_html_e( 'Select an Agency', 'cl-classified' ); ?></label></th>
-                <td>
-					<?php
-					$args       = [
-						'post_type'      => 'store',
-						'posts_per_page' => - 1,
-						'post_status'    => 'publish',
-					];
-					$get_agency = new \WP_Query( $args )
-					?>
-                    <select name="user_agency" id="user_agency">
-                        <option><?php echo esc_html__( 'Select Agency', 'cl-classified' ) ?></option>
-						<?php
-						if ( $get_agency->have_posts() ) {
-							while ( $get_agency->have_posts() ) {
-								$get_agency->the_post();
-								$selected = ( $user_agency == get_the_id() ) ? 'selected' : null;
-								echo "<option " . $selected . " value='" . get_the_id() . "'>" . get_the_title() . "</option>";
-							}
-						}
-						?>
-                    </select>
-                </td>
-            </tr>
-        </table>
-		<?php
-	}
-
-	//disable wp responsive images
+	// disable wp responsive images
 	function disable_wp_responsive_images() {
 		return 1;
 	}
-
-	// Update user profile info
-	function rt_update_user_profile_fields( $user_id ) {
-		if ( ! current_user_can( 'edit_user', $user_id ) ) {
-			return false;
-		}
-
-		if ( ! empty( $_POST['user_agency'] ) && intval( $_POST['user_agency'] ) >= 1900 ) {
-			update_user_meta( $user_id, 'user_agency', intval( $_POST['user_agency'] ) );
-		}
-	}
-
 
 	public static function instance() {
 		if ( null == self::$instance ) {
@@ -271,12 +217,10 @@ class General {
 		return $output;
 	}
 
-	public function move_textarea_to_bottom( $fields ) {
-		$temp = $fields['comment'];
-		unset( $fields['comment'] );
-		$fields['comment'] = $temp;
-
-		return $fields;
+	public function restrict_admin_area() {
+		if ( Options::$options['remove_admin_bar'] && ! current_user_can( 'administrator' ) ) {
+			show_admin_bar( false );
+		}
 	}
 
 	public function hentry_config( $classes ) {
@@ -285,16 +229,6 @@ class General {
 		}
 
 		return $classes;
-	}
-
-	public function excerpt_more() {
-		if ( is_search() ) {
-			$readmore = '<a href="' . get_the_permalink() . '"> [' . esc_html__( 'read more ...', 'cl-classified' ) . ']</a>';
-
-			return $readmore;
-		}
-
-		return ' ...';
 	}
 
 	public function add_span_cat_count( $links ) {

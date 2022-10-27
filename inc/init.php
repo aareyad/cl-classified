@@ -24,7 +24,7 @@ final class Includes {
 	 */
 	private function __construct() {
 		$this->suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-		$this->version = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : RTCL_CLASSSIFIED_VERSION;
+		$this->version = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : CL_CLASSIFIED_VERSION;
 
 		$this->init();
 	}
@@ -45,9 +45,9 @@ final class Includes {
 	 */
 	protected function init() {
 		new Constants();
+		Options::instance();
 		General::instance();
 		Scripts::instance();
-		Options::instance();
 		Layouts::instance();
 		if ( class_exists( 'WP_Customize_Control' ) ) {
 			Init::instance();

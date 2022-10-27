@@ -122,9 +122,9 @@ class General extends Customizer {
 				'label'           => esc_html__( 'Logo max width', 'cl-classified' ),
 				'section'         => 'general_section',
 				'type'            => 'text',
-				'description'     => esc_html__( 'Enter logo width. Eg: 196px', 'cl-classified' ),
+				'description'     => esc_html__( 'Enter logo width. Eg: 200px', 'cl-classified' ),
 				'input_attrs'     => [
-					'placeholder' => esc_html__( '196px', 'cl-classified' ),
+					'placeholder' => esc_html__( '200px', 'cl-classified' ),
 				],
 			]
 		);

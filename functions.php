@@ -14,5 +14,7 @@ function cl_classified_load_textdomain() {
 	load_theme_textdomain( 'cl-classified', get_template_directory() . '/languages' );
 }
 
+define( 'CL_CLASSIFIED_VERSION', '1.0.0' );
+
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';
