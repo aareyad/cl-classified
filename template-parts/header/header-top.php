@@ -45,7 +45,7 @@ if ( 'fullwidth' == Options::$header_width ) {
                     <ul class="topbar-right">
 						<?php if ( $socials ): ?>
                             <li class="social-icon">
-                                <label><?php esc_html_e( 'Follow Us On:', 'homlisti' ); ?></label>
+                                <label><?php esc_html_e( 'Follow Us On:', 'cl-classified' ); ?></label>
 								<?php foreach ( $socials as $social ): ?>
                                     <a target="_blank" href="<?php echo esc_url( $social['url'] ); ?>"><i
                                                 class="<?php echo esc_attr( $social['icon'] ); ?>"></i></a>

@@ -22,7 +22,7 @@ if ( $previous || $next ):
                     <div class="overlay" style="background-image:url(<?php echo esc_url( $prev_image ) ?>)"></div>
                     <a href="<?php echo esc_url( get_permalink( $previous ) ); ?>" class="pg-prev">
                         <i class="fas fa-chevron-left"></i>
-                        <h5 class="item-title"><span><?php esc_html_e( 'Previous Post: ', 'homlisti' ) ?></span><?php echo get_the_title( $previous ); ?></h5>
+                        <h5 class="item-title"><span><?php esc_html_e( 'Previous Post: ', 'cl-classified' ) ?></span><?php echo get_the_title( $previous ); ?></h5>
                     </a>
                 </div>
             </div>
@@ -34,7 +34,7 @@ if ( $previous || $next ):
                 <div class="post-nav next-post">
                     <div class="overlay" style="background-image:url(<?php echo esc_url( $prev_image ) ?>)"></div>
                     <a href="<?php echo esc_url( get_permalink( $next ) ); ?>" class="pg-next">
-                        <h5 class="item-title"><span><?php esc_html_e( 'Next Post: ', 'homlisti' ) ?></span><?php echo get_the_title( $next ); ?></h5>
+                        <h5 class="item-title"><span><?php esc_html_e( 'Next Post: ', 'cl-classified' ) ?></span><?php echo get_the_title( $next ); ?></h5>
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>

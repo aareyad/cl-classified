@@ -34,15 +34,15 @@ class Typography {
 		// Typography Panel
 		$wp_customize->add_panel( 'rt_typo_panel',
 			[
-				'title'       => esc_html__( 'Typography', 'homlisti' ),
-				'description' => esc_html__( 'Change site typography.', 'homlisti' ),
+				'title'       => esc_html__( 'Typography', 'cl-classified' ),
+				'description' => esc_html__( 'Change site typography.', 'cl-classified' ),
 				'priority'    => 15,
 			]
 		);
 		// Body
 		$wp_customize->add_section( 'typography_body_section',
 			[
-				'title'    => esc_html__( 'Body', 'homlisti' ),
+				'title'    => esc_html__( 'Body', 'cl-classified' ),
 				'priority' => 10,
 				'panel'    => 'rt_typo_panel',
 			]
@@ -50,7 +50,7 @@ class Typography {
 		// Heading
 		$wp_customize->add_section( 'typography_heading_section',
 			[
-				'title'    => esc_html__( 'Heading', 'homlisti' ),
+				'title'    => esc_html__( 'Heading', 'cl-classified' ),
 				'priority' => 12,
 				'panel'    => 'rt_typo_panel',
 			]
@@ -58,7 +58,7 @@ class Typography {
 		// Menu
 		$wp_customize->add_section( 'typography_menu_section',
 			[
-				'title'    => esc_html__( 'Menu', 'homlisti' ),
+				'title'    => esc_html__( 'Menu', 'cl-classified' ),
 				'priority' => 14,
 				'panel'    => 'rt_typo_panel',
 			]
@@ -78,7 +78,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_body',
 			[
-				'label'       => __( 'Body', 'homlisti' ),
+				'label'       => __( 'Body', 'cl-classified' ),
 				'section'     => 'typography_body_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -95,8 +95,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_body_size',
 			[
-				'label'       => __( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => __( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_body_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -114,8 +114,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_body_height',
 			[
-				'label'       => __( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => __( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_body_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -137,7 +137,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_heading',
 			[
-				'label'       => esc_html__( 'All Heading Typography (H1-H6)', 'homlisti' ),
+				'label'       => esc_html__( 'All Heading Typography (H1-H6)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -165,7 +165,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h1',
 			[
-				'label'       => __( 'Header h1 ', 'homlisti' ),
+				'label'       => __( 'Header h1 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -182,8 +182,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h1_size',
 			[
-				'label'       => __( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => __( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -201,8 +201,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h1_height',
 			[
-				'label'       => __( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => __( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -231,7 +231,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h2',
 			[
-				'label'       => __( 'Header h2 ', 'homlisti' ),
+				'label'       => __( 'Header h2 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -248,8 +248,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h2_size',
 			[
-				'label'       => __( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => __( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -267,8 +267,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h2_height',
 			[
-				'label'       => __( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => __( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -297,7 +297,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h3',
 			[
-				'label'       => __( 'Header h3 ', 'homlisti' ),
+				'label'       => __( 'Header h3 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -314,8 +314,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h3_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -333,8 +333,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h3_height',
 			[
-				'label'       => esc_html__( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -363,7 +363,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h4',
 			[
-				'label'       => esc_html__( 'Header h4 ', 'homlisti' ),
+				'label'       => esc_html__( 'Header h4 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -380,8 +380,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h4_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -399,8 +399,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h4_height',
 			[
-				'label'       => esc_html__( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -429,7 +429,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h5',
 			[
-				'label'       => esc_html__( 'Header h5 ', 'homlisti' ),
+				'label'       => esc_html__( 'Header h5 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -446,8 +446,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h5_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -465,8 +465,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h5_height',
 			[
-				'label'       => esc_html__( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -495,7 +495,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_h6',
 			[
-				'label'       => esc_html__( 'Header h6 ', 'homlisti' ),
+				'label'       => esc_html__( 'Header h6 ', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -512,8 +512,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h6_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -531,8 +531,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_h6_height',
 			[
-				'label'       => esc_html__( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_heading_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -564,7 +564,7 @@ class Typography {
 		);
 		$wp_customize->add_control( new Control( $wp_customize, 'typo_menu',
 			[
-				'label'       => esc_html__( 'Menu', 'homlisti' ),
+				'label'       => esc_html__( 'Menu', 'cl-classified' ),
 				'section'     => 'typography_menu_section',
 				'input_attrs' => [
 					'font_count' => 'all',
@@ -582,8 +582,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_menu_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_menu_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -601,8 +601,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_menu_height',
 			[
-				'label'       => esc_html__( 'Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => esc_html__( 'Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_menu_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -632,8 +632,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_submenu_size',
 			[
-				'label'       => __( 'Sub Menu Font Size', 'homlisti' ),
-				'description' => esc_html__( 'Font Size (px)', 'homlisti' ),
+				'label'       => __( 'Sub Menu Font Size', 'cl-classified' ),
+				'description' => esc_html__( 'Font Size (px)', 'cl-classified' ),
 				'section'     => 'typography_menu_section',
 				'type'        => 'text',
 				'input_attrs' => [
@@ -651,8 +651,8 @@ class Typography {
 		);
 		$wp_customize->add_control( 'typo_submenu_height',
 			[
-				'label'       => __( 'Sub Menu Line Height', 'homlisti' ),
-				'description' => esc_html__( 'Line Height (px)', 'homlisti' ),
+				'label'       => __( 'Sub Menu Line Height', 'cl-classified' ),
+				'description' => esc_html__( 'Line Height (px)', 'cl-classified' ),
 				'section'     => 'typography_menu_section',
 				'type'        => 'text',
 				'input_attrs' => [

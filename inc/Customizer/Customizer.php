@@ -42,16 +42,16 @@ class Customizer {
 		// Layout Panel
 		$wp_customize->add_panel( 'rttheme_layouts_defaults',
 			[
-				'title'       => esc_html__( 'Layout Settings', 'homlisti' ),
-				'description' => esc_html__( 'Adjust the overall layout for your site.', 'homlisti' ),
+				'title'       => esc_html__( 'Layout Settings', 'cl-classified' ),
+				'description' => esc_html__( 'Adjust the overall layout for your site.', 'cl-classified' ),
 				'priority'    => 17,
 			]
 		);
 		// Color Panel
 		$wp_customize->add_panel( 'rttheme_color_panel',
 			[
-				'title'       => esc_html__( 'Color', 'homlisti' ),
-				'description' => esc_html__( 'Change site color', 'homlisti' ),
+				'title'       => esc_html__( 'Color', 'cl-classified' ),
+				'description' => esc_html__( 'Change site color', 'cl-classified' ),
 				'priority'    => 17,
 			]
 		);

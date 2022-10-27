@@ -55,7 +55,7 @@ if ( Options::$has_tr_header ) {
                 </a>
 		    <?php else: ?>
                 <h1 class="site-title site-main-logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'homlisti' ); ?>" rel="home">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'cl-classified' ); ?>" rel="home">
 					    <?php echo esc_html( $site_name ); ?>
                     </a>
                 </h1>

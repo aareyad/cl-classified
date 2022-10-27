@@ -163,7 +163,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public function rttheme_getGoogleFonts( $count = 30 ) {
 			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY
 
-			$_font_path   = apply_filters( 'homlisti_customizer_fonts', 'url' );
+			$_font_path   = apply_filters( 'cl_classified_customizer_fonts', 'url' );
 			$body_content = "";
 
 			if ( $_font_path === 'url' ) {
@@ -180,7 +180,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				$body_content = wp_remote_retrieve_body( $request );
 			}
 
-			$content = json_decode( apply_filters( 'homlisti_customizer_fonts_change', $body_content ) );
+			$content = json_decode( apply_filters( 'cl_classified_customizer_fonts_change', $body_content ) );
 
 			if ( $count == 'all' ) {
 				return $content->items;
@@ -189,8 +189,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			}
 
 			// TODO: IF wp_remote_get not working then below code should apply with code snippets
-			// add_filter('homlisti_customizer_fonts', function (){	return "path"});
-			// add_filter('homlisti_customizer_fonts_change', function (){ $fontFile = trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json'; $get_content = file_get_contents($fontFile); return $get_content;});
+			// add_filter('cl_classified_customizer_fonts', function (){	return "path"});
+			// add_filter('cl_classified_customizer_fonts_change', function (){ $fontFile = trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json'; $get_content = file_get_contents($fontFile); return $get_content;});
 		}
 	}
 }

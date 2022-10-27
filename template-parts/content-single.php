@@ -10,10 +10,10 @@ use RadiusTheme\ClassifiedLite\Options;
 $comments_number = get_comments_number();
 $comments_text   = sprintf( '(%s)', number_format_i18n( $comments_number ) );
 $has_entry_meta  = Options::$options['post_author_name'] || Options::$options['post_comment_num'] || Options::$options['post_date'];
-$footer_class    = Options::$options['post_tag'] && has_tag() && Options::$options['post_social_icon'] && class_exists( 'HomListi_Core' ) ? 'col-md-6 col-sm-12 col-12'
+$footer_class    = Options::$options['post_tag'] && has_tag() && Options::$options['post_social_icon'] && class_exists( 'CL_Classified_Core' ) ? 'col-md-6 col-sm-12 col-12'
 	: 'col-md-12 col-sm-12 col-12';
-$has_post_footer = ( Options::$options['post_tag'] && has_tag() ) || ( Options::$options['post_social_icon'] && class_exists( 'HomListi_Core' ) );
-$has_post_social = ( class_exists( 'HomListi_Core' ) && Options::$options['post_social_icon'] );
+$has_post_footer = ( Options::$options['post_tag'] && has_tag() ) || ( Options::$options['post_social_icon'] && class_exists( 'CL_Classified_Core' ) );
+$has_post_social = ( class_exists( 'CL_Classified_Core' ) && Options::$options['post_social_icon'] );
 ?>
     <div class="site-content-block">
         <div class="main-content">
@@ -60,7 +60,7 @@ $has_post_social = ( class_exists( 'HomListi_Core' ) && Options::$options['post_
 					<?php if ( $has_post_footer ): ?>
                         <div class="post-footer <?php echo esc_attr( $has_post_social ? '' : 'has-no-share' ) ?>">
                             <div class="row align-items-center">
-								<?php if ( class_exists( 'HomListi_Core' ) && Options::$options['post_social_icon'] ): ?>
+								<?php if ( class_exists( 'CL_Classified_Core' ) && Options::$options['post_social_icon'] ): ?>
                                     <div class="<?php echo esc_attr( $footer_class ); ?>">
                                         <div class="post-social-share-inner">
                                         <span class="social-label">

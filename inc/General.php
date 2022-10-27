@@ -17,7 +17,7 @@ class General {
 		add_action( 'after_setup_theme', [ $this, 'theme_setup' ] );
 		//add_filter( 'max_srcset_image_width', [ $this, 'disable_wp_responsive_images' ] );
 		add_action( 'widgets_init', [ $this, 'register_sidebars' ], 99 );
-		add_action( 'homlisti_breadcrumb', [ $this, 'breadcrumb' ] );
+		add_action( 'cl_classified_breadcrumb', [ $this, 'breadcrumb' ] );
 		add_filter( 'body_class', [ $this, 'body_classes' ] );
 		add_action( 'wp_head', [ $this, 'noscript_hide_preloader' ], 1 );
 		add_action( 'wp_head', [ $this, 'pingback' ] );
@@ -67,7 +67,7 @@ class General {
 			'rdtheme-size2' => [ 450, 260, true ], // Listing Thumbnail Size and blog grid
 		];
 
-		$sizes = apply_filters( 'homlisti_image_size', $sizes );
+		$sizes = apply_filters( 'cl_classified_image_size', $sizes );
 
 		foreach ( $sizes as $size => $value ) {
 			add_image_size( $size, $value[0], $value[1], $value[2] );
@@ -145,10 +145,6 @@ class General {
 
 		if ( is_front_page() && ! is_home() ) {
 			$classes[] = 'front-page';
-		}
-
-		if ( is_singular( 'rtcl_listing' ) ) {
-			$classes[] = 'single-listing-style-' . Helper::listing_single_style();
 		}
 
 		if ( Helper::has_full_width() ) {

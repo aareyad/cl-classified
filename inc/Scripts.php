@@ -81,7 +81,7 @@ class Scripts {
 		$h5_font = json_decode( Options::$options['typo_h5'], true );
 		$h6_font = json_decode( Options::$options['typo_h6'], true );
 
-		if ( 'off' !== _x( 'on', 'Google font: on or off', 'homlisti' ) ) {
+		if ( 'off' !== _x( 'on', 'Google font: on or off', 'cl-classified' ) ) {
 			if ( ! empty( $h1_font['font'] ) ) {
 				if ( $h1_font['font'] == 'Inherit' ) {
 					$h1Font  = $hFont;
@@ -269,7 +269,7 @@ class Scripts {
 		wp_register_style( 'rt-admin', Helper::get_css( 'rt-admin' ), [], $this->version );
 		wp_enqueue_style( 'flaticon' );
 		wp_enqueue_style( 'rt-admin' );
-		wp_enqueue_style( 'homlisti-admin', Helper::get_css( 'homlisti-admin' ), [], $this->version );*/
+		wp_enqueue_style( 'cl-classified-admin', Helper::get_css( 'cl-classified-admin' ), [], $this->version );*/
 	}
 
 	public function register_gutenberg_scripts() {
