@@ -243,7 +243,7 @@ class General {
 
 	public function breadcrumb() {
 		$args = [
-			'delimiter'   => '&nbsp;<i class="fas fa-angle-right"></i>&nbsp;',
+			'delimiter'   => '<i class="delimiter">/</i>',
 			'wrap_before' => '<nav class="rtcl-breadcrumb">',
 			'wrap_after'  => '</nav>',
 			'before'      => '',
@@ -262,7 +262,7 @@ class General {
 		if ( ! empty( $args['breadcrumb'] ) ) {
 			$breadcrumb_style = Options::$breadcrumb_style;
 			?>
-            <section class="breadcrumbs-banner <?php echo esc_attr( $breadcrumb_style ) ?>">
+            <section class="breadcrumbs-area <?php echo esc_attr( $breadcrumb_style ) ?>">
                 <div class="container">
 					<?php
 					printf( "%s", $args['wrap_before'] );
@@ -281,7 +281,6 @@ class General {
 					printf( "%s", $args['wrap_after'] );
 					?>
                 </div>
-
             </section>
 			<?php
 		}

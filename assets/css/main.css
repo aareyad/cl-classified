@@ -1626,6 +1626,36 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	}
 }
 
+/*-------------------------------------
+#. Breadcrumbs
+---------------------------------------*/
+.breadcrumbs-area {
+	margin-top: 80px;
+}
+
+.breadcrumbs-area .rtcl-breadcrumb {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.breadcrumbs-area .rtcl-breadcrumb a {
+	color: #797f89;
+}
+
+.breadcrumbs-area .rtcl-breadcrumb a:hover {
+	color: #f9423a;
+}
+
+.breadcrumbs-area .rtcl-breadcrumb span {
+	color: #f9423a;
+}
+
+.breadcrumbs-area .rtcl-breadcrumb .delimiter {
+	display: inline-block;
+	padding: 0 8px;
+	font-style: normal;
+}
+
 /*---------------------------------------------------------
 #. Footer Area
 -----------------------------------------------------------*/
