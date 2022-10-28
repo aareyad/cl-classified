@@ -35,43 +35,6 @@
   font-size: 15px;
 }
 
-.footer-bottom {
-  background-color: #1c1d20;
-  color: #91939d;
-  padding: 35px 0;
-  border-top: 1px solid #2e2e2e;
-
-  @include small-screen() {
-    text-align: center;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  ul.payment-icons {
-
-    @include ul0();
-
-    text-align: right;
-    font-size: 0;
-
-    @include small-screen() {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    li {
-      display: inline;
-      padding-left: 4px;
-
-      &:first-child {
-        padding-left: 0;
-      }
-    }
-  }
-}
-
 /*---------------------------------------------
 #. Footer Widgets
 -----------------------------------------------*/

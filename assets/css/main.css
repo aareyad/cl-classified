@@ -1693,47 +1693,6 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	font-size: 15px;
 }
 
-.footer-bottom {
-	background-color: #1c1d20;
-	color: #91939d;
-	padding: 35px 0;
-	border-top: 1px solid #2e2e2e;
-}
-
-@media screen and (max-width: 767px) {
-	.footer-bottom {
-		text-align: center;
-	}
-}
-
-.footer-bottom a:hover {
-	text-decoration: underline;
-}
-
-.footer-bottom ul.payment-icons {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-align: right;
-	font-size: 0;
-}
-
-@media screen and (max-width: 767px) {
-	.footer-bottom ul.payment-icons {
-		text-align: center;
-		margin-top: 10px;
-	}
-}
-
-.footer-bottom ul.payment-icons li {
-	display: inline;
-	padding-left: 4px;
-}
-
-.footer-bottom ul.payment-icons li:first-child {
-	padding-left: 0;
-}
-
 /*---------------------------------------------
 #. Footer Widgets
 -----------------------------------------------*/
@@ -2833,8 +2792,31 @@ a.scrollToTop:focus {
 	color: #fff;
 }
 
+.footer-bottom {
+	background-color: #1c1d20;
+	color: #91939d;
+	padding: 40px 0;
+	border-top: 1px solid #2e2e2e;
+}
+
+@media screen and (max-width: 767px) {
+	.footer-bottom {
+		text-align: center;
+	}
+}
+
+.footer-bottom a:hover {
+	text-decoration: underline;
+}
+
 .footer-bottom .footer-copyright {
 	margin-bottom: 0;
+}
+
+.footer-bottom .cl-app-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .banner-search {
@@ -2875,6 +2857,7 @@ a.scrollToTop:focus {
 }
 
 .banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button input {
+	width: 100%;
 	outline: none;
 	border: none;
 	box-shadow: none;

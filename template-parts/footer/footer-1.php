@@ -32,7 +32,6 @@ switch ( $footer_columns ) {
 	default:
 		$footer_class = 'col-lg-3 col-sm-6 col-12';
 }
-$copyright_class = has_nav_menu( 'secondary' ) ? 'col-xl-6 col-lg-4 text-right' : 'col-sm-12 col-12 text-center';
 ?>
 <footer id="site-footer" class="site-footer footer-wrap footer-style-1">
 	<?php if ( $footer_columns ): ?>
@@ -56,26 +55,49 @@ $copyright_class = has_nav_menu( 'secondary' ) ? 'col-xl-6 col-lg-4 text-right' 
 	<?php if ( Options::$options['copyright_area'] ): ?>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
-                    <div class="<?php echo esc_attr( $copyright_class ); ?>">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
                         <p class="footer-copyright">
-			                <?php
-			                echo wp_kses( Options::$options['copyright_text'], [
-				                'a'      => [
-					                'href'  => [],
-					                'title' => [],
-				                ],
-				                'br'     => [],
-				                'em'     => [],
-				                'strong' => [],
-			                ] );
-			                ?>
+							<?php
+							echo wp_kses( Options::$options['copyright_text'], [
+								'a'      => [
+									'href'  => [],
+									'title' => [],
+								],
+								'br'     => [],
+								'em'     => [],
+								'strong' => [],
+							] );
+							?>
                         </p>
                     </div>
-					<?php if ( has_nav_menu( 'secondary' ) ): ?>
-                        <div class="col-xl-6 col-lg-8">
-                            <div class="payment-icons">
+					<?php
+					$play_store = ( isset( Options::$options['play_store_image'] ) && 0 != Options::$options['play_store_image'] ) ? wp_get_attachment_image_src( Options::$options['play_store_image'], 'full' ) : '';
+					$app_store  = ( isset( Options::$options['app_store_image'] ) && 0 != Options::$options['app_store_image'] ) ? wp_get_attachment_image_src( Options::$options['app_store_image'], 'full' ) : '';
 
+					if ( ! empty( $play_store ) || ! empty( $app_store ) ): ?>
+                        <div class="col-auto">
+                            <div class="cl-app-wrap text-lg-end">
+								<?php if ( ! empty( $play_store ) ): ?>
+                                    <a class="cl-play-store-app"
+                                       href="<?php echo esc_url( Options::$options['play_store_url'] ); ?>">
+                                        <img src="<?php echo esc_url( $play_store[0] ); ?>"
+                                             width="<?php echo esc_attr( $play_store[1] ); ?>"
+                                             height="<?php echo esc_attr( $play_store[2] ); ?>"
+                                             alt="<?php esc_attr_e( 'App Link', 'cl-classified' ); ?>"
+                                        >
+                                    </a>
+								<?php endif; ?>
+								<?php if ( ! empty( $app_store ) ): ?>
+                                    <a class="cl-app-store-app"
+                                       href="<?php echo esc_url( Options::$options['app_store_url'] ); ?>">
+                                        <img src="<?php echo esc_url( $app_store[0] ); ?>"
+                                             width="<?php echo esc_attr( $app_store[1] ); ?>"
+                                             height="<?php echo esc_attr( $app_store[2] ); ?>"
+                                             alt="<?php esc_attr_e( 'App Link', 'cl-classified' ); ?>"
+                                        >
+                                    </a>
+								<?php endif; ?>
                             </div>
                         </div>
 					<?php endif; ?>

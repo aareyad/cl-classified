@@ -23,7 +23,26 @@ a.scrollToTop {
 }
 
 .footer-bottom {
+  background-color: #1c1d20;
+  color: #91939d;
+  padding: 40px 0;
+  border-top: 1px solid #2e2e2e;
+
+  @include small-screen() {
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   .footer-copyright {
     margin-bottom: 0;
+  }
+
+  .cl-app-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
