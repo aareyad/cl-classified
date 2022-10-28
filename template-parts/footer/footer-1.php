@@ -56,7 +56,7 @@ switch ( $footer_columns ) {
         <div class="footer-bottom">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-auto">
+                    <div class="col-auto footer-copyright-area">
                         <p class="footer-copyright">
 							<?php
 							echo wp_kses( Options::$options['copyright_text'], [

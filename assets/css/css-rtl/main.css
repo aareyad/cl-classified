@@ -2790,6 +2790,23 @@ a.scrollToTop:focus {
 	border-top: 1px solid #2e2e2e;
 }
 
+.footer-bottom .row {
+	flex-wrap: initial;
+}
+
+@media screen and (max-width: 767px) {
+	.footer-bottom .row {
+		flex-direction: column;
+		gap: 15px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer-bottom .footer-copyright-area {
+		order: 2;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.footer-bottom {
 		text-align: center;

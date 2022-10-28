@@ -28,6 +28,21 @@ a.scrollToTop {
   padding: 40px 0;
   border-top: 1px solid #2e2e2e;
 
+  .row {
+    flex-wrap: initial;
+
+    @include small-screen() {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .footer-copyright-area {
+    @include small-screen() {
+      order: 2;
+    }
+  }
+
   @include small-screen() {
     text-align: center;
   }
