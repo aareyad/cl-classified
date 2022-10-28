@@ -164,7 +164,7 @@ class Helper {
 	 *
 	 * @return array
 	 */
-	public static function get_header_list( $return_type = '' ): array {
+	public static function get_header_list( $return_type = '' ) {
 		if ( 'header' === $return_type ) {
 			return [
 				'1' => [
@@ -178,6 +178,31 @@ class Helper {
 				'1'       => esc_html__( 'Layout 1', 'cl-classified' )
 			];
 		}
+	}
+
+	/**
+	 * Get site footer list
+	 *
+	 * @param string $return_type
+	 *
+	 * @return array
+	 */
+	public static function get_footer_list( $return_type = '' ) {
+		if ( 'footer' === $return_type ) {
+			$layout = [
+				'1' => [
+					'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/footer-1.png',
+					'name'  => esc_html__( 'Layout 1', 'cl-classified' )
+				]
+			];
+		} else {
+			$layout = [
+				'default' => esc_html__( 'Default', 'cl-classified' ),
+				'1'       => esc_html__( 'Layout 1', 'cl-classified' )
+			];
+		}
+
+		return apply_filters( 'cl_classified_footer_layout', $layout );
 	}
 
 	public static function get_custom_listing_template( $template, $echo = true, $args = [], $path = 'custom/' ) {

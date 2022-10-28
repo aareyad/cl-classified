@@ -189,7 +189,6 @@ class Header extends Customizer {
 			]
 		);
 
-
 		// Header Login Icon Visibility
 		$wp_customize->add_setting( 'header_login_icon',
 			[

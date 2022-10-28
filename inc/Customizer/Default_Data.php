@@ -70,7 +70,10 @@ class Default_Data {
 			'footer_style'                 => '1',
 			'copyright_area'               => 1,
 			'copyright_text'               => date( 'Y' ) . '© All right reserved by Radiustheme',
-			'footer_bg_image'              => '',
+			'app_store_image'              => '',
+			'app_store_url'                => '',
+			'play_store_image'             => '',
+			'play_store_url'               => '',
 
 			// Blog Layout
 			'blog_layout'                  => 'right-sidebar',
