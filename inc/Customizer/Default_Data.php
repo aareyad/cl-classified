@@ -202,7 +202,7 @@ class Default_Data {
 			'banner_search_radius'           => 0,
 			'banner_search_category'         => 1,
 			'banner_search_keyword'          => 1,
-			'listing_search_style'           => 'popup',
+			'listing_search_style'           => 'standard',
 			'listing_related'                => 1,
 
 			// Contact Info

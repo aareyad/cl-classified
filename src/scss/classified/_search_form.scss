@@ -10,11 +10,27 @@
       align-items: flex-end;
       gap: 20px;
 
+      @include medium-screen() {
+        flex-wrap: wrap;
+      }
+
       & > div {
         flex: 1 1 0;
         -webkit-box-flex: 1;
         -ms-flex: 1 1 0;
         margin: 0;
+
+        @include medium-screen() {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 47%;
+          flex: 0 0 47%;
+          max-width: 47%;
+        }
+
+        @include extra-small-screen() {
+          flex-basis: 100%;
+          max-width: 100%;
+        }
       }
 
       .rtin-btn-holder {
@@ -30,18 +46,57 @@
         }
 
         .rtcl-search-input-button {
-          background-color: $white;
-          padding: 15px 20px;
-          border-radius: $borderRadius5;
-          box-shadow: 0 2px 8px #e4e4e4;
 
+          .rtcl-icon-spinner {
+            position: absolute;
+          }
+
+          &.rtcl-search-input-type {
+            .cl-classified-listing-search-dropdown {
+              .dropdown-toggle {
+                background-color: $white;
+                border-radius: $borderRadius5;
+                box-shadow: 0 2px 8px #e4e4e4;
+                border: none;
+                padding: 14px 20px;
+                width: 100%;
+                text-align: left;
+
+                &:after {
+                  content: none;
+                }
+              }
+
+              .dropdown-menu {
+                width: 100%;
+                border-color: $borderColor;
+
+                .dropdown-item {
+                  color: $bodyColor;
+
+                  &:hover,
+                  &:active,
+                  &:focus {
+                    background: $primaryColor;
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+
+          select,
           input {
+            background-color: $white;
+            padding: 15px 20px;
+            border-radius: $borderRadius5;
+            box-shadow: 0 2px 8px #e4e4e4;
             width: 100%;
+            height: auto;
             outline: none;
             border: none;
-            box-shadow: none;
-            padding: 0;
             margin: 0;
+            line-height: 24px;
           }
 
           .cl-input-icon {
@@ -66,6 +121,23 @@
 
         i {
           margin-left: 8px;
+        }
+      }
+
+      &.rtin-style-standard {
+        .rtcl-location-search,
+        .rtcl-category-search {
+          cursor: pointer;
+        }
+      }
+
+      &.rtin-style-popup {
+        .rtcl-search-input-location,
+        .rtcl-search-input-category {
+          background-color: $white;
+          padding: 15px 20px;
+          border-radius: $borderRadius5;
+          box-shadow: 0 2px 8px #e4e4e4;
         }
       }
     }

@@ -18,3 +18,5 @@ define( 'CL_CLASSIFIED_VERSION', '1.0.0' );
 
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';
+
+do_action( 'cl_classified_theme_init' );

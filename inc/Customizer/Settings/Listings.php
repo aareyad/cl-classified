@@ -10,6 +10,7 @@ namespace RadiusTheme\ClassifiedLite\Customizer\Settings;
 use RadiusTheme\ClassifiedLite\Customizer\Controls\Separator;
 use RadiusTheme\ClassifiedLite\Customizer\Controls\Switcher;
 use RadiusTheme\ClassifiedLite\Customizer\Customizer;
+use RadiusTheme\ClassifiedLite\Helper;
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
@@ -195,12 +196,7 @@ class Listings extends Customizer {
 			'type'    => 'select',
 			'section' => 'listings_section', // Add a default or your own section
 			'label'   => esc_html__( 'Search Style', 'cl-classified' ),
-			'choices' => [
-				'popup'      => esc_html__( 'Popup', 'cl-classified' ),
-				'standard'   => esc_html__( 'Standard', 'cl-classified' ),
-				'suggestion' => esc_html__( 'Auto Suggestion', 'cl-classified' ),
-				'dependency' => esc_html__( 'Dependency Selection', 'cl-classified' ),
-			],
+			'choices' => Helper::get_search_form_style(),
 		] );
 
 		// Separator

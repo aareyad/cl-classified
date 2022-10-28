@@ -205,6 +205,28 @@ class Helper {
 		return apply_filters( 'cl_classified_footer_layout', $layout );
 	}
 
+	/**
+	 * Get site search style
+	 *
+	 * @return array
+	 */
+
+	public static function get_search_form_style() {
+		$style = [
+			'standard' => esc_html__( 'Standard', 'cl-classified' ),
+		];
+
+		if ( class_exists( 'RtclPro' ) ) {
+			$style = array_merge( $style, [
+				'popup'      => esc_html__( 'Popup', 'cl-classified' ),
+				'suggestion' => esc_html__( 'Auto Suggestion', 'cl-classified' ),
+				'dependency' => esc_html__( 'Dependency Selection', 'cl-classified' ),
+			] );
+		}
+
+		return $style;
+	}
+
 	public static function get_custom_listing_template( $template, $echo = true, $args = [], $path = 'custom/' ) {
 		$template = 'classified-listing/' . $path . $template;
 		if ( $echo ) {

@@ -96,7 +96,7 @@ $style = Options::$options['listing_search_style'];
 						<?php else: ?>
                             <div class="rtcl-search-input-button rtcl-search-input-location">
                                 <span class="cl-input-icon">
-                                    <img src="<?php echo esc_url( Helper::get_img('map.svg')); ?>" alt="icon" />
+                                    <img src="<?php echo esc_url( Helper::get_img( 'map.svg' ) ); ?>" alt="icon"/>
                                 </span>
                                 <span class="search-input-label location-name">
                                     <?php echo $selected_location ? esc_html( $selected_location->name ) : esc_html( $loc_text ) ?>
@@ -187,7 +187,7 @@ $style = Options::$options['listing_search_style'];
 					<?php else: ?>
                         <div class="rtcl-search-input-button rtcl-search-input-category">
                             <span class="cl-input-icon">
-                                <img src="<?php echo esc_url( Helper::get_img('grid.svg')); ?>" alt="icon" />
+                                <img src="<?php echo esc_url( Helper::get_img( 'grid.svg' ) ); ?>" alt="icon"/>
                             </span>
                             <span class="search-input-label category-name">
                                 <?php echo $selected_category ? esc_html( $selected_category->name ) : esc_html( $cat_text ); ?>
@@ -204,13 +204,14 @@ $style = Options::$options['listing_search_style'];
 		<?php if ( ! empty( Options::$options['banner_search_type'] ) ): ?>
             <div class="<?php echo esc_attr( $typ_class ); ?>">
                 <div class="form-group">
+                    <label><?php esc_html_e( 'In which type?', 'cl-classified' ); ?></label>
                     <div class="rtcl-search-input-button rtcl-search-input-type">
 						<?php
 						$listing_types = Functions::get_listing_types();
 						$listing_types = empty( $listing_types ) ? [] : $listing_types;
 						?>
                         <div class="dropdown cl-classified-listing-search-dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                     aria-haspopup="true"
                                     aria-expanded="false"><?php esc_html_e( 'Select Type', 'cl-classified' ); ?></button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

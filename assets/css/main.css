@@ -1662,6 +1662,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 .main-footer {
 	padding: 80px 0 50px;
 	background-color: #1c1d20;
+	color: #91939d;
 }
 
 @media screen and (max-width: 480px) {
@@ -1676,7 +1677,12 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 
 .main-footer .widget>h3 {
 	color: #ffffff;
-	font-size: 24px;
+	font-size: 18px;
+	padding-bottom: 0;
+}
+
+.main-footer .widget>h3:after {
+	content: none;
 }
 
 .main-footer .search-form .custom-search-input input.search-query {
@@ -1697,11 +1703,11 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 #. Footer Widgets
 -----------------------------------------------*/
 .widget {
-	color: #797f89;
+	color: #91939d;
 }
 
 .widget a {
-	color: #797f89;
+	color: #91939d;
 }
 
 .widget a:hover {
@@ -1808,6 +1814,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	padding: 25px;
 	border-radius: 8px;
 	background-color: #ffffff;
+	color: #797f89;
 }
 
 .sidebar-widget-area .widget:last-child {
@@ -1992,58 +1999,42 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 /*---------------------------------------------
 #. Custom Widgets
 -----------------------------------------------*/
-.widget.widget_classima_image_link .rtin-images {
-	margin-bottom: 35px;
-}
-
-.widget.widget_classima_image_link .rtin-images li {
-	margin-bottom: 12px;
-}
-
-.widget.widget_classima_image_link .rtin-images li img {
-	border-radius: 2px;
-}
-
-.widget.widget_classima_about .rtin-img {
-	height: 83px;
-}
-
-@media screen and (max-width: 767px) {
-	.widget.widget_classima_about .rtin-img {
-		height: inherit;
-		margin-bottom: 20px;
-	}
-}
-
-.widget.widget_classima_about .rtin-des {
+.widget.widget_cl_classified_about .rtin-img {
 	margin-bottom: 20px;
 }
 
-.widget.widget_classima_about ul {
+.widget.widget_cl_classified_about .rtin-des {
+	margin-bottom: 20px;
+	padding-right: 10px;
+}
+
+.widget.widget_cl_classified_about ul {
 	font-size: 0;
 }
 
-.widget.widget_classima_about ul li {
+.widget.widget_cl_classified_about ul li {
 	display: inline-block;
 	margin: 0 7px 5px 0;
 	padding: 0;
 }
 
-.widget.widget_classima_about ul li a {
-	background-color: fade(#ffffff, 19%);
+.widget.widget_cl_classified_about ul li a {
+	background-color: #2d2e33;
+	color: #ffffff;
 	display: block;
 	font-size: 16px;
-	line-height: 38px;
+	font-weight: 400;
+	line-height: 44px;
 	text-align: center;
 	transition: all 0.3s ease-out;
-	width: 38px;
-	height: 38px;
+	width: 44px;
+	height: 44px;
 	border-radius: 50%;
 }
 
-.widget.widget_classima_about ul li a:hover {
+.widget.widget_cl_classified_about ul li a:hover {
 	background-color: #f9423a;
-	color: #fff;
+	color: #ffffff;
 }
 
 .site-content .content-area {
@@ -2832,11 +2823,33 @@ a.scrollToTop:focus {
 	gap: 20px;
 }
 
+@media (max-width: 991.98px) {
+	.banner-search .cl-classified-listing-search .rtcl-widget-search-form {
+		flex-wrap: wrap;
+	}
+}
+
 .banner-search .cl-classified-listing-search .rtcl-widget-search-form>div {
 	flex: 1 1 0;
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0;
 	margin: 0;
+}
+
+@media (max-width: 991.98px) {
+	.banner-search .cl-classified-listing-search .rtcl-widget-search-form>div {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 47%;
+		flex: 0 0 47%;
+		max-width: 47%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.banner-search .cl-classified-listing-search .rtcl-widget-search-form>div {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
 }
 
 .banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-btn-holder {
@@ -2849,20 +2862,52 @@ a.scrollToTop:focus {
 	margin-bottom: 10px;
 }
 
-.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button {
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button .rtcl-icon-spinner {
+	position: absolute;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-toggle {
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 2px 8px #e4e4e4;
+	border: none;
+	padding: 14px 20px;
+	width: 100%;
+	text-align: left;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-toggle:after {
+	content: none;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-menu {
+	width: 100%;
+	border-color: #e7e7e7;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-menu .dropdown-item {
+	color: #797f89;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-menu .dropdown-item:hover,
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-menu .dropdown-item:active,
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button.rtcl-search-input-type .cl-classified-listing-search-dropdown .dropdown-menu .dropdown-item:focus {
+	background: #f9423a;
+	color: #ffffff;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button select,
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button input {
 	background-color: #ffffff;
 	padding: 15px 20px;
 	border-radius: 5px;
 	box-shadow: 0 2px 8px #e4e4e4;
-}
-
-.banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button input {
 	width: 100%;
+	height: auto;
 	outline: none;
 	border: none;
-	box-shadow: none;
-	padding: 0;
 	margin: 0;
+	line-height: 24px;
 }
 
 .banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-input-item .rtcl-search-input-button .cl-input-icon {
@@ -2886,6 +2931,19 @@ a.scrollToTop:focus {
 
 .banner-search .cl-classified-listing-search .rtcl-widget-search-form .rtin-search-btn i {
 	margin-left: 8px;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form.rtin-style-standard .rtcl-location-search,
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form.rtin-style-standard .rtcl-category-search {
+	cursor: pointer;
+}
+
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form.rtin-style-popup .rtcl-search-input-location,
+.banner-search .cl-classified-listing-search .rtcl-widget-search-form.rtin-style-popup .rtcl-search-input-category {
+	background-color: #ffffff;
+	padding: 15px 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 8px #e4e4e4;
 }
 
 .banner-search+.breadcrumbs-area {
