@@ -1,0 +1,139 @@
+.rtcl {
+  .rtcl-notices-wrapper {
+    margin: 0;
+  }
+
+  .rtcl-listings-actions {
+    .rtcl-result-count {
+      font-family: $headingFont;
+      color: #212529;
+    }
+
+    .rtcl-ordering {
+      .orderby {
+        color: #afb3b8;
+        background-color: $white;
+        box-shadow: none;
+        border: 1px solid #D0D0D0;
+        height: 40px;
+        border-radius: $borderRadius5;
+      }
+    }
+  }
+}
+
+.rtcl-sidebar-wrapper {
+  & > div {
+    margin-bottom: 30px;
+    border-radius: $borderRadius8;
+    border: none;
+    padding: 0;
+    background-color: $white;
+    color: $bodyColor;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .rtcl-widget-heading {
+    h3 {
+      background-color: $primaryColor;
+      color: $white;
+      padding: 10px 25px;
+      border-radius: $borderRadius8 $borderRadius8 0 0;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    & + div,
+    & + ul {
+      padding: 22px 25px;
+    }
+  }
+
+  .rtcl-widget-filter-class {
+    .panel-block {
+      padding: 25px;
+
+      .ui-accordion-item {
+        .ui-accordion-title {
+          font-weight: 700;
+          color: $liteBlack;
+          border-color: $borderColor;
+
+          .ui-accordion-icon {
+            background-color: #fff1f3;
+            border: 1px solid $primaryColor;
+            color: $primaryColor;
+            border-radius: 50%;
+
+            &:before {
+              padding: 0;
+              margin: 0;
+              width: 20px;
+              height: 20px;
+              transform: translateY(3px);
+            }
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      ul {
+        li {
+          &.has-sub {
+            .arrow {
+              .rtcl-icon {
+                color: #b0b0b0;
+                font-size: 10px;
+              }
+            }
+          }
+
+          &:before {
+            content: none;
+          }
+
+          &.is-opener {
+            span {
+              i {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ui-buttons {
+      .rtcl-filter-btn {
+        background-color: $primaryColor;
+        color: $white;
+        padding: 10px 16px;
+        border-radius: $borderRadius8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: capitalize;
+        border: 1px solid $primaryColor;
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          color: $black;
+        }
+      }
+    }
+  }
+
+}

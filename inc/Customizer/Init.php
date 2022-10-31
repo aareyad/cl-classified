@@ -9,6 +9,7 @@ use RadiusTheme\ClassifiedLite\Customizer\Settings\Error_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Header;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Footer;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Listing_Archive_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Listings;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Page_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Post;
@@ -49,6 +50,7 @@ class Init {
 		// Listings
 		if ( class_exists( 'Rtcl' ) ) {
 			new Listings();
+			new Listing_Archive_Layout();
 		}
 	}
 }

@@ -209,6 +209,24 @@ class Listings extends Customizer {
 			'section'  => 'listings_section',
 		] ) );
 
+		// Listing Archive Title
+		$wp_customize->add_setting(
+			'listing_archive_title',
+			[
+				'default'           => $this->defaults['listing_archive_title'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'rttheme_switch_sanitization',
+			]
+		);
+		$wp_customize->add_control(
+			new Switcher( $wp_customize, 'listing_archive_title',
+				[
+					'label'   => esc_html__( 'Listing Archive Title Visibility', 'cl-classified' ),
+					'section' => 'listings_section',
+				]
+			)
+		);
+
 		// Related Listing
 		$wp_customize->add_setting(
 			'listing_related',

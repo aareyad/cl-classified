@@ -151,6 +151,10 @@ class General {
 			$classes[] = 'is-full-width';
 		}
 
+		if ( Options::$layout === 'left-sidebar' ) {
+			$classes[] = 'sidebar-in-left';
+		}
+
 		return $classes;
 	}
 

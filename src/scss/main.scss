@@ -35,4 +35,6 @@ CSS INDEX
 @import "general/error";
 @import "general/footer";
 // Classified Listing
-@import "classified/_search_form";
+@import "classified/wrapper";
+@import "classified/search_form";
+@import "classified/listing_archive";

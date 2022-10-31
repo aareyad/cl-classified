@@ -32,14 +32,13 @@ class Layouts {
 	}
 
 	public function layout_settings() {
-		$is_listing = $is_listing_archive = $is_listing_account = false;
+		$is_listing = $is_listing_archive = false;
 
 		if ( class_exists( 'Rtcl' ) ) {
 			$is_listing_archive = Functions::is_listings() || Functions::is_listing_taxonomy();
-			$is_listing_account = Functions::is_account_page();
 		}
 
-		if ( $is_listing_archive || $is_listing_account ) {
+		if ( $is_listing_archive ) {
 			$is_listing = true;
 		}
 		// Single Pages
@@ -75,6 +74,8 @@ class Layouts {
 				$this->type                                   = 'error';
 				Options::$options[ $this->type . '_layout' ]  = 'full-width';
 				Options::$options[ $this->type . '_sidebar' ] = '';
+			} elseif ( $is_listing_archive ) {
+				$this->type = 'listing_archive';
 			} else {
 				$this->type = 'blog';
 			}
