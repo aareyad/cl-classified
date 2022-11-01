@@ -32,6 +32,9 @@ class Listing_Functions {
 
 	public function rtcl_action_hook() {
 		remove_action( 'rtcl_before_main_content', [ TemplateHooks::class, 'breadcrumb' ], 6 );
+		if ( isset( $_GET['view'] ) && 'grid' === $_GET['view'] ) {
+			remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'loop_item_excerpt' ], 70 );
+		}
 	}
 
 }

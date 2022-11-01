@@ -10,6 +10,8 @@
     }
 
     .rtcl-ordering {
+      margin-right: 15px;
+
       .orderby {
         color: #afb3b8;
         background-color: $white;
@@ -19,121 +21,29 @@
         border-radius: $borderRadius5;
       }
     }
-  }
-}
 
-.rtcl-sidebar-wrapper {
-  & > div {
-    margin-bottom: 30px;
-    border-radius: $borderRadius8;
-    border: none;
-    padding: 0;
-    background-color: $white;
-    color: $bodyColor;
+    .rtcl-view-switcher {
+      .rtcl-view-trigger {
+        border: 1px solid #d0d0d0;
+        color: $bodyColor;
+        border-radius: 4px;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        line-height: 36px;
+        text-align: center;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .rtcl-widget-heading {
-    h3 {
-      background-color: $primaryColor;
-      color: $white;
-      padding: 10px 25px;
-      border-radius: $borderRadius8 $borderRadius8 0 0;
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 0;
-
-      &:after {
-        content: none;
-      }
-    }
-
-    & + div,
-    & + ul {
-      padding: 22px 25px;
-    }
-  }
-
-  .rtcl-widget-filter-class {
-    .panel-block {
-      padding: 25px;
-
-      .ui-accordion-item {
-        .ui-accordion-title {
-          font-weight: 700;
-          color: $liteBlack;
-          border-color: $borderColor;
-
-          .ui-accordion-icon {
-            background-color: #fff1f3;
-            border: 1px solid $primaryColor;
-            color: $primaryColor;
-            border-radius: 50%;
-
-            &:before {
-              padding: 0;
-              margin: 0;
-              width: 20px;
-              height: 20px;
-              transform: translateY(3px);
-            }
-          }
-
-          &:hover {
-            text-decoration: none;
-          }
+        &.active {
+          background-color: $primaryColor;
+          border-color: transparent;
+          color: $white;
+          box-shadow: 0 4px 10px rgba($primaryColor, 0.5);
         }
-      }
 
-      ul {
-        li {
-          &.has-sub {
-            .arrow {
-              .rtcl-icon {
-                color: #b0b0b0;
-                font-size: 10px;
-              }
-            }
-          }
-
-          &:before {
-            content: none;
-          }
-
-          &.is-opener {
-            span {
-              i {
-                color: $primaryColor;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .ui-buttons {
-      .rtcl-filter-btn {
-        background-color: $primaryColor;
-        color: $white;
-        padding: 10px 16px;
-        border-radius: $borderRadius8;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 16px;
-        text-transform: capitalize;
-        border: 1px solid $primaryColor;
-        display: inline-block;
-        transition: all 0.3s;
-
-        &:hover {
-          background-color: transparent;
-          color: $black;
+        &:last-child {
+          margin-left: 5px;
         }
       }
     }
   }
-
 }
