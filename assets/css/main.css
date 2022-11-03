@@ -749,6 +749,10 @@ table .wp-block-table__cell-content,
 	display: block;
 }
 
+:root {
+	--rtcl-primary-color: #F9423A;
+}
+
 .pt-30 {
 	padding-top: 30px;
 }
@@ -1636,6 +1640,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 .breadcrumbs-area .rtcl-breadcrumb {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #e7e7e7;
+	margin-bottom: 0;
 }
 
 .breadcrumbs-area .rtcl-breadcrumb a {
@@ -2828,8 +2833,9 @@ a.scrollToTop:focus {
 }
 
 .rtcl .rtcl-wrapper {
-	padding-left: 12px;
-	padding-right: 12px;
+	padding: 80px 12px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @media screen and (min-width: 576px) {
@@ -3155,4 +3161,147 @@ a.scrollToTop:focus {
 
 .rtcl .rtcl-listings-actions .rtcl-view-switcher .rtcl-view-trigger:last-child {
 	margin-left: 5px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item {
+	border: none;
+	border-radius: 8px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner {
+	overflow: hidden;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-thumbnail {
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-meta-buttons {
+	display: flex;
+	left: auto;
+	bottom: auto;
+	top: 20px;
+	right: 15px;
+	gap: 6px;
+	justify-content: right;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-meta-buttons .rtcl-btn {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	color: #797f89;
+	background-color: #ffffff;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-meta-buttons .rtcl-btn:hover {
+	background-color: #f9423a;
+	color: #ffffff;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-meta-buttons .rtcl-btn a {
+	color: inherit;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content {
+	padding: 15px 25px 20px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-title {
+	line-height: 1.5;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-title a {
+	color: #000000;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-title a:hover {
+	color: #f9423a;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-price-wrap {
+	margin-top: 5px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-price-wrap .rtcl-price {
+	font-size: 20px;
+	color: #f9423a;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listable .rtcl-listable-item {
+	color: #797f89;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-meta-data {
+	color: #797f89;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-meta-data li {
+	margin-bottom: 8px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-listing-meta-data li svg {
+	margin-right: 5px;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item.is-featured {
+	background-color: #ffffff;
+	border: none;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item.as-top {
+	background-color: #faf8e6;
+	border: none;
+}
+
+.rtcl .rtcl-grid-view .rtcl-listing-item:hover .listing-thumb .listing-thumb-inner .rtcl-thumbnail {
+	transform: scale(1.1);
+}
+
+.rtcl nav.rtcl-pagination {
+	margin-top: 40px;
+}
+
+.rtcl nav.rtcl-pagination ul li {
+	margin-right: 10px;
+	border: none;
+	border-radius: 0;
+}
+
+.rtcl nav.rtcl-pagination ul li .page-numbers {
+	width: 45px;
+	height: 45px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: 1px solid #e7e7e7;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #ef1c13;
+	background-color: #ffffff;
+	transition: all 0.3s;
+}
+
+.rtcl nav.rtcl-pagination ul li .page-numbers:hover {
+	color: #ffffff;
+	border: 1px solid transparent;
+	background-color: #f9423a;
+}
+
+.rtcl nav.rtcl-pagination ul li .page-numbers.prev,
+.rtcl nav.rtcl-pagination ul li .page-numbers.next {
+	color: #f9423a;
+}
+
+.rtcl nav.rtcl-pagination ul li .page-numbers.prev:hover,
+.rtcl nav.rtcl-pagination ul li .page-numbers.next:hover {
+	color: #ffffff;
+	background-color: #f9423a;
+}
+
+.rtcl nav.rtcl-pagination ul li .page-numbers.current {
+	color: #ffffff;
+	border: 1px solid transparent;
+	background-color: #f9423a;
 }

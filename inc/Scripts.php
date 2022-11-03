@@ -326,9 +326,11 @@ class Scripts {
 
 		if ( Options::$padding_top != '' ) {
 			$style .= 'body .content-area {padding-top:' . Options::$padding_top . '!important;}';
+			$style .= 'body .rtcl-wrapper {padding-top:' . Options::$padding_top . '!important;}';
 		}
 		if ( Options::$padding_bottom != '' ) {
 			$style .= 'body .content-area {padding-bottom:' . Options::$padding_bottom . '!important}';
+			$style .= 'body .rtcl-wrapper {padding-bottom:' . Options::$padding_bottom . '!important}';
 		}
 
 		$bgimg = ! empty( wp_get_attachment_image_url( Options::$options['banner_image'], 'full' ) ) ? wp_get_attachment_image_url( Options::$options['banner_image'],

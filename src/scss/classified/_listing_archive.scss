@@ -46,4 +46,111 @@
       }
     }
   }
+
+  .rtcl-grid-view {
+    .rtcl-listing-item {
+      border: none;
+      border-radius: $borderRadius8;
+
+      .listing-thumb {
+        .listing-thumb-inner {
+          overflow: hidden;
+
+          .rtcl-thumbnail {
+            transition: all 0.3s ease-in-out;
+          }
+
+          .rtcl-meta-buttons {
+            display: flex;
+            left: auto;
+            bottom: auto;
+            top: 20px;
+            right: 15px;
+            gap: 6px;
+            justify-content: right;
+
+            .rtcl-btn {
+              width: 34px;
+              height: 34px;
+              border-radius: 50%;
+              color: $bodyColor;
+              background-color: $white;
+
+              &:hover {
+                background-color: $primaryColor;
+                color: $white;
+              }
+
+              a {
+                color: inherit;
+              }
+            }
+          }
+        }
+      }
+
+      .item-content {
+        padding: 15px 25px 20px;
+
+        .rtcl-listing-title {
+          line-height: 1.5;
+
+          a {
+            color: $black;
+
+            &:hover {
+              color: $primaryColor;
+            }
+          }
+        }
+
+        .rtcl-price-wrap {
+          margin-top: 5px;
+
+          .rtcl-price {
+            font-size: 20px;
+            color: $primaryColor;
+          }
+        }
+
+        .rtcl-listable {
+          .rtcl-listable-item {
+            color: $bodyColor;
+          }
+        }
+
+        .rtcl-listing-meta-data {
+          color: $bodyColor;
+
+          li {
+            margin-bottom: 8px;
+
+            svg {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      &.is-featured {
+        background-color: $white;
+        border: none;
+      }
+
+      &.as-top {
+        background-color: #faf8e6;
+        border: none;
+      }
+
+      &:hover {
+        .listing-thumb {
+          .listing-thumb-inner {
+            .rtcl-thumbnail {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
 }
