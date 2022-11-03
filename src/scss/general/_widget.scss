@@ -19,6 +19,10 @@
     font-size: 18px;
     padding-bottom: 0;
 
+    @include small-screen() {
+      margin-bottom: 20px;
+    }
+
     &:after {
       content: none;
     }

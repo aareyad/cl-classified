@@ -47,10 +47,9 @@
     }
   }
 
-  .rtcl-grid-view {
+  .rtcl-listings {
     .rtcl-listing-item {
-      border: none;
-      border-radius: $borderRadius8;
+      margin-bottom: 20px;
 
       .listing-thumb {
         .listing-thumb-inner {
@@ -62,12 +61,7 @@
 
           .rtcl-meta-buttons {
             display: flex;
-            left: auto;
-            bottom: auto;
-            top: 20px;
-            right: 15px;
             gap: 6px;
-            justify-content: right;
 
             .rtcl-btn {
               width: 34px;
@@ -90,7 +84,26 @@
       }
 
       .item-content {
-        padding: 15px 25px 20px;
+        .listing-categories {
+          display: inline-block;
+          border-radius: 30px;
+          border: 1px solid #ffc8c6;
+          padding: 2px 9px;
+          color: $primaryColor;
+          font-size: 13px;
+          line-height: 1.3;
+
+          &:hover {
+            background-color: $primaryColor;
+            color: $white;
+          }
+        }
+
+        .rtcl-listing-badge-wrap {
+          .badge {
+            border-radius: $borderRadius4;
+          }
+        }
 
         .rtcl-listing-title {
           line-height: 1.5;
@@ -101,15 +114,6 @@
             &:hover {
               color: $primaryColor;
             }
-          }
-        }
-
-        .rtcl-price-wrap {
-          margin-top: 5px;
-
-          .rtcl-price {
-            font-size: 20px;
-            color: $primaryColor;
           }
         }
 
@@ -130,27 +134,31 @@
             }
           }
         }
+
+        .rtcl-price-wrap {
+          .price-type-on_call {
+            .rtcl-price-meta {
+              font-weight: 600;
+            }
+          }
+        }
+
       }
 
       &.is-featured {
         background-color: $white;
         border: none;
+        margin-bottom: 20px;
       }
 
       &.as-top {
-        background-color: #faf8e6;
+        background-color: #2cb2c714;
         border: none;
       }
-
-      &:hover {
-        .listing-thumb {
-          .listing-thumb-inner {
-            .rtcl-thumbnail {
-              transform: scale(1.1);
-            }
-          }
-        }
-      }
     }
+
   }
 }
+
+@import "listing_grid";
+@import "listing_list";
