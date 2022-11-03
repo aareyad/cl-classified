@@ -8,7 +8,7 @@
 use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 
-$has_top_info = Options::$options['contact_address'] || Options::$options['contact_phone'] || Options::$options['contact_email'] || Options::$options['contact_website'];
+$has_top_info = Options::$options['contact_address'] || Options::$options['contact_phone'] || Options::$options['contact_email'];
 $socials      = Helper::socials();
 
 if ( ! $has_top_info || ! $socials ) {
@@ -20,37 +20,44 @@ if ( 'fullwidth' == Options::$header_width ) {
 }
 ?>
 
-<div id="header-topbar" class="header-topbar">
+<div id="top-header" class="top-header">
     <div class="<?php echo esc_attr( $header_container ); ?>">
-        <div class="row d-flex align-items-center">
+        <div class="top-header-inner">
 			<?php if ( $has_top_info ): ?>
-                <div class="col-sm-7 col-7">
-                    <ul class="topbar-left">
-						<?php if ( Options::$options['contact_phone'] ): ?>
-                            <li class="item-location"><i
-                                        class="fas fa-phone"></i><span><?php echo esc_html( Options::$options['contact_phone'] ); ?></span>
-                            </li>
-						<?php endif; ?>
+                <div class="tophead-left">
+                    <ul class="tophead-info">
 						<?php if ( Options::$options['contact_address'] ): ?>
-                            <li class="item-location"><i
-                                        class="fas fa-map-marker-alt"></i><span><?php echo esc_html( Options::$options['contact_address'] ); ?></span>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><?php echo esc_html( Options::$options['contact_address'] ); ?></span>
                             </li>
 						<?php endif; ?>
-
+						<?php if ( Options::$options['contact_phone'] ): ?>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span><?php echo esc_html( Options::$options['contact_phone'] ); ?></span>
+                            </li>
+						<?php endif; ?>
+						<?php if ( Options::$options['contact_email'] ): ?>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span><?php echo esc_html( Options::$options['contact_email'] ); ?></span>
+                            </li>
+						<?php endif; ?>
                     </ul>
                 </div>
 			<?php endif; ?>
 			<?php if ( $socials ): ?>
-                <div class="col-sm-5 col-5 d-flex justify-content-end">
-                    <ul class="topbar-right">
+                <div class="tophead-right">
+                    <ul class="tophead-social">
 						<?php if ( $socials ): ?>
-                            <li class="social-icon">
-                                <label><?php esc_html_e( 'Follow Us On:', 'cl-classified' ); ?></label>
-								<?php foreach ( $socials as $social ): ?>
-                                    <a target="_blank" href="<?php echo esc_url( $social['url'] ); ?>"><i
-                                                class="<?php echo esc_attr( $social['icon'] ); ?>"></i></a>
-								<?php endforeach; ?>
-                            </li>
+							<?php foreach ( $socials as $social ): ?>
+                                <li>
+                                    <a target="_blank" href="<?php echo esc_url( $social['url'] ); ?>">
+                                        <i class="<?php echo esc_attr( $social['icon'] ); ?>"></i>
+                                    </a>
+                                </li>
+							<?php endforeach; ?>
 						<?php endif; ?>
                     </ul>
                 </div>

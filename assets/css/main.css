@@ -884,29 +884,35 @@ table .wp-block-table__cell-content,
 #. Topbar
 ---------------------------------------*/
 .top-header {
-	background-color: #111;
+	background-color: #1c1d20;
 	padding: 8px 0;
 	line-height: 1.3;
 }
 
 .top-header li {
-	line-height: 1.3;
+	line-height: 1.5;
 }
 
 .top-header .top-header-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
 	.top-header .top-header-inner {
 		display: block;
 		text-align: center;
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
 	.top-header .top-header-inner .tophead-right {
 		margin-top: 5px;
 	}
@@ -918,7 +924,7 @@ table .wp-block-table__cell-content,
 	padding: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
 	.top-header .top-header-inner .tophead-info {
 		text-align: center;
 	}
@@ -926,7 +932,7 @@ table .wp-block-table__cell-content,
 
 .top-header .top-header-inner .tophead-info li {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 20px;
 }
 
 .top-header .top-header-inner .tophead-info li .fa {
@@ -936,31 +942,39 @@ table .wp-block-table__cell-content,
 
 .top-header .top-header-inner .tophead-info li a,
 .top-header .top-header-inner .tophead-info li span {
-	color: #dddddd;
+	color: #91939d;
+}
+
+.top-header .top-header-inner .tophead-info li span {
+	margin-left: 4px;
 }
 
 .top-header .top-header-inner .tophead-info li a:hover {
 	text-decoration: underline;
 }
 
-.top-header .top-header-inner .tophead-social {
+.top-header .top-header-inner .tophead-right .tophead-social {
 	font-size: 0;
 }
 
-.top-header .top-header-inner .tophead-social li {
+.top-header .top-header-inner .tophead-right .tophead-social li {
 	display: inline;
 	vertical-align: middle;
-}
-
-.top-header .top-header-inner .tophead-social li a {
 	margin-left: 20px;
-	color: #ddd;
-	font-size: 15px;
-	line-height: 1;
 }
 
-.top-header .top-header-inner .tophead-social li a:hover {
+.top-header .top-header-inner .tophead-right .tophead-social li a {
+	color: #91939d;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.top-header .top-header-inner .tophead-right .tophead-social li a:hover {
 	color: #f9423a;
+}
+
+.top-header .top-header-inner .tophead-right .tophead-social li:first-child {
+	margin-left: 0;
 }
 
 /* Transparent */
@@ -1311,7 +1325,7 @@ table .wp-block-table__cell-content,
 @media (max-width: 991.98px) {
 
 	.main-header-sticky-wrapper,
-	.site-header {
+	.site-header .main-header {
 		display: none;
 	}
 }

@@ -211,7 +211,6 @@ class Default_Data {
 			'contact_address'               => '121 King St, Melbourne den 3000, Australia',
 			'contact_phone'                 => '(+123) 596 000',
 			'contact_email'                 => 'info@example.com',
-			'contact_website'               => '',
 			'facebook'                      => '#',
 			'twitter'                       => '#',
 			'instagram'                     => '#',

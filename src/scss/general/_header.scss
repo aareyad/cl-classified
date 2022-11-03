@@ -1,84 +1,4 @@
 /*-------------------------------------
-#. Topbar
----------------------------------------*/
-.top-header {
-  background-color: #111;
-  padding: 8px 0;
-  line-height: 1.3;
-
-  li {
-    line-height: 1.3;
-  }
-
-  .top-header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @include mobile-screen() {
-      display: block;
-      text-align: center;
-    }
-
-    .tophead-right {
-      @include mobile-screen() {
-        margin-top: 5px;
-      }
-    }
-
-    .tophead-info {
-      @include ul0();
-      @include mobile-screen() {
-        text-align: center;
-      }
-
-      li {
-        display: inline-block;
-        margin-right: 30px;
-
-        .fa {
-          color: $primaryColor;
-          padding-right: 10px;
-        }
-
-        a, span {
-          color: #dddddd;
-        }
-
-        a:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .tophead-social {
-      font-size: 0;
-
-      li {
-        display: inline;
-        vertical-align: middle;
-
-        a {
-          margin-left: 20px;
-          color: #ddd;
-          font-size: 15px;
-          line-height: 1;
-
-          &:hover {
-            color: $primaryColor;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Transparent */
-.trheader .top-header {
-  background-color: rgba(0, 0, 0, .7);
-}
-
-/*-------------------------------------
 #. Header Layout 1
 ---------------------------------------*/
 
@@ -448,7 +368,7 @@
 // Mobile Menu
 
 .main-header-sticky-wrapper,
-.site-header {
+.site-header .main-header {
   @include medium-screen() {
     display: none;
   }

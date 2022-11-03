@@ -4,6 +4,7 @@ namespace RadiusTheme\ClassifiedLite\Customizer;
 
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Blog_Layout;
+use RadiusTheme\ClassifiedLite\Customizer\Settings\Contact_Info;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Error;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\Error_Layout;
 use RadiusTheme\ClassifiedLite\Customizer\Settings\General;
@@ -41,6 +42,7 @@ class Init {
 		new Blog();
 		new Post();
 		new Error();
+		new Contact_Info();
 		new Typography();
 		// Layout
 		new Blog_Layout();

@@ -336,4 +336,43 @@ class Helper {
 
 		return $rgb;
 	}
+
+	public static function socials() {
+		$rdtheme_socials = [
+			'facebook'  => [
+				'icon' => 'fab fa-facebook-square',
+				'url'  => Options::$options['facebook'],
+			],
+			'twitter'   => [
+				'icon' => 'fab fa-twitter',
+				'url'  => Options::$options['twitter'],
+			],
+			'linkedin'  => [
+				'icon' => 'fab fa-linkedin-in',
+				'url'  => Options::$options['linkedin'],
+			],
+			'youtube'   => [
+				'icon' => 'fab fa-youtube',
+				'url'  => Options::$options['youtube'],
+			],
+			'pinterest' => [
+				'icon' => 'fab fa-pinterest',
+				'url'  => Options::$options['pinterest'],
+			],
+			'instagram' => [
+				'icon' => 'fab fa-instagram',
+				'url'  => Options::$options['instagram'],
+			],
+			'skype'     => [
+				'icon' => 'fab fa-skype',
+				'url'  => Options::$options['skype'],
+			],
+		];
+
+		return array_filter( $rdtheme_socials, [ __CLASS__, 'filter_social' ] );
+	}
+
+	public static function filter_social( $args ) {
+		return ( $args['url'] != '' );
+	}
 }
