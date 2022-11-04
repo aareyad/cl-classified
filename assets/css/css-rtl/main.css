@@ -3145,6 +3145,14 @@ a.scrollToTop:focus {
 	margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+	.rtcl .rtcl-wrapper .listing-sidebar+.rtcl-sidebar-wrapper {
+		display: block;
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}
+
 .rtcl .rtcl-notices-wrapper {
 	margin: 0;
 }

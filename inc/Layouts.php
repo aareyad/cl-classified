@@ -54,7 +54,7 @@ class Layouts {
 				case 'rtcl_listing':
 					$this->type = 'listing_single';
 
-					Options::$options[ $this->type . '_layout' ]  = 'full-width';
+					Options::$options[ $this->type . '_layout' ]  = 'right-sidebar';
 					Options::$options[ $this->type . '_sidebar' ] = '';
 					break;
 				default:
