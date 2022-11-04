@@ -155,6 +155,18 @@ class Default_Data {
 			'listing_archive_padding_top'    => '',
 			'listing_archive_padding_bottom' => '',
 
+			// Listing Single Layout
+			'listing_single_header_style'   => 'default',
+			'listing_single_header_width'   => 'default',
+			'listing_single_menu_alignment' => 'default',
+			'listing_single_tr_header'      => 'default',
+			'listing_single_breadcrumb'     => 'default',
+			'listing_single_banner_search'  => 'default',
+			'listing_single_top_bar'        => 'default',
+			'listing_single_footer_style'   => 'default',
+			'listing_single_padding_top'    => '',
+			'listing_single_padding_bottom' => '',
+
 			// Color
 			'primary_color'                  => '#00c194',
 			'primary_lighiten'               => '#50ffe4',
@@ -176,23 +188,10 @@ class Default_Data {
 			'menu_icon_color'                => '',
 			'menu_icon_hover_color'          => '',
 
-			'breadcrumb_style'              => 'style-1',
 			'breadcrumb_bg1'                => '',
 			'breadcrumb_bg2'                => '',
 			'breadcrumb_color'              => '#878c9f',
 			'breadcrumb_active_color'       => '',
-
-			// Listing Single Layout
-			'listing_single_layout'         => 'right-sidebar',
-			'listing_single_padding_top'    => '',
-			'listing_single_padding_bottom' => '90px',
-			'listing_single_breadcrumb'     => 'default',
-			'listing_single_footer_style'   => 'default',
-			'listing_single_header_style'   => 'default',
-			'listing_single_header_width'   => 'default',
-			'listing_single_menu_alignment' => 'default',
-			'listing_single_tr_header'      => 'default',
-			'listing_single_top_bar'        => 'default',
 
 			// Store Archive Layout
 			'store_archive_layout'          => 'right-sidebar',

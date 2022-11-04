@@ -42,7 +42,7 @@ class Layouts {
 			$is_listing = true;
 		}
 		// Single Pages
-		if ( is_single() || is_page() ) {
+		if ( ( is_single() || is_page() ) && ! $is_listing ) {
 			$post_type        = get_post_type();
 			$post_id          = get_the_id();
 			$this->meta_value = get_post_meta( $post_id, "{$this->base}_layout_settings", true );
@@ -50,6 +50,12 @@ class Layouts {
 			switch ( $post_type ) {
 				case 'post':
 					$this->type = 'single_post';
+					break;
+				case 'rtcl_listing':
+					$this->type = 'listing_single';
+
+					Options::$options[ $this->type . '_layout' ]  = 'full-width';
+					Options::$options[ $this->type . '_sidebar' ] = '';
 					break;
 				default:
 					$this->type = 'page';
@@ -93,9 +99,6 @@ class Layouts {
 			Options::$footer_style      = $this->layout_global_option( 'footer_style' );
 			Options::$has_tr_header     = $this->layout_global_option( 'tr_header', true );
 		}
-
-		// All pages
-		Options::$breadcrumb_style = $this->meta_global_option( 'breadcrumb_style' );
 	}
 
 	// Single

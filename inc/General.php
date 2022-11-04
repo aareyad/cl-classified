@@ -264,9 +264,8 @@ class General {
 		$args['breadcrumb'] = $breadcrumbs->generate();
 
 		if ( ! empty( $args['breadcrumb'] ) ) {
-			$breadcrumb_style = Options::$breadcrumb_style;
 			?>
-            <section class="breadcrumbs-area <?php echo esc_attr( $breadcrumb_style ) ?>">
+            <section class="breadcrumbs-area">
                 <div class="container">
 					<?php
 					printf( "%s", $args['wrap_before'] );
