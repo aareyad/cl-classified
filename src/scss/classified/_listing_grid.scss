@@ -42,6 +42,19 @@
           .rtcl-price {
             font-size: 20px;
             color: $primaryColor;
+
+            .rtcl-price-meta {
+              font-size: 14px;
+              color: $bodyColor;
+              margin-top: 0;
+              align-items: center;
+
+              .rtcl-on_call {
+                font-size: 20px !important;
+                color: $primaryColor;
+                font-weight: 600;
+              }
+            }
           }
         }
 

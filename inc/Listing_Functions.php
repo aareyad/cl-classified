@@ -53,6 +53,32 @@ class Listing_Functions {
 		add_filter( 'rtcl_listing_the_excerpt', function ( $excerpt ) {
 			return wp_trim_words( $excerpt, 25 );
 		} );
+		// Override Related Listing Item Number
+		add_filter( 'rtcl_related_slider_options', function ( $slider_options ) {
+			$slider_options = [
+				"loop"         => false,
+				"autoplay"     => [
+					"delay"                => 3000,
+					"disableOnInteraction" => false,
+					"pauseOnMouseEnter"    => true
+				],
+				"speed"        => 1000,
+				"spaceBetween" => 20,
+				"breakpoints"  => [
+					0    => [
+						"slidesPerView" => 1
+					],
+					500  => [
+						"slidesPerView" => 2
+					],
+					1200 => [
+						"slidesPerView" => 3
+					]
+				]
+			];
+
+			return $slider_options;
+		} );
 	}
 
 	public static function loop_item_category_price() {
