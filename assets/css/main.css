@@ -3145,6 +3145,244 @@ a.scrollToTop:focus {
 	margin-left: 10px;
 }
 
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-price-wrap {
+	margin-bottom: 25px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-price-wrap .rtcl-price {
+	position: relative;
+	align-items: center;
+	background-color: #f9423a;
+	font-size: 26px;
+	color: #ffffff;
+	margin-left: 27px;
+	font-weight: 700;
+	height: 58px;
+	padding: 14px 24px 14px 24px;
+	border-radius: 0 8px 8px 0;
+	transition: all 0.2s ease-in;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-price-wrap .rtcl-price .rtcl-price-meta {
+	font-size: 16px;
+	font-weight: 400;
+	margin-left: 5px;
+	margin-top: 0;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-price-wrap .rtcl-price:after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: -21px;
+	transform: translateY(-50%) rotate(-45deg);
+	height: 41px;
+	width: 41px;
+	border-radius: 8px 0 0 0;
+	background-color: #f9423a;
+	transition: all 0.2s ease-in;
+	z-index: -1;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info {
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 8px;
+	padding: 20px 25px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .rtcl-listing-side-title {
+	padding: 0;
+	border: none;
+	margin-bottom: 15px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .rtcl-listing-side-title h3 {
+	font-weight: 700;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group {
+	padding: 0;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item {
+	color: #797f89;
+	border: none;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .media {
+	display: inline-flex;
+	width: 100%;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .media .rtcl-icon {
+	display: none;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .media-body {
+	flex: 1;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .media-body>span {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .locations,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .numbers {
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	padding: 10px 16px;
+	background-color: #ffffff;
+	font-weight: 400;
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .numbers a {
+	color: inherit;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .numbers:hover {
+	background-color: #f9423a;
+	color: #ffffff;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtin-author {
+	margin-bottom: 15px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtin-author>img {
+	margin-right: 12px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtin-author .rtin-name {
+	flex: 1;
+	color: #797f89;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.reveal-phone .media .rtcl-icon {
+	display: none;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body {
+	display: inline-block;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body .rtcl-do-email-link {
+	color: #797f89;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	padding: 10px 16px;
+	background-color: #ffffff;
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body .rtcl-do-email-link:before {
+	content: '\f0e0';
+	font-family: "Font Awesome 6 Free";
+	font-weight: 600;
+	color: #f9423a;
+	margin-right: 5px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body .rtcl-do-email-link span {
+	font-weight: 400;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body .rtcl-do-email-link:hover {
+	background-color: #f9423a;
+	color: #ffffff;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email .media-body .rtcl-do-email-link:hover:before {
+	color: #ffffff;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email #rtcl-contact-form .form-group {
+	margin-bottom: 10px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email #rtcl-contact-form .form-group #rtcl-contact-message {
+	height: auto;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email #rtcl-contact-form .btn {
+	background-color: #f9423a;
+	border: none;
+	padding: 12px 15px;
+	line-height: 1;
+	border-radius: 5px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-do-email #rtcl-contact-form .btn:hover {
+	background-color: #ef1c13;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-chat-link,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-chat-link,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link {
+	color: #797f89;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	padding: 10px 16px;
+	background-color: #ffffff;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-chat-link .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-chat-link .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link .rtcl-icon {
+	color: #f9423a;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-chat-link:hover,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link:hover,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-chat-link:hover,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link:hover {
+	background-color: #f9423a;
+	color: #ffffff;
+	border-color: #f9423a;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-chat-link:hover .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link:hover .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-chat-link:hover .rtcl-icon,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link:hover .rtcl-icon {
+	color: #ffffff;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link:before,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link:before {
+	content: '\f0c1';
+	font-family: "Font Awesome 6 Free";
+	font-weight: 600;
+	color: #f9423a;
+	margin-right: 5px;
+}
+
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-contact-seller .rtcl-website-link:hover:before,
+.rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtcl-website .rtcl-website-link:hover:before {
+	color: #ffffff;
+}
+
 @media screen and (min-width: 768px) {
 	.rtcl .rtcl-wrapper .listing-sidebar+.rtcl-sidebar-wrapper {
 		display: block;
@@ -3420,7 +3658,7 @@ a.scrollToTop:focus {
 }
 
 .rtcl .rtcl-related-listing .rtcl-related-title h2 {
-	font-size: 22px;
+	font-size: 24px;
 	margin-bottom: 0;
 }
 

@@ -59,7 +59,7 @@ do_action( 'rtcl_before_single_listing' );
                 <div class="rtcl-main-content-wrapper">
                     <!-- Price -->
 					<?php if ( $listing->can_show_price() ): ?>
-                        <div class="rtcl-price-wrap">
+                        <div class="rtcl-price-wrap price-in-mobile">
 							<?php echo $listing->get_price_html(); ?>
                         </div>
 					<?php endif; ?>

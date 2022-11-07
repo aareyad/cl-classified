@@ -27,6 +27,12 @@ if ( $sidebar_position == "left" ) {
 <!-- Seller / User Information -->
 <div class="<?php echo esc_attr( implode( ' ', $sidebar_class ) ); ?>">
     <div class="listing-sidebar">
+        <!-- Price -->
+	    <?php if ( $listing->can_show_price() ): ?>
+            <div class="rtcl-price-wrap price-in-desktop">
+			    <?php echo $listing->get_price_html(); ?>
+            </div>
+	    <?php endif; ?>
 		<?php $listing->the_user_info(); ?>
 		<?php do_action( 'rtcl_after_single_listing_sidebar', $listing->get_id() ); ?>
     </div>
