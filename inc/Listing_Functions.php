@@ -41,6 +41,15 @@ class Listing_Functions {
 		// remove action
 		remove_action( 'rtcl_before_main_content', [ TemplateHooks::class, 'breadcrumb' ], 6 );
 		remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'loop_item_excerpt' ], 70 );
+		remove_action( 'rtcl_single_listing_content', [ TemplateHooks::class, 'add_single_listing_gallery' ], 30 );
+		remove_action( 'rtcl_single_listing_inner_sidebar', [
+			TemplateHooks::class,
+			'add_single_listing_inner_sidebar_custom_field'
+		], 10 );
+		remove_action( 'rtcl_single_listing_inner_sidebar', [
+			TemplateHooks::class,
+			'add_single_listing_inner_sidebar_action'
+		], 20 );
 		// add action
 		if ( 'list' === $view ) {
 			remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'listing_price' ], 80 );

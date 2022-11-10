@@ -129,5 +129,31 @@
     background-color: #fff;
     padding: 25px;
     border-radius: $borderRadius8;
+    box-shadow: 0 0 20px #f0f0f0;
   }
+}
+
+.rtcl-widget-title2 {
+  position: relative;
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600 !important;
+    color: $black;
+    margin-bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 4px;
+    width: 40px;
+    bottom: -2px;
+    background-color: $primaryColor;
+  }
+
 }

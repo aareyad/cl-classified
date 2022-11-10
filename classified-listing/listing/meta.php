@@ -43,7 +43,7 @@ if ( ! $listing->can_show_date() && ! $listing->can_show_user() && ! $listing->c
 		$types = ! empty( $listing_types ) && isset( $listing_types[ $listing->get_ad_type() ] ) ? $listing_types[ $listing->get_ad_type() ] : '';
 		if ( $types ) {
 			?>
-            <li class="ad-type"><i class="rtcl-icon rtcl-icon-tags"></i>&nbsp;<?php echo esc_html( $types ); ?></li>
+            <li class="ad-type"><i class="rtcl-icon rtcl-icon-tags"></i><?php echo esc_html( $types ); ?></li>
 		<?php } ?>
 	<?php endif; ?>
 	<?php
@@ -61,16 +61,17 @@ if ( ! $listing->can_show_date() && ! $listing->can_show_user() && ! $listing->c
 	<?php endif; ?>
 	<?php if ( $listing->can_show_date() ) : ?>
         <li class="updated">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!--<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 4V8L10 10M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
                       stroke="#BEC2C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
+            </svg>-->
+            <i class="fa-regular fa-clock"></i>
 			<?php $listing->the_time(); ?>
         </li>
 	<?php endif; ?>
 	<?php if ( $listing->can_show_views() ) : ?>
         <li class="rt-views">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.25 8.05493V10.4549" stroke="#BEC2C9" stroke-width="1.2" stroke-linecap="round"
                       stroke-linejoin="round"/>
                 <path d="M9 6.75V11.76" stroke="#BEC2C9" stroke-width="1.2" stroke-linecap="round"
@@ -79,7 +80,8 @@ if ( ! $listing->can_show_date() && ! $listing->can_show_user() && ! $listing->c
                       stroke-linejoin="round"/>
                 <path d="M6.75 16.5H11.25C15 16.5 16.5 15 16.5 11.25V6.75C16.5 3 15 1.5 11.25 1.5H6.75C3 1.5 1.5 3 1.5 6.75V11.25C1.5 15 3 16.5 6.75 16.5Z"
                       stroke="#BEC2C9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            </svg>-->
+            <i class="fa-regular fa-eye"></i>
 			<?php echo sprintf( _n( '%s view', '%s views', $listing->get_view_counts(), 'classified-listing' ), number_format_i18n( $listing->get_view_counts() ) ); ?>
         </li>
 	<?php endif; ?>
