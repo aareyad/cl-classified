@@ -32,4 +32,3 @@ use Rtcl\Models\Listing;
         <?php do_action('rtcl_listing_seller_information', $listing); ?>
     </div>
 </div>
-

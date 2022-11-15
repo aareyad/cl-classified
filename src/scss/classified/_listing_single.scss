@@ -32,12 +32,15 @@
     right: 0;
   }
 
-  &:hover {
-    .swiper-button-next,
-    .swiper-button-prev {
-      visibility: visible;
+  .rtcl-slider {
+    &.swiper-horizontal:hover {
+      .swiper-button-next,
+      .swiper-button-prev {
+        visibility: visible;
+      }
     }
   }
+
 }
 
 /*-------------------------------------
@@ -96,6 +99,14 @@
       top: -3px;
       background-color: $primaryColor;
     }
+
+    .rtcl-price-wrap {
+      &.price-in-mobile {
+        @media screen and (min-width: 992px) {
+          display: none;
+        }
+      }
+    }
   }
 
   .rtcl-single-custom-fields {
@@ -119,6 +130,7 @@
     }
   }
 }
+
 /*-------------------------------------
 #. Social Share Modal
 ---------------------------------------*/
@@ -148,6 +160,7 @@
         line-height: 36px;
         width: 40px;
         height: 40px;
+        cursor: pointer;
 
         &:hover {
           background-color: $primaryColor;
@@ -184,6 +197,7 @@
     }
   }
 }
+
 .rtcl-social-share-modal {
   .modal-header {
     button.close {
@@ -196,6 +210,7 @@
       font-size: 16px;
     }
   }
+
   .modal-body {
     .modal-title {
       text-align: center;
