@@ -3171,6 +3171,10 @@ a.scrollToTop:focus {
 	margin-left: 10px;
 }
 
+.rtcl .rtcl-wrapper .listing-sidebar {
+	margin-bottom: 25px;
+}
+
 .rtcl .rtcl-wrapper .listing-sidebar .rtcl-price-wrap {
 	margin-bottom: 25px;
 }
@@ -4429,4 +4433,53 @@ a.scrollToTop:focus {
 
 .rtcl-el-listing-location-box.location-box-style-2:hover .rtin-content .rtin-counter {
 	background-color: #f9423a;
+}
+
+.rt-el-post .rtin-each {
+	background-color: #ffffff;
+	margin-bottom: 30px;
+}
+
+.rt-el-post .rtin-each .rtin-content-area {
+	padding: 25px;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-meta {
+	margin: 0 0 15px;
+	padding: 0;
+	list-style: none;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-meta li {
+	display: inline-block;
+	color: #797f89;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-meta li a {
+	color: inherit;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-meta li.date {
+	background-color: #feeceb;
+	border-radius: 30px;
+	font-size: 14px;
+	border: 1px solid #f9423a;
+	color: #f9423a;
+	padding: 3px 8px;
+	margin-right: 5px;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-title {
+	font-size: 22px;
+	margin-bottom: 0;
+	line-height: 1.2;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-title a {
+	color: #000000;
+	transition: all 0.3s ease-in-out;
+}
+
+.rt-el-post .rtin-each .rtin-content-area .post-title a:hover {
+	color: #f9423a;
 }

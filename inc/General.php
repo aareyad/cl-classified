@@ -113,17 +113,6 @@ class General {
 				]
 			);
 		}
-
-		register_sidebar(
-			[
-				'name'          => esc_html__( 'Store Sidebar', 'cl-classified' ),
-				'id'            => 'store-sidebar',
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widget-heading">',
-				'after_title'   => '</h3>',
-			]
-		);
 	}
 
 	public function body_classes( $classes ) {
