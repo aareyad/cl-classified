@@ -24,7 +24,7 @@ $human_time = human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp
         <div class="comment-meta clearfix">
             <div class="comment-meta-left">
                 <h3 class="comment-author"><?php echo get_comment_author_link( $comment );?></h3>
-                <div class="comment-time"><?php printf( esc_html__( ' %1$s ago / %2$s @ %3$s', 'classima'), $human_time, $date, $time );?></div>
+                <div class="comment-time"><?php printf( esc_html__( ' %1$s ago / %2$s @ %3$s', 'cl-classified'), $human_time, $date, $time );?></div>
             </div>
 			<?php
 			comment_reply_link(
@@ -40,7 +40,7 @@ $human_time = human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp
         </div>
         <div class="comment-text">
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-                <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'classima' ); ?></p>
+                <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'cl-classified' ); ?></p>
 			<?php endif; ?>
 			<?php comment_text(); ?>
         </div>

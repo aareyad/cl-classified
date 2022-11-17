@@ -16,6 +16,7 @@ function cl_classified_load_textdomain() {
 
 define( 'CL_CLASSIFIED_VERSION', '1.0.0' );
 
+require_once 'lib/class-tgm-plugin-activation.php';
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';
 

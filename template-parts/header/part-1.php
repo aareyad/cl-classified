@@ -26,7 +26,7 @@ $login_icon_title = is_user_logged_in() ? esc_html__( 'My Account', 'cl-classifi
     <div class="header-icon-area">
 		<?php if ( Helper::is_chat_enabled() ): ?>
             <a class="header-chat-icon rtcl-chat-unread-count"
-               title="<?php esc_html_e( 'Chat', 'cl-classified' ); ?>"
+               title="<?php esc_attr_e( 'Chat', 'cl-classified' ); ?>"
                href="<?php echo esc_url( Link::get_my_account_page_link( 'chat' ) ); ?>"><i class="far fa-comments"></i></a>
 		<?php endif; ?>
 		<?php if ( class_exists( 'Rtcl' ) && Options::$options['header_login_icon'] ): ?>

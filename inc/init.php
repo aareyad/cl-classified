@@ -6,6 +6,7 @@
  */
 
 use RadiusTheme\ClassifiedLite\Constants;
+use RadiusTheme\ClassifiedLite\TGM_Config;
 use RadiusTheme\ClassifiedLite\General;
 use RadiusTheme\ClassifiedLite\Layouts;
 use RadiusTheme\ClassifiedLite\Listing_Functions;
@@ -46,6 +47,7 @@ final class Includes {
 	 */
 	protected function init() {
 		new Constants();
+		new TGM_Config();
 		Options::instance();
 		General::instance();
 		Scripts::instance();

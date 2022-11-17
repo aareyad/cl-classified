@@ -114,7 +114,7 @@ $style = Options::$options['listing_search_style'];
                         <div class="rtcl-search-input-button cl-classified-search-style-2 rtin-location">
                             <input type="text" name="geo_address" autocomplete="off"
                                    value="<?php echo ! empty( $_GET['geo_address'] ) ? esc_attr( $_GET['geo_address'] ) : '' ?>"
-                                   placeholder="<?php esc_html_e( "Select a location", "cl-classified" ); ?>"
+                                   placeholder="<?php esc_attr_e( "Select a location", "cl-classified" ); ?>"
                                    class="form-control rtcl-geo-address-input"/>
                             <i class="rtcl-get-location rtcl-icon rtcl-icon-target"></i>
                             <input type="hidden" class="latitude" name="center_lat"
@@ -131,7 +131,7 @@ $style = Options::$options['listing_search_style'];
                                 <i class=""></i>
                                 <input type="number" class="form-control" name="distance"
                                        value="<?php echo ! empty( $_GET['distance'] ) ? absint( $_GET['distance'] ) : 30 ?>"
-                                       placeholder="<?php esc_html_e( "Radius", "cl-classified" ); ?>">
+                                       placeholder="<?php esc_attr_e( "Radius", "cl-classified" ); ?>">
                             </div>
                         </div>
                     </div>
