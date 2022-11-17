@@ -1387,6 +1387,7 @@ table .wp-block-table__cell-content,
 .rt-mobile-menu .mobile-menu-bar .mobile-logo-area .custom-logo {
 	display: inline-block;
 	height: 32px;
+	max-width: 120px;
 	padding: 5px 0;
 }
 
@@ -3627,6 +3628,10 @@ a.scrollToTop:focus {
 .rtcl .rtcl-list-view .rtcl-listing-item {
 	gap: 20px;
 	padding: 15px 15px 15px 20px;
+	border-radius: 8px;
+}
+
+.rtcl .rtcl-list-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-thumbnail {
 	border-radius: 8px;
 }
 

@@ -48,11 +48,6 @@ class TGM_Config {
 				'slug'     => 'elementor',
 				'required' => false,
 			],
-			[
-				'name'     => 'Review Schema',
-				'slug'     => 'review-schema',
-				'required' => false,
-			],
 		];
 
 		$config = [

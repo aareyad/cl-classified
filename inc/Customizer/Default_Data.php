@@ -76,7 +76,6 @@ class Default_Data {
 			'play_store_url'                 => '#',
 
 			// Listings Settings
-			'single_listing_style'           => 1,
 			'listing_detail_sidebar'         => 1,
 			'banner_search'                  => 0,
 			'banner_search_type'             => 0,

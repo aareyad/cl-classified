@@ -26,29 +26,6 @@ class Listings extends Customizer {
 
 	public function register_listings_controls( $wp_customize ) {
 
-		// Single Listing Layout
-		$wp_customize->add_setting(
-			'single_listing_style',
-			[
-				'default'           => $this->defaults['single_listing_style'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_radio_sanitization',
-			]
-		);
-		$wp_customize->add_control(
-			'single_listing_style',
-			[
-				'label'       => esc_html__( 'Listing Details Style', 'cl-classified' ),
-				'section'     => 'listings_section',
-				'description' => esc_html__( 'Select listing details page style', 'cl-classified' ),
-				'type'        => 'select',
-				'choices'     => [
-					'1' => esc_html__( 'General Listing', 'cl-classified' ),
-					'2' => esc_html__( 'Directory', 'cl-classified' ),
-				],
-			]
-		);
-
 		// Show or Hide Listing sidebar
 		$wp_customize->add_setting(
 			'listing_detail_sidebar',
