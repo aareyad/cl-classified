@@ -36,12 +36,19 @@ class TGM_Config {
 				'required' => true,
 				'version'  => '2.8'
 			],
+			[
+				'name'     => 'RT Demo Importer',
+				'slug'     => 'rt-demo-importer',
+				'source'   => 'rt-demo-importer.zip',
+				'required' => false,
+				'version'  => '5.0.0'
+			],
 
 			// Repository
 			[
 				'name'     => 'Classified Listing',
 				'slug'     => 'classified-listing',
-				'required' => false,
+				'required' => true,
 			],
 			[
 				'name'     => 'Elementor Page Builder',
