@@ -5,7 +5,7 @@
  * This template can be overridden by copying it to yourtheme/classified-listing/content-single-rtcl_listing.php.
  *
  * @package ClassifiedListing/Templates
- * @version 1.5.56
+ * @version 2.2.25
  */
 
 use Rtcl\Controllers\BusinessHoursController;
@@ -76,12 +76,7 @@ do_action( 'rtcl_before_single_listing' );
 						<?php endif; ?>
                         <!--  Inner Sidebar -->
 						<?php do_action( 'rtcl_single_listing_inner_sidebar', $listing ); ?>
-                        <div class="rtcl-single-custom-fields">
-                            <div class="rtcl-widget-title2">
-                                <h3><?php esc_html_e( 'Overview', 'cl-classified' ); ?></h3>
-                            </div>
-							<?php $listing->the_custom_fields(); ?>
-                        </div>
+						<?php $listing->the_custom_fields(); ?>
                         <div class="rtcl-single-actions">
 							<?php $listing->the_actions(); ?>
                         </div>
