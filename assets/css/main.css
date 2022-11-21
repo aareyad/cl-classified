@@ -4355,44 +4355,6 @@ a.scrollToTop:focus {
 	font-size: 20px;
 }
 
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details {
-	padding: 0;
-	background: transparent;
-	border: none;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .rtcl-category-title {
-	font-size: 16px;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .image,
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .icon {
-	margin-bottom: 10px;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .image a,
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .icon a {
-	border-radius: 50%;
-	width: 110px;
-	height: 110px;
-	background-color: #ffffff;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .image a .rtcl-icon,
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .icon a .rtcl-icon {
-	color: inherit;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner .image a {
-	display: inline-block;
-	line-height: 110px;
-}
-
-.rtcl-categories.rtcl-categories-elementor .cat-item-wrap .cat-details .cat-details-inner:hover .icon a {
-	color: #ffffff;
-	background-color: #f9423a;
-}
-
 .rtcl-el-listing-location-box.location-box-style-2 .rtin-content {
 	text-align: center;
 	height: 100%;
