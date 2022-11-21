@@ -133,6 +133,7 @@ class Default_Data {
 			'error_padding_top'              => '',
 			'error_padding_bottom'           => '',
 			'error_breadcrumb'               => 'default',
+			'error_banner_search'            => 'default',
 			'error_top_bar'                  => 'default',
 			'error_header_style'             => 'default',
 			'error_header_width'             => 'default',
@@ -155,16 +156,16 @@ class Default_Data {
 			'listing_archive_padding_bottom' => '',
 
 			// Listing Single Layout
-			'listing_single_header_style'   => 'default',
-			'listing_single_header_width'   => 'default',
-			'listing_single_menu_alignment' => 'default',
-			'listing_single_tr_header'      => 'default',
-			'listing_single_breadcrumb'     => 'default',
-			'listing_single_banner_search'  => 'default',
-			'listing_single_top_bar'        => 'default',
-			'listing_single_footer_style'   => 'default',
-			'listing_single_padding_top'    => '',
-			'listing_single_padding_bottom' => '',
+			'listing_single_header_style'    => 'default',
+			'listing_single_header_width'    => 'default',
+			'listing_single_menu_alignment'  => 'default',
+			'listing_single_tr_header'       => 'default',
+			'listing_single_breadcrumb'      => 'default',
+			'listing_single_banner_search'   => 'default',
+			'listing_single_top_bar'         => 'default',
+			'listing_single_footer_style'    => 'default',
+			'listing_single_padding_top'     => '',
+			'listing_single_padding_bottom'  => '',
 
 			// Color
 			'primary_color'                  => '#00c194',
@@ -187,75 +188,75 @@ class Default_Data {
 			'menu_icon_color'                => '',
 			'menu_icon_hover_color'          => '',
 
-			'breadcrumb_bg1'                => '',
-			'breadcrumb_bg2'                => '',
-			'breadcrumb_color'              => '#878c9f',
-			'breadcrumb_active_color'       => '',
+			'breadcrumb_bg1'               => '',
+			'breadcrumb_bg2'               => '',
+			'breadcrumb_color'             => '#878c9f',
+			'breadcrumb_active_color'      => '',
 
 			// Store Archive Layout
-			'store_archive_layout'          => 'right-sidebar',
-			'store_archive_sidebar'         => 'store-sidebar',
-			'store_archive_header_style'    => 'default',
-			'store_archive_header_width'    => 'default',
-			'store_archive_menu_alignment'  => 'default',
-			'store_archive_tr_header'       => 'default',
-			'store_archive_top_bar'         => 'default',
-			'store_archive_padding_top'     => '',
-			'store_archive_padding_bottom'  => '',
-			'store_archive_breadcrumb'      => 'default',
-			'store_archive_footer_style'    => 'default',
+			'store_archive_layout'         => 'right-sidebar',
+			'store_archive_sidebar'        => 'store-sidebar',
+			'store_archive_header_style'   => 'default',
+			'store_archive_header_width'   => 'default',
+			'store_archive_menu_alignment' => 'default',
+			'store_archive_tr_header'      => 'default',
+			'store_archive_top_bar'        => 'default',
+			'store_archive_padding_top'    => '',
+			'store_archive_padding_bottom' => '',
+			'store_archive_breadcrumb'     => 'default',
+			'store_archive_footer_style'   => 'default',
 
 			// Contact Info
-			'contact_address'               => '121 King St, Melbourne den 3000, Australia',
-			'contact_phone'                 => '(+123) 596 000',
-			'contact_email'                 => 'info@example.com',
-			'facebook'                      => '#',
-			'twitter'                       => '#',
-			'instagram'                     => '#',
-			'youtube'                       => '',
-			'pinterest'                     => '',
-			'linkedin'                      => '#',
-			'skype'                         => '',
+			'contact_address'              => '121 King St, Melbourne den 3000, Australia',
+			'contact_phone'                => '(+123) 596 000',
+			'contact_email'                => 'info@example.com',
+			'facebook'                     => '#',
+			'twitter'                      => '#',
+			'instagram'                    => '#',
+			'youtube'                      => '',
+			'pinterest'                    => '',
+			'linkedin'                     => '#',
+			'skype'                        => '',
 
 			// Body Typography
-			'typo_body'                     => json_encode(
+			'typo_body'                    => json_encode(
 				[
 					'font'          => 'Lato',
 					'regularweight' => 'normal',
 				]
 			),
-			'typo_body_size'                => '16px',
-			'typo_body_height'              => '24px',
+			'typo_body_size'               => '16px',
+			'typo_body_height'             => '24px',
 
 			// Menu Typography
-			'typo_menu'                     => json_encode(
+			'typo_menu'                    => json_encode(
 				[
 					'font'          => 'Nunito',
 					'regularweight' => '700',
 				]
 			),
-			'typo_menu_size'                => '16px',
-			'typo_menu_height'              => '24px',
+			'typo_menu_size'               => '16px',
+			'typo_menu_height'             => '24px',
 
 			//Sub Menu Typography
-			'typo_submenu_size'             => '16px',
-			'typo_submenu_height'           => '24px',
+			'typo_submenu_size'            => '16px',
+			'typo_submenu_height'          => '24px',
 
 			// Heading Typography
-			'typo_heading'                  => json_encode(
+			'typo_heading'                 => json_encode(
 				[
 					'font'          => 'Nunito',
 					'regularweight' => '700',
 				]
 			),
-			'typo_h1'                       => json_encode(
+			'typo_h1'                      => json_encode(
 				[
 					'font'          => '',
 					'regularweight' => '700',
 				]
 			),
-			'typo_h1_size'                  => '36px',
-			'typo_h1_height'                => '1.5',
+			'typo_h1_size'                 => '36px',
+			'typo_h1_height'               => '1.5',
 
 			'typo_h2'        => json_encode(
 				[
