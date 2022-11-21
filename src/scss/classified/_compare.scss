@@ -1,0 +1,51 @@
+#rtcl-compare-wrap {
+  #rtcl-compare-panel-btn {
+    background-color: $primaryColor;
+    color: $white;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    left: -20px;
+
+    .rtcl-compare-listing-count {
+      background: $secondaryColor;
+    }
+  }
+
+  h5.rtcl-compare-wrap-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .rtcl-compare-item {
+    h4.rtcl-compare-item-title {
+      font-size: 18px;
+      font-weight: 400;
+
+      a {
+        color: $black;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  #rtcl-compare-btn-wrap {
+    a.rtcl-compare-btn {
+      background-color: $primaryColor;
+      color: $white;
+      border: 1px solid $primaryColor;
+
+      &:hover {
+        background-color: $secondaryColor;
+        border-color: $secondaryColor;
+      }
+    }
+  }
+}
+
+.rtcl-compare-table thead th {
+  border-bottom: none;
+}

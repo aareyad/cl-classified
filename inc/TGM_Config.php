@@ -27,7 +27,7 @@ class TGM_Config {
 				'slug'     => 'cl-classified-core',
 				'source'   => 'cl-classified-core.zip',
 				'required' => true,
-				'version'  => '1.0'
+				'version'  => '1.0.1'
 			],
 			[
 				'name'     => 'RT Framework',
