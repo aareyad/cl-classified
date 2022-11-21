@@ -40,7 +40,7 @@ if ( count( $fields ) ) :
                 <div class="rtcl-widget-title2">
                     <h3><?php esc_html_e( 'Overview', 'cl-classified' ); ?></h3>
                 </div>
-                <ul class="list-group list-group-flush mb-3 custom-field-properties">
+                <ul class="list-group list-group-flush custom-field-properties">
 					<?php Functions::print_html( $fieldData ); ?>
                 </ul>
             </div>

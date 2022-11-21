@@ -4313,6 +4313,94 @@ a.scrollToTop:focus {
 	border: 1px solid #f9423a;
 }
 
+/*-------------------------------------
+#. My Account
+---------------------------------------*/
+.rtcl #rtcl-user-login-wrapper {
+	background: transparent;
+	padding: 0;
+}
+
+.rtcl #rtcl-lost-password-form .form-group,
+.rtcl .rtcl-registration-form-wrap .form-group,
+.rtcl .rtcl-login-form-wrap .form-group {
+	margin-bottom: 15px;
+}
+
+.rtcl #rtcl-lost-password-form .form-group .control-label,
+.rtcl .rtcl-registration-form-wrap .form-group .control-label,
+.rtcl .rtcl-login-form-wrap .form-group .control-label {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 6px;
+	text-transform: capitalize;
+}
+
+.rtcl #rtcl-lost-password-form .form-group .btn,
+.rtcl .rtcl-registration-form-wrap .form-group .btn,
+.rtcl .rtcl-login-form-wrap .form-group .btn {
+	color: #ffffff !important;
+	padding: 10px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.3;
+	border: 1px solid #f9423a;
+	background-color: #f9423a;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+.rtcl #rtcl-lost-password-form .form-group .btn:hover,
+.rtcl .rtcl-registration-form-wrap .form-group .btn:hover,
+.rtcl .rtcl-login-form-wrap .form-group .btn:hover {
+	background-color: #ef1c13;
+	border: 1px solid #ef1c13;
+}
+
+.rtcl a {
+	color: #f9423a;
+}
+
+.rtcl a:hover {
+	color: #ef1c13;
+}
+
+.rtcl-page-registration .site-content-block .main-content,
+.rtcl-page-login .site-content-block .main-content {
+	background-color: transparent;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.rtcl-page-registration .site-content-block .main-content .rtcl-registration-form-wrap,
+.rtcl-page-registration .site-content-block .main-content .rtcl-login-form-wrap,
+.rtcl-page-login .site-content-block .main-content .rtcl-registration-form-wrap,
+.rtcl-page-login .site-content-block .main-content .rtcl-login-form-wrap {
+	background-color: #ffffff;
+	margin: 0 auto;
+	border-radius: 8px;
+	padding: 25px;
+	box-shadow: 0 0 20px #f0f0f0;
+}
+
+.rtcl-page-registration .site-content-block .main-content .rtcl-registration-form-wrap>h2,
+.rtcl-page-registration .site-content-block .main-content .rtcl-login-form-wrap>h2,
+.rtcl-page-login .site-content-block .main-content .rtcl-registration-form-wrap>h2,
+.rtcl-page-login .site-content-block .main-content .rtcl-login-form-wrap>h2 {
+	font-size: 24px;
+}
+
+.rtcl-page-login #rtcl-lost-password-form {
+	background-color: #ffffff;
+	margin: 0 auto;
+	border-radius: 8px;
+	padding: 25px;
+	box-shadow: 0 0 20px #f0f0f0;
+}
+
 .elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item {
 	margin-bottom: 0;
 }
