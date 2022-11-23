@@ -168,95 +168,62 @@ class Default_Data {
 			'listing_single_padding_bottom'  => '',
 
 			// Color
-			'primary_color'                  => '#00c194',
-			'primary_lighiten'               => '#50ffe4',
-			'primary_lighiten2'              => '#dceeea',
-			'primary_lighiten3'              => '#EAF7F4',
-			'primary_dark'                   => '#00a376',
-			'secondary_color'                => '#07c196',
-			'body_color'                     => '#788593',
-			'menu_color'                     => '#000000',
-			'menu_background'                => '',
-			'sticky_menu_background'         => '',
-			'sub_menu_color'                 => '#3a3a3a',
-			'menu_hover_color'               => '',
-			'transparent_menu_color'         => '',
-			'transparent_menu_color_hover'   => '',
-			'menu_arrow_color'               => '',
-			'btn_color'                      => '',
-			'btn_hover_color'                => '',
-			'menu_icon_color'                => '',
-			'menu_icon_hover_color'          => '',
-
-			'breadcrumb_bg1'               => '',
-			'breadcrumb_bg2'               => '',
-			'breadcrumb_color'             => '#878c9f',
-			'breadcrumb_active_color'      => '',
-
-			// Store Archive Layout
-			'store_archive_layout'         => 'right-sidebar',
-			'store_archive_sidebar'        => 'store-sidebar',
-			'store_archive_header_style'   => 'default',
-			'store_archive_header_width'   => 'default',
-			'store_archive_menu_alignment' => 'default',
-			'store_archive_tr_header'      => 'default',
-			'store_archive_top_bar'        => 'default',
-			'store_archive_padding_top'    => '',
-			'store_archive_padding_bottom' => '',
-			'store_archive_breadcrumb'     => 'default',
-			'store_archive_footer_style'   => 'default',
+			'primary_color'                  => '#f9423a',
+			'lite_primary_color'             => '#feeceb',
+			'secondary_color'                => '#ef1c13',
+			'top_listing_bg'                 => '#2cb2c7',
 
 			// Contact Info
-			'contact_address'              => '121 King St, Melbourne den 3000, Australia',
-			'contact_phone'                => '(+123) 596 000',
-			'contact_email'                => 'info@example.com',
-			'facebook'                     => '#',
-			'twitter'                      => '#',
-			'instagram'                    => '#',
-			'youtube'                      => '',
-			'pinterest'                    => '',
-			'linkedin'                     => '#',
-			'skype'                        => '',
+			'contact_address'                => '121 King St, Melbourne den 3000, Australia',
+			'contact_phone'                  => '(+123) 596 000',
+			'contact_email'                  => 'info@example.com',
+			'facebook'                       => '#',
+			'twitter'                        => '#',
+			'instagram'                      => '#',
+			'youtube'                        => '',
+			'pinterest'                      => '',
+			'linkedin'                       => '#',
+			'skype'                          => '',
 
 			// Body Typography
-			'typo_body'                    => json_encode(
+			'typo_body'                      => json_encode(
 				[
 					'font'          => 'Lato',
 					'regularweight' => 'normal',
 				]
 			),
-			'typo_body_size'               => '16px',
-			'typo_body_height'             => '24px',
+			'typo_body_size'                 => '16px',
+			'typo_body_height'               => '24px',
 
 			// Menu Typography
-			'typo_menu'                    => json_encode(
+			'typo_menu'                      => json_encode(
 				[
 					'font'          => 'Nunito',
 					'regularweight' => '700',
 				]
 			),
-			'typo_menu_size'               => '16px',
-			'typo_menu_height'             => '24px',
+			'typo_menu_size'                 => '16px',
+			'typo_menu_height'               => '24px',
 
 			//Sub Menu Typography
-			'typo_submenu_size'            => '16px',
-			'typo_submenu_height'          => '24px',
+			'typo_submenu_size'              => '16px',
+			'typo_submenu_height'            => '24px',
 
 			// Heading Typography
-			'typo_heading'                 => json_encode(
+			'typo_heading'                   => json_encode(
 				[
 					'font'          => 'Nunito',
 					'regularweight' => '700',
 				]
 			),
-			'typo_h1'                      => json_encode(
+			'typo_h1'                        => json_encode(
 				[
 					'font'          => '',
 					'regularweight' => '700',
 				]
 			),
-			'typo_h1_size'                 => '36px',
-			'typo_h1_height'               => '1.5',
+			'typo_h1_size'                   => '36px',
+			'typo_h1_height'                 => '1.5',
 
 			'typo_h2'        => json_encode(
 				[

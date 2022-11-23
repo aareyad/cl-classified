@@ -55,7 +55,7 @@
     color: #91939d;
 
     &:hover {
-      color: $primaryColor;
+      color: var(--rtcl-primary-color);
     }
   }
 
@@ -66,7 +66,7 @@
     position: relative;
 
     &:after {
-      background-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
       bottom: 0;
       content: "";
       height: 3px;
@@ -138,8 +138,8 @@
     line-height: 1.5;
 
     &:hover {
-      background-color: $primaryColor;
-      border-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
+      border-color: var(--rtcl-primary-color);
     }
   }
 }
@@ -179,7 +179,7 @@
       &::after {
         width: 50px;
         height: 5px;
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         content: "";
         position: absolute;
         left: 0;
@@ -192,7 +192,7 @@
       color: $bodyColor;
 
       &:hover {
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
       }
     }
 
@@ -208,7 +208,7 @@
         content: "\f105";
         font-family: "Font Awesome 6 Free";
         font-weight: 600;
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
         position: absolute;
         left: 0;
         top: 5px;
@@ -243,7 +243,7 @@
     line-height: 1.2;
 
     &:hover {
-      background-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
       color: $white;
     }
   }
@@ -258,7 +258,7 @@
         border-radius: $borderRadius5;
 
         &:focus {
-          border-color: $primaryColor;
+          border-color: var(--rtcl-primary-color);
           box-shadow: none;
           outline: none;
         }
@@ -277,7 +277,7 @@
         .search-btn {
           border: 0;
           background: 0;
-          color: $primaryColor;
+          color: var(--rtcl-primary-color);
         }
       }
     }
@@ -294,9 +294,9 @@
           border-color: $borderColor;
 
           .ui-accordion-icon {
-            background-color: #fff1f3;
-            border: 1px solid $primaryColor;
-            color: $primaryColor;
+            background-color: var(--rtcl-lite-primary-color);
+            border: 1px solid var(--rtcl-primary-color);
+            color: var(--rtcl-primary-color);
             border-radius: 50%;
 
             &:before {
@@ -332,7 +332,7 @@
           &.is-opener {
             span {
               i {
-                color: $primaryColor;
+                color: var(--rtcl-primary-color);
               }
             }
           }
@@ -342,7 +342,7 @@
 
     .ui-buttons {
       .rtcl-filter-btn {
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         color: $white;
         padding: 10px 16px;
         border-radius: $borderRadius8;
@@ -350,7 +350,7 @@
         font-weight: 600;
         font-size: 16px;
         text-transform: capitalize;
-        border: 1px solid $primaryColor;
+        border: 1px solid var(--rtcl-primary-color);
         display: inline-block;
         transition: all 0.3s;
 
@@ -399,7 +399,7 @@
         border-radius: 50%;
 
         &:hover {
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
           color: $white;
         }
       }

@@ -27,7 +27,7 @@
 
         &:after {
           content: "";
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
           height: 5px;
           width: 100%;
           position: absolute;
@@ -44,7 +44,7 @@
         padding: 25px;
 
         .rtin-counter {
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
         }
 
       }

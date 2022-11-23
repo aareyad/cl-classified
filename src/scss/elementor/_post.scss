@@ -23,8 +23,8 @@
             background-color: #feeceb;
             border-radius: 30px;
             font-size: 14px;
-            border: 1px solid $primaryColor;
-            color: $primaryColor;
+            border: 1px solid var(--rtcl-primary-color);
+            color: var(--rtcl-primary-color);
             padding: 3px 8px;
             margin-right: 5px;
           }
@@ -41,7 +41,7 @@
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            color: $primaryColor;
+            color: var(--rtcl-primary-color);
           }
         }
       }

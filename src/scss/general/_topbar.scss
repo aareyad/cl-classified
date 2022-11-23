@@ -46,7 +46,7 @@
         margin-right: 20px;
 
         .fa {
-          color: $primaryColor;
+          color: var(--rtcl-primary-color);
           padding-right: 10px;
         }
 
@@ -80,7 +80,7 @@
             line-height: 1.5;
 
             &:hover {
-              color: $primaryColor;
+              color: var(--rtcl-primary-color);
             }
           }
 

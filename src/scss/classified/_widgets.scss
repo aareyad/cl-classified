@@ -14,7 +14,7 @@
 
   .rtcl-widget-heading {
     h3 {
-      background-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
       color: $white;
       padding: 10px 25px;
       border-radius: $borderRadius8 $borderRadius8 0 0;
@@ -44,9 +44,9 @@
           border-color: $borderColor;
 
           .ui-accordion-icon {
-            background-color: #fff1f3;
-            border: 1px solid $primaryColor;
-            color: $primaryColor;
+            background-color: var(--rtcl-lite-primary-color);
+            border: 1px solid var(--rtcl-primary-color);
+            color: var(--rtcl-primary-color);
             border-radius: 50%;
 
             &:before {
@@ -82,7 +82,7 @@
           &.is-opener {
             span {
               i {
-                color: $primaryColor;
+                color: var(--rtcl-primary-color);
               }
             }
           }
@@ -92,7 +92,7 @@
 
     .ui-buttons {
       .rtcl-filter-btn {
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         color: $white;
         padding: 10px 16px;
         border-radius: $borderRadius8;
@@ -100,7 +100,7 @@
         font-weight: 600;
         font-size: 16px;
         text-transform: capitalize;
-        border: 1px solid $primaryColor;
+        border: 1px solid var(--rtcl-primary-color);
         display: inline-block;
         transition: all 0.3s;
 
@@ -139,7 +139,7 @@
         .rtcl-price {
           position: relative;
           align-items: center;
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
           font-size: 26px;
           color: $white;
           margin-left: 27px;
@@ -166,7 +166,7 @@
             height: 41px;
             width: 41px;
             border-radius: 8px 0 0 0;
-            background-color: $primaryColor;
+            background-color: var(--rtcl-primary-color);
             transition: all 0.2s ease-in;
             z-index: -1;
           }
@@ -236,7 +236,7 @@
               }
 
               &:hover {
-                background-color: $primaryColor;
+                background-color: var(--rtcl-primary-color);
                 color: $white;
               }
             }
@@ -282,7 +282,7 @@
                     content: '\f0e0';
                     font-family: "Font Awesome 6 Free";
                     font-weight: 600;
-                    color: $primaryColor;
+                    color: var(--rtcl-primary-color);
                     margin-right: 5px;
                   }
 
@@ -291,7 +291,7 @@
                   }
 
                   &:hover {
-                    background-color: $primaryColor;
+                    background-color: var(--rtcl-primary-color);
                     color: $white;
 
                     &:before {
@@ -311,14 +311,14 @@
                 }
 
                 .btn {
-                  background-color: $primaryColor;
+                  background-color: var(--rtcl-primary-color);
                   border: none;
                   padding: 12px 15px;
                   line-height: 1;
                   border-radius: $borderRadius5;
 
                   &:hover {
-                    background-color: $secondaryColor;
+                    background-color: var(--rtcl-secondary-color);
                   }
                 }
               }
@@ -343,13 +343,13 @@
                 transition: all 0.3s ease-in-out;
 
                 .rtcl-icon {
-                  color: $primaryColor;
+                  color: var(--rtcl-primary-color);
                 }
 
                 &:hover {
-                  background-color: $primaryColor;
+                  background-color: var(--rtcl-primary-color);
                   color: $white;
-                  border-color: $primaryColor;
+                  border-color: var(--rtcl-primary-color);
 
                   .rtcl-icon {
                     color: $white;
@@ -362,7 +362,7 @@
                   content: '\f0c1';
                   font-family: "Font Awesome 6 Free";
                   font-weight: 600;
-                  color: $primaryColor;
+                  color: var(--rtcl-primary-color);
                   margin-right: 5px;
                 }
 

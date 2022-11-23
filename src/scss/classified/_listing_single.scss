@@ -10,7 +10,7 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    background: $primaryColor;
+    background: var(--rtcl-primary-color);
     color: $white;
     width: 36px;
     height: 36px;
@@ -97,7 +97,7 @@
       height: 4px;
       width: 40px;
       top: -3px;
-      background-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
     }
 
     .rtcl-price-wrap {
@@ -163,8 +163,8 @@
         cursor: pointer;
 
         &:hover {
-          background-color: $primaryColor;
-          border-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
+          border-color: var(--rtcl-primary-color);
           color: $white;
         }
 
@@ -203,7 +203,7 @@
     button.close {
       width: 20px;
       height: 20px;
-      background: $primaryColor;
+      background: var(--rtcl-primary-color);
       color: $white;
       line-height: 1;
       border-radius: $borderRadius2;
@@ -356,7 +356,7 @@
       }
 
       &:hover {
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
       }
     }
   }

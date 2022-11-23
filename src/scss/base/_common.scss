@@ -62,7 +62,7 @@ a {
 
   &:link,
   &:visited {
-    color: $primaryColor;
+    color: var(--rtcl-primary-color);
     transition: all 0.3s ease 0s;
     text-decoration: none;
   }
@@ -70,7 +70,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $secondaryColor;
+    color: var(--rtcl-secondary-color);
     text-decoration: none;
   }
 }
@@ -257,7 +257,7 @@ acronym {
 
 mark,
 ins {
-  background: fade($primaryColor, 30%);
+  background: rgba(var(--rtcl-primary-color), 0.3);
   text-decoration: none;
 }
 
@@ -282,7 +282,7 @@ blockquote {
   margin: 30px 30px 30px 40px;
   padding: 0 0 0 30px;
   border: none;
-  background-color: $litePrimaryColor;
+  background-color: var(--rtcl-lite-primary-color);
 }
 
 .screen-reader-text {
@@ -529,7 +529,7 @@ table,
   margin: 30px 30px 30px 40px;
   padding: 15px 20px 15px 20px;
   border: none;
-  border-left: 5px solid $primaryColor;
+  border-left: 5px solid var(--rtcl-primary-color);
   border-radius: 10px;
 
   p {
@@ -573,7 +573,7 @@ table,
 }
 
 .wp-block-pullquote {
-  border: 2px solid $primaryColor;
+  border: 2px solid var(--rtcl-primary-color);
   border-width: 2px 0;
   padding: 40px 0;
   background: none;

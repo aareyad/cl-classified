@@ -13,12 +13,12 @@
       color: $bodyColor;
 
       &:hover {
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
       }
     }
 
     span {
-      color: $primaryColor;
+      color: var(--rtcl-primary-color);
     }
 
     .delimiter {

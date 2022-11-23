@@ -132,13 +132,13 @@
           border-radius: $borderRadius2;
           padding: 8px 15px;
           display: block;
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
           font-size: 12px;
           line-height: 1;
           transition: all .5s ease-out;
 
           &:hover {
-            background-color: $secondaryColor;
+            background-color: var(--rtcl-secondary-color);
           }
 
           @include medium-screen() {
@@ -272,15 +272,15 @@
       text-decoration: none;
       font-weight: $semiBold;
       font-size: 16px;
-      border: 1px solid $primaryColor;
-      background-color: $primaryColor;
+      border: 1px solid var(--rtcl-primary-color);
+      background-color: var(--rtcl-primary-color);
       display: inline-block;
       transition: all 0.3s;
 
       &:hover {
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
         background-color: transparent;
-        border: 1px solid $primaryColor;
+        border: 1px solid var(--rtcl-primary-color);
       }
 
     }

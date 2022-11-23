@@ -267,8 +267,12 @@ class Helper {
 		return apply_filters( 'rdtheme_secondary_color', Options::$options['secondary_color'] );
 	}
 
-	public static function get_body_color() {
-		return apply_filters( 'rdtheme_body_color', Options::$options['body_color'] );
+	public static function get_top_bg_color() {
+		return apply_filters( 'rdtheme_top_bg_color', Options::$options['top_listing_bg'] );
+	}
+
+	public static function get_lite_primary_color() {
+		return apply_filters( 'rdtheme_lite_primary_color', Options::$options['lite_primary_color'] );
 	}
 
 	public static function is_header_btn_enabled() {

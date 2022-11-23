@@ -137,7 +137,7 @@
             text-align: left;
             -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-            border-top: 2px solid $primaryColor;
+            border-top: 2px solid var(--rtcl-primary-color);
 
             &.sub-menu {
               li {
@@ -175,7 +175,7 @@
 
               &:hover {
                 & > a {
-                  color: $primaryColor;
+                  color: var(--rtcl-primary-color);
                 }
               }
             }
@@ -206,7 +206,7 @@
             &.current-menu-item {
               a:after {
                 content: '';
-                background-color: $primaryColor;
+                background-color: var(--rtcl-primary-color);
                 height: 5px;
                 -webkit-transition: all 0.5s ease-out;
                 transition: all 0.5s ease-out;
@@ -219,7 +219,7 @@
 
             & > a {
               &:hover {
-                color: $primaryColor;
+                color: var(--rtcl-primary-color);
               }
             }
           }
@@ -259,20 +259,20 @@
   .header-login-icon {
     justify-content: center;
     align-items: center;
-    border: 1px solid $primaryColor;
+    border: 1px solid var(--rtcl-primary-color);
     margin-right: 15px;
     width: 45px;
     border-radius: 50%;
     height: 45px;
     display: flex;
-    background-color: $litePrimaryColor;
-    color: $primaryColor;
+    background-color: var(--rtcl-lite-primary-color);
+    color: var(--rtcl-primary-color);
     transition: all 0.4s;
 
     &:hover {
       border: 1px solid transparent;
       color: $white;
-      background-color: $primaryColor;
+      background-color: var(--rtcl-primary-color);
 
       i {
         -webkit-animation: toTopFromBottom 0.3s forwards;
@@ -291,9 +291,9 @@
 
     .header-btn {
       display: inline-block;
-      color: $primaryColor;
-      background: #fff1f3;
-      border: 1px solid #ef9a9c;
+      color: var(--rtcl-primary-color);
+      background: var(--rtcl-lite-primary-color);
+      border: 1px solid var(--rtcl-primary-color);
       padding: 8px 16px 8px 10px;
       border-radius: 50px;
       font-weight: $bold;
@@ -309,19 +309,19 @@
         color: $white;
         border-radius: 50%;
         margin-right: 5px;
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         transition: all 0.4s;
 
       }
 
       &:hover {
-        background: $primaryColor;
+        background: var(--rtcl-primary-color);
         color: $white;
         border: 1px solid transparent;
 
         i {
           background-color: $white;
-          color: $primaryColor;
+          color: var(--rtcl-primary-color);
           transform: rotate(90deg);
         }
       }
@@ -389,7 +389,7 @@
     padding: 4px 0;
     min-height: 42px;
     z-index: 999;
-    border-bottom: 2px solid $primaryColor;
+    border-bottom: 2px solid var(--rtcl-primary-color);
 
     img {
       padding: 4px 15px;
@@ -457,7 +457,7 @@
         line-height: 1;
         padding: 5px 10px;
         margin-right: 15px;
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         color: $white;
         border-radius: 20px;
 
@@ -481,7 +481,7 @@
       top: 0;
       right: 0;
       cursor: pointer;
-      color: $primaryColor;
+      color: var(--rtcl-primary-color);
       text-decoration: none;
       text-indent: -9999em;
       line-height: 22px;
@@ -492,7 +492,7 @@
 
       span {
         display: block;
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         height: 3px;
         margin-top: 3px;
         position: relative;
@@ -504,7 +504,7 @@
           left: 0;
           top: 6px;
           width: 100%;
-          background: $primaryColor;
+          background: var(--rtcl-primary-color);
           height: 3px;
         }
 
@@ -515,7 +515,7 @@
           left: 0;
           top: 12px;
           width: 100%;
-          background: $primaryColor;
+          background: var(--rtcl-primary-color);
           height: 3px;
         }
       }
@@ -546,7 +546,7 @@
         display: inline-block;
         font-family: 'Font Awesome 6 Free';
         font-weight: 600;
-        color: $primaryColor;
+        color: var(--rtcl-primary-color);
         transition: .1s;
         right: 0;
         position: absolute;

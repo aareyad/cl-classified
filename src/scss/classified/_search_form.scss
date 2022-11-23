@@ -78,7 +78,7 @@
                   &:hover,
                   &:active,
                   &:focus {
-                    background: $primaryColor;
+                    background: var(--rtcl-primary-color);
                     color: $white;
                   }
                 }
@@ -107,7 +107,7 @@
       }
 
       .rtin-search-btn {
-        background-color: $primaryColor;
+        background-color: var(--rtcl-primary-color);
         color: $white;
         border: 0;
         padding: 15px 28px;
@@ -117,7 +117,7 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
-          background-color: $secondaryColor;
+          background-color: var(--rtcl-secondary-color);
         }
 
         i {

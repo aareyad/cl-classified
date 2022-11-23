@@ -30,7 +30,7 @@
 
           .listing-meta-rating {
             border: none;
-            border-right: 1px solid $primaryColor;
+            border-right: 1px solid var(--rtcl-primary-color);
             color: $bodyColor;
             padding: 0 10px 0 0;
             border-radius: 0;
@@ -137,15 +137,15 @@
               text-decoration: none;
               font-weight: $semiBold;
               font-size: 16px;
-              border: 1px solid $primaryColor;
-              background-color: $primaryColor;
+              border: 1px solid var(--rtcl-primary-color);
+              background-color: var(--rtcl-primary-color);
               display: inline-block;
               transition: all 0.3s;
 
               &:hover {
-                color: $primaryColor;
+                color: var(--rtcl-primary-color);
                 background-color: transparent;
-                border: 1px solid $primaryColor;
+                border: 1px solid var(--rtcl-primary-color);
               }
             }
           }

@@ -34,10 +34,10 @@
         text-align: center;
 
         &.active {
-          background-color: $primaryColor;
+          background-color: var(--rtcl-primary-color);
           border-color: transparent;
           color: $white;
-          box-shadow: 0 4px 10px rgba($primaryColor, 0.5);
+          box-shadow: 0 4px 10px rgba(var(--rtcl-primary-color), 0.5);
         }
 
         &:last-child {
@@ -71,7 +71,7 @@
               background-color: $white;
 
               &:hover {
-                background-color: $primaryColor;
+                background-color: var(--rtcl-primary-color);
                 color: $white;
               }
 
@@ -89,12 +89,12 @@
           border-radius: 30px;
           border: 1px solid #ffc8c6;
           padding: 2px 9px;
-          color: $primaryColor;
+          color: var(--rtcl-primary-color);
           font-size: 13px;
           line-height: 1.3;
 
           &:hover {
-            background-color: $primaryColor;
+            background-color: var(--rtcl-primary-color);
             color: $white;
           }
         }
@@ -112,7 +112,7 @@
             color: $black;
 
             &:hover {
-              color: $primaryColor;
+              color: var(--rtcl-primary-color);
             }
           }
         }

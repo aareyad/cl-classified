@@ -39,7 +39,7 @@
             .icon {
               a {
                 color: $white;
-                background-color: $primaryColor;
+                background-color: var(--rtcl-primary-color);
               }
             }
           }

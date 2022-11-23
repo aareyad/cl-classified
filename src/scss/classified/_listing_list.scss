@@ -41,7 +41,7 @@
 
             .rtcl-price {
               font-size: 22px;
-              color: $primaryColor;
+              color: var(--rtcl-primary-color);
             }
           }
         }

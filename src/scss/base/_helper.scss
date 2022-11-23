@@ -1,6 +1,11 @@
 :root {
-  --rtcl-primary-color: #F9423A;
+  --rtcl-primary-color: #{$primaryColor};
+  --rtcl-secondary-color: #{$secondaryColor};
+  --rtcl-top-bg-color: #2cb2c7;
+  --rtcl-link-hover-color: #{$secondaryColor};
+  --rtcl-lite-primary-color: #{$litePrimaryColor};
 }
+
 .pt-30 {
   padding-top: 30px;
 }
@@ -65,14 +70,14 @@
 
 .section-link {
   a {
-    color: $secondaryColor;
+    color: var(--rtcl-secondary-color);
     font-weight: $semiBold;
     transition: all 0.3s ease-in-out;
     border-bottom: 1px solid transparent;
 
     &:hover {
-      color: $primaryColor;
-      border-bottom: 1px solid $primaryColor;
+      color: var(--rtcl-primary-color);
+      border-bottom: 1px solid var(--rtcl-primary-color);
     }
   }
 
@@ -88,15 +93,15 @@
   text-decoration: none;
   font-weight: $semiBold;
   font-size: 16px;
-  border: 1px solid $primaryColor;
-  background-color: $primaryColor;
+  border: 1px solid var(--rtcl-primary-color);
+  background-color: var(--rtcl-primary-color);
   display: inline-block;
   transition: all 0.3s;
 
   &:hover {
-    color: $primaryColor !important;
+    color: var(--rtcl-primary-color) !important;
     background-color: transparent;
-    border: 1px solid $primaryColor;
+    border: 1px solid var(--rtcl-primary-color);
   }
 
   .rtin-button-icon {
@@ -116,7 +121,7 @@
   border-color: $borderColor;
 
   &:focus {
-    border-color: $primaryColor;
+    border-color: var(--rtcl-primary-color);
   }
 }
 
@@ -153,7 +158,7 @@
     height: 4px;
     width: 40px;
     bottom: -2px;
-    background-color: $primaryColor;
+    background-color: var(--rtcl-primary-color);
   }
 
 }
