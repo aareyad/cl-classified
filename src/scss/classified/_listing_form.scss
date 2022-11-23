@@ -1,0 +1,64 @@
+.rtcl-form-page {
+  .main-content {
+    .rtcl-post-form-wrap,
+    .rtcl-listing-info-selecting {
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+
+      a:hover {
+        color: $secondaryColor;
+      }
+
+      .rtcl-post-section-title {
+        h3 {
+          font-weight: 700;
+          color: $black;
+
+          .rtcl-icon {
+            color: $primaryColor;
+          }
+
+          &:before {
+            background-color: $borderColor;
+          }
+        }
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          color: $black;
+          display: block;
+          font-size: 15px;
+          font-weight: 600;
+          margin-bottom: 6px;
+          text-transform: capitalize;
+        }
+      }
+
+      .rtcl-post-section {
+        margin-bottom: 30px;
+      }
+
+      .rtcl-submit-btn {
+        color: $white !important;
+        padding: 10px 16px;
+        border-radius: $borderRadius5;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.3;
+        border: 1px solid $primaryColor;
+        background-color: $primaryColor;
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $secondaryColor;
+          border: 1px solid $secondaryColor;
+        }
+      }
+    }
+  }
+}

@@ -4565,7 +4565,7 @@ a.scrollToTop:focus {
 }
 
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-EditAccountForm .form-group .form-group label {
-	margin-bottom: 5px;
+	margin-bottom: 6px;
 	font-weight: 400;
 }
 
@@ -4752,6 +4752,74 @@ a.scrollToTop:focus {
 	color: #ffffff;
 	border: 1px solid transparent;
 	background-color: #f9423a;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting {
+	background-color: transparent;
+	padding: 0;
+	box-shadow: none;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap a:hover,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting a:hover {
+	color: #ef1c13;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-post-section-title h3,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-post-section-title h3 {
+	font-weight: 700;
+	color: #000000;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-post-section-title h3 .rtcl-icon,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-post-section-title h3 .rtcl-icon {
+	color: #f9423a;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-post-section-title h3:before,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-post-section-title h3:before {
+	background-color: #e7e7e7;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .form-group,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .form-group {
+	margin-bottom: 20px;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .form-group label,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .form-group label {
+	color: #000000;
+	display: block;
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 6px;
+	text-transform: capitalize;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-post-section,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-post-section {
+	margin-bottom: 30px;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-submit-btn,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-submit-btn {
+	color: #ffffff !important;
+	padding: 10px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.3;
+	border: 1px solid #f9423a;
+	background-color: #f9423a;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-submit-btn:hover,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-submit-btn:hover {
+	background-color: #ef1c13;
+	border: 1px solid #ef1c13;
 }
 
 .elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item {
