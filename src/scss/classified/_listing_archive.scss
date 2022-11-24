@@ -10,7 +10,7 @@
     }
 
     .rtcl-ordering {
-      margin-right: 15px;
+      margin-right: 0;
 
       .orderby {
         color: #afb3b8;
@@ -23,6 +23,8 @@
     }
 
     .rtcl-view-switcher {
+      margin-left: 15px;
+
       .rtcl-view-trigger {
         border: 1px solid #d0d0d0;
         color: $bodyColor;
@@ -87,7 +89,7 @@
         .listing-categories {
           display: inline-block;
           border-radius: 30px;
-          border: 1px solid #ffc8c6;
+          border: 1px solid var(--rtcl-lite-primary-color);
           padding: 2px 9px;
           color: var(--rtcl-primary-color);
           font-size: 13px;
@@ -148,12 +150,11 @@
 
       &.is-featured {
         background-color: $white;
-        border: none;
         margin-bottom: 20px;
       }
 
       &.as-top {
-        background-color: #2cb2c714;
+        background-color: var(--rtcl-top-bg-color);
         border: none;
       }
     }

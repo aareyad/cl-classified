@@ -46,7 +46,11 @@ CSS INDEX
 @import "classified/listing_single";
 @import "classified/review_form";
 @import "classified/account";
+@import "classified/checkout";
 @import "classified/listing_form";
+// Classified Listing Store
+@import "classified/store_archive";
+@import "classified/store_single";
 // Elementor
 @import "elementor/listing";
 @import "elementor/post";

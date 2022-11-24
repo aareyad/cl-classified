@@ -9,6 +9,7 @@ namespace RadiusTheme\ClassifiedLite;
 
 use Rtcl\Controllers\Hooks\TemplateHooks;
 use Rtcl\Helpers\Functions;
+use RtclStore\Controllers\Hooks\TemplateHooks as StoreHooks;
 
 class Listing_Functions {
 
@@ -50,6 +51,10 @@ class Listing_Functions {
 			TemplateHooks::class,
 			'add_single_listing_inner_sidebar_action'
 		], 20 );
+		if ( class_exists( 'RtclStore' ) ) {
+			remove_action( 'rtcl_single_store_information', [ StoreHooks::class, 'store_social_media' ], 40 );
+			add_action( 'rtcl_single_store_information', [ StoreHooks::class, 'store_social_media' ], 60 );
+		}
 		// add action
 		if ( 'list' === $view ) {
 			remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'listing_price' ], 80 );

@@ -33,9 +33,9 @@ $secondary_rgb = Helper::hex2rgb( $secondary_color );
 :root {
 --rtcl-primary-color: <?php echo esc_html( $primary_color ? $primary_color : '#f9423a' ); ?>;
 --rtcl-secondary-color: <?php echo esc_html( $secondary_color ? $secondary_color : '#ef1c13' ); ?>;
---rtcl-top-bg-color: <?php echo esc_html( $top_bg ? $top_bg : '#2cb2c7' ); ?>;
+--rtcl-top-bg-color: <?php echo esc_html( $top_bg ? $top_bg : '#dff0f3' ); ?>;
 --rtcl-link-hover-color: <?php echo esc_html( $secondary_color ? $secondary_color : '#ef1c13' ); ?>;
---rtcl-lite-primary-color: <?php echo esc_html( $primary_color ? $primary_color : '#feeceb' ); ?>;
+--rtcl-lite-primary-color: <?php echo esc_html( $lite_primary ? $lite_primary : '#feeceb' ); ?>;
 }
 <?php
 /*-------------------------------------

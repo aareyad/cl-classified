@@ -752,7 +752,7 @@ table .wp-block-table__cell-content,
 :root {
 	--rtcl-primary-color: #f9423a;
 	--rtcl-secondary-color: #ef1c13;
-	--rtcl-top-bg-color: #2cb2c7;
+	--rtcl-top-bg-color: #dff0f3;
 	--rtcl-link-hover-color: #ef1c13;
 	--rtcl-lite-primary-color: #feeceb;
 }
@@ -834,7 +834,9 @@ table .wp-block-table__cell-content,
 	font-size: 14px;
 }
 
-.rtin-button {
+.rtin-button,
+.rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit {
 	color: #ffffff !important;
 	padding: 10px 16px;
 	border-radius: 5px;
@@ -847,13 +849,17 @@ table .wp-block-table__cell-content,
 	transition: all 0.3s;
 }
 
-.rtin-button:hover {
+.rtin-button:hover,
+.rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn:hover,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit:hover {
 	color: var(--rtcl-primary-color) !important;
 	background-color: transparent;
 	border: 1px solid var(--rtcl-primary-color);
 }
 
-.rtin-button .rtin-button-icon {
+.rtin-button .rtin-button-icon,
+.rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn .rtin-button-icon,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit .rtin-button-icon {
 	margin-left: 5px;
 	vertical-align: middle;
 }
@@ -1328,7 +1334,7 @@ table .wp-block-table__cell-content,
 .main-header-sticky-wrapper {
 	position: fixed;
 	top: 0;
-	z-index: 9999;
+	z-index: 999;
 	width: 100%;
 	margin-top: -120px;
 	-webkit-transition: all 0.5s ease-out;
@@ -3436,7 +3442,7 @@ a.scrollToTop:focus {
 }
 
 .rtcl .rtcl-listings-actions .rtcl-ordering {
-	margin-right: 15px;
+	margin-right: 0;
 }
 
 .rtcl .rtcl-listings-actions .rtcl-ordering .orderby {
@@ -3446,6 +3452,10 @@ a.scrollToTop:focus {
 	border: 1px solid #D0D0D0;
 	height: 40px;
 	border-radius: 5px;
+}
+
+.rtcl .rtcl-listings-actions .rtcl-view-switcher {
+	margin-left: 15px;
 }
 
 .rtcl .rtcl-listings-actions .rtcl-view-switcher .rtcl-view-trigger {
@@ -3507,7 +3517,7 @@ a.scrollToTop:focus {
 .rtcl .rtcl-listings .rtcl-listing-item .item-content .listing-categories {
 	display: inline-block;
 	border-radius: 30px;
-	border: 1px solid #ffc8c6;
+	border: 1px solid var(--rtcl-lite-primary-color);
 	padding: 2px 9px;
 	color: var(--rtcl-primary-color);
 	font-size: 13px;
@@ -3558,12 +3568,11 @@ a.scrollToTop:focus {
 
 .rtcl .rtcl-listings .rtcl-listing-item.is-featured {
 	background-color: #ffffff;
-	border: none;
 	margin-bottom: 20px;
 }
 
 .rtcl .rtcl-listings .rtcl-listing-item.as-top {
-	background-color: #2cb2c714;
+	background-color: var(--rtcl-top-bg-color);
 	border: none;
 }
 
@@ -4490,6 +4499,10 @@ a.scrollToTop:focus {
 	box-shadow: none;
 }
 
+.rtcl-account .site-content {
+	background-color: transparent;
+}
+
 .rtcl-account .rtcl-MyAccount-wrap {
 	background-color: transparent;
 	box-shadow: none;
@@ -4758,6 +4771,20 @@ a.scrollToTop:focus {
 	background-color: var(--rtcl-primary-color);
 }
 
+.rtcl-checkout .content-area {
+	background-color: transparent;
+}
+
+.rtcl-checkout .main-content .rtcl-checkout-content {
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+}
+
+.rtcl-form-page .content-area {
+	background-color: transparent;
+}
+
 .rtcl-form-page .main-content .rtcl-post-form-wrap,
 .rtcl-form-page .main-content .rtcl-listing-info-selecting {
 	background-color: transparent;
@@ -4824,6 +4851,133 @@ a.scrollToTop:focus {
 .rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-submit-btn:hover {
 	background-color: var(--rtcl-secondary-color);
 	border: 1px solid var(--rtcl-secondary-color);
+}
+
+.rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link {
+	display: block;
+	background: #ffffff;
+	padding: 25px;
+	border-radius: 8px;
+}
+
+.rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link div.item-content {
+	padding: 0;
+	background-color: transparent;
+}
+
+.rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link .store-thumb .rtcl-store-thumbnail {
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link .rtcl-store-title {
+	font-size: 18px;
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link:hover .rtcl-store-title {
+	color: #f9423a;
+}
+
+.rtcl .rtcl-stores .rtcl-store-item:hover div.item-content {
+	background-color: transparent;
+	box-shadow: none;
+	color: #000000;
+}
+
+.store-info-item-block,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-hour,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-address,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-phone .text .numbers,
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email .store-email-label {
+	border: 1px solid #e7e7e7;
+	color: #797f89;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 4px;
+	padding: 10px 16px;
+	background-color: #ffffff;
+	transition: all 0.3s ease-in-out;
+}
+
+.rtcl.store-content-wrap {
+	border: none;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 8px;
+	padding: 25px;
+}
+
+.rtcl.store-content-wrap .store-banner {
+	margin: -25px -25px 20px;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo {
+	gap: 20px;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-logo {
+	max-width: 220px;
+	background: none;
+	border-radius: 4px;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-logo img {
+	border-radius: 4px;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-info {
+	padding: 0;
+	flex: 1;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-info .store-name h2 {
+	margin-bottom: 10px;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item {
+	border: none;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item .icon {
+	padding-right: 5px;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item .icon span {
+	color: var(--rtcl-primary-color);
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-phone .icon {
+	display: none;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-phone .text {
+	flex: 1;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-phone .text .numbers a {
+	color: inherit;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .form-group {
+	margin-bottom: 20px;
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .form-group textarea {
+	height: auto;
+}
+
+.rtcl.store-content-wrap .store-information .store-details .is-slogan {
+	font-size: 20px;
+}
+
+.rtcl.store-content-wrap .store-information .store-listing-list>h3 {
+	font-size: 20px;
+}
+
+.rtcl #store-details-modal .store-more-details .more-item h3 {
+	font-size: 20px;
+	border-color: #e7e7e7;
 }
 
 .elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item {
@@ -4893,7 +5047,7 @@ a.scrollToTop:focus {
 }
 
 .rt-el-post .rtin-each .rtin-content-area .post-meta li.date {
-	background-color: #feeceb;
+	background-color: var(--rtcl-lite-primary-color);
 	border-radius: 30px;
 	font-size: 14px;
 	border: 1px solid var(--rtcl-primary-color);
