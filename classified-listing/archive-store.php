@@ -4,7 +4,6 @@
  * @version 1.2.31
  */
 
-use RadiusTheme\ClassifiedLite\Helper;
 use RadiusTheme\ClassifiedLite\Options;
 use Rtcl\Helpers\Functions as RtclFunctions;
 use RtclStore\Helpers\Functions as StoreFunctions;

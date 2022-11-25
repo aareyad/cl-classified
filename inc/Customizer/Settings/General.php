@@ -139,47 +139,6 @@ class General extends Customizer {
 			'section'  => 'general_section',
 		] ) );
 
-		// Preloader
-		$wp_customize->add_setting( 'preloader',
-			[
-				'default'           => $this->defaults['preloader'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'preloader',
-			[
-				'label'   => esc_html__( 'Preloader', 'cl-classified' ),
-				'section' => 'general_section',
-			]
-		) );
-
-		// Preloader Image
-		$wp_customize->add_setting( 'preloader_image',
-			[
-				'default'           => $this->defaults['preloader_image'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'absint',
-			]
-		);
-		$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'preloader_image',
-			[
-				'label'         => esc_html__( 'Preloader Image', 'cl-classified' ),
-				'description'   => esc_html__( 'Add preloader image to change default image', 'cl-classified' ),
-				'section'       => 'general_section',
-				'mime_type'     => 'image',
-				'button_labels' => [
-					'select'       => esc_html__( 'Select Image', 'cl-classified' ),
-					'change'       => esc_html__( 'Change Image', 'cl-classified' ),
-					'default'      => esc_html__( 'Default', 'cl-classified' ),
-					'remove'       => esc_html__( 'Remove', 'cl-classified' ),
-					'placeholder'  => esc_html__( 'No file selected', 'cl-classified' ),
-					'frame_title'  => esc_html__( 'Select File', 'cl-classified' ),
-					'frame_button' => esc_html__( 'Choose File', 'cl-classified' ),
-				],
-			]
-		) );
-
 		// Banner Image
 		$wp_customize->add_setting( 'banner_image',
 			[

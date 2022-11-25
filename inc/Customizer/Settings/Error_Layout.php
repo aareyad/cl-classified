@@ -197,11 +197,7 @@ class Error_Layout extends Customizer {
 			'type'    => 'select',
 			'section' => 'error_layout_section',
 			'label'   => esc_html__( 'Footer Layout', 'cl-classified' ),
-			'choices' => [
-				'default' => esc_html__( 'Default', 'cl-classified' ),
-				'1'       => esc_html__( 'Layout 1', 'cl-classified' ),
-				'2'       => esc_html__( 'Layout 2', 'cl-classified' ),
-			],
+			'choices'     => Helper::get_footer_list(),
 		] );
 	}
 }

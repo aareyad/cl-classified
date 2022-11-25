@@ -107,20 +107,6 @@ class Post extends Customizer {
 			]
 		) );
 
-		$wp_customize->add_setting( 'post_navigation',
-			[
-				'default'           => $this->defaults['post_navigation'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'post_navigation',
-			[
-				'label'   => esc_html__( 'Display Navigation', 'cl-classified' ),
-				'section' => 'single_post_section',
-			]
-		) );
-
 		$wp_customize->add_setting( 'post_social_icon',
 			[
 				'default'           => $this->defaults['post_social_icon'],
@@ -135,18 +121,5 @@ class Post extends Customizer {
 			]
 		) );
 
-		$wp_customize->add_setting( 'post_author_about',
-			[
-				'default'           => $this->defaults['post_author_about'],
-				'transport'         => 'refresh',
-				'sanitize_callback' => 'rttheme_switch_sanitization',
-			]
-		);
-		$wp_customize->add_control( new Switcher( $wp_customize, 'post_author_about',
-			[
-				'label'   => esc_html__( 'Display Author About', 'cl-classified' ),
-				'section' => 'single_post_section',
-			]
-		) );
 	}
 }

@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2022-11-21 11:35+0000\n"
+"POT-Creation-Date: 2022-11-25 09:34+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -303,7 +303,7 @@ msgstr ""
 msgid "Top Bar"
 msgstr ""
 
-#: inc/Customizer/Settings/Blog_Layout.php:83, inc/Customizer/Settings/Blog_Layout.php:115, inc/Customizer/Settings/Blog_Layout.php:134, inc/Customizer/Settings/Blog_Layout.php:153, inc/Customizer/Settings/Blog_Layout.php:171, inc/Customizer/Settings/Blog_Layout.php:189, inc/Customizer/Settings/Blog_Layout.php:240, inc/Customizer/Settings/Error.php:41, inc/Customizer/Settings/Error_Layout.php:39, inc/Customizer/Settings/Error_Layout.php:72, inc/Customizer/Settings/Error_Layout.php:91, inc/Customizer/Settings/Error_Layout.php:110, inc/Customizer/Settings/Error_Layout.php:129, inc/Customizer/Settings/Error_Layout.php:148, inc/Customizer/Settings/Error_Layout.php:201, inc/Customizer/Settings/Footer.php:106, inc/Customizer/Settings/Footer.php:158, inc/Customizer/Settings/General.php:46, inc/Customizer/Settings/General.php:77, inc/Customizer/Settings/General.php:103, inc/Customizer/Settings/General.php:174, inc/Customizer/Settings/General.php:200, inc/Customizer/Settings/Listing_Archive_Layout.php:85, inc/Customizer/Settings/Listing_Archive_Layout.php:118, inc/Customizer/Settings/Listing_Archive_Layout.php:137, inc/Customizer/Settings/Listing_Archive_Layout.php:156, inc/Customizer/Settings/Listing_Archive_Layout.php:175, inc/Customizer/Settings/Listing_Archive_Layout.php:194, inc/Customizer/Settings/Listing_Single_Layout.php:40, inc/Customizer/Settings/Listing_Single_Layout.php:73, inc/Customizer/Settings/Listing_Single_Layout.php:92, inc/Customizer/Settings/Listing_Single_Layout.php:111, inc/Customizer/Settings/Listing_Single_Layout.php:130, inc/Customizer/Settings/Listing_Single_Layout.php:149, inc/Customizer/Settings/Page_Layout.php:85, inc/Customizer/Settings/Page_Layout.php:118, inc/Customizer/Settings/Page_Layout.php:137, inc/Customizer/Settings/Page_Layout.php:156, inc/Customizer/Settings/Page_Layout.php:175, inc/Customizer/Settings/Page_Layout.php:194, inc/Customizer/Settings/Page_Layout.php:247, inc/Customizer/Settings/Post_Layout.php:83, inc/Customizer/Settings/Post_Layout.php:115, inc/Customizer/Settings/Post_Layout.php:134, inc/Customizer/Settings/Post_Layout.php:153, inc/Customizer/Settings/Post_Layout.php:172, inc/Customizer/Settings/Post_Layout.php:191, inc/Customizer/Settings/Post_Layout.php:244, inc/Helper.php:177, inc/Helper.php:200
+#: inc/Customizer/Settings/Blog_Layout.php:83, inc/Customizer/Settings/Blog_Layout.php:115, inc/Customizer/Settings/Blog_Layout.php:134, inc/Customizer/Settings/Blog_Layout.php:153, inc/Customizer/Settings/Blog_Layout.php:171, inc/Customizer/Settings/Blog_Layout.php:189, inc/Customizer/Settings/Error.php:41, inc/Customizer/Settings/Error_Layout.php:39, inc/Customizer/Settings/Error_Layout.php:72, inc/Customizer/Settings/Error_Layout.php:91, inc/Customizer/Settings/Error_Layout.php:110, inc/Customizer/Settings/Error_Layout.php:129, inc/Customizer/Settings/Error_Layout.php:148, inc/Customizer/Settings/Footer.php:106, inc/Customizer/Settings/Footer.php:158, inc/Customizer/Settings/General.php:46, inc/Customizer/Settings/General.php:77, inc/Customizer/Settings/General.php:103, inc/Customizer/Settings/General.php:159, inc/Customizer/Settings/Listing_Archive_Layout.php:85, inc/Customizer/Settings/Listing_Archive_Layout.php:118, inc/Customizer/Settings/Listing_Archive_Layout.php:137, inc/Customizer/Settings/Listing_Archive_Layout.php:156, inc/Customizer/Settings/Listing_Archive_Layout.php:175, inc/Customizer/Settings/Listing_Archive_Layout.php:194, inc/Customizer/Settings/Listing_Single_Layout.php:40, inc/Customizer/Settings/Listing_Single_Layout.php:73, inc/Customizer/Settings/Listing_Single_Layout.php:92, inc/Customizer/Settings/Listing_Single_Layout.php:111, inc/Customizer/Settings/Listing_Single_Layout.php:130, inc/Customizer/Settings/Listing_Single_Layout.php:149, inc/Customizer/Settings/Page_Layout.php:85, inc/Customizer/Settings/Page_Layout.php:118, inc/Customizer/Settings/Page_Layout.php:137, inc/Customizer/Settings/Page_Layout.php:156, inc/Customizer/Settings/Page_Layout.php:175, inc/Customizer/Settings/Page_Layout.php:194, inc/Customizer/Settings/Post_Layout.php:83, inc/Customizer/Settings/Post_Layout.php:115, inc/Customizer/Settings/Post_Layout.php:134, inc/Customizer/Settings/Post_Layout.php:153, inc/Customizer/Settings/Post_Layout.php:172, inc/Customizer/Settings/Post_Layout.php:191, inc/Helper.php:177, inc/Helper.php:200
 msgid "Default"
 msgstr ""
 
@@ -379,12 +379,20 @@ msgstr ""
 msgid "Footer Layout"
 msgstr ""
 
-#: inc/Customizer/Settings/Blog_Layout.php:241, inc/Customizer/Settings/Error_Layout.php:202, inc/Customizer/Settings/Page_Layout.php:248, inc/Customizer/Settings/Post_Layout.php:245, inc/Helper.php:178, inc/Helper.php:201, inc/Helper.php:195
-msgid "Layout 1"
+#: inc/Customizer/Settings/Color.php:36
+msgid "Primary Color"
 msgstr ""
 
-#: inc/Customizer/Settings/Blog_Layout.php:242, inc/Customizer/Settings/Error_Layout.php:203, inc/Customizer/Settings/Page_Layout.php:249, inc/Customizer/Settings/Post_Layout.php:246
-msgid "Layout 2"
+#: inc/Customizer/Settings/Color.php:50
+msgid "Primary Lite Color"
+msgstr ""
+
+#: inc/Customizer/Settings/Color.php:64
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/Customizer/Settings/Color.php:78
+msgid "Top Listing Background Color"
 msgstr ""
 
 #: inc/Customizer/Settings/Contact_Info.php:36
@@ -427,7 +435,7 @@ msgstr ""
 msgid "Featured Image"
 msgstr ""
 
-#: inc/Customizer/Settings/Error.php:39, inc/Customizer/Settings/Error.php:44, inc/Customizer/Settings/Footer.php:109, inc/Customizer/Settings/Footer.php:161, inc/Customizer/Settings/General.php:49, inc/Customizer/Settings/General.php:80, inc/Customizer/Settings/General.php:106, inc/Customizer/Settings/General.php:177, inc/Customizer/Settings/General.php:203
+#: inc/Customizer/Settings/Error.php:39, inc/Customizer/Settings/Error.php:44, inc/Customizer/Settings/Footer.php:109, inc/Customizer/Settings/Footer.php:161, inc/Customizer/Settings/General.php:49, inc/Customizer/Settings/General.php:80, inc/Customizer/Settings/General.php:106, inc/Customizer/Settings/General.php:162
 msgid "Select File"
 msgstr ""
 
@@ -435,15 +443,15 @@ msgstr ""
 msgid "Change File"
 msgstr ""
 
-#: inc/Customizer/Settings/Error.php:42, inc/Customizer/Settings/Footer.php:107, inc/Customizer/Settings/Footer.php:159, inc/Customizer/Settings/General.php:47, inc/Customizer/Settings/General.php:78, inc/Customizer/Settings/General.php:104, inc/Customizer/Settings/General.php:175, inc/Customizer/Settings/General.php:201
+#: inc/Customizer/Settings/Error.php:42, inc/Customizer/Settings/Footer.php:107, inc/Customizer/Settings/Footer.php:159, inc/Customizer/Settings/General.php:47, inc/Customizer/Settings/General.php:78, inc/Customizer/Settings/General.php:104, inc/Customizer/Settings/General.php:160
 msgid "Remove"
 msgstr ""
 
-#: inc/Customizer/Settings/Error.php:43, inc/Customizer/Settings/Footer.php:108, inc/Customizer/Settings/Footer.php:160, inc/Customizer/Settings/General.php:48, inc/Customizer/Settings/General.php:79, inc/Customizer/Settings/General.php:105, inc/Customizer/Settings/General.php:176, inc/Customizer/Settings/General.php:202
+#: inc/Customizer/Settings/Error.php:43, inc/Customizer/Settings/Footer.php:108, inc/Customizer/Settings/Footer.php:160, inc/Customizer/Settings/General.php:48, inc/Customizer/Settings/General.php:79, inc/Customizer/Settings/General.php:105, inc/Customizer/Settings/General.php:161
 msgid "No file selected"
 msgstr ""
 
-#: inc/Customizer/Settings/Error.php:45, inc/Customizer/Settings/Footer.php:110, inc/Customizer/Settings/Footer.php:162, inc/Customizer/Settings/General.php:50, inc/Customizer/Settings/General.php:81, inc/Customizer/Settings/General.php:107, inc/Customizer/Settings/General.php:178, inc/Customizer/Settings/General.php:204
+#: inc/Customizer/Settings/Error.php:45, inc/Customizer/Settings/Footer.php:110, inc/Customizer/Settings/Footer.php:162, inc/Customizer/Settings/General.php:50, inc/Customizer/Settings/General.php:81, inc/Customizer/Settings/General.php:107, inc/Customizer/Settings/General.php:163
 msgid "Choose File"
 msgstr ""
 
@@ -483,11 +491,11 @@ msgstr ""
 msgid "This image will show on Footer."
 msgstr ""
 
-#: inc/Customizer/Settings/Footer.php:104, inc/Customizer/Settings/Footer.php:156, inc/Customizer/Settings/General.php:172, inc/Customizer/Settings/General.php:198
+#: inc/Customizer/Settings/Footer.php:104, inc/Customizer/Settings/Footer.php:156, inc/Customizer/Settings/General.php:157
 msgid "Select Image"
 msgstr ""
 
-#: inc/Customizer/Settings/Footer.php:105, inc/Customizer/Settings/Footer.php:157, inc/Customizer/Settings/General.php:173, inc/Customizer/Settings/General.php:199
+#: inc/Customizer/Settings/Footer.php:105, inc/Customizer/Settings/Footer.php:157, inc/Customizer/Settings/General.php:158
 msgid "Change Image"
 msgstr ""
 
@@ -548,34 +556,22 @@ msgid "200px"
 msgstr ""
 
 #: inc/Customizer/Settings/General.php:152
-msgid "Preloader"
-msgstr ""
-
-#: inc/Customizer/Settings/General.php:167
-msgid "Preloader Image"
-msgstr ""
-
-#: inc/Customizer/Settings/General.php:168
-msgid "Add preloader image to change default image"
-msgstr ""
-
-#: inc/Customizer/Settings/General.php:193
 msgid "Banner Image"
 msgstr ""
 
-#: inc/Customizer/Settings/General.php:194
+#: inc/Customizer/Settings/General.php:153
 msgid "Add banner image to change default image"
 msgstr ""
 
-#: inc/Customizer/Settings/General.php:219
+#: inc/Customizer/Settings/General.php:178
 msgid "Back to Top"
 msgstr ""
 
-#: inc/Customizer/Settings/General.php:235
+#: inc/Customizer/Settings/General.php:194
 msgid "Remove Admin Bar"
 msgstr ""
 
-#: inc/Customizer/Settings/General.php:237
+#: inc/Customizer/Settings/General.php:196
 msgid "This option not work for administrator users."
 msgstr ""
 
@@ -696,15 +692,7 @@ msgid "Display Tag"
 msgstr ""
 
 #: inc/Customizer/Settings/Post.php:119
-msgid "Display Navigation"
-msgstr ""
-
-#: inc/Customizer/Settings/Post.php:133
 msgid "Display Social Share"
-msgstr ""
-
-#: inc/Customizer/Settings/Post.php:147
-msgid "Display Author About"
 msgstr ""
 
 #: inc/Customizer/Settings/Post_Layout.php:38
@@ -799,35 +787,35 @@ msgstr ""
 msgid "Sub Menu Line Height"
 msgstr ""
 
-#: inc/General.php:79
+#: inc/General.php:76
 msgid "Primary"
 msgstr ""
 
-#: inc/General.php:88, inc/Helper.php:146
+#: inc/General.php:85, inc/Helper.php:146
 msgid "Sidebar"
 msgstr ""
 
-#: inc/General.php:98
+#: inc/General.php:95
 msgid "Footer 1"
 msgstr ""
 
-#: inc/General.php:99
+#: inc/General.php:96
 msgid "Footer 2"
 msgstr ""
 
-#: inc/General.php:100
+#: inc/General.php:97
 msgid "Footer 3"
 msgstr ""
 
-#: inc/General.php:101
+#: inc/General.php:98
 msgid "Footer 4"
 msgstr ""
 
-#: inc/General.php:194
+#: inc/General.php:174
 msgid "Search here..."
 msgstr ""
 
-#: inc/General.php:244
+#: inc/General.php:224
 msgctxt "breadcrumb"
 msgid "Home"
 msgstr ""
@@ -838,6 +826,10 @@ msgstr ""
 
 #: inc/Helper.php:148
 msgid "Listing Single Sidebar"
+msgstr ""
+
+#: inc/Helper.php:178, inc/Helper.php:201, inc/Helper.php:195
+msgid "Layout 1"
 msgstr ""
 
 #: inc/Helper.php:172
@@ -1343,18 +1335,6 @@ msgstr ""
 
 #: template-parts/content-none.php:12
 msgid "Get started here"
-msgstr ""
-
-#: template-parts/content-single-pagination.php:25
-msgid "Previous Post: "
-msgstr ""
-
-#: template-parts/content-single-pagination.php:37
-msgid "Next Post: "
-msgstr ""
-
-#: template-parts/content-single.php:67
-msgid "Share Link:"
 msgstr ""
 
 #: template-parts/footer/footer-1.php:87, template-parts/footer/footer-1.php:97

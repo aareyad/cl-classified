@@ -2,6 +2,7 @@
   .content-area {
     background-color: transparent;
   }
+
   .main-content {
     .rtcl-checkout-content {
       background-color: transparent;
@@ -14,6 +15,16 @@
             @extend .rtin-button;
           }
         }
+      }
+    }
+  }
+}
+
+.rtcl {
+  .rtcl-payment-receipt {
+    .action-btn {
+      .btn {
+        @extend .rtin-button;
       }
     }
   }

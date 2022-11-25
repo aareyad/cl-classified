@@ -19,8 +19,6 @@ class Default_Data {
 			'logo_light'                     => '',
 			'mobile_logo'                    => '',
 			'logo_width'                     => '200px',
-			'preloader'                      => '',
-			'preloader_image'                => '',
 			'banner_image'                   => '',
 			'back_to_top'                    => 1,
 			'remove_admin_bar'               => 0,
@@ -56,9 +54,7 @@ class Default_Data {
 			'post_cats'                      => 1,
 			'post_details_related_section'   => 0,
 			'post_tag'                       => 1,
-			'post_navigation'                => 0,
 			'post_social_icon'               => 0,
-			'post_author_about'              => 0,
 
 			// Error
 			'error_bodybanner'               => '',

@@ -60,17 +60,6 @@ $has_post_social = ( class_exists( 'CL_Classified_Core' ) && Options::$options['
 					<?php if ( $has_post_footer ): ?>
                         <div class="post-footer <?php echo esc_attr( $has_post_social ? '' : 'has-no-share' ) ?>">
                             <div class="row align-items-center">
-								<?php if ( class_exists( 'CL_Classified_Core' ) && Options::$options['post_social_icon'] ): ?>
-                                    <div class="<?php echo esc_attr( $footer_class ); ?>">
-                                        <div class="post-social-share-inner">
-                                        <span class="social-label">
-                                            <?php echo esc_html__( "Share Link:", "cl-classified" ) ?>
-                                        </span>
-                                            <!-- Social Share -->
-                                        </div>
-                                    </div>
-								<?php endif; ?>
-
 								<?php if ( has_tag() && Options::$options['post_tag'] ): ?>
                                     <div class="<?php echo esc_attr( $footer_class ); ?>">
                                         <div class="post-tags">
@@ -78,6 +67,12 @@ $has_post_social = ( class_exists( 'CL_Classified_Core' ) && Options::$options['
                                         </div>
                                     </div>
 								<?php endif; ?>
+	                            <?php if ( class_exists( 'CL_Classified_Core' ) && Options::$options['post_social_icon'] ): ?>
+                                    <div class="<?php echo esc_attr( $footer_class ); ?>">
+                                        <!-- Social Share -->
+                                        <?php CL_Classified_Core::social_share(); ?>
+                                    </div>
+	                            <?php endif; ?>
                             </div>
                         </div>
 					<?php endif; ?>
@@ -85,25 +80,3 @@ $has_post_social = ( class_exists( 'CL_Classified_Core' ) && Options::$options['
             </div>
         </div>
     </div>
-
-<?php
-if ( Options::$options['post_navigation'] ) {
-	get_template_part( 'template-parts/content-single-pagination' );
-}
-?>
-
-<?php if ( Options::$options['post_author_about'] ): ?>
-    <div class="blog-author mt-30">
-        <div class="widget-box">
-            <div class="media">
-                <div class="item-img">
-					<?php echo get_avatar( get_the_author_meta( 'ID' ), 110 ); ?>
-                </div>
-                <div class="media-body">
-                    <h3 class="item-title"><?php the_author_posts_link(); ?></h3>
-                    <p><?php echo esc_html( get_the_author_meta( 'description' ) ); ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php endif; ?>

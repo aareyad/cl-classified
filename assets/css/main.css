@@ -836,6 +836,7 @@ table .wp-block-table__cell-content,
 
 .rtin-button,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn,
+.rtcl .rtcl-payment-receipt .action-btn .btn,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit {
 	color: #ffffff !important;
 	padding: 10px 16px;
@@ -851,6 +852,7 @@ table .wp-block-table__cell-content,
 
 .rtin-button:hover,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn:hover,
+.rtcl .rtcl-payment-receipt .action-btn .btn:hover,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit:hover {
 	color: var(--rtcl-primary-color) !important;
 	background-color: transparent;
@@ -859,6 +861,7 @@ table .wp-block-table__cell-content,
 
 .rtin-button .rtin-button-icon,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn .rtin-button-icon,
+.rtcl .rtcl-payment-receipt .action-btn .btn .rtin-button-icon,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit .rtin-button-icon {
 	margin-left: 5px;
 	vertical-align: middle;
@@ -2432,7 +2435,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	border: 1px solid #e7e7e7;
 	border-radius: 4px;
 	text-decoration: none;
-	color: var(--rtcl-secondary-color);
+	color: var(--rtcl-primary-color);
 	background-color: #ffffff;
 	transition: all 0.3s;
 }
@@ -4901,13 +4904,23 @@ a.scrollToTop:focus {
 
 .rtcl.store-content-wrap {
 	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.rtcl.store-content-wrap .store-details-content-wrap {
+	background-color: #ffffff;
 	box-shadow: 0 0 20px #f0f0f0;
 	border-radius: 8px;
 	padding: 25px;
 }
 
 .rtcl.store-content-wrap .store-banner {
-	margin: -25px -25px 20px;
+	margin: 0 0 30px;
+}
+
+.rtcl.store-content-wrap .store-banner .banner {
+	border-radius: 8px;
 }
 
 .rtcl.store-content-wrap .store-banner .store-name-logo {
@@ -4933,6 +4946,19 @@ a.scrollToTop:focus {
 	margin-bottom: 10px;
 }
 
+.rtcl.store-content-wrap .store-information .store-info {
+	background-color: #ffffff;
+	box-shadow: 0 0 20px #f0f0f0;
+	border-radius: 8px;
+	padding: 25px;
+}
+
+@media screen and (max-width: 767px) {
+	.rtcl.store-content-wrap .store-information .store-info {
+		margin-top: 30px;
+	}
+}
+
 .rtcl.store-content-wrap .store-information .store-info .store-info-item {
 	border: none;
 	margin-top: 15px;
@@ -4945,6 +4971,10 @@ a.scrollToTop:focus {
 
 .rtcl.store-content-wrap .store-information .store-info .store-info-item .icon span {
 	color: var(--rtcl-primary-color);
+}
+
+.rtcl.store-content-wrap .store-information .store-info .store-info-item:first-child {
+	margin-top: 0;
 }
 
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-phone .icon {

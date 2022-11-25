@@ -31,12 +31,11 @@ gulp.task('scss', function () {
 gulp.task('rtl', function () {
     return gulp.src([
         'assets/css/*.css',
-        '!assets/css/slick.css',
-        '!assets/css/all.min.css',
+        '!assets/css/font-awesome-all.min.css',
         '!assets/css/rtl.css'
     ])
         .pipe(rtlcss())
-        .pipe(gulp.dest('assets/css/css-rtl/'));
+        .pipe(gulp.dest('assets/css-rtl/'));
 });
 
 gulp.task('minify-js', function () {

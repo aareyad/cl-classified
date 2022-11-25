@@ -2,7 +2,7 @@
 /**
  * @author  RadiusTheme
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 namespace RadiusTheme\ClassifiedLite;
@@ -18,7 +18,6 @@ class Scripts {
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ], 15 );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'register_gutenberg_scripts' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_gutenberg_scripts' ], 20 );
-		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_scripts' ], 15 );
 	}
 
 	public static function instance() {
@@ -239,7 +238,9 @@ class Scripts {
 		wp_register_style( 'font-awesome', Helper::get_css( 'font-awesome-all.min' ), [], $this->version );
 		wp_register_style( 'bootstrap', Helper::get_maybe_rtl_css( 'bootstrap.min' ), [], $this->version );
 		wp_register_style( 'cl-classified-main', Helper::get_maybe_rtl_css( 'main' ), [], $this->version );
-		wp_register_style( 'cl-classified-rtl', Helper::get_rtl_css( 'rtl' ), [], $this->version );
+		if ( is_rtl() ) {
+			wp_register_style( 'cl-classified-rtl', Helper::get_css( 'rtl' ), [], $this->version );
+		}
 
 		// Script
 		wp_register_script( 'bootstrap', Helper::get_js( 'bootstrap.bundle.min' ), [ 'jquery' ], $this->version, true );
@@ -262,14 +263,6 @@ class Scripts {
 
 		wp_enqueue_script( 'cl-classified-main' );
 		$this->localized_scripts(); // Localization
-	}
-
-	public function enqueue_admin_scripts() {
-		/*wp_register_style( 'flaticon', Helper::get_css( 'flaticon' ), [], $this->version );
-		wp_register_style( 'rt-admin', Helper::get_css( 'rt-admin' ), [], $this->version );
-		wp_enqueue_style( 'flaticon' );
-		wp_enqueue_style( 'rt-admin' );
-		wp_enqueue_style( 'cl-classified-admin', Helper::get_css( 'cl-classified-admin' ), [], $this->version );*/
 	}
 
 	public function register_gutenberg_scripts() {

@@ -2,7 +2,7 @@
 /**
  * @author  RadiusTheme
  * @since   1.0.0
- * @version 1.0.1
+ * @version 1.1.0
  */
 
 if ( ! isset( $content_width ) ) {
@@ -14,7 +14,7 @@ function cl_classified_load_textdomain() {
 	load_theme_textdomain( 'cl-classified', get_template_directory() . '/languages' );
 }
 
-define( 'CL_CLASSIFIED_VERSION', '1.0.1' );
+define( 'CL_CLASSIFIED_VERSION', '1.1.0' );
 
 require_once 'lib/updater/theme-updater.php';
 require_once 'lib/class-tgm-plugin-activation.php';

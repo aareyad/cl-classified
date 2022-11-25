@@ -11,12 +11,22 @@
 .rtcl {
   &.store-content-wrap {
     border: none;
-    box-shadow: 0 0 20px #f0f0f0;
-    border-radius: $borderRadius8;
-    padding: 25px;
+    background-color: transparent;
+    padding: 0;
+
+    .store-details-content-wrap {
+      background-color: $white;
+      box-shadow: 0 0 20px #f0f0f0;
+      border-radius: $borderRadius8;
+      padding: 25px;
+    }
 
     .store-banner {
-      margin: -25px -25px 20px;
+      margin: 0 0 30px;
+
+      .banner {
+        border-radius: $borderRadius8;
+      }
 
       .store-name-logo {
         gap: 20px;
@@ -46,6 +56,15 @@
 
     .store-information {
       .store-info {
+        background-color: $white;
+        box-shadow: 0 0 20px #f0f0f0;
+        border-radius: $borderRadius8;
+        padding: 25px;
+
+        @include small-screen() {
+          margin-top: 30px;
+        }
+
         .store-info-item {
           border: none;
           margin-top: 15px;
@@ -57,6 +76,10 @@
             span {
               color: var(--rtcl-primary-color);
             }
+          }
+
+          &:first-child {
+            margin-top: 0;
           }
 
           &.store-hour {

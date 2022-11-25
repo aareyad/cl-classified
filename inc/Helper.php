@@ -250,7 +250,7 @@ class Helper {
 	}
 
 	public static function is_chat_enabled() {
-		if ( Options::$options['header_chat_icon'] && class_exists( 'RtclPro' ) ) {
+		if ( Options::$options['header_chat_icon'] && class_exists( 'Rtcl' ) && class_exists( 'RtclPro' ) ) {
 			if ( Fns::is_enable_chat() ) {
 				return true;
 			}
