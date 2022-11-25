@@ -167,7 +167,7 @@ class Default_Data {
 			'primary_color'                  => '#f9423a',
 			'lite_primary_color'             => '#feeceb',
 			'secondary_color'                => '#ef1c13',
-			'top_listing_bg'                 => '#2cb2c7',
+			'top_listing_bg'                 => '#dff0f3',
 
 			// Contact Info
 			'contact_address'                => '121 King St, Melbourne den 3000, Australia',
