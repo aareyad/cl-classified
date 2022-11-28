@@ -13,31 +13,31 @@ class EDD_Theme_Updater_Admin {
 	 * @since 1.0.0
 	 * @type string
 	 */
-	 protected $remote_api_url = null;
-	 protected $theme_slug = null;
-	 protected $version = null;
-	 protected $author = null;
-	 protected $download_id = null;
-	 protected $renew_url = null;
-	 protected $strings = null;
+	protected $remote_api_url = null;
+	protected $theme_slug = null;
+	protected $version = null;
+	protected $author = null;
+	protected $download_id = null;
+	protected $renew_url = null;
+	protected $strings = null;
 
 	/**
 	 * Initialize the class.
 	 *
 	 * @since 1.0.0
 	 */
-	function __construct( $config = array(), $strings = array() ) {
+	function __construct( $config = [], $strings = [] ) {
 
-		$config = wp_parse_args( $config, array(
+		$config = wp_parse_args( $config, [
 			'remote_api_url' => 'http://easydigitaldownloads.com',
-			'theme_slug' => get_template(),
-			'item_id' => '',
-			'license' => '',
-			'version' => '',
-			'author' => '',
-			'download_id' => '',
-			'renew_url' => ''
-		) );
+			'theme_slug'     => get_template(),
+			'item_id'        => '',
+			'license'        => '',
+			'version'        => '',
+			'author'         => '',
+			'download_id'    => '',
+			'renew_url'      => ''
+		] );
 
 		// Set config arguments
 		$this->remote_api_url = $config['remote_api_url'];
@@ -50,20 +50,20 @@ class EDD_Theme_Updater_Admin {
 
 		// Populate version fallback
 		if ( '' == $config['version'] ) {
-			$theme = wp_get_theme( $this->theme_slug );
+			$theme         = wp_get_theme( $this->theme_slug );
 			$this->version = $theme->get( 'Version' );
 		}
 
 		// Strings passed in from the updater config
 		$this->strings = $strings;
 
-		add_action( 'admin_init', array( $this, 'updater' ) );
-		add_action( 'admin_init', array( $this, 'register_option' ) );
-		add_action( 'admin_init', array( $this, 'license_action' ) );
-		add_action( 'admin_menu', array( $this, 'license_menu' ) );
-		add_action( 'update_option_' . $this->theme_slug . '_license_key', array( $this, 'activate_license' ), 10, 2 );
-		add_filter( 'http_request_args', array( $this, 'disable_wporg_request' ), 5, 2 );
-
+		add_action( 'admin_init', [ $this, 'updater' ] );
+		add_action( 'admin_init', [ $this, 'register_option' ] );
+		add_action( 'admin_init', [ $this, 'license_action' ] );
+		add_action( 'admin_menu', [ $this, 'license_menu' ] );
+		add_action( 'update_option_' . $this->theme_slug . '_license_key', [ $this, 'activate_license' ], 10, 2 );
+		add_filter( 'http_request_args', [ $this, 'disable_wporg_request' ], 5, 2 );
+		add_action( 'admin_footer', [ $this, 'script' ] );
 	}
 
 	/**
@@ -74,23 +74,23 @@ class EDD_Theme_Updater_Admin {
 	function updater() {
 
 		/* If there is no valid license key status, don't allow updates. */
-		if ( get_option( $this->theme_slug . '_license_key_status', false) != 'valid' ) {
+		if ( get_option( $this->theme_slug . '_license_key_status', false ) != 'valid' ) {
 			return;
 		}
 
-		if ( !class_exists( 'EDD_Theme_Updater' ) ) {
+		if ( ! class_exists( 'EDD_Theme_Updater' ) ) {
 			// Load our custom theme updater
 			include( dirname( __FILE__ ) . '/theme-updater-class.php' );
 		}
 
 		new EDD_Theme_Updater(
-			array(
-				'remote_api_url' 	=> $this->remote_api_url,
-				'version' 			=> $this->version,
-				'license' 			=> trim( get_option( $this->theme_slug . '_license_key' ) ),
-				'item_id' 		    => $this->item_id,
-				'author'			=> $this->author
-			),
+			[
+				'remote_api_url' => $this->remote_api_url,
+				'version'        => $this->version,
+				'license'        => trim( get_option( $this->theme_slug . '_license_key' ) ),
+				'item_id'        => $this->item_id,
+				'author'         => $this->author
+			],
 			$this->strings
 		);
 	}
@@ -109,7 +109,7 @@ class EDD_Theme_Updater_Admin {
 			$strings['theme-license'],
 			'manage_options',
 			$this->theme_slug . '-license',
-			array( $this, 'license_page' )
+			[ $this, 'license_page' ]
 		);
 	}
 
@@ -123,11 +123,11 @@ class EDD_Theme_Updater_Admin {
 		$strings = $this->strings;
 
 		$license = trim( get_option( $this->theme_slug . '_license_key' ) );
-		$status = get_option( $this->theme_slug . '_license_key_status', false );
+		$status  = get_option( $this->theme_slug . '_license_key_status', false );
 
 		// Checks license status to display under license key
 		if ( ! $license ) {
-			$message    = $strings['enter-key'];
+			$message = $strings['enter-key'];
 		} else {
 			// delete_transient( $this->theme_slug . '_license_message' );
 			if ( ! get_transient( $this->theme_slug . '_license_message', false ) ) {
@@ -136,49 +136,55 @@ class EDD_Theme_Updater_Admin {
 			$message = get_transient( $this->theme_slug . '_license_message' );
 		}
 		?>
-		<div class="wrap">
-			<h2><?php echo esc_html( $strings['theme-license'] ); ?></h2>
-			<form method="post" action="options.php">
+        <div class="wrap">
+        <h2><?php echo esc_html( $strings['theme-license'] ); ?></h2>
+        <form method="post" action="options.php">
 
-				<?php settings_fields( $this->theme_slug . '-license' ); ?>
+			<?php settings_fields( $this->theme_slug . '-license' ); ?>
 
-				<table class="form-table">
-					<tbody>
+            <table class="form-table">
+                <tbody>
 
-						<tr valign="top">
-							<th scope="row" valign="top">
-								<?php echo esc_html( $strings['license-key'] ); ?>
-							</th>
-							<td>
-								<input id="<?php echo esc_attr( $this->theme_slug ); ?>_license_key" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
-								<p class="description">
-									<?php echo esc_html( $message ); ?>
-								</p>
-							</td>
-						</tr>
+                <tr valign="top">
+                    <th scope="row" valign="top">
+						<?php echo esc_html( $strings['license-key'] ); ?>
+                    </th>
+                    <td>
+                        <input id="<?php echo esc_attr( $this->theme_slug ); ?>_license_key"
+                               name="<?php echo esc_attr( $this->theme_slug ); ?>_license_key" type="text"
+                               class="regular-text" value="<?php echo esc_attr( $license ); ?>"/>
+                        <p class="description">
+							<?php echo esc_html( $message ); ?>
+                        </p>
+                    </td>
+                </tr>
 
-						<?php if ( $license ) { ?>
-						<tr valign="top">
-							<th scope="row" valign="top">
-								<?php echo esc_html( $strings['license-action'] ); ?>
-							</th>
-							<td>
-								<?php
-								wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
-								if ( 'valid' == $status ) { ?>
-									<input type="submit" class="button-secondary" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_deactivate" value="<?php echo esc_attr( $strings['deactivate-license'] ); ?>"/>
-								<?php } else { ?>
-									<input type="submit" class="button-secondary" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_activate" value="<?php echo esc_attr( $strings['activate-license'] ); ?>"/>
-								<?php }
-								?>
-							</td>
-						</tr>
-						<?php } ?>
+				<?php if ( $license ) { ?>
+                    <tr valign="top">
+                        <th scope="row" valign="top">
+							<?php echo esc_html( $strings['license-action'] ); ?>
+                        </th>
+                        <td>
+							<?php
+							wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
+							if ( 'valid' == $status ) { ?>
+                                <input type="submit" class="button-secondary"
+                                       name="<?php echo esc_attr( $this->theme_slug ); ?>_license_deactivate"
+                                       value="<?php echo esc_attr( $strings['deactivate-license'] ); ?>"/>
+							<?php } else { ?>
+                                <input type="submit" class="button-secondary"
+                                       name="<?php echo esc_attr( $this->theme_slug ); ?>_license_activate"
+                                       value="<?php echo esc_attr( $strings['activate-license'] ); ?>"/>
+							<?php }
+							?>
+                        </td>
+                    </tr>
+				<?php } ?>
 
-					</tbody>
-				</table>
-				<?php submit_button(); ?>
-			</form>
+                </tbody>
+            </table>
+			<?php submit_button(); ?>
+        </form>
 		<?php
 	}
 
@@ -191,7 +197,7 @@ class EDD_Theme_Updater_Admin {
 		register_setting(
 			$this->theme_slug . '-license',
 			$this->theme_slug . '_license_key',
-			array( $this, 'sanitize_license' )
+			[ $this, 'sanitize_license' ]
 		);
 	}
 
@@ -201,6 +207,7 @@ class EDD_Theme_Updater_Admin {
 	 * since 1.0.0
 	 *
 	 * @param string $new License key that was submitted.
+	 *
 	 * @return string $new Sanitized license key.
 	 */
 	function sanitize_license( $new ) {
@@ -219,17 +226,18 @@ class EDD_Theme_Updater_Admin {
 	/**
 	 * Makes a call to the API.
 	 *
+	 * @param array $api_params to be used for wp_remote_get.
+	 *
+	 * @return array $response decoded JSON response.
 	 * @since 1.0.0
 	 *
-	 * @param array $api_params to be used for wp_remote_get.
-	 * @return array $response decoded JSON response.
 	 */
-	 function get_api_response( $api_params ) {
+	function get_api_response( $api_params ) {
 
-		 // Call the custom API.
+		// Call the custom API.
 		$response = wp_remote_get(
 			add_query_arg( $api_params, $this->remote_api_url ),
-			array( 'timeout' => 15, 'sslverify' => false )
+			[ 'timeout' => 15, 'sslverify' => false ]
 		);
 
 		// Make sure the response came back okay.
@@ -240,7 +248,7 @@ class EDD_Theme_Updater_Admin {
 		$response = json_decode( wp_remote_retrieve_body( $response ) );
 
 		return $response;
-	 }
+	}
 
 	/**
 	 * Activates the license key.
@@ -252,11 +260,11 @@ class EDD_Theme_Updater_Admin {
 		$license = trim( get_option( $this->theme_slug . '_license_key' ) );
 
 		// Data to send in our API request.
-		$api_params = array(
+		$api_params = [
 			'edd_action' => 'activate_license',
 			'license'    => $license,
 			'item_id'    => $this->item_id
-		);
+		];
 
 		$license_data = $this->get_api_response( $api_params );
 
@@ -279,11 +287,11 @@ class EDD_Theme_Updater_Admin {
 		$license = trim( get_option( $this->theme_slug . '_license_key' ) );
 
 		// Data to send in our API request.
-		$api_params = array(
+		$api_params = [
 			'edd_action' => 'deactivate_license',
 			'license'    => $license,
 			'item_id'    => $this->item_id
-		);
+		];
 
 		$license_data = $this->get_api_response( $api_params );
 
@@ -311,6 +319,7 @@ class EDD_Theme_Updater_Admin {
 		if ( '' != $this->download_id && $license_key ) {
 			$url = esc_url( $this->remote_api_url );
 			$url .= '/checkout/?edd_license_key=' . $license_key . '&download_id=' . $this->download_id;
+
 			return $url;
 		}
 
@@ -318,7 +327,6 @@ class EDD_Theme_Updater_Admin {
 		return $this->remote_api_url;
 
 	}
-
 
 
 	/**
@@ -334,7 +342,7 @@ class EDD_Theme_Updater_Admin {
 			}
 		}
 
-		if ( isset( $_POST[$this->theme_slug . '_license_deactivate'] ) ) {
+		if ( isset( $_POST[ $this->theme_slug . '_license_deactivate' ] ) ) {
 			if ( check_admin_referer( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' ) ) {
 				$this->deactivate_license();
 			}
@@ -345,39 +353,40 @@ class EDD_Theme_Updater_Admin {
 	/**
 	 * Checks if license is valid and gets expire date.
 	 *
+	 * @return string $message License status message.
 	 * @since 1.0.0
 	 *
-	 * @return string $message License status message.
 	 */
 	function check_license() {
 
 		$license = trim( get_option( $this->theme_slug . '_license_key' ) );
 		$strings = $this->strings;
 
-		$api_params = array(
+		$api_params = [
 			'edd_action' => 'check_license',
 			'license'    => $license,
 			'item_id'    => $this->item_id
-		);
+		];
 
 		$license_data = $this->get_api_response( $api_params );
 
 		// If response doesn't include license data, return
-		if ( !isset( $license_data->license ) ) {
+		if ( ! isset( $license_data->license ) ) {
 			$message = $strings['license-unknown'];
+
 			return $message;
 		}
 
 		// Get expire date
 		$expires = false;
 		if ( isset( $license_data->expires ) ) {
-			$expires = date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires ) );
+			$expires    = date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires ) );
 			$renew_link = '<a href="' . esc_url( $this->get_renewal_link() ) . '" target="_blank">' . $strings['renew'] . '</a>';
 		}
 
 		// Get site counts
-		$site_count = !empty( $license_data->site_count ) ? $license_data->site_count : ''; //@kowsar
-		$license_limit = !empty( $license_data->license_limit ) ? $license_data->license_limit : ''; //@kowsar
+		$site_count    = ! empty( $license_data->site_count ) ? $license_data->site_count : ''; //@kowsar
+		$license_limit = ! empty( $license_data->license_limit ) ? $license_data->license_limit : ''; //@kowsar
 
 		// If unlimited
 		if ( 0 == $license_limit ) {
@@ -426,22 +435,46 @@ class EDD_Theme_Updater_Admin {
 
 		// If it's not a theme update request, bail.
 		if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) ) {
- 			return $r;
- 		}
+			return $r;
+		}
 
- 		// Decode the JSON response
- 		$themes = json_decode( $r['body']['themes'] );
+		// Decode the JSON response
+		$themes = json_decode( $r['body']['themes'] );
 
- 		// Remove the active parent and child themes from the check
- 		$parent = get_option( 'template' );
- 		$child = get_option( 'stylesheet' );
- 		unset( $themes->themes->$parent );
- 		unset( $themes->themes->$child );
+		// Remove the active parent and child themes from the check
+		$parent = get_option( 'template' );
+		$child  = get_option( 'stylesheet' );
+		unset( $themes->themes->$parent );
+		unset( $themes->themes->$child );
 
- 		// Encode the updated JSON response
- 		$r['body']['themes'] = json_encode( $themes );
+		// Encode the updated JSON response
+		$r['body']['themes'] = json_encode( $themes );
 
- 		return $r;
+		return $r;
+	}
+
+	function script() {
+	    $license = trim( get_option( $this->theme_slug . '_license_key' ) );
+	    $api_params = [
+			'edd_action' => 'check_license',
+			'license'    => $license,
+			'item_id'    => $this->item_id
+		];
+
+		$license_data = $this->get_api_response( $api_params );
+
+		if ( wp_script_is( 'jquery', 'done' ) && $license_data->license !== 'valid' ) {
+            if ( isset( $_GET['page'] ) && $_GET['page'] == 'fw-backups-demo-content' ) { ?>
+                <script type="text/javascript">
+                    jQuery("#fw-ext-backups-demo-list .theme-actions a").on("click", function(e) {
+                        e.preventDefault();
+                        alert('<?php esc_html_e('Please activate your theme using purchase code, to install demo data.', 'cl-classified'); ?>');
+                        return false;
+                    });
+                </script>
+            <?php
+            }
+		}
 	}
 
 }
