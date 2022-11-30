@@ -835,6 +835,7 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button,
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn,
 .rtcl .rtcl-payment-receipt .action-btn .btn,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit {
@@ -851,6 +852,7 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button:hover,
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn:hover,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn:hover,
 .rtcl .rtcl-payment-receipt .action-btn .btn:hover,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit:hover {
@@ -860,6 +862,7 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button .rtin-button-icon,
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn .rtin-button-icon,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn .rtin-button-icon,
 .rtcl .rtcl-payment-receipt .action-btn .btn .rtin-button-icon,
 .rtcl.store-content-wrap .store-information .store-info .store-info-item.store-email #store-email-form .sc-submit .rtin-button-icon {
@@ -4586,6 +4589,10 @@ a.scrollToTop:focus {
 	color: #111111;
 }
 
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-EditAccountForm .form-group .form-control {
+	color: #797f89;
+}
+
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-EditAccountForm .form-group .form-group label {
 	margin-bottom: 6px;
 	font-weight: 400;
@@ -4737,6 +4744,37 @@ a.scrollToTop:focus {
 
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-listings .rtcl-list-view .rtcl-listing-item .rtcl-actions .btn:hover {
 	background-color: var(--rtcl-secondary-color);
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group {
+	margin-bottom: 20px;
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group .form-control {
+	color: #797f89;
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group textarea {
+	height: auto;
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group label {
+	color: #111111;
+	margin-bottom: 6px;
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group .col-sm-offset-3 {
+	margin-right: 25%;
+}
+
+@media screen and (max-width: 767px) {
+	.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .form-group .col-sm-offset-3 {
+		margin-right: 0;
+	}
+}
+
+.rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .oh-time-hour .form-control {
+	height: 40px;
 }
 
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content .pagination {

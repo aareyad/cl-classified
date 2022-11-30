@@ -182,6 +182,10 @@
             color: #111111;
           }
 
+          .form-control {
+            color: $bodyColor;
+          }
+
           .form-group {
             label {
               margin-bottom: 6px;
@@ -340,6 +344,45 @@
                   background-color: var(--rtcl-secondary-color);
                 }
               }
+            }
+          }
+        }
+      }
+
+      #rtcl-store-content-wrap {
+        .rtcl-store-settings {
+          .form-group {
+            margin-bottom: 20px;
+
+            .form-control {
+              color: $bodyColor;
+            }
+
+            textarea {
+              height: auto;
+            }
+
+            label {
+              color: #111111;
+              margin-bottom: 6px;
+            }
+
+            .col-sm-offset-3 {
+              margin-left: 25%;
+
+              @include small-screen() {
+                margin-left: 0;
+              }
+            }
+          }
+
+          .btn {
+            @extend .rtin-button;
+          }
+
+          .oh-time-hour {
+            .form-control {
+              height: 40px;
             }
           }
         }

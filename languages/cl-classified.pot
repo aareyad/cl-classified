@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2022-11-25 09:45+0000\n"
+"POT-Creation-Date: 2022-11-30 09:48+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -1227,6 +1227,22 @@ msgstr ""
 
 #: lib/class-tgm-plugin-activation.php:3498
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/updater/theme-updater-admin.php:474
+msgid "activate license"
+msgstr ""
+
+#: lib/updater/theme-updater-admin.php:477
+msgid "Please, %s to install, update bundle plugins and import demo contents."
+msgstr ""
+
+#: lib/updater/theme-updater-admin.php:492
+msgid "Please activate your theme using license code, to install demo data."
+msgstr ""
+
+#: lib/updater/theme-updater-admin.php:504, lib/updater/theme-updater-admin.php:522
+msgid "Please activate your theme using license code, to use this plugin."
 msgstr ""
 
 #: lib/updater/theme-updater.php:31
