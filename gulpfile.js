@@ -17,7 +17,7 @@ var zip = require('gulp-zip');
 
 
 gulp.task('scss', function () {
-    return gulp.src(['main.scss'], {cwd: 'src/scss'})
+    return gulp.src(['main.scss', 'rtl.scss'], {cwd: 'src/scss'})
         .pipe(sass({
             plugins: [autoprefix]
         }))
