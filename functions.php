@@ -14,9 +14,11 @@ function cl_classified_load_textdomain() {
 	load_theme_textdomain( 'cl-classified', get_template_directory() . '/languages' );
 }
 
-define( 'CL_CLASSIFIED_VERSION', '1.1.1' );
+define( 'CL_CLASSIFIED_VERSION', '1.1.2' );
 
-require_once 'lib/updater/theme-updater.php';
+if ( ! defined('RT_DEBUG') ) {
+    require_once 'lib/updater/theme-updater.php';
+}
 require_once 'lib/class-tgm-plugin-activation.php';
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';

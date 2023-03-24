@@ -133,6 +133,10 @@ class General {
 			$classes[] = 'front-page';
 		}
 
+        if ( is_author() ) {
+            $classes[] = 'rtcl';
+        }
+
 		if ( Helper::has_full_width() ) {
 			$classes[] = 'is-full-width';
 		}

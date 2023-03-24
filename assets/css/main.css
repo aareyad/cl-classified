@@ -3296,6 +3296,7 @@ a.scrollToTop:focus {
 
 .rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .numbers a {
 	color: inherit;
+	display: block;
 }
 
 .rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item .numbers:hover {
