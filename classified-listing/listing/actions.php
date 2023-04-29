@@ -12,6 +12,7 @@
 
 use Rtcl\Helpers\Functions;
 use Rtcl\Helpers\Text;
+use RtclClaimListing\Helpers\Functions as ClaimFunctions;
 
 
 if ( ! $can_add_favourites && ! $can_report_abuse && ! $social ) {
@@ -35,6 +36,20 @@ if ( ! $can_add_favourites && ! $can_report_abuse && ! $social ) {
 				<?php else: ?>
                     <a href="javascript:void(0)" class="rtcl-require-login">
                         <span class='rtcl-icon rtcl-icon-trash'></span>
+                    </a>
+				<?php endif; ?>
+            </li>
+		<?php endif; ?>
+		<?php if ( function_exists( 'rtclClaimListing' ) && ClaimFunctions::claim_listing_enable() ): ?>
+            <li class='list-group-item' data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="<?php echo esc_html( ClaimFunctions::get_claim_action_title() ); ?>">
+				<?php if ( is_user_logged_in() ): ?>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#rtcl-claim-listing-modal">
+                        <span class="rtcl-icon rtcl-icon-exchange"></span>
+                    </a>
+				<?php else: ?>
+                    <a href="javascript:void(0)" class="rtcl-require-login">
+                        <span class="rtcl-icon rtcl-icon-exchange"></span>
                     </a>
 				<?php endif; ?>
             </li>
@@ -71,6 +86,8 @@ if ( ! $can_add_favourites && ! $can_report_abuse && ! $social ) {
         </div>
     </div>
 <?php endif; ?>
+
+<?php do_action( 'rtcl_single_listing_after_action', $listing_id ); ?>
 
 <?php if ( $can_report_abuse ) { ?>
     <!-- Social Share Modal -->
