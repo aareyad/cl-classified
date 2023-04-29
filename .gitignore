@@ -4,6 +4,6 @@ testing.html
 package-lock.json
 inc/plugins/
 node_modules/
-plugin-bundle/
+.DS_Store/
 __build/
 __*/
