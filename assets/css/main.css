@@ -835,6 +835,10 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button,
+#rtcl-report-abuse-form .modal-footer .btn,
+.rtcl-listing-booking-wrap form #rtcl-booking-submit-btn,
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form button.btn,
+.rtcl-claim-listing-wrapper .modal-footer button.btn,
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn,
 .rtcl .rtcl-payment-receipt .action-btn .btn,
@@ -852,6 +856,10 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button:hover,
+#rtcl-report-abuse-form .modal-footer .btn:hover,
+.rtcl-listing-booking-wrap form #rtcl-booking-submit-btn:hover,
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form button.btn:hover,
+.rtcl-claim-listing-wrapper .modal-footer button.btn:hover,
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn:hover,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn:hover,
 .rtcl .rtcl-payment-receipt .action-btn .btn:hover,
@@ -862,6 +870,10 @@ table .wp-block-table__cell-content,
 }
 
 .rtin-button .rtin-button-icon,
+#rtcl-report-abuse-form .modal-footer .btn .rtin-button-icon,
+.rtcl-listing-booking-wrap form #rtcl-booking-submit-btn .rtin-button-icon,
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form button.btn .rtin-button-icon,
+.rtcl-claim-listing-wrapper .modal-footer button.btn .rtin-button-icon,
 .rtcl-account .rtcl-MyAccount-wrap .rtcl-MyAccount-content #rtcl-store-content-wrap .rtcl-store-settings .btn .rtin-button-icon,
 .rtcl-checkout .main-content .rtcl-checkout-content #rtcl-checkout-form .rtcl-submit-btn-wrap .btn .rtin-button-icon,
 .rtcl .rtcl-payment-receipt .action-btn .btn .rtin-button-icon,
@@ -1340,7 +1352,7 @@ table .wp-block-table__cell-content,
 .main-header-sticky-wrapper {
 	position: fixed;
 	top: 0;
-	z-index: 999;
+	z-index: 9999;
 	width: 100%;
 	margin-top: -120px;
 	-webkit-transition: all 0.5s ease-out;
@@ -3604,6 +3616,7 @@ a.scrollToTop:focus {
 
 .rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner {
 	overflow: hidden;
+	border-radius: 8px;
 }
 
 .rtcl .rtcl-grid-view .rtcl-listing-item .listing-thumb .listing-thumb-inner .rtcl-thumbnail {
@@ -4055,6 +4068,16 @@ a.scrollToTop:focus {
 	font-weight: 700;
 }
 
+#rtcl-report-abuse-form .form-group label {
+	color: #222222;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+#rtcl-report-abuse-form .form-group .form-control {
+	height: auto;
+}
+
 /*-------------------------------------
 #. Social Share Modal
 ---------------------------------------*/
@@ -4265,6 +4288,36 @@ a.scrollToTop:focus {
 
 .rtcl-social-profile-wrap .rtcl-social-profiles a:hover {
 	color: var(--rtcl-primary-color);
+}
+
+.rtcl-listing-booking-wrap {
+	background-color: #ffffff;
+}
+
+.rtcl-listing-booking-wrap form .form-group label {
+	margin-bottom: 5px;
+}
+
+.rtcl-listing-booking-wrap form #rtcl-booking-submit-btn {
+	margin-top: 10px;
+}
+
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form .form-group {
+	margin-bottom: 8px;
+}
+
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form .form-group label {
+	margin-bottom: 8px;
+}
+
+.rtcl-booking-confirmation-wrapper .rtcl-booking-confirmation-form .form-group textarea.form-control {
+	height: auto;
+	min-height: 100px;
+}
+
+.rtcl-claim-listing-wrapper textarea.form-control {
+	height: auto;
+	min-height: 80px;
 }
 
 .rtcl .rtcl-Reviews.rtcl {
@@ -4877,6 +4930,13 @@ a.scrollToTop:focus {
 	margin-bottom: 30px;
 }
 
+.rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-post-section .rtcl-booking-holder .form-group label,
+.rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-post-section .rtcl-booking-holder .form-group label {
+	font-weight: 400;
+	display: inline-block;
+	color: inherit;
+}
+
 .rtcl-form-page .main-content .rtcl-post-form-wrap .rtcl-submit-btn,
 .rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-submit-btn {
 	color: #ffffff !important;
@@ -5053,6 +5113,10 @@ a.scrollToTop:focus {
 
 .elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item {
 	margin-bottom: 0;
+}
+
+.elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item .listing-thumb:after {
+	border-radius: 8px 0 0 0;
 }
 
 .elementor-widget-rtcl-listing-items .rtcl-listings-sc-wrapper .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-item .rtcl-meta-buttons-wrap {

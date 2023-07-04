@@ -18,6 +18,7 @@
       .listing-thumb {
         .listing-thumb-inner {
           overflow: hidden;
+          border-radius: $borderRadius8;
 
           .rtcl-thumbnail {
             transition: all 0.3s ease-in-out;

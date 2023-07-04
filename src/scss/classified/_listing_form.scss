@@ -44,6 +44,16 @@
 
       .rtcl-post-section {
         margin-bottom: 30px;
+
+        .rtcl-booking-holder {
+          .form-group {
+            label {
+              font-weight: 400;
+              display: inline-block;
+              color: inherit;
+            }
+          }
+        }
       }
 
       .rtcl-submit-btn {

@@ -131,6 +131,25 @@
   }
 }
 
+#rtcl-report-abuse-form {
+  .form-group {
+    label {
+      color: #222222;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      height: auto;
+    }
+  }
+  .modal-footer {
+    .btn {
+      @extend .rtin-button;
+    }
+  }
+}
+
 /*-------------------------------------
 #. Social Share Modal
 ---------------------------------------*/
@@ -358,6 +377,58 @@
       &:hover {
         color: var(--rtcl-primary-color);
       }
+    }
+  }
+}
+
+.rtcl-listing-booking-wrap {
+  background-color: #ffffff;
+
+  form {
+    .form-group {
+      label {
+        margin-bottom: 5px;
+      }
+    }
+
+    #rtcl-booking-submit-btn {
+      @extend .rtin-button;
+
+      margin-top: 10px;
+    }
+  }
+}
+
+.rtcl-booking-confirmation-wrapper {
+  .rtcl-booking-confirmation-form {
+    .form-group {
+      margin-bottom: 8px;
+
+      label {
+        margin-bottom: 8px;
+      }
+
+      textarea.form-control {
+        height: auto;
+        min-height: 100px;
+      }
+    }
+
+    button.btn {
+      @extend .rtin-button;
+    }
+  }
+}
+
+.rtcl-claim-listing-wrapper {
+  textarea.form-control {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .modal-footer {
+    button.btn {
+      @extend .rtin-button;
     }
   }
 }

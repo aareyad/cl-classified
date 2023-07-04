@@ -6,6 +6,12 @@
         .rtcl-listing-item {
           margin-bottom: 0;
 
+          .listing-thumb {
+            &:after {
+              border-radius: 8px 0 0 0;
+            }
+          }
+
           .rtcl-meta-buttons-wrap {
             gap: 6px;
 
