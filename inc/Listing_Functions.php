@@ -61,6 +61,10 @@ class Listing_Functions {
 			add_action( 'rtcl_listing_loop_item', [ __CLASS__, 'loop_item_category_price' ], 15 );
 			add_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'loop_item_excerpt' ], 45 );
 		}
+        // Seller Verification
+        if ( class_exists('RtclSellerVerification' ) ) {
+	        remove_action( 'rtcl_listing_seller_information', [ \RtclSellerActionHooks::class, 'listing_sidebar_verified_author' ], 5 );
+        }
 	}
 
 	public function rtcl_filter_hook() {

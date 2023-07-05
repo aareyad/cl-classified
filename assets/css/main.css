@@ -3325,7 +3325,6 @@ a.scrollToTop:focus {
 }
 
 .rtcl .rtcl-wrapper .listing-sidebar .rtcl-listing-user-info .list-group .list-group-item.rtin-author .rtin-name {
-	flex: 1;
 	color: #797f89;
 	font-size: 16px;
 	margin-bottom: 0;
@@ -4955,6 +4954,11 @@ a.scrollToTop:focus {
 .rtcl-form-page .main-content .rtcl-listing-info-selecting .rtcl-submit-btn:hover {
 	background-color: var(--rtcl-secondary-color);
 	border: 1px solid var(--rtcl-secondary-color);
+}
+
+.rtcl-EditAccountForm .phone-row .selected-country-flag,
+#rtcl-post-form .rtcl-post-contact-details .phone-row .selected-country-flag {
+	top: 7px;
 }
 
 .rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link {
