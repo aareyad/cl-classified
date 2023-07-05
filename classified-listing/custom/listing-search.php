@@ -110,8 +110,9 @@ $style = Options::$options['listing_search_style'];
                 </div>
 			<?php else: ?>
                 <div class="<?php echo esc_attr( $loc_class ); ?>">
+                    <label><?php esc_html_e( 'Where is it?', 'cl-classified' ); ?></label>
                     <div class="form-group">
-                        <div class="rtcl-search-input-button cl-classified-search-style-2 rtin-location">
+                        <div class="rtcl-search-input-button cl-classified-search-style-2 rtin-location rtcl-geo-address-field">
                             <input type="text" name="geo_address" autocomplete="off"
                                    value="<?php echo ! empty( $_GET['geo_address'] ) ? esc_attr( $_GET['geo_address'] ) : '' ?>"
                                    placeholder="<?php esc_attr_e( "Select a location", "cl-classified" ); ?>"

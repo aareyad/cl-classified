@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2023-07-05 09:22+0000\n"
+"POT-Creation-Date: 2023-07-05 11:46+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -551,39 +551,39 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:25, classified-listing/custom/listing-search.php:216
+#: classified-listing/custom/listing-search.php:25, classified-listing/custom/listing-search.php:217
 msgid "Select Type"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:117
-msgid "Select a location"
-msgstr ""
-
-#: classified-listing/custom/listing-search.php:134
-msgid "Radius"
-msgstr ""
-
-#: classified-listing/custom/listing-search.php:48
+#: classified-listing/custom/listing-search.php:113, classified-listing/custom/listing-search.php:48
 msgid "Where is it?"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:147
+#: classified-listing/custom/listing-search.php:118
+msgid "Select a location"
+msgstr ""
+
+#: classified-listing/custom/listing-search.php:135
+msgid "Radius"
+msgstr ""
+
+#: classified-listing/custom/listing-search.php:148
 msgid "In which category?"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:207
+#: classified-listing/custom/listing-search.php:208
 msgid "In which type?"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:235
+#: classified-listing/custom/listing-search.php:236
 msgid "What are you looking for?"
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:238
+#: classified-listing/custom/listing-search.php:239
 msgid "Enter Keyword here ..."
 msgstr ""
 
-#: classified-listing/custom/listing-search.php:249
+#: classified-listing/custom/listing-search.php:250
 msgid "Search"
 msgstr ""
 

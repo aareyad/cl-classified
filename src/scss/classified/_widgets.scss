@@ -62,6 +62,21 @@
             text-decoration: none;
           }
         }
+
+        &.rtcl-radius-filter {
+
+          .rtcl-range-slider-field {
+            .rtcl-range-label {
+              margin-top: 10px;
+            }
+
+            .rtcl-range-slider-input {
+              width: 100%;
+            }
+          }
+
+        }
+
       }
 
       ul {
@@ -386,4 +401,8 @@
       }
     }
   }
+}
+
+.rtcl-geo-address-field i.rtcl-icon {
+  right: 5px;
 }
