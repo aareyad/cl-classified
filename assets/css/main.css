@@ -1725,7 +1725,7 @@ body.slidemenuon .mobile-menu-bar span.sidebarBtn span:after {
 	color: var(--rtcl-primary-color);
 }
 
-.breadcrumbs-area .rtcl-breadcrumb span {
+.breadcrumbs-area .rtcl-breadcrumb span:last-child {
 	color: var(--rtcl-primary-color);
 }
 
@@ -3646,6 +3646,10 @@ a.scrollToTop:focus {
 	padding: 15px 25px 20px;
 }
 
+.rtcl .rtcl-grid-view .rtcl-listing-item .item-content .listing-cat-price {
+	margin-bottom: 10px;
+}
+
 .rtcl .rtcl-grid-view .rtcl-listing-item .item-content .rtcl-price-wrap {
 	margin-top: 5px;
 }
@@ -4096,6 +4100,9 @@ a.scrollToTop:focus {
 	border-top: 1px solid #e7e7e7;
 	margin-top: 20px;
 	padding-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .rtcl-single-actions .rtcl-single-listing-action {
@@ -4152,6 +4159,30 @@ a.scrollToTop:focus {
 
 .rtcl-single-actions .rtcl-single-listing-action .list-group-item.social-share-list button svg {
 	color: inherit;
+}
+
+.rtcl-single-actions .terms-name a {
+	display: inline-block;
+	background-color: #e7e7e7;
+	padding: 8px 10px;
+	margin-right: 8px;
+	line-height: 1;
+	border-radius: 3px;
+	color: inherit;
+}
+
+.rtcl-single-actions .terms-name a:hover {
+	background-color: var(--rtcl-primary-color);
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.rtcl-single-actions .terms-name span {
+	display: none;
+}
+
+.rtcl-single-actions .terms-name+.rtcl-single-listing-action {
+	margin-left: auto;
 }
 
 .rtcl-social-share-modal .modal-header button.close {

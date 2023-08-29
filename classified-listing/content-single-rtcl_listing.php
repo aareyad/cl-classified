@@ -78,6 +78,7 @@ do_action( 'rtcl_before_single_listing' );
 						<?php do_action( 'rtcl_single_listing_inner_sidebar', $listing ); ?>
 						<?php $listing->the_custom_fields(); ?>
                         <div class="rtcl-single-actions">
+	                        <?php echo Functions::get_listing_tag( $listing->get_id() ); ?>
 							<?php $listing->the_actions(); ?>
                         </div>
                     </div>

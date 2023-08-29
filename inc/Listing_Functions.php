@@ -60,7 +60,9 @@ class Listing_Functions {
 			remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'listing_price' ], 80 );
 			add_action( 'rtcl_listing_loop_item', [ __CLASS__, 'loop_item_category_price' ], 15 );
 			add_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'loop_item_excerpt' ], 45 );
-		}
+		} else if( 'grid' === $view ) {
+			add_action( 'rtcl_listing_loop_item', [ __CLASS__, 'loop_item_category' ], 15 );
+        }
         // Seller Verification
         if ( class_exists('RtclSellerVerification' ) ) {
 	        remove_action( 'rtcl_listing_seller_information', [ \RtclSellerActionHooks::class, 'listing_sidebar_verified_author' ], 5 );
@@ -110,6 +112,21 @@ class Listing_Functions {
 					<?php echo esc_html( $category->name ); ?>
                 </a>
 				<?php Functions::get_template( 'listing/loop/price' ); ?>
+            </div>
+			<?php
+		}
+	}
+
+	public static function loop_item_category() {
+		global $listing;
+		if ( $listing->has_category() && $listing->can_show_category() ) {
+			$category = $listing->get_categories();
+			$category = end( $category );
+			?>
+            <div class="listing-cat-price">
+                <a class="listing-categories" href="<?php echo esc_url( get_term_link( $category ) ); ?>">
+					<?php echo esc_html( $category->name ); ?>
+                </a>
             </div>
 			<?php
 		}
