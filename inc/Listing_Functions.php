@@ -60,19 +60,20 @@ class Listing_Functions {
 			remove_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'listing_price' ], 80 );
 			add_action( 'rtcl_listing_loop_item', [ __CLASS__, 'loop_item_category_price' ], 15 );
 			add_action( 'rtcl_listing_loop_item', [ TemplateHooks::class, 'loop_item_excerpt' ], 45 );
-		} else if( 'grid' === $view ) {
+		} else if ( 'grid' === $view ) {
 			add_action( 'rtcl_listing_loop_item', [ __CLASS__, 'loop_item_category' ], 15 );
-        }
-        // Seller Verification
-        if ( class_exists('RtclSellerVerification' ) ) {
-	        remove_action( 'rtcl_listing_seller_information', [ \RtclSellerActionHooks::class, 'listing_sidebar_verified_author' ], 5 );
-        }
+		}
+		// Seller Verification
+		if ( class_exists( 'RtclSellerVerification' ) ) {
+			remove_action( 'rtcl_listing_seller_information', [ \RtclSellerActionHooks::class, 'listing_sidebar_verified_author' ], 5 );
+		}
 	}
 
 	public function rtcl_filter_hook() {
 		add_filter( 'rtcl_listing_the_excerpt', function ( $excerpt ) {
 			return wp_trim_words( $excerpt, 25 );
 		} );
+		add_filter( 'rtcl_bootstrap_dequeue', '__return_false' );
 		// Override Related Listing Item Number
 		add_filter( 'rtcl_related_slider_options', function ( $slider_options ) {
 			$slider_options = [

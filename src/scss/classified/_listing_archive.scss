@@ -65,6 +65,22 @@
             display: flex;
             gap: 6px;
 
+            .favourite-label {
+              display: none;
+            }
+
+            .rtcl-favourites {
+              color: $bodyColor;
+              opacity: 0;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              visibility: hidden;
+              transform: translateY(20px);
+              transition: all 0.3s ease-in-out;
+            }
+
+            .rtcl-favourites,
             .rtcl-btn {
               width: 34px;
               height: 34px;
@@ -156,6 +172,16 @@
       &.as-top {
         background-color: var(--rtcl-top-bg-color);
         border: none;
+      }
+
+      &:hover {
+        .rtcl-meta-buttons {
+          .rtcl-favourites {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+          }
+        }
       }
     }
 

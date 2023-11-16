@@ -26,11 +26,11 @@ $typ_text = esc_html__( 'Select Type', 'cl-classified' );
 
 $selected_location = $selected_category = false;
 
-if ( get_query_var( 'rtcl_location' ) && $location = get_term_by( 'slug', get_query_var( 'rtcl_location' ), rtcl()->location ) ) {
+if ( get_query_var( '__loc' ) && $location = get_term_by( 'slug', get_query_var( '__loc' ), rtcl()->location ) ) {
 	$selected_location = $location;
 }
 
-if ( get_query_var( 'rtcl_category' ) && $category = get_term_by( 'slug', get_query_var( 'rtcl_category' ), rtcl()->category ) ) {
+if ( get_query_var( '__cat' ) && $category = get_term_by( 'slug', get_query_var( '__cat' ), rtcl()->category ) ) {
 	$selected_category = $category;
 }
 
@@ -65,7 +65,7 @@ $style = Options::$options['listing_search_style'];
 									'name'              => 'rtcl_location',
 									'id'                => 'rtcl-location-search-' . wp_rand(),
 									'class'             => 'form-control rtcl-location-search',
-									'selected'          => get_query_var( 'rtcl_location' ),
+									'selected'          => get_query_var( '__loc' ),
 									'hierarchical'      => true,
 									'value_field'       => 'slug',
 									'depth'             => Functions::get_location_depth_limit(),
@@ -156,7 +156,7 @@ $style = Options::$options['listing_search_style'];
 								'name'              => 'rtcl_category',
 								'id'                => 'rtcl-category-search-' . wp_rand(),
 								'class'             => 'form-control rtcl-category-search',
-								'selected'          => get_query_var( 'rtcl_category' ),
+								'selected'          => get_query_var( '__cat' ),
 								'hierarchical'      => true,
 								'value_field'       => 'slug',
 								'depth'             => Functions::get_category_depth_limit(),
