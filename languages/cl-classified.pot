@@ -1,4 +1,4 @@
-# Copyright (C) 2023 cl-classified
+# Copyright (C) 2024 cl-classified
 # This file is distributed under the same license as the cl-classified package.
 msgid ""
 msgstr ""
@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2023-11-16 07:05+0000\n"
+"POT-Creation-Date: 2024-01-16 05:46+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
