@@ -4656,6 +4656,10 @@ body.rtcl-account:not(.page-template-rtcl-canvas_template) .site-content-block .
 	padding-top: 0;
 }
 
+#rtcl-form-builder-container .rtcl-fb-sections .rtcl-fb-section .section-header {
+	margin-bottom: 25px;
+}
+
 .rtcl .rtcl-stores .rtcl-store-item .rtcl-store-link {
 	display: block;
 	background: #ffffff;
