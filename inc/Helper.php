@@ -16,11 +16,10 @@ class Helper {
 	}
 
 	public static function has_full_width() {
-		$theme_option_full_width = Options::$layout == 'full-width';
-		$not_active_sidebar      = ! is_active_sidebar( 'sidebar' );
-		$bool                    = $theme_option_full_width || $not_active_sidebar;
+		$full_width_layout  = Options::$layout == 'full-width';
+		$not_active_sidebar = ! is_active_sidebar( Options::$sidebar );
 
-		return $bool;
+		return $full_width_layout || $not_active_sidebar;
 	}
 
 	public static function the_layout_class() {
