@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2024-01-16 06:12+0000\n"
+"POT-Creation-Date: 2024-02-01 09:38+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: inc/General.php:85, inc/Helper.php:146
+#: inc/General.php:85, inc/Helper.php:145
 msgid "Sidebar"
 msgstr ""
 
@@ -94,39 +94,39 @@ msgctxt "breadcrumb"
 msgid "Home"
 msgstr ""
 
-#: inc/Helper.php:147
+#: inc/Helper.php:146
 msgid "Listing Archive Sidebar"
 msgstr ""
 
-#: inc/Helper.php:148
+#: inc/Helper.php:147
 msgid "Listing Single Sidebar"
 msgstr ""
 
-#: inc/Helper.php:177, inc/Helper.php:200, inc/Customizer/Settings/Blog_Layout.php:83, inc/Customizer/Settings/Blog_Layout.php:115, inc/Customizer/Settings/Blog_Layout.php:134, inc/Customizer/Settings/Blog_Layout.php:153, inc/Customizer/Settings/Blog_Layout.php:171, inc/Customizer/Settings/Blog_Layout.php:189, inc/Customizer/Settings/Error.php:41, inc/Customizer/Settings/Error_Layout.php:39, inc/Customizer/Settings/Error_Layout.php:72, inc/Customizer/Settings/Error_Layout.php:91, inc/Customizer/Settings/Error_Layout.php:110, inc/Customizer/Settings/Error_Layout.php:129, inc/Customizer/Settings/Error_Layout.php:148, inc/Customizer/Settings/Footer.php:106, inc/Customizer/Settings/Footer.php:158, inc/Customizer/Settings/General.php:46, inc/Customizer/Settings/General.php:77, inc/Customizer/Settings/General.php:103, inc/Customizer/Settings/General.php:159, inc/Customizer/Settings/Listing_Archive_Layout.php:85, inc/Customizer/Settings/Listing_Archive_Layout.php:118, inc/Customizer/Settings/Listing_Archive_Layout.php:137, inc/Customizer/Settings/Listing_Archive_Layout.php:156, inc/Customizer/Settings/Listing_Archive_Layout.php:175, inc/Customizer/Settings/Listing_Archive_Layout.php:194, inc/Customizer/Settings/Listing_Single_Layout.php:40, inc/Customizer/Settings/Listing_Single_Layout.php:73, inc/Customizer/Settings/Listing_Single_Layout.php:92, inc/Customizer/Settings/Listing_Single_Layout.php:111, inc/Customizer/Settings/Listing_Single_Layout.php:130, inc/Customizer/Settings/Listing_Single_Layout.php:149, inc/Customizer/Settings/Page_Layout.php:85, inc/Customizer/Settings/Page_Layout.php:118, inc/Customizer/Settings/Page_Layout.php:137, inc/Customizer/Settings/Page_Layout.php:156, inc/Customizer/Settings/Page_Layout.php:175, inc/Customizer/Settings/Page_Layout.php:194, inc/Customizer/Settings/Post_Layout.php:83, inc/Customizer/Settings/Post_Layout.php:115, inc/Customizer/Settings/Post_Layout.php:134, inc/Customizer/Settings/Post_Layout.php:153, inc/Customizer/Settings/Post_Layout.php:172, inc/Customizer/Settings/Post_Layout.php:191
+#: inc/Helper.php:176, inc/Helper.php:199, inc/Customizer/Settings/Blog_Layout.php:83, inc/Customizer/Settings/Blog_Layout.php:115, inc/Customizer/Settings/Blog_Layout.php:134, inc/Customizer/Settings/Blog_Layout.php:153, inc/Customizer/Settings/Blog_Layout.php:171, inc/Customizer/Settings/Blog_Layout.php:189, inc/Customizer/Settings/Error.php:41, inc/Customizer/Settings/Error_Layout.php:39, inc/Customizer/Settings/Error_Layout.php:72, inc/Customizer/Settings/Error_Layout.php:91, inc/Customizer/Settings/Error_Layout.php:110, inc/Customizer/Settings/Error_Layout.php:129, inc/Customizer/Settings/Error_Layout.php:148, inc/Customizer/Settings/Footer.php:106, inc/Customizer/Settings/Footer.php:158, inc/Customizer/Settings/General.php:46, inc/Customizer/Settings/General.php:77, inc/Customizer/Settings/General.php:103, inc/Customizer/Settings/General.php:159, inc/Customizer/Settings/Listing_Archive_Layout.php:85, inc/Customizer/Settings/Listing_Archive_Layout.php:118, inc/Customizer/Settings/Listing_Archive_Layout.php:137, inc/Customizer/Settings/Listing_Archive_Layout.php:156, inc/Customizer/Settings/Listing_Archive_Layout.php:175, inc/Customizer/Settings/Listing_Archive_Layout.php:194, inc/Customizer/Settings/Listing_Single_Layout.php:40, inc/Customizer/Settings/Listing_Single_Layout.php:73, inc/Customizer/Settings/Listing_Single_Layout.php:92, inc/Customizer/Settings/Listing_Single_Layout.php:111, inc/Customizer/Settings/Listing_Single_Layout.php:130, inc/Customizer/Settings/Listing_Single_Layout.php:149, inc/Customizer/Settings/Page_Layout.php:85, inc/Customizer/Settings/Page_Layout.php:118, inc/Customizer/Settings/Page_Layout.php:137, inc/Customizer/Settings/Page_Layout.php:156, inc/Customizer/Settings/Page_Layout.php:175, inc/Customizer/Settings/Page_Layout.php:194, inc/Customizer/Settings/Post_Layout.php:83, inc/Customizer/Settings/Post_Layout.php:115, inc/Customizer/Settings/Post_Layout.php:134, inc/Customizer/Settings/Post_Layout.php:153, inc/Customizer/Settings/Post_Layout.php:172, inc/Customizer/Settings/Post_Layout.php:191
 msgid "Default"
 msgstr ""
 
-#: inc/Helper.php:178, inc/Helper.php:201, inc/Helper.php:195
+#: inc/Helper.php:177, inc/Helper.php:200, inc/Helper.php:194
 msgid "Layout 1"
 msgstr ""
 
-#: inc/Helper.php:172
+#: inc/Helper.php:171
 msgid "Style 1"
 msgstr ""
 
-#: inc/Helper.php:216
+#: inc/Helper.php:215
 msgid "Standard"
 msgstr ""
 
-#: inc/Helper.php:221
+#: inc/Helper.php:220
 msgid "Popup"
 msgstr ""
 
-#: inc/Helper.php:222
+#: inc/Helper.php:221
 msgid "Auto Suggestion"
 msgstr ""
 
-#: inc/Helper.php:223
+#: inc/Helper.php:222
 msgid "Dependency Selection"
 msgstr ""
 

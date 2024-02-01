@@ -141,6 +141,77 @@
     }
   }
 
+  .rtcl-widget-listings {
+    .rtcl-grid-view .rtcl-listing-item .item-content {
+      padding: 20px 0 0;
+
+      .listing-title {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0;
+        color: #222222;
+
+        a {
+          color: inherit;
+        }
+
+        &:after {
+          content: none;
+        }
+      }
+
+      .listing-meta {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          span + span {
+            margin-left: 15px;
+          }
+        }
+
+        .rtcl-icon {
+          margin-right: 7px;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: var(--rtcl-primary-color);
+      color: #ffffff;
+      height: 32px;
+      width: 32px;
+      border-radius: 3px;
+
+      &:after {
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .rtcl-widget-search {
+    .form-group {
+      margin-bottom: 15px;
+
+      .rtcl-action-buttons {
+        .btn {
+          padding: 10px 15px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      label {
+        font-size: 15px;
+        font-weight: 500;
+        color: #222222;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
 }
 
 .rtcl {

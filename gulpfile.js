@@ -17,7 +17,7 @@ var zip = require('gulp-zip');
 
 
 gulp.task('scss', function () {
-    return gulp.src(['main.scss', 'rtl.scss'], {cwd: 'src/scss'})
+    return gulp.src(['main.scss', 'rtl.scss'], {cwd: 'src/scss', sourcemaps: true})
         .pipe(sass({
             plugins: [autoprefix]
         }))
@@ -25,7 +25,7 @@ gulp.task('scss', function () {
             indent_char: '\t',
             indent_size: 1
         }))
-        .pipe(gulp.dest('assets/css/'));
+        .pipe(gulp.dest('assets/css/', {sourcemaps: '.'}));
 });
 
 gulp.task('rtl', function () {
