@@ -4226,6 +4226,10 @@ a.scrollToTop:focus {
 	color: inherit;
 }
 
+.rtcl-single-actions .rtcl-single-listing-action .list-group-item a .rtcl-icon .rtcl-icon-twitter {
+	background-color: #ffffff;
+}
+
 .rtcl-single-actions .rtcl-single-listing-action .list-group-item .favourite-label {
 	display: none;
 }
