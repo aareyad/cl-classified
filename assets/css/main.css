@@ -4226,10 +4226,6 @@ a.scrollToTop:focus {
 	color: inherit;
 }
 
-.rtcl-single-actions .rtcl-single-listing-action .list-group-item a .rtcl-icon .rtcl-icon-twitter {
-	background-color: #ffffff;
-}
-
 .rtcl-single-actions .rtcl-single-listing-action .list-group-item .favourite-label {
 	display: none;
 }
@@ -4318,11 +4314,15 @@ a.scrollToTop:focus {
 }
 
 .rtcl-social-share-modal .modal-body .share-icon a.twitter {
-	background-color: #1DA1F2;
+	background-color: #000000;
+}
+
+.rtcl-social-share-modal .modal-body .share-icon a.twitter .rtcl-icon-twitter {
+	background-color: #ffffff;
 }
 
 .rtcl-social-share-modal .modal-body .share-icon a.twitter:hover {
-	background-color: #0075BC;
+	background-color: #333333;
 }
 
 .rtcl-social-share-modal .modal-body .share-icon a.linkedin {
@@ -4417,8 +4417,18 @@ a.scrollToTop:focus {
 	color: inherit;
 }
 
+.rtcl-social-profile-wrap .rtcl-social-profiles a .rtcl-icon-tiktok,
+.rtcl-social-profile-wrap .rtcl-social-profiles a .rtcl-icon-twitter {
+	background-color: #797f89;
+}
+
 .rtcl-social-profile-wrap .rtcl-social-profiles a:hover {
 	color: var(--rtcl-primary-color);
+}
+
+.rtcl-social-profile-wrap .rtcl-social-profiles a:hover .rtcl-icon-tiktok,
+.rtcl-social-profile-wrap .rtcl-social-profiles a:hover .rtcl-icon-twitter {
+	background-color: var(--rtcl-primary-color);
 }
 
 .rtcl-listing-booking-wrap {

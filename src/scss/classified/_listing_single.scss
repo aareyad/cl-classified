@@ -192,10 +192,6 @@
 
         .rtcl-icon {
           color: inherit;
-
-          .rtcl-icon-twitter {
-            background-color: #ffffff;
-          }
         }
       }
 
@@ -297,8 +293,12 @@
         &.twitter {
           background-color: $twitter;
 
+          .rtcl-icon-twitter {
+            background-color: $white;
+          }
+
           &:hover {
-            background-color: #0075BC;
+            background-color: #333333;
           }
         }
 
@@ -406,8 +406,18 @@
         color: inherit;
       }
 
+      .rtcl-icon-tiktok,
+      .rtcl-icon-twitter {
+        background-color: #797f89;
+      }
+
       &:hover {
         color: var(--rtcl-primary-color);
+
+        .rtcl-icon-tiktok,
+        .rtcl-icon-twitter {
+          background-color: var(--rtcl-primary-color);
+        }
       }
     }
   }
