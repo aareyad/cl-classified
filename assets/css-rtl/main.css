@@ -3788,6 +3788,10 @@ a.scrollToTop:focus {
 	color: #797f89;
 }
 
+.rtcl .rtcl-listings .rtcl-listing-item .item-content .rtcl-listable .rtcl-listable-item.element-repeater>.listable-label-wrap {
+	justify-content: unset;
+}
+
 .rtcl .rtcl-listings .rtcl-listing-item .item-content .rtcl-listing-meta-data {
 	color: #797f89;
 }
@@ -4317,6 +4321,18 @@ a.scrollToTop:focus {
 	margin: 0 !important;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 991px) {
+	.rtcl-single-listing-details .rtcl-single-custom-fields .custom-field-properties {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.rtcl-single-listing-details .rtcl-single-custom-fields .custom-field-properties {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .rtcl-single-listing-details .rtcl-single-custom-fields .custom-field-properties .list-group-item {

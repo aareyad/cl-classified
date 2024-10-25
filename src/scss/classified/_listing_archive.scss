@@ -138,6 +138,10 @@
         .rtcl-listable {
           .rtcl-listable-item {
             color: $bodyColor;
+
+            &.element-repeater>.listable-label-wrap {
+              justify-content: unset;
+            }
           }
         }
 
