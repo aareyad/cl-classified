@@ -3788,6 +3788,12 @@ a.scrollToTop:focus {
 	color: #797f89;
 }
 
+.rtcl .rtcl-listings .rtcl-listing-item .item-content .rtcl-listable .rtcl-listable-item .cfp-color {
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
+
 .rtcl .rtcl-listings .rtcl-listing-item .item-content .rtcl-listable .rtcl-listable-item.element-repeater>.listable-label-wrap {
 	justify-content: unset;
 }
@@ -4344,6 +4350,14 @@ a.scrollToTop:focus {
 .rtcl-single-listing-details .rtcl-single-custom-fields .custom-field-properties .list-group-item .cfp-label {
 	color: #000000;
 	font-weight: 700;
+}
+
+.rtcl-single-listing-details .rtcl-single-custom-fields .custom-field-properties .list-group-item .cfp-color {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 5px;
 }
 
 #rtcl-report-abuse-form .form-group label {
