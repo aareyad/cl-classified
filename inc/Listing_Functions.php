@@ -106,12 +106,15 @@ class Listing_Functions {
 		global $listing;
 		if ( $listing->has_category() && $listing->can_show_category() ) {
 			$category = $listing->get_categories();
-			$category = end( $category );
 			?>
             <div class="listing-cat-price">
-                <a class="listing-categories" href="<?php echo esc_url( get_term_link( $category ) ); ?>">
-					<?php echo esc_html( $category->name ); ?>
-                </a>
+				<?php if ( $category ):
+					foreach ( $category as $cat ) {
+						?>
+                        <a class="listing-categories" href="<?php echo esc_url( get_term_link( $cat ) ); ?>">
+							<?php echo esc_html( $cat->name ); ?>
+                        </a>
+					<?php } endif; ?>
 				<?php Functions::get_template( 'listing/loop/price' ); ?>
             </div>
 			<?php
