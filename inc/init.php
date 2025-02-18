@@ -14,7 +14,7 @@ use RadiusTheme\ClassifiedLite\Scripts;
 use RadiusTheme\ClassifiedLite\Options;
 use RadiusTheme\ClassifiedLite\Customizer\Init;
 
-require_once __DIR__ . './../vendor/autoload.php';
+require_once get_template_directory() . '/vendor/autoload.php';
 
 final class Includes {
 	private $suffix;
