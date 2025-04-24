@@ -12,6 +12,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'store' );
 
+do_action( 'rtcl_before_content_wrapper' );
+
 /**
  * Hook: rtcl_before_main_content.
  *
@@ -80,5 +82,6 @@ if ( rtcl()->wp_query()->have_posts() ) {
  */
 do_action( 'rtcl_after_main_content' );
 
+do_action( 'rtcl_after_content_wrapper' );
 
 get_footer( 'store' );

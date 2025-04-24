@@ -11,7 +11,10 @@ use Rtcl\Helpers\Functions as RtclFunctions;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-get_header( 'store' ); ?>
+get_header( 'store' );
+
+do_action( 'rtcl_before_content_wrapper' );
+?>
 <?php
 /**
  * rtcl_before_main_content hook.
@@ -36,6 +39,8 @@ do_action( 'rtcl_before_main_content' );
  * @hooked rtcl_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'rtcl_after_main_content' );
+
+do_action( 'rtcl_after_content_wrapper' );
 ?>
 
 <?php

@@ -74,6 +74,14 @@
         }
       }
     }
+
+    .rtcl-post-contact-details {
+      .rtcl-map-wrap {
+        .rtcl-form-check {
+          padding-left: 0;
+        }
+      }
+    }
   }
 
   .rtcl-post-marketplace {
@@ -122,6 +130,16 @@
   top: 7px;
 }
 
+.rtcl-bhs .rtcl-day-actions .form-check-input,
+#rtcl-bhs-holder input#rtcl-active-bhs,
+#rtcl-bhs-holder input#rtcl-active-special-bhs {
+  top: 0.28rem;
+}
+
+.rtcl-bhs .rtcl-day-actions .form-check-input.check-time-slot {
+  top: 2rem;
+}
+
 /*--------- Form builder compatibility ---------*/
 
 #rtcl-form-builder-container {
@@ -146,6 +164,14 @@
       .section-header {
         margin-bottom: 25px;
       }
+    }
+  }
+}
+
+.rtcl-post-section-title {
+  .selected-cat {
+    .rtcl-icon {
+      color: inherit;
     }
   }
 }

@@ -35,3 +35,15 @@ body.rtcl-account {
     }
   }
 }
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout {
+  background-color: #ffefdb;
+
+  a {
+    color: #ff8800;
+
+    &:before {
+      background-color: #ff8800 !important;
+    }
+  }
+}
