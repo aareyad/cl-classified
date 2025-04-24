@@ -29,10 +29,7 @@
         border: 1px solid #d0d0d0;
         color: $bodyColor;
         border-radius: 4px;
-        height: 40px;
-        width: 40px;
         padding: 0;
-        line-height: 36px;
         text-align: center;
 
         &.active {
@@ -86,11 +83,15 @@
               height: 34px;
               border-radius: 50%;
               color: $bodyColor;
-              background-color: $white;
+              background-color: transparent;
 
               &:hover {
                 background-color: var(--rtcl-primary-color);
                 color: $white;
+              }
+
+              .rtcl-icon {
+                margin-right: 0;
               }
 
               a {

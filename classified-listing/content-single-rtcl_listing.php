@@ -22,11 +22,13 @@ if ( post_password_required() ) {
 }
 $sidebar_position = Functions::get_option_item( 'rtcl_moderation_settings', 'detail_page_sidebar_position', 'right' );
 $sidebar_class    = [
-	'col-md-3',
+	'col-lg-3',
+	'col-sm-12',
 	'order-2'
 ];
 $content_class    = [
-	'col-md-9',
+	'col-lg-9',
+	'col-sm-12',
 	'order-1',
 	'listing-content'
 ];
@@ -36,8 +38,8 @@ if ( $sidebar_position == "left" ) {
 	$content_class   = array_diff( $content_class, [ 'order-1' ] );
 	$content_class[] = 'order-2';
 } else if ( $sidebar_position == "bottom" ) {
-	$content_class   = array_diff( $content_class, [ 'col-md-9' ] );
-	$sidebar_class   = array_diff( $sidebar_class, [ 'col-md-3' ] );
+	$content_class   = array_diff( $content_class, [ 'col-lg-9', 'col-sm-12' ] );
+	$sidebar_class   = array_diff( $sidebar_class, [ 'col-lg-3', 'col-sm-12' ] );
 	$content_class[] = 'col-sm-12';
 	$sidebar_class[] = 'rtcl-listing-bottom-sidebar';
 }

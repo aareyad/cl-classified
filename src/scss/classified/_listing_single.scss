@@ -237,6 +237,10 @@
     }
   }
 
+  .modal {
+    z-index: 99999;
+  }
+
   .terms-name {
     a {
       display: inline-block;
@@ -390,6 +394,8 @@
       padding: 0;
       margin: 0;
       border: none;
+      background-color: transparent;
+      box-shadow: none;
 
       .rtclbh {
         border-color: $borderColor;
@@ -513,6 +519,14 @@
           background-color: var(--rtcl-secondary-color);
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-top: 30px;
+
+    .price-in-desktop {
+      display: none;
     }
   }
 }

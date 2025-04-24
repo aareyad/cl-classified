@@ -222,7 +222,7 @@
 }
 
 .rtcl {
-  .rtcl-wrapper {
+  .rtcl-content-wrapper {
     .listing-sidebar {
       margin-bottom: 25px;
 
@@ -283,10 +283,10 @@
           }
         }
 
-        .list-group {
+        .rtcl-list-group {
           padding: 0;
 
-          .list-group-item {
+          .rtcl-list-group-item {
             color: $bodyColor;
             border: none;
             padding: 0;
@@ -332,6 +332,10 @@
               &:hover {
                 background-color: var(--rtcl-primary-color);
                 color: $white;
+
+                .rtcl-icon {
+                  color: $white !important;
+                }
               }
             }
 
@@ -351,8 +355,12 @@
 
             &.reveal-phone {
               .media {
-                .rtcl-icon {
-                  display: none;
+                .revealed-whatsapp-number,
+                .revealed-phone-number {
+                  .rtcl-icon {
+                    display: inline-block;
+                    color: var(--rtcl-primary-color);
+                  }
                 }
               }
             }
@@ -395,7 +403,7 @@
               }
 
               #rtcl-contact-form {
-                .form-group {
+                .rtcl-form-group {
                   margin-bottom: 10px;
 
                   #rtcl-contact-message {
@@ -403,7 +411,7 @@
                   }
                 }
 
-                .btn {
+                .rtcl-btn {
                   background-color: var(--rtcl-primary-color);
                   border: none;
                   padding: 12px 15px;
@@ -423,13 +431,13 @@
 
               .rtcl-chat-link,
               .rtcl-website-link {
-                color: $bodyColor;
-                border: 1px solid $borderColor;
+                color: $bodyColor !important;
+                border: 1px solid $borderColor !important;
                 box-shadow: 0 0 20px #f0f0f0;
                 border-radius: 4px;
                 display: block;
                 padding: 10px 16px;
-                background-color: $white;
+                background-color: $white !important;
                 font-size: 16px;
                 font-weight: 400;
                 text-align: left;
@@ -440,9 +448,9 @@
                 }
 
                 &:hover {
-                  background-color: var(--rtcl-primary-color);
-                  color: $white;
-                  border-color: var(--rtcl-primary-color);
+                  background-color: var(--rtcl-primary-color) !important;
+                  color: $white !important;
+                  border-color: var(--rtcl-primary-color) !important;
 
                   .rtcl-icon {
                     color: $white;
@@ -451,6 +459,10 @@
               }
 
               .rtcl-website-link {
+                .rtcl-icon {
+                  display: none;
+                }
+
                 &:before {
                   content: '\f0c1';
                   font-family: "Font Awesome 6 Free";

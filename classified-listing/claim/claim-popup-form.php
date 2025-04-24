@@ -33,41 +33,41 @@ $phone = get_the_author_meta( '_rtcl_phone', $user_id );
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name"><?php esc_html_e( 'Name', 'rtcl-claim-listing' ); ?></label>
+                        <label for="name"><?php esc_html_e( 'Name', 'cl-classified' ); ?></label>
                         <input type="text" name="name" id="name" class="form-control"
                                value="<?php echo esc_attr( $name ); ?>"
                                required/>
                     </div>
                     <div class="form-group">
-                        <label for="email"><?php esc_html_e( 'Email', 'rtcl-claim-listing' ); ?></label>
+                        <label for="email"><?php esc_html_e( 'Email', 'cl-classified' ); ?></label>
                         <input type="email" name="email" id="email" class="form-control"
                                value="<?php echo esc_attr( $email ); ?>" required/>
                     </div>
                     <div class="form-group">
-                        <label for="phone"><?php esc_html_e( 'Phone', 'rtcl-claim-listing' ); ?></label>
+                        <label for="phone"><?php esc_html_e( 'Phone', 'cl-classified' ); ?></label>
                         <input type="tel" name="phone" id="phone" class="form-control"
                                value="<?php echo esc_attr( $phone ); ?>" required/>
                     </div>
                     <div class="form-group">
-                        <label for="message"><?php esc_html_e( 'Details', 'rtcl-claim-listing' ); ?></label>
-                        <textarea placeholder="<?php esc_attr_e( 'Write your claim here', 'rtcl-claim-listing' ); ?>"
+                        <label for="message"><?php esc_html_e( 'Details', 'cl-classified' ); ?></label>
+                        <textarea placeholder="<?php esc_attr_e( 'Write your claim here', 'cl-classified' ); ?>"
                                   name="message"
                                   id="message" class="form-control"></textarea>
                     </div>
 					<?php if ( Functions::is_enable_attachment_field() ): ?>
                         <div class="form-group">
-                            <label><?php esc_html_e( 'Attachment', 'rtcl-claim-listing' ); ?></label>
+                            <label><?php esc_html_e( 'Attachment', 'cl-classified' ); ?></label>
                             <div class="rtcl-claim-document-wrap">
                                 <div class="rtcl-claim-document no-file">
                                     <div class="rtcl-media-action">
                                     <span class="document-upload-btn add">
-                                        <i class="rtcl-icon-upload"></i> <?php esc_html_e( 'Upload File', 'rtcl-claim-listing' ); ?>
+                                        <i class="rtcl-icon-upload"></i> <?php esc_html_e( 'Upload File', 'cl-classified' ); ?>
                                     </span>
                                     </div>
                                     <div class="other-document"></div>
                                 </div>
                                 <div class="alert alert-danger mt-2">
-									<?php esc_html_e( 'Maximum file size 5 MB, only pdf file allowed.', 'rtcl-claim-listing' ); ?>
+									<?php esc_html_e( 'Maximum file size 5 MB, only pdf file allowed.', 'cl-classified' ); ?>
                                 </div>
                             </div>
                         </div>

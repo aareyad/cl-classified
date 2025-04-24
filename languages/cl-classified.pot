@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2025-02-18 06:20+0000\n"
+"POT-Creation-Date: 2025-04-24 04:42+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -37,11 +37,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:63
+#: comments.php:63, classified-listing/claim/claim-popup-form.php:36
 msgid "Name"
 msgstr ""
 
-#: comments.php:67, inc/Customizer/Settings/Contact_Info.php:66
+#: comments.php:67, classified-listing/claim/claim-popup-form.php:42, inc/Customizer/Settings/Contact_Info.php:66
 msgid "Email"
 msgstr ""
 
@@ -543,6 +543,30 @@ msgstr ""
 msgid "Blank Template"
 msgstr ""
 
+#: classified-listing/claim/claim-popup-form.php:47, inc/Customizer/Settings/Contact_Info.php:51
+msgid "Phone"
+msgstr ""
+
+#: classified-listing/claim/claim-popup-form.php:52
+msgid "Details"
+msgstr ""
+
+#: classified-listing/claim/claim-popup-form.php:53
+msgid "Write your claim here"
+msgstr ""
+
+#: classified-listing/claim/claim-popup-form.php:59
+msgid "Attachment"
+msgstr ""
+
+#: classified-listing/claim/claim-popup-form.php:64
+msgid "Upload File"
+msgstr ""
+
+#: classified-listing/claim/claim-popup-form.php:70
+msgid "Maximum file size 5 MB, only pdf file allowed."
+msgstr ""
+
 #: classified-listing/custom/listing-search.php:23
 msgid "Select Location"
 msgstr ""
@@ -631,6 +655,34 @@ msgstr[1] ""
 
 #: classified-listing/listing/user-information.php:23
 msgid "Information"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:41
+msgid "Open Hours"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:66
+msgid "Always Open"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:63
+msgid "Permanently Close"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:57
+msgid "Closed"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:72, inc/Customizer/Settings/Contact_Info.php:36
+msgid "Address"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:78
+msgid "Description"
+msgstr ""
+
+#: classified-listing/store/details-modal.php:84
+msgid "Visit our website"
 msgstr ""
 
 #: inc/Customizer/Customizer.php:45
@@ -979,14 +1031,6 @@ msgstr ""
 
 #: inc/Customizer/Settings/Color.php:78
 msgid "Top Listing Background Color"
-msgstr ""
-
-#: inc/Customizer/Settings/Contact_Info.php:36
-msgid "Address"
-msgstr ""
-
-#: inc/Customizer/Settings/Contact_Info.php:51
-msgid "Phone"
 msgstr ""
 
 #: inc/Customizer/Settings/Contact_Info.php:93

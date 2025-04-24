@@ -22,7 +22,7 @@ if ( class_exists( 'RtclStore' ) ) {
 	<div class="rtcl-listing-side-title">
 		<h3><?php esc_html_e( 'Information', 'cl-classified' ); ?></h3>
 	</div>
-	<div class="list-group">
+	<div class="rtcl-list-group">
 		<?php do_action( 'rtcl_listing_seller_information', $listing ); ?>
 	</div>
 </div>
