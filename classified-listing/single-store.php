@@ -33,12 +33,9 @@ do_action( 'rtcl_before_main_content' );
 <?php endwhile; // end of the loop. ?>
 
 <?php
-/**
- * rtcl_after_main_content hook.
- *
- * @hooked rtcl_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
 do_action( 'rtcl_after_main_content' );
+
+do_action( 'rtcl_store_sidebar' );
 
 do_action( 'rtcl_after_content_wrapper' );
 ?>
