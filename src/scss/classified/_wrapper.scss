@@ -26,3 +26,11 @@
     }
   }
 }
+
+.rtcl.post-type-archive-rtcl_listing .rtcl-content-wrapper > #primary {
+  order: initial;
+}
+
+.rtcl.post-type-archive-rtcl_listing.sidebar-in-left .rtcl-content-wrapper > #primary {
+  order: 2;
+}
