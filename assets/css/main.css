@@ -2951,6 +2951,14 @@ a.scrollToTop:focus {
 	padding-bottom: 0;
 }
 
+.rtcl.post-type-archive-rtcl_listing .rtcl-content-wrapper>#primary {
+	order: initial;
+}
+
+.rtcl.post-type-archive-rtcl_listing.sidebar-in-left .rtcl-content-wrapper>#primary {
+	order: 2;
+}
+
 .banner-search {
 	padding: 50px 0;
 	background-position: left bottom;

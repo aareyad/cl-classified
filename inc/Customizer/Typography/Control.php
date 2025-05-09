@@ -72,9 +72,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'rttheme-select2-js', trailingslashit( get_template_directory_uri() ) . 'assets/js/select2.min.js', [ 'jquery' ], '4.0.6', true );
-			wp_enqueue_script( 'rttheme-typography-controls-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/assets/typography.js', [ 'rttheme-select2-js' ], '1.2', true );
-			wp_enqueue_style( 'rttheme-typography-controls-css', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/assets/typography.css', [], '1.1', 'all' );
+			wp_enqueue_script( 'rttheme-select2-js', trailingslashit( get_template_directory_uri() ) . 'assets/js/select2.min.js', [ 'jquery' ], '4.0.6',
+				true );
+			wp_enqueue_script( 'rttheme-typography-controls-js',
+				trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/assets/typography.js', [ 'rttheme-select2-js' ], '1.2', true );
+			wp_enqueue_style( 'rttheme-typography-controls-css',
+				trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/assets/typography.css', [], '1.1', 'all' );
 			wp_enqueue_style( 'rttheme-select2-css', trailingslashit( get_template_directory_uri() ) . 'assets/css/select2.min.css', [], '4.0.6', 'all' );
 		}
 
@@ -111,7 +114,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							<?php
 							foreach ( $this->fontList as $key => $value ) {
 								$fontCounter ++;
-								$fontListStr .= '<option value="' . $value->family . '" ' . selected( $this->fontValues->font, $value->family, false ) . '>' . $value->family . '</option>';
+								$fontListStr .= '<option value="' . $value->family . '" ' . selected( $this->fontValues->font, $value->family, false ) . '>'
+								                . $value->family . '</option>';
 								if ( $this->fontValues->font === $value->family ) {
 									$isFontInList = true;
 								}
@@ -121,7 +125,9 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							}
 							if ( ! $isFontInList && $this->fontListIndex ) {
 								// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font
-								$fontListStr = '<option value="' . $this->fontList[ $this->fontListIndex ]->family . '" ' . selected( $this->fontValues->font, $this->fontList[ $this->fontListIndex ]->family, false ) . '>' . $this->fontList[ $this->fontListIndex ]->family . ' (default)</option>' . $fontListStr;
+								$fontListStr = '<option value="' . $this->fontList[ $this->fontListIndex ]->family . '" ' . selected( $this->fontValues->font,
+										$this->fontList[ $this->fontListIndex ]->family, false ) . '>' . $this->fontList[ $this->fontListIndex ]->family
+								               . ' (default)</option>' . $fontListStr;
 							}
 							// Display our list of font options
 							printf( "%s", $fontListStr );
@@ -133,7 +139,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
                         <select class="google-fonts-regularweight-style">
 							<?php
 							foreach ( $this->fontList[ $this->fontListIndex ]->variants as $key => $value ) {
-								echo '<option value="' . $value . '" ' . selected( $this->fontValues->regularweight, $value, false ) . '>' . $value . '</option>';
+								echo '<option value="' . $value . '" ' . selected( $this->fontValues->regularweight, $value, false ) . '>' . $value
+								     . '</option>';
 							}
 							?>
                         </select>
@@ -183,7 +190,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			$content = json_decode( apply_filters( 'cl_classified_customizer_fonts_change', $body_content ) );
 
 			if ( $count == 'all' ) {
-				return $content->items;
+				return $content->items ?? 0;
 			} else {
 				return array_slice( $content->items, 0, $count );
 			}

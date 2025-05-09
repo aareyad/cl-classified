@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: RadiusTheme <info@radiustheme.com>\n"
-"POT-Creation-Date: 2025-04-24 04:42+0000\n"
+"POT-Creation-Date: 2025-05-09 08:38+0000\n"
 "Project-Id-Version: undefined\n"
 "Report-Msgid-Bugs-To: techlabpro15@gmail.com\n"
 "X-Poedit-Basepath: ..\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: classified-listing/content-single-rtcl_listing.php:101
+#: classified-listing/content-single-rtcl_listing.php:103
 msgid "Business Hours"
 msgstr ""
 
@@ -657,34 +657,6 @@ msgstr[1] ""
 msgid "Information"
 msgstr ""
 
-#: classified-listing/store/details-modal.php:41
-msgid "Open Hours"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:66
-msgid "Always Open"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:63
-msgid "Permanently Close"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:57
-msgid "Closed"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:72, inc/Customizer/Settings/Contact_Info.php:36
-msgid "Address"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:78
-msgid "Description"
-msgstr ""
-
-#: classified-listing/store/details-modal.php:84
-msgid "Visit our website"
-msgstr ""
-
 #: inc/Customizer/Customizer.php:45
 msgid "Layout Settings"
 msgstr ""
@@ -1031,6 +1003,10 @@ msgstr ""
 
 #: inc/Customizer/Settings/Color.php:78
 msgid "Top Listing Background Color"
+msgstr ""
+
+#: inc/Customizer/Settings/Contact_Info.php:36
+msgid "Address"
 msgstr ""
 
 #: inc/Customizer/Settings/Contact_Info.php:93
