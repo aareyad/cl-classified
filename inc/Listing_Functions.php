@@ -37,7 +37,7 @@ class Listing_Functions {
 		if ( isset( $_GET['view'] ) && in_array( $_GET['view'], [ 'grid', 'list' ], true ) ) {
 			$view = esc_attr( $_GET['view'] );
 		} else {
-			$view = Functions::get_option_item( 'rtcl_general_settings', 'default_view', 'list' );
+			$view = Functions::get_option_item( 'rtcl_archive_listing_settings', 'default_view', 'list' );
 		}
 		// remove action
 		remove_action( 'rtcl_before_main_content', [ TemplateHooks::class, 'breadcrumb' ], 6 );
