@@ -21,9 +21,7 @@ function cl_classified_theme_load() {
 
 define( 'CL_CLASSIFIED_VERSION', '1.7.1' );
 
-if ( ! defined( 'RT_DEBUG' ) ) {
-	require_once 'lib/updater/theme-updater.php';
-}
+require_once 'lib/updater/theme-updater.php';
 require_once 'lib/class-tgm-plugin-activation.php';
 require_once 'inc/init.php';
 require_once 'inc/Customizer/sanitization.php';
