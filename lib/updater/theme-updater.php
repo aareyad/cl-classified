@@ -6,13 +6,13 @@
  */
 
 // Includes the files needed for the theme updater
-if ( !class_exists( 'EDD_Theme_Updater_Admin' ) ) {
+if ( ! class_exists( 'EDD_Theme_Updater_Admin' ) ) {
 	include( dirname( __FILE__ ) . '/theme-updater-admin.php' );
 }
 
 add_action( 'after_setup_theme', 'rdtheme_edd_theme_updater', 20 );
 
-function rdtheme_edd_theme_updater(){
+function rdtheme_edd_theme_updater() {
 	$theme_data = wp_get_theme( get_template() );
 
 	// Config settings
@@ -37,6 +37,7 @@ function rdtheme_edd_theme_updater(){
 		'status-unknown'            => __( 'License status is unknown.', 'cl-classified' ),
 		'renew'                     => __( 'Renew?', 'cl-classified' ),
 		'unlimited'                 => __( 'unlimited', 'cl-classified' ),
+		'lifetime-license'          => __( 'License type: lifetime.', 'cl-classified' ),
 		'license-key-is-active'     => __( 'License key is active.', 'cl-classified' ),
 		'expires%s'                 => __( 'Expires %s.', 'cl-classified' ),
 		'%1$s/%2$-sites'            => __( 'You have %1$s / %2$s sites activated.', 'cl-classified' ),
@@ -47,8 +48,10 @@ function rdtheme_edd_theme_updater(){
 		'license-key-is-disabled'   => __( 'License key is disabled.', 'cl-classified' ),
 		'site-is-inactive'          => __( 'Site is inactive.', 'cl-classified' ),
 		'license-status-unknown'    => __( 'License status is unknown.', 'cl-classified' ),
-		'update-notice'             => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'cl-classified' ),
-		'update-available'          => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'cl-classified' )
+		'update-notice'             => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.",
+			'cl-classified' ),
+		'update-available'          => __( '<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.',
+			'cl-classified' )
 	);
 
 	// Loads the updater classes

@@ -19,7 +19,7 @@ function cl_classified_theme_load() {
 	do_action( 'cl_classified_theme_init' );
 }
 
-define( 'CL_CLASSIFIED_VERSION', '1.7.1' );
+define( 'CL_CLASSIFIED_VERSION', '1.7.2' );
 
 require_once 'lib/updater/theme-updater.php';
 require_once 'lib/class-tgm-plugin-activation.php';
